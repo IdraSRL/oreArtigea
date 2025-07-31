@@ -4,14 +4,14 @@
  */
 
 // Versione principale dell'applicazione
-export const APP_VERSION = '2.16.0';
+export const APP_VERSION = '2.0.0';
 
 // Informazioni aggiuntive (opzionali)
-export const BUILD_DATE = '2025-01-27-fix';
+export const BUILD_DATE = '2025-01-27-simplified';
 export const BUILD_INFO = {
   version: APP_VERSION,
   buildDate: BUILD_DATE,
-  description: 'Sistema Gestione Ore e Bigliettini BnB'
+  description: 'Sistema Gestione Ore Semplificato'
 };
 
 // Funzione per ottenere la versione corrente
