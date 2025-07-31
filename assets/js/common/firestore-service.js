@@ -155,3 +155,12 @@ export async function updateDoc(collName, docId, data) {
   await setDoc(docRef, data, { merge: true });
   return { success: true };
 }
+
+/**
+ * Named export per eliminare un documento
+ */
+export async function deleteDoc(collName, docId) {
+  const docRef = doc(db, collName, docId);
+  await deleteDoc(docRef);
+  return { success: true };
+}

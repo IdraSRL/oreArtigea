@@ -333,12 +333,31 @@ body {
     background: rgba(15, 15, 35, var(--alpha-80));
 }
 
+.table-primary {
+    background: linear-gradient(45deg, var(--primary), var(--secondary)) !important;
+    color: var(--white) !important;
+}
+
+.table-secondary {
+    background: rgba(139, 92, 246, var(--alpha-20)) !important;
+    color: var(--white) !important;
+}
+
 .table th,
 .table td {
     border-color: rgba(255, 255, 255, var(--alpha-10));
     padding: 0.75rem 0.5rem;
     vertical-align: middle;
     text-align: center;
+}
+
+.table-striped > tbody > tr:nth-of-type(odd) > td,
+.table-striped > tbody > tr:nth-of-type(odd) > th {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.table-hover tbody tr:hover td {
+    background-color: rgba(99, 102, 241, 0.1) !important;
 }
 
 .table-hover tbody tr:hover {

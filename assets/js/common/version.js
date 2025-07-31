@@ -4,14 +4,14 @@
  */
 
 // Versione principale dell'applicazione
-export const APP_VERSION = '2.0.1';
+export const APP_VERSION = '2.1.0';
 
 // Informazioni aggiuntive (opzionali)
-export const BUILD_DATE = '2025-01-27-cleaned';
+export const BUILD_DATE = '2025-01-27-dynamic';
 export const BUILD_INFO = {
   version: APP_VERSION,
   buildDate: BUILD_DATE,
-  description: 'Sistema Gestione Ore - Versione Pulita'
+  description: 'Sistema Gestione Ore - Gestione Dinamica'
 };
 
 // Funzione per ottenere la versione corrente

@@ -22,33 +22,59 @@ async function fetchDataArray(varName) {
 }
 
 export const TimeEntryService = {
-  activityTypes: {
-    appartamenti: { name: "Appartamenti", color: "#B71C6B" },
-    uffici:       { name: "Uffici",       color: "#006669" },
-    bnb:          { name: "BnB",          color: "#B38F00" },
-    pst:          { name: "PST",          color: "#283593" }
+  activityTypes: {},
+  
+  /**
+   * Carica le categorie dinamicamente da Firestore
+   */
+  async loadCategories() {
+    try {
+      const ref = doc(db, 'Data', 'categories');
+      const snap = await getDoc(ref);
+      if (snap.exists()) {
+        const categories = snap.data().categories || [];
+        this.activityTypes = {};
+        
+        // Colori predefiniti per le categorie
+        const colors = ["#B71C6B", "#006669", "#B38F00", "#283593", "#8B5CF6", "#10B981", "#F59E0B", "#EF4444"];
+        
+        categories.forEach((category, index) => {
+          const categoryId = category.name.toLowerCase().replace(/\s+/g, '_');
+          this.activityTypes[categoryId] = {
+            name: category.name,
+            color: colors[index % colors.length],
+            activities: category.activities || []
+          };
+        });
+        
+        // Aggiungi sempre PST come categoria fissa
+        this.activityTypes.pst = {
+          name: "PST",
+          color: "#283593",
+          activities: []
+        };
+      }
+    } catch (e) {
+      console.error('❌ loadCategories error:', e);
+    }
   },
 
   /**
    * Restituisce le attività disponibili per un tipo
    */
   async getActivitiesForType(type) {
-    const map = { appartamenti: 'appartamenti', uffici: 'uffici', bnb: 'bnb' };
-    const varName = map[type];
-    if (!varName) return [];
+    // Assicurati che le categorie siano caricate
+    if (Object.keys(this.activityTypes).length === 0) {
+      await this.loadCategories();
+    }
     
-    const arr = await fetchDataArray(varName);
-    return arr.map(item => {
-      if (typeof item === 'string') {
-        const [name, minutes] = item.split('|');
-        return { name: name.trim(), minutes: parseInt(minutes, 10) || 0 };
-      } else if (item && typeof item === 'object') {
-        const name = item.name ?? item.nome ?? '';
-        const minutes = item.minutes ?? item.minuti ?? 0;
-        return { name: String(name), minutes: Number(minutes) };
-      }
-      return null;
-    }).filter(x => x && x.name);
+    const categoryData = this.activityTypes[type];
+    if (!categoryData || !categoryData.activities) return [];
+    
+    return categoryData.activities.map(activity => ({
+      name: activity.name,
+      minutes: activity.minutes || 0
+    }));
   },
 
   /**

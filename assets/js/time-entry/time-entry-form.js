@@ -116,7 +116,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initializeDatePicker();
 
   // Configura i pulsanti di aggiunta attività (Uffici, Appartamenti, BnB, PST)
-  setupActivityButtons();
+  await setupActivityButtons();
 
   // Event listeners globali
   logoutBtn.addEventListener('click', () => AuthService.logout());
@@ -138,26 +138,36 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  function setupActivityButtons() {
-    const buttons = [
-      { id: 'addUfficiBtn', text: 'Uffici', type: 'uffici', color: TimeEntryService.activityTypes.uffici.color, icon: 'fas fa-building' },
-      { id: 'addAppartamentiBtn', text: 'Appartamenti', type: 'appartamenti', color: TimeEntryService.activityTypes.appartamenti.color, icon: 'fas fa-home' },
-      { id: 'addBnBBtn', text: 'BnB', type: 'bnb', color: TimeEntryService.activityTypes.bnb.color, icon: 'fas fa-bed' },
-      { id: 'addPstBtn', text: 'PST', type: 'pst', color: TimeEntryService.activityTypes.pst.color, icon: 'fas fa-tools' }
-    ];
+  async function setupActivityButtons() {
+    // Carica le categorie dinamicamente
+    await TimeEntryService.loadCategories();
+    
+    const icons = {
+      'uffici': 'fas fa-building',
+      'appartamenti': 'fas fa-home',
+      'bnb': 'fas fa-bed',
+      'pst': 'fas fa-tools'
+    };
+    
+    // Icone di fallback per categorie personalizzate
+    const fallbackIcons = ['fas fa-briefcase', 'fas fa-cog', 'fas fa-wrench', 'fas fa-clipboard-list'];
+    let iconIndex = 0;
 
-    buttons.forEach(button => {
+    Object.entries(TimeEntryService.activityTypes).forEach(([typeId, typeData]) => {
+      const icon = icons[typeId] || fallbackIcons[iconIndex % fallbackIcons.length];
+      iconIndex++;
+      
       const btnHtml = `
         <div class="col-6 col-lg-3 mb-2">
-          <button type="button" class="btn w-100 btn-activity" id="${button.id}"
-            style="background-color: ${button.color}; color: white; min-height: 60px;">
-            <i class="${button.icon} d-block mb-1" style="font-size: 1.3.0rem;"></i>
-            <span class="small">${button.text}</span>
+          <button type="button" class="btn w-100 btn-activity" id="add${typeId}Btn"
+            style="background-color: ${typeData.color}; color: white; min-height: 60px;">
+            <i class="${icon} d-block mb-1" style="font-size: 1.3rem;"></i>
+            <span class="small">${typeData.name}</span>
           </button>
         </div>
       `;
       activityButtons.insertAdjacentHTML('beforeend', btnHtml);
-      document.getElementById(button.id).addEventListener('click', () => addActivity(button.type));
+      document.getElementById(`add${typeId}Btn`).addEventListener('click', () => addActivity(typeId));
     });
   }
 
@@ -250,13 +260,19 @@ document.addEventListener('DOMContentLoaded', () => {
       .map(a => `<option value="${a.name}" data-minutes="${a.minutes}">${a.name}</option>`)
       .join('');
     
+    const typeData = TimeEntryService.activityTypes[type];
     const typeIcons = {
-      uffici: 'fas fa-building',
-      appartamenti: 'fas fa-home',
-      bnb: 'fas fa-bed'
+      'uffici': 'fas fa-building',
+      'appartamenti': 'fas fa-home',
+      'bnb': 'fas fa-bed',
+      'pst': 'fas fa-tools'
     };
     
-    const multiplierHtml = type === 'bnb'
+    const fallbackIcons = ['fas fa-briefcase', 'fas fa-cog', 'fas fa-wrench', 'fas fa-clipboard-list'];
+    const icon = typeIcons[type] || fallbackIcons[Math.floor(Math.random() * fallbackIcons.length)];
+    
+    // Il moltiplicatore è disponibile solo per BnB (mantenendo la logica originale)
+    const multiplierHtml = type === 'bnb' || (typeData && typeData.name.toLowerCase().includes('bnb'))
       ? `<div class="col-6 mb-3">
          <label class="form-label small fw-bold">
            <i class="fas fa-times me-1"></i>Moltiplicatore
@@ -272,7 +288,7 @@ document.addEventListener('DOMContentLoaded', () => {
       <div class="card bg-dark border-2" style="border-color: ${color} !important;">
         <div class="card-header text-white d-flex justify-content-between align-items-center" style="background-color: ${color};">
           <h6 class="mb-0">
-            <i class="${typeIcons[type]} me-2"></i>${type.charAt(0).toUpperCase() + type.slice(1)}
+            <i class="${icon} me-2"></i>${typeData ? typeData.name : type.charAt(0).toUpperCase() + type.slice(1)}
           </h6>
           <button type="button" class="btn btn-sm btn-outline-light"
                   onclick="this.closest('.activity-group').remove()">
