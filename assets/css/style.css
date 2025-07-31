@@ -1,4 +1,5 @@
-/* style.css v=1.0.0 */
+/* style.css - Sistema Gestione Ore */
+
 /* ===== VARIABILI CSS ===== */
 :root {
     /* Colori principali */
@@ -33,32 +34,28 @@
 }
 
 .activity-group {
-  position: relative;                             /* per il posizionamento assoluto del delete-btn */
-  margin-bottom: 1rem;                            /* spazio tra le schede */
-  border-left: 4px solid var(--bs-border-start-color); /* bordo colorato a sinistra */
-  box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .075); /* ombra leggera */
-  border-radius: .25rem;                          /* angoli arrotondati */
-  overflow: hidden;                               /* clippo eventuali overflow */
+  position: relative;
+  margin-bottom: 1rem;
+  border-left: 4px solid var(--bs-border-start-color);
+  box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .075);
+  border-radius: .25rem;
+  overflow: hidden;
 }
 
-/* Padding uniforme per il contenuto */
 .activity-group .card-body {
   padding: 1rem;
 }
 
-/* Pulsante "Rimuovi" in basso a destra */
 .activity-group .delete-btn {
   bottom: 0.75rem;
   right: 0.75rem;
 }
 
-/* Assicura che tutti i campi occupino l'intera larghezza */
 .activity-group .form-control,
 .activity-group .form-select {
   width: 100%;
 }
 
-/* Se stai usando una row interna, forzala in colonna */
 .activity-group .row {
   display: flex !important;
   flex-direction: column !important;
@@ -76,7 +73,6 @@ body {
     min-height: 100vh;
     overflow-x: auto !important;
 }
-
 
 /* ===== NAVBAR ===== */
 .navbar {
@@ -327,21 +323,6 @@ body {
   background-color: #f59e0b;
 }
 
-.irene {
-    background-color: #960505;
-}
-.molino {
-    background-color: #7e0596;
-}
-
-.cerrano {
-    background-color: #052c96;
-}
-
-.lorenza {
-    background-color: #059669;
-}
-
 /* ===== TABLES ===== */
 .table {
     color: var(--gray-100);
@@ -568,7 +549,6 @@ body {
         align-items: center;
     }
 
-  /* Ottimizzazioni specifiche per touch */
   .btn-activity {
     min-height: 60px !important;
     font-size: 0.9rem;
@@ -780,70 +760,6 @@ body {
 @keyframes spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
-}
-
-/* ===== VALUTAZIONE PRODOTTI STYLES ===== */
-.product-image {
-  cursor: pointer;
-  transition: transform 0.2s ease;
-}
-
-.product-image:hover {
-  transform: scale(1.05);
-}
-
-.toast-notification {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  padding: 1rem 1.5rem;
-  border-radius: 8px;
-  color: white;
-  font-weight: 500;
-  z-index: 10000;
-  max-width: 300px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-}
-
-.toast-error {
-  background: linear-gradient(45deg, #ef4444, #dc2626);
-}
-
-.toast-success {
-  background: linear-gradient(45deg, #10b981, #059669);
-}
-
-/* Rating dots hover effects */
-.rating-dot:hover {
-  transform: scale(1.2);
-  border-color: #0d6efd !important;
-}
-
-.rating-dot.active:hover {
-  background-color: #0b5ed7 !important;
-}
-
-/* Offcanvas backdrop fix */
-.offcanvas-backdrop {
-  transition: opacity 0.15s linear;
-}
-
-.offcanvas-backdrop.fade {
-  opacity: 0;
-}
-
-.offcanvas-backdrop.show {
-  opacity: 0.5;
-}
-
-@keyframes slideInRight {
-  from { transform: translateX(100%); opacity: 0; }
-  to { transform: translateX(0); opacity: 1; }
-}
-
-@keyframes slideOutRight {
-  from { transform: translateX(0); opacity: 1; }
-  to { transform: translateX(100%); opacity: 0; }
 }
 
 /* ===== COLLAPSE ANIMATIONS ===== */

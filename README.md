@@ -1,7 +1,7 @@
 # Sistema Gestione Ore Semplificato
 
-**Versione:** 2.0.0  
-**Build:** 2025-01-27
+**Versione:** 2.0.1  
+**Build:** 2025-01-27-cleaned
 
 ## Panoramica
 
@@ -20,14 +20,12 @@ Sistema semplificato per la gestione delle ore lavorative dei dipendenti con fun
 
 ## Sistema di Versioning
 
-Questo progetto implementa un sistema di versioning automatico per garantire il corretto caricamento delle risorse.
+Sistema di versioning automatico con cache-busting per garantire aggiornamenti corretti.
 
 ### Struttura Versioning
 
-- **Versione App:** 2.0.0 (formato semver) 
-- **Versione CSS:** v=2.0.0
-- **Versione JavaScript:** v=2.0.0
-- **Build Date:** 2025-01-27
+- **Versione App:** 2.0.1 (formato semver) 
+- **Build Date:** 2025-01-27-cleaned
 
 ### File di Configurazione
 
@@ -38,7 +36,7 @@ Questo progetto implementa un sistema di versioning automatico per garantire il 
 
 1. Modifica `assets/js/common/version.js`:
 ```javascript
-export const APP_VERSION = '2.1.0';
+export const APP_VERSION = '2.0.2';
 ```
 
 2. Il sistema automaticamente:
@@ -59,7 +57,9 @@ export const APP_VERSION = '2.1.0';
 │       │   ├── loader.js
 │       │   ├── firebase-config.js
 │       │   ├── firestore-service.js
-│       │   └── time-utilis.js
+│       │   ├── time-utilis.js
+│       │   ├── utils.js
+│       │   └── export-excel.js
 │       ├── auth/
 │       │   └── auth.js
 │       ├── admin/
@@ -81,15 +81,15 @@ export const APP_VERSION = '2.1.0';
 ## Funzionalità Principali
 
 ### Gestione Ore Dipendenti
-- Registrazione attività con tipologie (Uffici, Appartamenti, BnB, PST)
+- Registrazione attività con tipologie predefinite
 - Calcolo automatico ore decimali con moltiplicatori e divisione per persone
-- Gestione giorni speciali (riposo, ferie, malattia)
+- Gestione status giornalieri (normale, riposo, ferie, malattia)
 - Riepilogo mensile con totali e dettagli giornalieri
 
 ### Pannello Amministrativo
 - Visualizzazione ore di tutti i dipendenti
-- Export Excel con dati mensili
-- Gestione configurazioni sistema
+- Export Excel con dati mensili in formato decimale
+- Gestione dati di configurazione
 - Registro completo attività con filtri avanzati
 
 ### Sistema di Autenticazione
@@ -130,18 +130,19 @@ Data/
 
 ## Calcolo Ore
 
-Il sistema utilizza la formula:
+Il sistema calcola le ore utilizzando:
 ```
-Ore Decimali = (Minuti × Moltiplicatore) ÷ Persone ÷ 60
+Minuti Effettivi = (Minuti × Moltiplicatore) ÷ Persone
+Ore Decimali = Minuti Effettivi ÷ 60
 ```
 
-Tutti i calcoli mantengono precisione a 2 decimali e utilizzano formattazione italiana.
+Tutti i calcoli mantengono precisione a 2 decimali con formattazione italiana.
 
 ## Tecnologie Utilizzate
 
 - **Frontend**: HTML5, CSS3, JavaScript ES6+, Bootstrap 5
 - **Database**: Google Firestore
-- **Autenticazione**: Sistema custom con Firestore
+- **Autenticazione**: Sistema personalizzato
 - **Export**: ExcelJS per generazione file Excel
 - **Versioning**: Sistema automatico di cache-busting
 
@@ -154,7 +155,12 @@ Tutti i calcoli mantengono precisione a 2 decimali e utilizzano formattazione it
 
 ## Manutenzione
 
-Per aggiornare il sistema:
+### Aggiornamento Sistema
 1. Modificare i file necessari
 2. Incrementare la versione in `version.js`
 3. Il sistema gestirà automaticamente il cache-busting
+### Pulizia Codice
+- Rimossi file duplicati e non utilizzati
+- Standardizzati stili di codifica
+- Ottimizzate importazioni e dipendenze
+- Consolidate funzioni comuni

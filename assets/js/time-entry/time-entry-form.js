@@ -5,7 +5,6 @@ import { TimeEntryService } from './time-entry-core.js';
 import { FirestoreService } from '../common/firestore-service.js';
 import {
   calculateTotalMinutes,
-  formatHoursMinutes,
   formatDecimalHours
 } from '../common/time-utilis.js';
 
@@ -110,9 +109,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const messageEl = document.getElementById('message');
   const recentActivities = document.getElementById('recentActivities');
 
-  // Conserva i dati già esistenti per il giorno selezionato
-  let currentDayData = null;
-
   // Mostra il nome utente
   userDisplay.textContent = username;
 
@@ -126,7 +122,6 @@ document.addEventListener('DOMContentLoaded', () => {
   logoutBtn.addEventListener('click', () => AuthService.logout());
   timeEntryForm.addEventListener('submit', handleFormSubmit);
   restDayCheckbox.addEventListener('change', toggleActivityFields);
-  // Al cambiamento del radio button (normal/vacation/sick), aggiorna visibilità campi attività
   document.querySelectorAll('input[name="dayStatus"]').forEach(radio => {
     radio.addEventListener('change', toggleActivityFields);
   });
@@ -136,11 +131,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function initializeDatePicker() {
     const today = new Date();
-    // Set the input value to ISO format YYYY-MM-DD
     dateInput.value = formatISO(today);
-    // Load activities for today
     loadActivitiesForDate(dateInput.value);
-    // On change, load activities for selected date
     dateInput.addEventListener('change', (e) => {
       loadActivitiesForDate(e.target.value);
     });
@@ -174,7 +166,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const dayStatus = document.querySelector('input[name="dayStatus"]:checked')?.value; // 'normal', 'vacation', 'sick'
     const disableActivities = isRestDay || dayStatus === 'vacation' || dayStatus === 'sick';
 
-    // Se è giorno di riposo, nasconde anche le opzioni ferie/malattia
     statusOptions.style.display = isRestDay ? 'none' : 'block';
     activitiesContainer.style.display = disableActivities ? 'none' : 'block';
     activityButtons.style.display = disableActivities ? 'none' : 'flex';
@@ -191,7 +182,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     activitiesContainer.insertAdjacentHTML('beforeend', html);
     
-    // Aggiungi event listener per il cambio persone se non è PST
+    // Event listener per conferma cambio persone
     if (type !== 'pst') {
       const peopleSelect = document.querySelector(`[name="people${idx}"]`);
       if (peopleSelect) {
@@ -332,158 +323,166 @@ document.addEventListener('DOMContentLoaded', () => {
     input.value = mins || '';
   };
 
-async function handleFormSubmit(e) {
-  e.preventDefault();
-  const restDayCheckbox = document.getElementById('restDay');
-  const dateInputEl     = document.getElementById('date');
-  const date            = dateInputEl.value;
-  const user            = sessionStorage.getItem('loggedUser') || '';
-  const cd              = window.currentDayData || {};
+  async function handleFormSubmit(e) {
+    e.preventDefault();
+    
+    const isRestDay = restDayCheckbox.checked;
+    const date = dateInput.value;
+    const dayStatus = document.querySelector('input[name="dayStatus"]:checked')?.value;
+    
+    let status = {
+      riposo: isRestDay,
+      ferie: dayStatus === 'vacation',
+      malattia: dayStatus === 'sick'
+    };
 
-  // blocco se riposo/ferie/malattia
-  if (cd.riposo || cd.ferie || cd.malattia) {
-    const stato = cd.riposo ? 'riposo' : cd.ferie ? 'ferie' : 'malattia';
-    showMessage(`Giorno già segnato come ${stato}.`, 'alert-warning');
-    return;
-  }
+    const activities = [];
 
-  // solo oggi o ieri
-  const todayStr = formatISO(new Date());
-  const y = new Date(); y.setDate(y.getDate() - 1);
-  const yesterdayStr = formatISO(y);
-  if (date !== todayStr && date !== yesterdayStr) {
-    showMessage('Solo oggi o ieri.', 'alert-warning');
-    return;
-  }
+    // Se non è riposo/ferie/malattia, raccogli le attività
+    if (!isRestDay && dayStatus === 'normal') {
+      const activityGroups = document.querySelectorAll('.activity-group');
+      
+      if (activityGroups.length === 0) {
+        showMessage('Aggiungi almeno un\'attività', 'alert-danger');
+        return;
+      }
 
-  const acts   = collectActivitiesFromForm();
-  const status = { riposo: restDayCheckbox.checked, ferie: false, malattia: false };
+      activityGroups.forEach(group => {
+        const idx = group.dataset.index;
+        const type = group.dataset.type;
+        
+        const nameEl = document.querySelector(`[name="activityName${idx}"]`);
+        const minEl = document.querySelector(`[name="minutes${idx}"]`);
+        const pplEl = document.querySelector(`[name="people${idx}"]`);
+        const mulEl = document.querySelector(`[name="multiplier${idx}"]`);
+        
+        if (nameEl?.value && minEl?.value) {
+          activities.push({
+            type: type,
+            name: nameEl.value,
+            minutes: minEl.value,
+            people: pplEl?.value || 1,
+            multiplier: mulEl?.value || 1
+          });
+        }
+      });
 
-  try {
-    console.log(`🚀 submit per ${user}@${date}`, acts, status);
-    const res = await TimeEntryService.saveTimeEntry(user, date, acts, status);
-    if (res.success) {
-      console.log('✅ saveTimeEntry success');
-      showMessage('Salvato!', 'alert-success');
-      loadActivitiesForDate(date);
-      resetForm();
-    } else {
-      console.error('❌ saveTimeEntry failed', res.error);
-      showMessage('Errore.', 'alert-danger');
+      if (activities.length === 0) {
+        showMessage('Compila correttamente almeno un\'attività', 'alert-danger');
+        return;
+      }
     }
-  } catch (err) {
-    console.error('❌ handleFormSubmit exception', err);
-    showMessage('Errore.', 'alert-danger');
+
+    try {
+      showProgress('Salvataggio in corso...');
+      const result = await TimeEntryService.saveTimeEntry(username, date, activities, status);
+      
+      if (result.success) {
+        showMessage('Registrazione completata con successo!', 'alert-success');
+        resetForm();
+        loadActivitiesForDate(date);
+        // Emetti evento per aggiornare altre sezioni
+        window.dispatchEvent(new Event('timeEntrySaved'));
+      } else {
+        showMessage('Errore durante il salvataggio', 'alert-danger');
+      }
+    } catch (error) {
+      console.error('❌ handleFormSubmit error:', error);
+      showMessage('Errore durante il salvataggio', 'alert-danger');
+    } finally {
+      hideProgress();
+    }
   }
-}
 
   async function loadActivitiesForDate(date) {
     try {
-      showProgress('Caricamento attività...');
       const result = await FirestoreService.getEmployeeDay(username, date);
       if (result.success) {
-        currentDayData = result.data || null;
-        displayActivities(currentDayData);
+        displayActivities(result.data);
       } else {
         showMessage('Errore durante il caricamento delle attività', 'alert-danger');
       }
     } catch (error) {
       console.error('Error:', error);
       showMessage('Errore durante il caricamento delle attività', 'alert-danger');
-    } finally {
-      hideProgress();
     }
   }
 
-function displayActivities(data) {
-  const recentActivities = document.getElementById('recentActivities');
-  if (!recentActivities) return;
+  function displayActivities(data) {
+    if (!data) {
+      recentActivities.innerHTML = '<p class="text-muted">Nessuna attività registrata per questa data.</p>';
+      return;
+    }
 
-  // Caso: nessun dato
-  if (!data) {
-    recentActivities.innerHTML = '<p class="text-muted">Nessuna attività registrata per questa data.</p>';
-    return;
-  }
+    let html = '';
 
-  let html = '';
+    // Status alerts
+    if (data.riposo) {
+      html += '<div class="alert alert-warning"><i class="fas fa-bed me-2"></i>Giorno di riposo</div>';
+    } else if (data.ferie) {
+      html += '<div class="alert alert-info"><i class="fas fa-umbrella-beach me-2"></i>Giorno di ferie</div>';
+    } else if (data.malattia) {
+      html += '<div class="alert alert-danger"><i class="fas fa-thermometer me-2"></i>Giorno di malattia</div>';
+    }
 
-  // Alert per riposo, ferie o malattia
-  if (data.riposo) {
-    html += '<div class="alert alert-warning"><i class="fas fa-bed me-2"></i>Giorno di riposo</div>';
-  } else if (data.ferie) {
-    html += '<div class="alert alert-info"><i class="fas fa-umbrella-beach me-2"></i>Giorno di ferie</div>';
-  } else if (data.malattia) {
-    html += '<div class="alert alert-danger"><i class="fas fa-thermometer me-2"></i>Giorno di malattia</div>';
-  }
+    // Activities table
+    if (data.attività && data.attività.length > 0) {
+      html += '<div class="table-responsive"><table class="table table-striped table-sm">';
+      html += '<thead><tr><th class="small">Attività</th><th class="small">Min</th><th class="small">Pers</th><th class="small">Molt</th><th class="small">Min Eff</th></tr></thead><tbody>';
 
-  // Tabella attività + calcolo totale
-  if (data.attività && data.attività.length > 0) {
-    // 1) costruisco la tabella con arrotondamento per riga
-    html += '<div class="table-responsive"><table class="table table-striped table-sm">';
-    html += '<thead><tr>'
-         + '<th class="small">Attività</th><th class="small">Min</th><th class="small">Pers</th>'
-         + '<th class="small">Molt</th><th class="small">Min Eff</th>'
-         + '</tr></thead><tbody>';
+      data.attività.forEach(activity => {
+        const minutes = parseInt(activity.minuti, 10) || 0;
+        const people = parseInt(activity.persone, 10) || 1;
+        const multiplier = parseInt(activity.moltiplicatore, 10) || 1;
+        const effectiveMinutes = Math.round((minutes * multiplier) / people);
 
-    data.attività.forEach(activity => {
-      const minutes    = parseInt(activity.minuti,       10) || 0;
-      const people     = parseInt(activity.persone,      10) || 1;
-      const multiplier = parseInt(activity.moltiplicatore,10) || 1;
+        html += `
+          <tr>
+            <td class="small">${activity.nome}</td>
+            <td class="small">${minutes}</td>
+            <td class="small">${people}</td>
+            <td class="small">${multiplier}</td>
+            <td class="small fw-bold">${effectiveMinutes}</td>
+          </tr>
+        `;
+      });
 
-      // calcolo e arrotondamento per cella
-      const effectiveFloat  = (minutes * multiplier) / people;
-      const effectiveRounded = Math.round(effectiveFloat);
+      html += '</tbody></table></div>';
+
+      // Total calculation
+      const flatActivities = data.attività.map(a => ({
+        minutes: parseInt(a.minuti, 10) || 0,
+        multiplier: parseInt(a.moltiplicatore, 10) || 1,
+        people: parseInt(a.persone, 10) || 1
+      }));
+      
+      const rawMinutes = calculateTotalMinutes(flatActivities);
+      const decHours = formatDecimalHours(rawMinutes, 2);
+      const formatted = decHours.toLocaleString('it-IT', { minimumFractionDigits: 2 });
 
       html += `
-        <tr>
-          <td class="small">${activity.nome}</td>
-          <td class="small">${minutes}</td>
-          <td class="small">${people}</td>
-          <td class="small">${multiplier}</td>
-          <td class="small fw-bold">${effectiveRounded}</td>
-        </tr>
+        <div class="alert alert-success mt-3">
+          <i class="fas fa-clock me-2"></i>Totale ore: <strong>${formatted}</strong>
+        </div>
       `;
-    });
+    } else if (!data.riposo && !data.ferie && !data.malattia) {
+      html += '<p class="text-muted">Nessuna attività registrata per questa data.</p>';
+    }
 
-    html += '</tbody></table></div>';
-
-    // 2) totale con time-utils (arrotonda una sola volta)
-    const flat = data.attività.map(a => ({
-      minutes:    parseInt(a.minuti,       10) || 0,
-      multiplier: parseInt(a.moltiplicatore,10) || 1,
-      people:     parseInt(a.persone,      10) || 1
-    }));
-    const rawMinutes = calculateTotalMinutes(flat);
-// ore decimali con 2 cifre e formato italiano
-const decHours = formatDecimalHours(rawMinutes, 2);
-const formatted = decHours.toLocaleString('it-IT', { minimumFractionDigits: 2 });
-
-    html += `
-      <div class="alert alert-success mt-3">
-        <i class="fas fa-clock me-2"></i>Totale ore: <strong>${formatted}</strong>
-      </div>
-    `;
-
-  } else if (!data.riposo && !data.ferie && !data.malattia) {
-    // Nessuna attività registrata
-    html += '<p class="text-muted">Nessuna attività registrata per questa data.</p>';
+    recentActivities.innerHTML = html;
   }
-
-  recentActivities.innerHTML = html;
-}
 
   function resetForm() {
     const activityGroups = document.querySelectorAll('.activity-group');
     activityGroups.forEach(group => group.remove());
+    
     restDayCheckbox.checked = false;
     document.getElementById('normalDay').checked = true;
     toggleActivityFields();
   }
 
   /**
-   * Mostra un messaggio di avviso/errore/successo per 3 secondi.
-   * @param {string} text  - Testo del messaggio
-   * @param {string} type  - Classi Bootstrap da applicare (es. 'alert-danger', 'alert-success')
+   * Mostra messaggio temporaneo
    */
   function showMessage(text, type) {
     messageEl.innerHTML = `<i class="fas fa-info-circle me-2"></i>${text}`;
@@ -492,6 +491,9 @@ const formatted = decHours.toLocaleString('it-IT', { minimumFractionDigits: 2 })
     setTimeout(() => messageEl.style.display = 'none', 4000);
   }
 
+  /**
+   * Mostra overlay di caricamento
+   */
   function showProgress(text) {
     let progressContainer = document.getElementById('progressContainer');
     if (!progressContainer) {
@@ -523,12 +525,22 @@ const formatted = decHours.toLocaleString('it-IT', { minimumFractionDigits: 2 })
   }
 
   /**
-   * Nasconde/rimuove l'overlay di caricamento.
+   * Nasconde overlay di caricamento
    */
   function hideProgress() {
     const progressContainer = document.getElementById('progressContainer');
     if (progressContainer) {
       progressContainer.remove();
     }
+  }
+
+  /**
+   * Formatta data in ISO
+   */
+  function formatISO(date) {
+    const d = String(date.getDate()).padStart(2, '0');
+    const m = String(date.getMonth() + 1).padStart(2, '0');
+    const y = date.getFullYear();
+    return `${y}-${m}-${d}`;
   }
 });

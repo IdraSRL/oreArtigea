@@ -1,7 +1,4 @@
-// utils.js v1.0
-
-// utils.js – funzioni comuni centralizzate
-
+// utils.js - Utility functions comuni
 
 export function formatISO(date) {
   const d = String(date.getDate()).padStart(2, '0');

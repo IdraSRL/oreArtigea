@@ -1,9 +1,5 @@
-// time-entry-summary.js
-
 import { AuthService } from "../auth/auth.js";
 import { FirestoreService } from "../common/firestore-service.js";
-import { AdminService } from "../admin/common/admin-service.js";
-// ATTENZIONE: percorso corretto "time-utils.js" e tolta la funzione mai utilizzata
 import {
   calculateTotalMinutes,
   formatDecimalHours
@@ -24,13 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // ============================================
-  // SEZIONE 1: LISTA AGGREGATA PER DATA
-  // (Attività recenti con filtro per data singola - RIMOSSA dalla tab Registrazione)
-  // ============================================
-
-  // ============================================
-  // SEZIONE 2: RIEPILOGO MENSILE
-  // (Totali, status e tabella giorno per giorno)
+  // RIEPILOGO MENSILE
   // ============================================
   const summaryContainer = document.getElementById('summaryContainer');
   const monthSelect      = document.getElementById('monthSelect');
@@ -101,12 +91,10 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Totali tramite AdminService.calculateTotalHours
-    const totals = AdminService.calculateTotalHours(monthData);
-// Ore decimali con 2 cifre e formattazione italiana
-const decHours       = totals.decimalHours;
-const formattedHours = decHours.toLocaleString('it-IT', {
-  minimumFractionDigits: 2
-});
+    const totals = calculateTotalHours(monthData);
+    const formattedHours = totals.decimalHours.toLocaleString('it-IT', {
+      minimumFractionDigits: 2
+    });
 
 
     // Inizializza HTML dei totali
@@ -187,9 +175,8 @@ for (let day = 1; day <= daysInMonth; day++) {
       people:     parseInt(a.persone,      10) || 1
     }));
     const rawMinutes = calculateTotalMinutes(flatActivities);
-// ore decimali con 2 cifre e formato italiano
-const decHours = formatDecimalHours(rawMinutes, 2);
-ore = decHours.toLocaleString('it-IT', { minimumFractionDigits: 2 });
+    const decHours = formatDecimalHours(rawMinutes, 2);
+    ore = decHours.toLocaleString('it-IT', { minimumFractionDigits: 2 });
 
   }
 
@@ -217,7 +204,7 @@ ore = decHours.toLocaleString('it-IT', { minimumFractionDigits: 2 });
   }
 
   // ============================================
-  // SEZIONE 3: TABELLA COMPLETA ATTIVITÀ MENSILI (FULL LOG)
+  // TABELLA COMPLETA ATTIVITÀ MENSILI
   // ============================================
   const fullActivityTableBody = document.getElementById('fullActivityTableBody');
   const activityLogDateFilter = document.getElementById('activityLogDateFilter');
@@ -294,24 +281,47 @@ ore = decHours.toLocaleString('it-IT', { minimumFractionDigits: 2 });
   };
 
   // ============================================
-  // EVENTO PERSONALIZZATO “timeEntrySaved”
+  // GESTIONE EVENTI
   // ============================================
-  // Quando viene salvata una voce in time-entry-form.js, emettiamo questo evento:
-  // window.dispatchEvent(new Event('timeEntrySaved'));
   window.addEventListener('timeEntrySaved', () => {
-    // 1) Ricarico il riepilogo mensile (se la sezione è presente)
     if (monthSelect && summaryContainer) {
       loadMonthlyData();
     }
-    // 2) Ricarico la tabella completa (se presente)
     if (fullActivityTableBody) {
       loadFullActivityLog();
     }
   });
 
   // ============================================
-  // UTILITY COMUNI: MESSAGGI E PROGRESS
+  // UTILITY FUNCTIONS
   // ============================================
+  function calculateTotalHours(daysData) {
+    let rawTotalMinutes = 0;
+    let sickDays = 0;
+    let vacationDays = 0;
+    let restDays = 0;
+
+    Object.values(daysData).forEach(day => {
+      if (day.malattia) {
+        sickDays++;
+      } else if (day.ferie) {
+        vacationDays++;
+      } else if (day.riposo) {
+        restDays++;
+      } else if (Array.isArray(day.attività) && day.attività.length) {
+        const flat = day.attività.map(a => ({
+          minutes: parseInt(a.minuti, 10) || 0,
+          multiplier: parseInt(a.moltiplicatore, 10) || 1,
+          people: parseInt(a.persone, 10) || 1
+        }));
+        rawTotalMinutes += calculateTotalMinutes(flat);
+      }
+    });
+
+    const decimalHours = formatDecimalHours(rawTotalMinutes, 2);
+    return { decimalHours, sickDays, vacationDays, restDays };
+  }
+
   function showProgress(text) {
     let progressContainer = document.getElementById('progressContainer');
     if (!progressContainer) {
@@ -338,7 +348,7 @@ ore = decHours.toLocaleString('it-IT', { minimumFractionDigits: 2 });
   }
 
   /**
-   * Converte oggetto Date in ISO locale 'YYYY-MM-DD'
+   * Formatta data in ISO
    */
   function formatISO(date) {
     const d   = String(date.getDate()).padStart(2, '0');
