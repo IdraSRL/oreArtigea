@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+  <!-- Sistema di Cache-Busting -->
+<script type="module" src="../assets/js/common/loader.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pannello Admin – Bigliettini BnB</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Flatpickr CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" />
+
+  <!-- Stili base -->
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <link rel="stylesheet" href="../assets/css/style_gradimento.css" />
+  <link rel="stylesheet" href="../assets/css/style_bnb.css" />
+
+  <!-- Override scroll orizzontale nei modal -->
+  <style>
+    .modal-dialog {
+      max-width: 90vw;
+      margin: 1.5rem auto;
+    }
+
+    .modal-content,
+    .modal-body {
+      overflow-x: auto;
+    }
+
+    .modal-body .table-responsive table {
+      width: max-content;
+      min-width: 100%;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#">Pannello Admin</a>
+      <div class="d-flex">
+        <span class="navbar-text me-2 version-display">Caricamento...</span>
+        <span class="navbar-text me-3" id="userDisplay">Admin</span>
+        <button class="btn btn-outline-light btn-sm" id="logoutBtn">Logout</button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container mt-4">
+    <!-- TABS Amministrazione -->
+    <ul class="nav nav-tabs mb-4" id="adminTabs" role="tablist">
+      <li class="nav-item" role="presentation">
+        <button class="nav-link active" id="ore-tab" data-bs-toggle="tab" data-bs-target="#orePane" type="button"
+          role="tab" aria-controls="orePane" aria-selected="true">Riepilogo Ore</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="bnb-tab" data-bs-toggle="tab" data-bs-target="#bnbPane" type="button" role="tab"
+          aria-controls="bnbPane" aria-selected="false">Bigliettini BnB</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="gradimento-tab" data-bs-toggle="tab" data-bs-target="#gradimentoPane" type="button"
+          role="tab" aria-controls="gradimentoPane" aria-selected="false">Gradimento</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="calcolo-tab" data-bs-toggle="tab" data-bs-target="#calcoloPane" type="button"
+          role="tab" aria-controls="calcoloPane" aria-selected="false">Calcolo Biancheria</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="data-tab" data-bs-toggle="tab" data-bs-target="#dataPane" type="button" role="tab"
+          aria-controls="dataPane" aria-selected="false">
+          Gestione Data
+        </button>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="collegamenti-tab" data-bs-toggle="tab" href="#collegamenti" role="tab"
+          aria-controls="collegamenti" aria-selected="false">
+          Collegamenti
+        </a>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="valutazione-tab" data-bs-toggle="tab" data-bs-target="#valutazionePane" type="button"
+          role="tab" aria-controls="valutazionePane" aria-selected="false">Valutazione Prodotti</button>
+      </li>
+    </ul>
+
+
+    <div class="tab-content" id="adminTabsContent">
+      <!-- PANE RIEPILOGO ORE -->
+      <div class="tab-pane fade show active" id="orePane" role="tabpanel" aria-labelledby="ore-tab">
+        <div class="card mb-4 border-secondary">
+          <div class="card-body">
+            <h3 class="card-title mb-4">Riepilogo Ore Dipendenti</h3>
+            <div class="row mb-4">
+              <div class="col-md-5">
+                <label for="employeeSelect" class="form-label">Dipendente</label>
+                <select class="form-select" id="employeeSelect" style="width:100%">
+                </select>
+              </div>
+              <div class="col-md-5">
+                <label for="monthSelect" class="form-label">Mese</label>
+                <select class="form-select" id="monthSelect" style="width:100%"></select>
+              </div>
+              <div class="col-md-2 d-flex align-items-end">
+                <button class="btn btn-primary w-100" id="exportBtn">Esporta Excel</button>
+              </div>
+            </div>
+            <div id="summaryContainer" class="mt-4">
+              <p class="text-muted">Seleziona un dipendente e un mese per visualizzare i dati.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Modal Dettaglio Giornaliero -->
+        <div class="modal fade" id="dayDetailModal" tabindex="-1" aria-labelledby="dayDetailModalLabel"
+          aria-hidden="true">
+          <div class="modal-dialog modal-lg modal-dialog-scrollable">
+            <div class="modal-content bg-dark">
+              <div class="modal-header">
+                <h5 class="modal-title" id="dayDetailModalLabel">Dettaglio Giornaliero</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                  aria-label="Chiudi"></button>
+              </div>
+              <div class="modal-body">
+                <div id="dayDetail">
+                  <p class="text-muted">Seleziona un giorno dalla tabella per visualizzare i dettagli.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PANE BIGLIETTINI BnB -->
+      <div class="tab-pane fade" id="bnbPane" role="tabpanel" aria-labelledby="bnb-tab">
+        <div class="card mb-4 border-secondary">
+          <div class="card-body">
+            <h3 class="card-title mb-4">Elenco Bigliettini BnB</h3>
+            <div class="row mb-3">
+              <div class="col-sm-6">
+                <label for="bnbFilterDate" class="form-label">Seleziona Data</label>
+                <input type="date" id="bnbFilterDate" class="form-control" required />
+              </div>
+              <div class="col-sm-6 d-flex align-items-end">
+                <button id="bnbFilterBtn" class="btn btn-primary" type="button">
+                  <i class="fas fa-search me-1"></i>Carica Bigliettini
+                </button>
+              </div>
+            </div>
+            <div id="bnbEntriesContainer" class="table-responsive">
+              <p class="text-muted">Seleziona una data per visualizzare i bigliettini.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+<!-- ==== PANE GRADIMENTO ==== -->
+<div class="tab-pane fade" id="gradimentoPane" role="tabpanel" aria-labelledby="gradimento-tab">
+  <!-- Toolbar Filtri & Azioni -->
+  <div class="gr-toolbar d-flex flex-wrap gap-3 mb-3">
+    <div class="gr-filter-group">
+      <label for="gr-month" class="form-label">Mese</label>
+      <select id="gr-month" class="form-select">
+        <option value="all">Tutti i mesi</option>
+      </select>
+    </div>
+    <div class="gr-filter-group">
+      <label for="gr-rating" class="form-label">Valutazione</label>
+      <select id="gr-rating" class="form-select">
+        <option value="all">Tutte</option>
+        <option value="high">Alta (8–10)</option>
+        <option value="medium">Media (5–7)</option>
+        <option value="low">Bassa (1–4)</option>
+      </select>
+    </div>
+    <div class="gr-filter-group">
+      <label for="gr-client" class="form-label">Cliente</label>
+      <select id="gr-client" class="form-select">
+        <option value="all">Tutti i clienti</option>
+      </select>
+    </div>
+    <div class="gr-filter-group flex-grow-1">
+      <label for="gr-email" class="form-label">Cerca</label>
+      <input id="gr-email" type="text" class="form-control" placeholder="Email o nome cliente">
+    </div>
+    <div class="gr-button-group d-flex gap-2 align-items-end">
+      <button id="gr-apply"  class="btn btn-primary">Applica</button>
+      <button id="gr-refresh"class="btn btn-secondary">Aggiorna</button>
+    </div>
+  </div>
+
+  <hr class="gr-divider">
+
+  <!-- Statistiche -->
+  <div class="gr-stats row text-center mb-4">
+    <div class="gr-stat col">
+      <span id="gr-total"   class="h2">0</span>
+      <div>Clienti Totali</div>
+    </div>
+    <div class="gr-stat col">
+      <span id="gr-avg"     class="h2">0.0</span>
+      <div>Valutazione Media</div>
+    </div>
+    <div class="gr-stat col">
+      <span id="gr-monthly" class="h2">0</span>
+      <div>Feedback Mese</div>
+    </div>
+    <div class="gr-stat col">
+      <span id="gr-comments"class="h2">0</span>
+      <div>Con Commenti</div>
+    </div>
+  </div>
+
+  <hr class="gr-divider">
+
+  <!-- Grafici -->
+  <div class="gr-charts row g-4 mb-4">
+    <div class="gr-chart-container col-md-6">
+      <h5>📊 Media per Domanda</h5>
+      <canvas id="gr-bar" class="w-100" height="200"></canvas>
+    </div>
+    <div class="gr-chart-container col-md-6">
+      <h5>📈 Andamento Mensile</h5>
+      <canvas id="gr-line" class="w-100" height="200"></canvas>
+    </div>
+  </div>
+
+  <!-- Grafici per Cliente -->
+  <div id="gr-client-charts"></div>
+  <hr class="gr-divider">
+
+  <!-- Tabella Feedback -->
+  <div class="gr-table-wrapper table-responsive">
+    <table class="table table-bordered">
+      <thead class="table-light">
+        <tr>
+          <th>Nome Cliente</th>
+          <th>Email</th>
+          <th>Pulizia</th>
+          <th>Prodotti</th>
+          <th>Comunicazione</th>
+          <th>Media</th>
+          <th>Data</th>
+          <th>Commenti</th>
+          <th>Azioni</th>
+        </tr>
+      </thead>
+      <tbody id="gr-body">
+        <tr>
+          <td colspan="9" class="text-center py-5">Caricamento...</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Modal Commento -->
+  <div class="modal fade" id="gr-modal" tabindex="-1" aria-labelledby="gr-modal-label" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="gr-modal-label">Commento Dettagliato</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <p id="gr-modal-text"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Dettagli Feedback -->
+  <div class="modal fade" id="gr-detail-modal" tabindex="-1" aria-labelledby="gr-detail-modal-label" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="gr-detail-modal-label">Dettagli Feedback</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <input type="hidden" id="gr-detail-id">
+          <div class="mb-3">
+            <label for="gr-detail-client-name" class="form-label">Nome Cliente</label>
+            <input type="text" id="gr-detail-client-name" class="form-control">
+          </div>
+          <div class="mb-3">
+            <label for="gr-detail-email" class="form-label">Email</label>
+            <input type="email" id="gr-detail-email" class="form-control">
+          </div>
+          <p><strong>Mese:</strong> <span id="gr-detail-month"></span></p>
+          <p><strong>Pulizia:</strong> <span id="gr-detail-q1"></span></p>
+          <p><strong>Prodotti:</strong> <span id="gr-detail-q2"></span></p>
+          <p><strong>Comunicazione:</strong> <span id="gr-detail-q3"></span></p>
+          <p><strong>Commento:</strong> <span id="gr-detail-comment"></span></p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Chiudi</button>
+          <button type="button" class="btn btn-primary" id="gr-detail-save">Salva</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    <!-- ==== PANE CALCOLO BIANCHERIA ==== -->
+    <div class="tab-pane fade" id="calcoloPane" role="tabpanel" aria-labelledby="calcolo-tab">
+      <div class="card border-secondary mb-4">
+        <div class="card-body">
+          <h3 class="card-title mb-4">Calcolo Preventivo Biancheria</h3>
+          <form id="calculatorForm" class="row g-3">
+            <div class="col-md-6">
+              <label for="lettiMatrimoniali" class="form-label">Letti Matrimoniali</label>
+              <input type="number" id="lettiMatrimoniali" class="form-control" min="0" />
+            </div>
+            <div class="col-md-6">
+              <label for="lettiSingoli" class="form-label">Letti Singoli</label>
+              <input type="number" id="lettiSingoli" class="form-control" min="0" />
+            </div>
+            <div class="col-md-6">
+              <label for="cucina" class="form-label">Cucine</label>
+              <input type="number" id="cucina" class="form-control" min="0" />
+            </div>
+            <div class="col-md-6">
+              <label for="bagno" class="form-label">Bagni</label>
+              <input type="number" id="bagno" class="form-control" min="0" />
+            </div>
+            <div class="col-md-6">
+              <label for="ore" class="form-label">Ore Necessarie</label>
+              <input type="number" id="ore" class="form-control" step="0.5" min="0" />
+            </div>
+          </form>
+
+          <hr class="my-4">
+
+          <h5>Risultato</h5>
+          <div class="d-flex justify-content-between mb-2">
+            <span>Prezzo Finale:</span>
+            <strong id="total_price">€ 0.00</strong>
+          </div>
+          <div id="hiddenResults" class="d-none">
+            <div class="d-flex justify-content-between mb-2">
+              <span>Costo Biancheria:</span><span id="biancheriaTOT">0</span>
+            </div>
+            <div class="d-flex justify-content-between mb-2">
+              <span>Costo Personale:</span><span id="przPersonale">0</span>
+            </div>
+            <div class="d-flex justify-content-between mb-2">
+              <span>Margine:</span><span id="margine">0</span>
+            </div>
+          </div>
+          <div class="text-center mt-3">
+            <button id="toggleVisibility" class="btn btn-outline-secondary btn-sm">Mostra Dettagli</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==== PANE GESTIONE DATA ==== -->
+    <div class="tab-pane fade" id="dataPane" role="tabpanel" aria-labelledby="data-tab">
+      <div class="container py-4">
+        <div class="d-flex mb-3">
+          <button id="add-group" class="btn btn-primary me-2">+ Nuovo Gruppo</button>
+        </div>
+        <!-- Nav tabs dinamiche -->
+        <ul class="nav nav-tabs" id="groupTabs" role="tablist"></ul>
+        <!-- Tab panes dinamiche -->
+        <div class="tab-content border p-3" id="groupTabContent"></div>
+      </div>
+    </div>
+
+    <!-- ==== PANE COLLEGAMENTI ==== -->
+
+    <div class="tab-pane fade" id="collegamenti" role="tabpanel" aria-labelledby="collegamenti-tab">
+      <div class="p-3">
+        <h5>Collegamenti rapidi</h5>
+        <div class="d-grid gap-2">
+          <a href="https://docs.google.com/spreadsheets/d/16ZgOZv5jgoHxMWNfbDvdbk5aSm6OV14Gmkak1Hi8hRA/edit?pli=1&gid=0#gid=0" target="_blank" class="btn btn-success">Foglio Lorenza</a>
+          <a href="https://docs.google.com/spreadsheets/d/1TfRgNy1wmKBLGciopQiU7d6I1A6jMjx3XI-SuYF10cA/edit?pli=1&gid=0#gid=0" target="_blank" class="btn btn-success">Foglio Appartamenti</a>
+          <a href="https://docs.google.com/spreadsheets/d/1znemHbbA-KMphOfyksohR07K6OXkksL0x6eXFiUD4UA/edit?gid=0#gid=0" target="_blank" class="btn btn-success">Foglio BnB</a>
+          <a href="        https://docs.google.com/spreadsheets/d/1D0cG1Z59MTR5-MA1701goQ44vKQJSveofg_rvzSieFQ/edit?gid=0#gid=0" target="_blank" class="btn btn-success">Foglio Casale Di David</a>
+          <a href="https://docs.google.com/spreadsheets/d/1shvFnqNWlFhaFOKiGQN4REKwFwwK4e9_18KeMIkpDlQ/edit?gid=1535185113#gid=1535185113" target="_blank" class="btn btn-success">Foglio Bigliettini</a>
+        </div>
+      </div>
+    </div>
+
+    
+  </div>
+
+  <!-- ==== PANE VALUTAZIONE PRODOTTI ==== -->
+  <div class="tab-pane fade" id="valutazionePane" role="tabpanel" aria-labelledby="valutazione-tab">
+    <div class="card border-secondary mb-4">
+      <div class="card-body">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+          <h3 class="card-title mb-0">📊 Dashboard Valutazioni Prodotti</h3>
+          <div class="d-flex gap-2">
+            <div class="btn-group" role="group">
+              <button id="viewDashboardBtn" class="btn btn-outline-primary btn-sm active btn-lista">
+                <i class="fas fa-chart-bar me-1"></i>Dashboard
+              </button>
+              <button id="viewProductsBtn" class="btn btn-outline-primary btn-sm btn-lista">
+                <i class="fas fa-list me-1"></i>Lista Prodotti
+              </button>
+            </div>
+            <button id="addProductBtn" class="btn btn-success btn-sm" data-bs-toggle="modal" data-bs-target="#addProductModal">
+              <i class="fas fa-plus me-1"></i>Aggiungi Prodotto
+            </button>
+            <button id="refreshProductsBtn" class="btn btn-outline-secondary btn-sm">
+              <i class="fas fa-sync-alt me-1"></i>Aggiorna
+            </button>
+          </div>
+        </div>
+        
+        <div id="loadingProductsMessage" class="text-center py-5">
+          <div class="spinner-border text-primary mb-3" role="status">
+            <span class="visually-hidden">Caricamento...</span>
+          </div>
+          <p class="text-muted">Caricamento dati valutazioni...</p>
+        </div>
+        
+        <div id="dashboardProductsContent" class="dashboard-content" style="display: none;">
+          <!-- Statistiche -->
+          <div class="row mb-4">
+            <div class="col-md-3 mb-3">
+              <div class="card bg-primary text-white h-100 border-0">
+                <div class="card-body text-center">
+                  <h5 class="card-title">
+                    <i class="fas fa-box mb-2 d-block"></i>Prodotti Valutati
+                  </h5>
+                  <p class="card-text display-6" id="totalProductsCount">0</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 mb-3">
+              <div class="card bg-info text-white h-100 border-0">
+                <div class="card-body text-center">
+                  <h5 class="card-title">
+                    <i class="fas fa-eye mb-2 d-block"></i>Prodotti Visibili
+                  </h5>
+                  <p class="card-text display-6" id="visibleProductsCount">0</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 mb-3">
+              <div class="card bg-success text-white h-100 border-0">
+                <div class="card-body text-center">
+                  <h5 class="card-title">
+                    <i class="fas fa-star mb-2 d-block"></i>Valutazioni Totali
+                  </h5>
+                  <p class="card-text display-6" id="totalRatingsCount">0</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 mb-3">
+              <div class="card bg-warning text-dark h-100 border-0">
+                <div class="card-body text-center">
+                  <h5 class="card-title">
+                    <i class="fas fa-chart-line mb-2 d-block"></i>Media Generale
+                  </h5>
+                  <p class="card-text display-6" id="overallAverageScore">0.0</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 mb-3">
+              <div class="card bg-info text-white h-100 border-0">
+                <div class="card-body text-center">
+                  <h5 class="card-title">
+                    <i class="fas fa-calendar mb-2 d-block"></i>Ultimo Aggiornamento
+                  </h5>
+                  <p class="card-text small" id="lastUpdateTime">-</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Container per i grafici dei prodotti -->
+          <div id="productsChartsContainer" class="row g-4">
+            <!-- I grafici verranno generati dinamicamente qui -->
+          </div>
+        </div>
+        
+        <!-- Lista Prodotti Content -->
+        <div id="productsListContent" class="products-list-content" style="display: none;">
+          <!-- La tabella dei prodotti verrà generata dinamicamente qui -->
+        </div>
+        
+        <div id="noProductsData" class="text-center py-5" style="display: none;">
+          <div class="mb-4">
+            <i class="fas fa-chart-bar fa-4x text-muted mb-3"></i>
+            <h4 class="text-muted">Nessun dato disponibile</h4>
+            <p class="text-muted">Non sono ancora state registrate valutazioni per i prodotti.</p>
+          </div>
+          <a href="../index.html" class="btn btn-primary">
+            <i class="fas fa-plus me-2"></i>Inizia a Valutare
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- Loading Overlay -->
+  <div id="loading-overlay" class="loading-overlay" style="display: none;">
+    <div class="loading-content">
+      <div class="spinner"></div>
+      <p>Caricamento dati...</p>
+    </div>
+  </div>
+
+  <!-- Modal Aggiunta Prodotto -->
+  <div class="modal fade" id="addProductModal" tabindex="-1" aria-labelledby="addProductModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content bg-dark text-light">
+        <div class="modal-header border-secondary">
+          <h5 class="modal-title" id="addProductModalLabel">
+            <i class="fas fa-plus me-2"></i>Aggiungi Nuovo Prodotto
+          </h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Chiudi"></button>
+        </div>
+        <div class="modal-body">
+          <form id="addProductForm" class="row g-3">
+            <div class="col-md-6">
+              <label for="productId" class="form-label">ID Prodotto</label>
+              <input type="text" class="form-control bg-secondary text-light border-0" 
+                     id="productId" name="productId" required 
+                     placeholder="es: detergente-multiuso">
+              <small class="text-muted">Usare solo lettere minuscole, numeri e trattini</small>
+            </div>
+            <div class="col-md-6">
+              <label for="productName" class="form-label">Nome Prodotto</label>
+              <input type="text" class="form-control bg-secondary text-light border-0" 
+                     id="productName" name="productName" required 
+                     placeholder="es: Detergente Multiuso">
+            </div>
+            <div class="col-12">
+              <label for="productDescription" class="form-label">Descrizione</label>
+              <textarea class="form-control bg-secondary text-light border-0" 
+                        id="productDescription" name="productDescription" rows="2" required
+                        placeholder="Breve descrizione del prodotto"></textarea>
+            </div>
+            <div class="col-12">
+              <label class="form-label">Immagine Prodotto</label>
+              <div class="row g-2">
+                <div class="col-md-8">
+                  <input type="file" class="form-control bg-secondary text-light border-0" 
+                         id="productImageFile" name="productImageFile" 
+                         accept="image/jpeg,image/jpg,image/png,image/gif,image/webp">
+                  <small class="text-muted">Carica una nuova immagine (JPG, PNG, GIF, WebP - max 5MB) - Opzionale se server non disponibile</small>
+                </div>
+                <div class="col-md-4">
+                  <input type="text" class="form-control bg-secondary text-light border-0" 
+                         id="productImage" name="productImage" 
+                         placeholder="nome-file.jpg">
+                  <small class="text-muted">Nome file esistente (obbligatorio se non carichi)</small>
+                </div>
+              </div>
+              <div id="imagePreview" class="mt-2" style="display: none;">
+                <img id="previewImg" src="" alt="Anteprima" style="max-width: 200px; max-height: 150px; border-radius: 8px;">
+              </div>
+            </div>
+            <div class="col-md-4">
+              <label for="productMarca" class="form-label">Marca</label>
+              <input type="text" class="form-control bg-secondary text-light border-0" 
+                     id="productMarca" name="productMarca" required 
+                     placeholder="es: Ariel">
+            </div>
+            <div class="col-md-4">
+              <label for="productTipo" class="form-label">Tipo</label>
+              <input type="text" class="form-control bg-secondary text-light border-0" 
+                     id="productTipo" name="productTipo" required 
+                     placeholder="es: Detergente">
+            </div>
+            <div class="col-12">
+              <label for="productTags" class="form-label">Tag</label>
+              <input type="text" class="form-control bg-secondary text-light border-0" 
+                     id="productTags" name="productTags" 
+                     placeholder="Scrivi un tag e premi Invio (es: sgrassatore, anticalcare...)">
+              <small class="text-muted">Premi Invio o virgola per aggiungere un tag</small>
+              <div id="selectedTags" class="mt-2">
+                <!-- I tag selezionati appariranno qui -->
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer border-secondary">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+            <i class="fas fa-times me-1"></i>Annulla
+          </button>
+          <button type="button" class="btn btn-success" id="saveProductBtn">
+            <i class="fas fa-save me-1"></i>Salva Prodotto
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Firebase + i tuoi script -->
+<!-- Firebase configs -->
+<script type="module" src="../assets/js/common/firebase-config_gradimento.js"></script>
+
+<!-- Auth & Firestore service -->
+<script type="module" src="../assets/js/auth/auth.js"></script>
+<script type="module" src="../assets/js/common/firestore-service.js"></script>
+
+<!-- Admin core scripts -->
+<script type="module" src="../assets/js/admin/common/admin.js"></script>
+<script type="module" src="../assets/js/admin/common/admin-data.js"></script>
+
+<!-- Tab "Gradimento" -->
+<script type="module" src="../assets/js/admin/gradimento/admin_gradimento.js"></script>
+
+<!-- Utility -->
+<script type="module" src="../assets/js/common/preventivo.js"></script>
+<script src="../assets/js/common/input-date-polyfill.js"></script>
+
+<!-- Plugin esterni -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+<!-- Script Valutazione Prodotti -->
+<script type="module" src="../assets/js/admin/valutazione/admin-valutazione.js"></script>
+
+<!-- Cleanup script per prevenire conflitti -->
+<script>
+  // Cleanup quando si cambia tab
+  document.addEventListener('DOMContentLoaded', () => {
+    const tabs = document.querySelectorAll('#adminTabs button[data-bs-toggle="tab"]');
+    tabs.forEach(tab => {
+      tab.addEventListener('shown.bs.tab', (e) => {
+        // Se stiamo lasciando la tab gradimento, cleanup
+        if (e.relatedTarget && e.relatedTarget.id === 'gradimento-tab') {
+          if (window.cleanupGradimento) {
+            window.cleanupGradimento();
+          }
+        }
+      });
+    });
+
+    // Reset del modal quando viene chiuso
+    const addProductModal = document.getElementById('addProductModal');
+    if (addProductModal) {
+        addProductModal.addEventListener('hidden.bs.modal', () => {
+            // Cleanup più robusto
+            setTimeout(() => {
+                const backdrops = document.querySelectorAll('.modal-backdrop');
+                backdrops.forEach(backdrop => backdrop.remove());
+                document.body.classList.remove('modal-open');
+                document.body.style.overflow = '';
+                document.body.style.paddingRight = '';
+            }, 100);
+            
+            if (window.adminValutazioneManager) {
+                window.adminValutazioneManager.resetModal();
+            }
+        });
+        
+        // Previeni chiusura accidentale durante il salvataggio
+        addProductModal.addEventListener('hide.bs.modal', (e) => {
+            const saveBtn = document.getElementById('saveProductBtn');
+            if (saveBtn && saveBtn.disabled) {
+                e.preventDefault();
+                return false;
+            }
+        });
+    }
+  });
+</script>
+
+<script type="module">
+  import { AuthService } from '../assets/js/auth/auth.js';
+  import { loadBnbEntries } from '../assets/js/admin/bnb/admin-bnb.js';
+
+  document.addEventListener('DOMContentLoaded', async () => {
+    // Se non è admin, non facciamo nulla
+    if (!AuthService.checkAuth() || !AuthService.isAdmin()) return;
+
+    const dateInput = document.getElementById('bnbFilterDate');
+    const filterBtn = document.getElementById('bnbFilterBtn');
+    const container = document.getElementById('bnbEntriesContainer');
+    
+    if (!dateInput || !container || !filterBtn) {
+      console.warn('Elementi BnB non trovati nella pagina');
+      return;
+    }
+    
+    const today = new Date().toISOString().slice(0, 10);
+
+    // Valore iniziale e primo caricamento
+    dateInput.value = today;
+    
+    // Funzione per caricare i bigliettini
+    const loadData = async () => {
+      const selectedDate = dateInput.value;
+      if (!selectedDate) {
+        container.innerHTML = '<p class="text-warning">Seleziona una data valida.</p>';
+        return;
+      }
+      
+      container.innerHTML = '<div class="text-center"><div class="spinner-border" role="status"></div><p class="mt-2">Caricamento bigliettini...</p></div>';
+      
+      try {
+        await loadBnbEntries(selectedDate, container);
+      } catch (error) {
+        console.error('Errore nel caricamento:', error);
+        container.innerHTML = '<p class="text-danger">Errore nel caricamento dei bigliettini.</p>';
+      }
+    };
+
+    // Event listeners
+    filterBtn.addEventListener('click', loadData);
+    dateInput.addEventListener('change', loadData);
+    
+    // Caricamento iniziale
+    await loadData();
+  });
+</script>
+
+
+</body>
+
+</html>

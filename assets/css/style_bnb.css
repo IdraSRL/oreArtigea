@@ -1,0 +1,25 @@
+/* style_bnb.css v=1.0.0 */
+
+.table th, .table td{
+    background-color: rgba(240, 248, 255, 0.247);
+    color: white;
+}
+
+/* wrapper per ogni card di BnB */
+.bnb-table-wrapper {
+  /* se non aggiungi padding qui, applicalo al .card: .bnb-table-wrapper .card */
+  padding-top: 1rem;
+}
+
+/* bordino + spazio tra tutti i wrapper tranne il primo */
+.bnb-table-wrapper + .bnb-table-wrapper {
+  border-top: 1px solid #ddd;
+  margin-top: 1.5rem;
+}
+
+
+/* per colorare anche l’intestazione della card */
+.card-header.dalmazia   { background-color: #c41400 !important; }
+.card-header.martiri    { background-color: #0062b3 !important; }
+.card-header.c-grande   { background-color: #009107 !important; }
+.card-header.c-piccola  { background-color: #003d03  !important; }

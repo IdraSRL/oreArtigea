@@ -1,0 +1,1181 @@
+[11-Jul-2025 11:36:08 Europe/Rome] === UPLOAD REQUEST START ===
+[11-Jul-2025 11:36:08 Europe/Rome] Method: GET
+[11-Jul-2025 11:36:08 Europe/Rome] URI: /TestOre/api/upload-product-image.php
+[11-Jul-2025 11:36:08 Europe/Rome] === UPLOAD REQUEST START ===
+[11-Jul-2025 11:36:08 Europe/Rome] Headers: {"Cookie":"artigea-cookie-consent={\"necessary\":true,\"analytics\":false,\"marketing\":false,\"preferences\":false,\"timestamp\":1752156054940,\"version\":\"1.0\"}; artigea-cookie-consent_timestamp=1752156054941","Priority":"u=1, i","Accept-Language":"it-IT,it;q=0.9,en-US;q=0.8,en;q=0.7","Accept-Encoding":"gzip, deflate, br, zstd","Referer":"https:\/\/www.artigea.it\/TestOre\/pages\/admin.html","Sec-Fetch-Dest":"empty","Sec-Fetch-Mode":"cors","Sec-Fetch-Site":"same-origin","Accept":"*\/*","Sec-Ch-Ua-Mobile":"?0","Sec-Ch-Ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Google Chrome\";v=\"138\"","User-Agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/138.0.0.0 Safari\/537.36","Sec-Ch-Ua-Platform":"\"Windows\"","Cache-Control":"no-cache","Pragma":"no-cache","Connection":"close","X-Forwarded-Proto":"https","X-Forwarded-Port":"443","X-Real-Ip":"79.10.63.3","Host":"www.artigea.it"}
+[11-Jul-2025 11:36:08 Europe/Rome] Method: GET
+[11-Jul-2025 11:36:08 Europe/Rome] === UPLOAD REQUEST START ===
+[11-Jul-2025 11:36:08 Europe/Rome] Invalid method: GET
+[11-Jul-2025 11:36:08 Europe/Rome] URI: /TestOre/api/upload-product-image.php
+[11-Jul-2025 11:36:08 Europe/Rome] Method: GET
+[11-Jul-2025 11:36:08 Europe/Rome] === UPLOAD REQUEST START ===
+[11-Jul-2025 11:36:08 Europe/Rome] Headers: {"Cookie":"artigea-cookie-consent={\"necessary\":true,\"analytics\":false,\"marketing\":false,\"preferences\":false,\"timestamp\":1752156054940,\"version\":\"1.0\"}; artigea-cookie-consent_timestamp=1752156054941","Priority":"u=1, i","Accept-Language":"it-IT,it;q=0.9,en-US;q=0.8,en;q=0.7","Accept-Encoding":"gzip, deflate, br, zstd","Referer":"https:\/\/www.artigea.it\/TestOre\/pages\/admin.html","Sec-Fetch-Dest":"empty","Sec-Fetch-Mode":"cors","Sec-Fetch-Site":"same-origin","Accept":"*\/*","Sec-Ch-Ua-Mobile":"?0","Sec-Ch-Ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Google Chrome\";v=\"138\"","User-Agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/138.0.0.0 Safari\/537.36","Sec-Ch-Ua-Platform":"\"Windows\"","Cache-Control":"no-cache","Pragma":"no-cache","Connection":"close","X-Forwarded-Proto":"https","X-Forwarded-Port":"443","X-Real-Ip":"79.10.63.3","Host":"www.artigea.it"}
+[11-Jul-2025 11:36:08 Europe/Rome] URI: /TestOre/api/upload-product-image.php
+[11-Jul-2025 11:36:08 Europe/Rome] Method: GET
+[11-Jul-2025 11:36:08 Europe/Rome] Headers: {"Cookie":"artigea-cookie-consent={\"necessary\":true,\"analytics\":false,\"marketing\":false,\"preferences\":false,\"timestamp\":1752156054940,\"version\":\"1.0\"}; artigea-cookie-consent_timestamp=1752156054941","Priority":"u=1, i","Accept-Language":"it-IT,it;q=0.9,en-US;q=0.8,en;q=0.7","Accept-Encoding":"gzip, deflate, br, zstd","Referer":"https:\/\/www.artigea.it\/TestOre\/pages\/admin.html","Sec-Fetch-Dest":"empty","Sec-Fetch-Mode":"cors","Sec-Fetch-Site":"same-origin","Accept":"*\/*","Sec-Ch-Ua-Mobile":"?0","Sec-Ch-Ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Google Chrome\";v=\"138\"","User-Agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/138.0.0.0 Safari\/537.36","Sec-Ch-Ua-Platform":"\"Windows\"","Cache-Control":"no-cache","Pragma":"no-cache","Connection":"close","X-Forwarded-Proto":"https","X-Forwarded-Port":"443","X-Real-Ip":"79.10.63.3","Host":"www.artigea.it"}
+[11-Jul-2025 11:36:08 Europe/Rome] Invalid method: GET
+[11-Jul-2025 11:36:08 Europe/Rome] URI: /TestOre/api/upload-product-image.php
+[11-Jul-2025 11:36:08 Europe/Rome] Invalid method: GET
+[11-Jul-2025 11:36:08 Europe/Rome] Headers: {"Cookie":"artigea-cookie-consent={\"necessary\":true,\"analytics\":false,\"marketing\":false,\"preferences\":false,\"timestamp\":1752156054940,\"version\":\"1.0\"}; artigea-cookie-consent_timestamp=1752156054941","Priority":"u=1, i","Accept-Language":"it-IT,it;q=0.9,en-US;q=0.8,en;q=0.7","Accept-Encoding":"gzip, deflate, br, zstd","Referer":"https:\/\/www.artigea.it\/TestOre\/pages\/admin.html","Sec-Fetch-Dest":"empty","Sec-Fetch-Mode":"cors","Sec-Fetch-Site":"same-origin","Accept":"*\/*","Sec-Ch-Ua-Mobile":"?0","Sec-Ch-Ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Google Chrome\";v=\"138\"","User-Agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/138.0.0.0 Safari\/537.36","Sec-Ch-Ua-Platform":"\"Windows\"","Cache-Control":"no-cache","Pragma":"no-cache","Connection":"close","X-Forwarded-Proto":"https","X-Forwarded-Port":"443","X-Real-Ip":"79.10.63.3","Host":"www.artigea.it"}
+[11-Jul-2025 11:36:08 Europe/Rome] Invalid method: GET
+[11-Jul-2025 11:36:15 Europe/Rome] === UPLOAD REQUEST START ===
+[11-Jul-2025 11:36:15 Europe/Rome] === UPLOAD REQUEST START ===
+[11-Jul-2025 11:36:15 Europe/Rome] === UPLOAD REQUEST START ===
+[11-Jul-2025 11:36:15 Europe/Rome] Method: GET
+[11-Jul-2025 11:36:15 Europe/Rome] Method: GET
+[11-Jul-2025 11:36:15 Europe/Rome] Method: GET
+[11-Jul-2025 11:36:15 Europe/Rome] URI: /TestOre/api/upload-product-image.php
+[11-Jul-2025 11:36:15 Europe/Rome] URI: /TestOre/api/upload-product-image.php
+[11-Jul-2025 11:36:15 Europe/Rome] URI: /TestOre/api/upload-product-image.php
+[11-Jul-2025 11:36:15 Europe/Rome] Headers: {"Cookie":"artigea-cookie-consent={\"necessary\":true,\"analytics\":false,\"marketing\":false,\"preferences\":false,\"timestamp\":1752156054940,\"version\":\"1.0\"}; artigea-cookie-consent_timestamp=1752156054941","Priority":"u=1, i","Accept-Language":"it-IT,it;q=0.9,en-US;q=0.8,en;q=0.7","Accept-Encoding":"gzip, deflate, br, zstd","Referer":"https:\/\/www.artigea.it\/TestOre\/pages\/admin.html","Sec-Fetch-Dest":"empty","Sec-Fetch-Mode":"cors","Sec-Fetch-Site":"same-origin","Accept":"*\/*","Sec-Ch-Ua-Mobile":"?0","Sec-Ch-Ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Google Chrome\";v=\"138\"","User-Agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/138.0.0.0 Safari\/537.36","Sec-Ch-Ua-Platform":"\"Windows\"","Cache-Control":"no-cache","Pragma":"no-cache","Connection":"close","X-Forwarded-Proto":"https","X-Forwarded-Port":"443","X-Real-Ip":"79.10.63.3","Host":"www.artigea.it"}
+[11-Jul-2025 11:36:15 Europe/Rome] Headers: {"Cookie":"artigea-cookie-consent={\"necessary\":true,\"analytics\":false,\"marketing\":false,\"preferences\":false,\"timestamp\":1752156054940,\"version\":\"1.0\"}; artigea-cookie-consent_timestamp=1752156054941","Priority":"u=1, i","Accept-Language":"it-IT,it;q=0.9,en-US;q=0.8,en;q=0.7","Accept-Encoding":"gzip, deflate, br, zstd","Referer":"https:\/\/www.artigea.it\/TestOre\/pages\/admin.html","Sec-Fetch-Dest":"empty","Sec-Fetch-Mode":"cors","Sec-Fetch-Site":"same-origin","Accept":"*\/*","Sec-Ch-Ua-Mobile":"?0","Sec-Ch-Ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Google Chrome\";v=\"138\"","User-Agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/138.0.0.0 Safari\/537.36","Sec-Ch-Ua-Platform":"\"Windows\"","Cache-Control":"no-cache","Pragma":"no-cache","Connection":"close","X-Forwarded-Proto":"https","X-Forwarded-Port":"443","X-Real-Ip":"79.10.63.3","Host":"www.artigea.it"}
+[11-Jul-2025 11:36:15 Europe/Rome] Headers: {"Cookie":"artigea-cookie-consent={\"necessary\":true,\"analytics\":false,\"marketing\":false,\"preferences\":false,\"timestamp\":1752156054940,\"version\":\"1.0\"}; artigea-cookie-consent_timestamp=1752156054941","Priority":"u=1, i","Accept-Language":"it-IT,it;q=0.9,en-US;q=0.8,en;q=0.7","Accept-Encoding":"gzip, deflate, br, zstd","Referer":"https:\/\/www.artigea.it\/TestOre\/pages\/admin.html","Sec-Fetch-Dest":"empty","Sec-Fetch-Mode":"cors","Sec-Fetch-Site":"same-origin","Accept":"*\/*","Sec-Ch-Ua-Mobile":"?0","Sec-Ch-Ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Google Chrome\";v=\"138\"","User-Agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/138.0.0.0 Safari\/537.36","Sec-Ch-Ua-Platform":"\"Windows\"","Cache-Control":"no-cache","Pragma":"no-cache","Connection":"close","X-Forwarded-Proto":"https","X-Forwarded-Port":"443","X-Real-Ip":"79.10.63.3","Host":"www.artigea.it"}
+[11-Jul-2025 11:36:15 Europe/Rome] Invalid method: GET
+[11-Jul-2025 11:36:15 Europe/Rome] Invalid method: GET
+[11-Jul-2025 11:36:15 Europe/Rome] Invalid method: GET
+[11-Jul-2025 11:36:15 Europe/Rome] === UPLOAD REQUEST START ===
+[11-Jul-2025 11:36:15 Europe/Rome] Method: GET
+[11-Jul-2025 11:36:15 Europe/Rome] URI: /TestOre/api/upload-product-image.php
+[11-Jul-2025 11:36:15 Europe/Rome] Headers: {"Cookie":"artigea-cookie-consent={\"necessary\":true,\"analytics\":false,\"marketing\":false,\"preferences\":false,\"timestamp\":1752156054940,\"version\":\"1.0\"}; artigea-cookie-consent_timestamp=1752156054941","Priority":"u=1, i","Accept-Language":"it-IT,it;q=0.9,en-US;q=0.8,en;q=0.7","Accept-Encoding":"gzip, deflate, br, zstd","Referer":"https:\/\/www.artigea.it\/TestOre\/pages\/admin.html","Sec-Fetch-Dest":"empty","Sec-Fetch-Mode":"cors","Sec-Fetch-Site":"same-origin","Accept":"*\/*","Sec-Ch-Ua-Mobile":"?0","Sec-Ch-Ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Google Chrome\";v=\"138\"","User-Agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/138.0.0.0 Safari\/537.36","Sec-Ch-Ua-Platform":"\"Windows\"","Cache-Control":"no-cache","Pragma":"no-cache","Connection":"close","X-Forwarded-Proto":"https","X-Forwarded-Port":"443","X-Real-Ip":"79.10.63.3","Host":"www.artigea.it"}
+[11-Jul-2025 11:36:15 Europe/Rome] Invalid method: GET
+[11-Jul-2025 11:36:36 Europe/Rome] === UPLOAD REQUEST START ===
+[11-Jul-2025 11:36:36 Europe/Rome] Method: GET
+[11-Jul-2025 11:36:36 Europe/Rome] === UPLOAD REQUEST START ===
+[11-Jul-2025 11:36:36 Europe/Rome] URI: /TestOre/api/upload-product-image.php
+[11-Jul-2025 11:36:36 Europe/Rome] Method: GET
+[11-Jul-2025 11:36:36 Europe/Rome] Headers: {"Cookie":"artigea-cookie-consent={\"necessary\":true,\"analytics\":false,\"marketing\":false,\"preferences\":false,\"timestamp\":1752156054940,\"version\":\"1.0\"}; artigea-cookie-consent_timestamp=1752156054941","Priority":"u=1, i","Accept-Language":"it-IT,it;q=0.9,en-US;q=0.8,en;q=0.7","Accept-Encoding":"gzip, deflate, br, zstd","Referer":"https:\/\/www.artigea.it\/TestOre\/pages\/admin.html","Sec-Fetch-Dest":"empty","Sec-Fetch-Mode":"cors","Sec-Fetch-Site":"same-origin","Accept":"*\/*","Sec-Ch-Ua-Mobile":"?0","Sec-Ch-Ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Google Chrome\";v=\"138\"","User-Agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/138.0.0.0 Safari\/537.36","Sec-Ch-Ua-Platform":"\"Windows\"","Cache-Control":"no-cache","Pragma":"no-cache","Connection":"close","X-Forwarded-Proto":"https","X-Forwarded-Port":"443","X-Real-Ip":"79.10.63.3","Host":"www.artigea.it"}
+[11-Jul-2025 11:36:36 Europe/Rome] URI: /TestOre/api/upload-product-image.php
+[11-Jul-2025 11:36:36 Europe/Rome] Invalid method: GET
+[11-Jul-2025 11:36:36 Europe/Rome] Headers: {"Cookie":"artigea-cookie-consent={\"necessary\":true,\"analytics\":false,\"marketing\":false,\"preferences\":false,\"timestamp\":1752156054940,\"version\":\"1.0\"}; artigea-cookie-consent_timestamp=1752156054941","Priority":"u=1, i","Accept-Language":"it-IT,it;q=0.9,en-US;q=0.8,en;q=0.7","Accept-Encoding":"gzip, deflate, br, zstd","Referer":"https:\/\/www.artigea.it\/TestOre\/pages\/admin.html","Sec-Fetch-Dest":"empty","Sec-Fetch-Mode":"cors","Sec-Fetch-Site":"same-origin","Accept":"*\/*","Sec-Ch-Ua-Mobile":"?0","Sec-Ch-Ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Google Chrome\";v=\"138\"","User-Agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/138.0.0.0 Safari\/537.36","Sec-Ch-Ua-Platform":"\"Windows\"","Cache-Control":"no-cache","Pragma":"no-cache","Connection":"close","X-Forwarded-Proto":"https","X-Forwarded-Port":"443","X-Real-Ip":"79.10.63.3","Host":"www.artigea.it"}
+[11-Jul-2025 11:36:36 Europe/Rome] Invalid method: GET
+[11-Jul-2025 11:42:06 Europe/Rome] === UPLOAD REQUEST START ===
+[11-Jul-2025 11:42:06 Europe/Rome] Method: POST
+[11-Jul-2025 11:42:06 Europe/Rome] URI: /TestOre/api/upload-product-image.php
+[11-Jul-2025 11:42:06 Europe/Rome] Headers: {"Cookie":"artigea-cookie-consent={\"necessary\":true,\"analytics\":false,\"marketing\":false,\"preferences\":false,\"timestamp\":1752156054940,\"version\":\"1.0\"}; artigea-cookie-consent_timestamp=1752156054941","Priority":"u=1, i","Accept-Language":"it-IT,it;q=0.9,en-US;q=0.8,en;q=0.7","Accept-Encoding":"gzip, deflate, br, zstd","Referer":"https:\/\/www.artigea.it\/TestOre\/pages\/admin.html","Sec-Fetch-Dest":"empty","Sec-Fetch-Mode":"cors","Sec-Fetch-Site":"same-origin","Origin":"https:\/\/www.artigea.it","Accept":"*\/*","Sec-Ch-Ua-Mobile":"?0","Content-Type":"multipart\/form-data; boundary=----WebKitFormBoundary5vkBWcGlZR3fvzMx","Sec-Ch-Ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Google Chrome\";v=\"138\"","User-Agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/138.0.0.0 Safari\/537.36","Sec-Ch-Ua-Platform":"\"Windows\"","Cache-Control":"no-cache","Pragma":"no-cache","Content-Length":"167042","Connection":"close","X-Forwarded-Proto":"https","X-Forwarded-Port":"443","X-Real-Ip":"79.10.63.3","Host":"www.artigea.it"}
+[11-Jul-2025 11:42:06 Europe/Rome] POST request processing...
+[11-Jul-2025 11:42:06 Europe/Rome] Upload directory: ../assets/img/products/
+[11-Jul-2025 11:42:06 Europe/Rome] Max file size: 5242880
+[11-Jul-2025 11:42:06 Europe/Rome] POST data: {"productId":""}
+[11-Jul-2025 11:42:06 Europe/Rome] FILES data: {"productImage":{"name":"deoflash.jpg","full_path":"deoflash.jpg","type":"image\/jpeg","tmp_name":"\/tmp\/php2gZnhg","error":0,"size":166752}}
+[11-Jul-2025 11:42:06 Europe/Rome] File info - Name: deoflash.jpg, Size: 166752, Type: image/jpeg
+[11-Jul-2025 11:42:06 Europe/Rome] File extension: jpg
+[11-Jul-2025 11:42:06 Europe/Rome] Missing or invalid productId
+[11-Jul-2025 11:42:06 Europe/Rome] === UPLOAD REQUEST START ===
+[11-Jul-2025 11:42:06 Europe/Rome] Method: POST
+[11-Jul-2025 11:42:06 Europe/Rome] URI: /TestOre/api/upload-product-image.php
+[11-Jul-2025 11:42:06 Europe/Rome] Headers: {"Cookie":"artigea-cookie-consent={\"necessary\":true,\"analytics\":false,\"marketing\":false,\"preferences\":false,\"timestamp\":1752156054940,\"version\":\"1.0\"}; artigea-cookie-consent_timestamp=1752156054941","Priority":"u=1, i","Accept-Language":"it-IT,it;q=0.9,en-US;q=0.8,en;q=0.7","Accept-Encoding":"gzip, deflate, br, zstd","Referer":"https:\/\/www.artigea.it\/TestOre\/pages\/admin.html","Sec-Fetch-Dest":"empty","Sec-Fetch-Mode":"cors","Sec-Fetch-Site":"same-origin","Origin":"https:\/\/www.artigea.it","Accept":"*\/*","Sec-Ch-Ua-Mobile":"?0","Content-Type":"multipart\/form-data; boundary=----WebKitFormBoundary90RawCJDHpWLB8rJ","Sec-Ch-Ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Google Chrome\";v=\"138\"","User-Agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/138.0.0.0 Safari\/537.36","Sec-Ch-Ua-Platform":"\"Windows\"","Cache-Control":"no-cache","Pragma":"no-cache","Content-Length":"167042","Connection":"close","X-Forwarded-Proto":"https","X-Forwarded-Port":"443","X-Real-Ip":"79.10.63.3","Host":"www.artigea.it"}
+[11-Jul-2025 11:42:06 Europe/Rome] POST request processing...
+[11-Jul-2025 11:42:06 Europe/Rome] Upload directory: ../assets/img/products/
+[11-Jul-2025 11:42:06 Europe/Rome] Max file size: 5242880
+[11-Jul-2025 11:42:06 Europe/Rome] POST data: {"productId":""}
+[11-Jul-2025 11:42:06 Europe/Rome] FILES data: {"productImage":{"name":"deoflash.jpg","full_path":"deoflash.jpg","type":"image\/jpeg","tmp_name":"\/tmp\/phppJK2nE","error":0,"size":166752}}
+[11-Jul-2025 11:42:06 Europe/Rome] File info - Name: deoflash.jpg, Size: 166752, Type: image/jpeg
+[11-Jul-2025 11:42:06 Europe/Rome] File extension: jpg
+[11-Jul-2025 11:42:06 Europe/Rome] Missing or invalid productId
+[11-Jul-2025 11:42:52 Europe/Rome] === UPLOAD REQUEST START ===
+[11-Jul-2025 11:42:52 Europe/Rome] Method: POST
+[11-Jul-2025 11:42:52 Europe/Rome] URI: /TestOre/api/upload-product-image.php
+[11-Jul-2025 11:42:52 Europe/Rome] Headers: {"Cookie":"artigea-cookie-consent={\"necessary\":true,\"analytics\":false,\"marketing\":false,\"preferences\":false,\"timestamp\":1752156054940,\"version\":\"1.0\"}; artigea-cookie-consent_timestamp=1752156054941","Priority":"u=1, i","Accept-Language":"it-IT,it;q=0.9,en-US;q=0.8,en;q=0.7","Accept-Encoding":"gzip, deflate, br, zstd","Referer":"https:\/\/www.artigea.it\/TestOre\/pages\/admin.html","Sec-Fetch-Dest":"empty","Sec-Fetch-Mode":"cors","Sec-Fetch-Site":"same-origin","Origin":"https:\/\/www.artigea.it","Accept":"*\/*","Sec-Ch-Ua-Mobile":"?0","Content-Type":"multipart\/form-data; boundary=----WebKitFormBoundaryFJ7BM7laC44zVCT6","Sec-Ch-Ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Google Chrome\";v=\"138\"","User-Agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/138.0.0.0 Safari\/537.36","Sec-Ch-Ua-Platform":"\"Windows\"","Cache-Control":"no-cache","Pragma":"no-cache","Content-Length":"167050","Connection":"close","X-Forwarded-Proto":"https","X-Forwarded-Port":"443","X-Real-Ip":"79.10.63.3","Host":"www.artigea.it"}
+[11-Jul-2025 11:42:52 Europe/Rome] POST request processing...
+[11-Jul-2025 11:42:52 Europe/Rome] Upload directory: ../assets/img/products/
+[11-Jul-2025 11:42:52 Europe/Rome] Max file size: 5242880
+[11-Jul-2025 11:42:52 Europe/Rome] POST data: {"productId":"deoflash"}
+[11-Jul-2025 11:42:52 Europe/Rome] FILES data: {"productImage":{"name":"deoflash.jpg","full_path":"deoflash.jpg","type":"image\/jpeg","tmp_name":"\/tmp\/php8Xwktj","error":0,"size":166752}}
+[11-Jul-2025 11:42:52 Europe/Rome] File info - Name: deoflash.jpg, Size: 166752, Type: image/jpeg
+[11-Jul-2025 11:42:52 Europe/Rome] File extension: jpg
+[11-Jul-2025 11:42:52 Europe/Rome] Target file path: ../assets/img/products/deoflash.jpg
+[11-Jul-2025 11:42:52 Europe/Rome] Image info: {"0":2000,"1":2000,"2":2,"3":"width=\"2000\" height=\"2000\"","bits":8,"channels":3,"mime":"image\/jpeg"}
+[11-Jul-2025 11:42:52 Europe/Rome] File moved successfully to: ../assets/img/products/deoflash.jpg
+[11-Jul-2025 11:42:52 Europe/Rome] Starting image optimization for: ../assets/img/products/deoflash.jpg
+[11-Jul-2025 11:42:52 Europe/Rome] Original dimensions: 2000x2000
+[11-Jul-2025 11:42:52 Europe/Rome] New dimensions: 600x600
+[11-Jul-2025 11:42:52 Europe/Rome] === UPLOAD REQUEST START ===
+[11-Jul-2025 11:42:52 Europe/Rome] Method: POST
+[11-Jul-2025 11:42:52 Europe/Rome] URI: /TestOre/api/upload-product-image.php
+[11-Jul-2025 11:42:52 Europe/Rome] Headers: {"Cookie":"artigea-cookie-consent={\"necessary\":true,\"analytics\":false,\"marketing\":false,\"preferences\":false,\"timestamp\":1752156054940,\"version\":\"1.0\"}; artigea-cookie-consent_timestamp=1752156054941","Priority":"u=1, i","Accept-Language":"it-IT,it;q=0.9,en-US;q=0.8,en;q=0.7","Accept-Encoding":"gzip, deflate, br, zstd","Referer":"https:\/\/www.artigea.it\/TestOre\/pages\/admin.html","Sec-Fetch-Dest":"empty","Sec-Fetch-Mode":"cors","Sec-Fetch-Site":"same-origin","Origin":"https:\/\/www.artigea.it","Accept":"*\/*","Sec-Ch-Ua-Mobile":"?0","Content-Type":"multipart\/form-data; boundary=----WebKitFormBoundaryxNbnM8JqqGJKxG67","Sec-Ch-Ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Google Chrome\";v=\"138\"","User-Agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/138.0.0.0 Safari\/537.36","Sec-Ch-Ua-Platform":"\"Windows\"","Cache-Control":"no-cache","Pragma":"no-cache","Content-Length":"167050","Connection":"close","X-Forwarded-Proto":"https","X-Forwarded-Port":"443","X-Real-Ip":"79.10.63.3","Host":"www.artigea.it"}
+[11-Jul-2025 11:42:52 Europe/Rome] POST request processing...
+[11-Jul-2025 11:42:52 Europe/Rome] Upload directory: ../assets/img/products/
+[11-Jul-2025 11:42:52 Europe/Rome] Max file size: 5242880
+[11-Jul-2025 11:42:52 Europe/Rome] POST data: {"productId":"deoflash"}
+[11-Jul-2025 11:42:52 Europe/Rome] FILES data: {"productImage":{"name":"deoflash.jpg","full_path":"deoflash.jpg","type":"image\/jpeg","tmp_name":"\/tmp\/phpyUvH64","error":0,"size":166752}}
+[11-Jul-2025 11:42:52 Europe/Rome] File info - Name: deoflash.jpg, Size: 166752, Type: image/jpeg
+[11-Jul-2025 11:42:52 Europe/Rome] File extension: jpg
+[11-Jul-2025 11:42:52 Europe/Rome] Target file path: ../assets/img/products/deoflash.jpg
+[11-Jul-2025 11:42:52 Europe/Rome] Image info: {"0":2000,"1":2000,"2":2,"3":"width=\"2000\" height=\"2000\"","bits":8,"channels":3,"mime":"image\/jpeg"}
+[11-Jul-2025 11:42:52 Europe/Rome] File moved successfully to: ../assets/img/products/deoflash.jpg
+[11-Jul-2025 11:42:52 Europe/Rome] Starting image optimization for: ../assets/img/products/deoflash.jpg
+[11-Jul-2025 11:42:52 Europe/Rome] Original dimensions: 2000x2000
+[11-Jul-2025 11:42:52 Europe/Rome] New dimensions: 600x600
+[11-Jul-2025 11:42:53 Europe/Rome] Image optimization completed, save result: true
+[11-Jul-2025 11:42:53 Europe/Rome] Image optimization result: true
+[11-Jul-2025 11:42:53 Europe/Rome] Success response: {"success":true,"message":"Immagine caricata con successo","fileName":"deoflash.jpg","filePath":"assets\/img\/products\/deoflash.jpg","optimized":true}
+[11-Jul-2025 11:42:53 Europe/Rome] === UPLOAD REQUEST END ===
+[11-Jul-2025 11:42:53 Europe/Rome] Image optimization completed, save result: true
+[11-Jul-2025 11:42:53 Europe/Rome] Image optimization result: true
+[11-Jul-2025 11:42:53 Europe/Rome] Success response: {"success":true,"message":"Immagine caricata con successo","fileName":"deoflash.jpg","filePath":"assets\/img\/products\/deoflash.jpg","optimized":true}
+[11-Jul-2025 11:42:53 Europe/Rome] === UPLOAD REQUEST END ===
+[11-Jul-2025 12:02:21 Europe/Rome] === UPLOAD REQUEST START ===
+[11-Jul-2025 12:02:21 Europe/Rome] Method: POST
+[11-Jul-2025 12:02:21 Europe/Rome] URI: /TestOre/api/upload-product-image.php
+[11-Jul-2025 12:02:21 Europe/Rome] Headers: {"Cookie":"artigea-cookie-consent={\"necessary\":true,\"analytics\":false,\"marketing\":false,\"preferences\":false,\"timestamp\":1752156054940,\"version\":\"1.0\"}; artigea-cookie-consent_timestamp=1752156054941","Priority":"u=1, i","Accept-Language":"it-IT,it;q=0.9,en-US;q=0.8,en;q=0.7","Accept-Encoding":"gzip, deflate, br, zstd","Referer":"https:\/\/www.artigea.it\/TestOre\/pages\/admin.html","Sec-Fetch-Dest":"empty","Sec-Fetch-Mode":"cors","Sec-Fetch-Site":"same-origin","Origin":"https:\/\/www.artigea.it","Accept":"*\/*","Sec-Ch-Ua-Mobile":"?0","Content-Type":"multipart\/form-data; boundary=----WebKitFormBoundaryf2FcyCy8ktBt4Zjn","Sec-Ch-Ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Google Chrome\";v=\"138\"","User-Agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/138.0.0.0 Safari\/537.36","Sec-Ch-Ua-Platform":"\"Windows\"","Cache-Control":"no-cache","Pragma":"no-cache","Content-Length":"167051","Connection":"close","X-Forwarded-Proto":"https","X-Forwarded-Port":"443","X-Real-Ip":"79.10.63.3","Host":"www.artigea.it"}
+[11-Jul-2025 12:02:21 Europe/Rome] POST request processing...
+[11-Jul-2025 12:02:21 Europe/Rome] Upload directory: ../assets/img/products/
+[11-Jul-2025 12:02:21 Europe/Rome] Max file size: 5242880
+[11-Jul-2025 12:02:21 Europe/Rome] POST data: {"productId":"deo-flasf"}
+[11-Jul-2025 12:02:21 Europe/Rome] FILES data: {"productImage":{"name":"deoflash.jpg","full_path":"deoflash.jpg","type":"image\/jpeg","tmp_name":"\/tmp\/phpHqwWdL","error":0,"size":166752}}
+[11-Jul-2025 12:02:21 Europe/Rome] File info - Name: deoflash.jpg, Size: 166752, Type: image/jpeg
+[11-Jul-2025 12:02:21 Europe/Rome] File extension: jpg
+[11-Jul-2025 12:02:21 Europe/Rome] Target file path: ../assets/img/products/deo-flasf.jpg
+[11-Jul-2025 12:02:21 Europe/Rome] Image info: {"0":2000,"1":2000,"2":2,"3":"width=\"2000\" height=\"2000\"","bits":8,"channels":3,"mime":"image\/jpeg"}
+[11-Jul-2025 12:02:21 Europe/Rome] === UPLOAD REQUEST START ===
+[11-Jul-2025 12:02:21 Europe/Rome] Method: POST
+[11-Jul-2025 12:02:21 Europe/Rome] URI: /TestOre/api/upload-product-image.php
+[11-Jul-2025 12:02:21 Europe/Rome] File moved successfully to: ../assets/img/products/deo-flasf.jpg
+[11-Jul-2025 12:02:21 Europe/Rome] Headers: {"Cookie":"artigea-cookie-consent={\"necessary\":true,\"analytics\":false,\"marketing\":false,\"preferences\":false,\"timestamp\":1752156054940,\"version\":\"1.0\"}; artigea-cookie-consent_timestamp=1752156054941","Priority":"u=1, i","Accept-Language":"it-IT,it;q=0.9,en-US;q=0.8,en;q=0.7","Accept-Encoding":"gzip, deflate, br, zstd","Referer":"https:\/\/www.artigea.it\/TestOre\/pages\/admin.html","Sec-Fetch-Dest":"empty","Sec-Fetch-Mode":"cors","Sec-Fetch-Site":"same-origin","Origin":"https:\/\/www.artigea.it","Accept":"*\/*","Sec-Ch-Ua-Mobile":"?0","Content-Type":"multipart\/form-data; boundary=----WebKitFormBoundaryFT83KxrLPqSiqBLf","Sec-Ch-Ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Google Chrome\";v=\"138\"","User-Agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/138.0.0.0 Safari\/537.36","Sec-Ch-Ua-Platform":"\"Windows\"","Cache-Control":"no-cache","Pragma":"no-cache","Content-Length":"167051","Connection":"close","X-Forwarded-Proto":"https","X-Forwarded-Port":"443","X-Real-Ip":"79.10.63.3","Host":"www.artigea.it"}
+[11-Jul-2025 12:02:21 Europe/Rome] Starting image optimization for: ../assets/img/products/deo-flasf.jpg
+[11-Jul-2025 12:02:21 Europe/Rome] POST request processing...
+[11-Jul-2025 12:02:21 Europe/Rome] Upload directory: ../assets/img/products/
+[11-Jul-2025 12:02:21 Europe/Rome] Original dimensions: 2000x2000
+[11-Jul-2025 12:02:21 Europe/Rome] Max file size: 5242880
+[11-Jul-2025 12:02:21 Europe/Rome] New dimensions: 600x600
+[11-Jul-2025 12:02:21 Europe/Rome] POST data: {"productId":"deo-flasf"}
+[11-Jul-2025 12:02:21 Europe/Rome] FILES data: {"productImage":{"name":"deoflash.jpg","full_path":"deoflash.jpg","type":"image\/jpeg","tmp_name":"\/tmp\/phpdPoNbQ","error":0,"size":166752}}
+[11-Jul-2025 12:02:21 Europe/Rome] File info - Name: deoflash.jpg, Size: 166752, Type: image/jpeg
+[11-Jul-2025 12:02:21 Europe/Rome] File extension: jpg
+[11-Jul-2025 12:02:21 Europe/Rome] Target file path: ../assets/img/products/deo-flasf.jpg
+[11-Jul-2025 12:02:21 Europe/Rome] Image info: {"0":2000,"1":2000,"2":2,"3":"width=\"2000\" height=\"2000\"","bits":8,"channels":3,"mime":"image\/jpeg"}
+[11-Jul-2025 12:02:21 Europe/Rome] File moved successfully to: ../assets/img/products/deo-flasf.jpg
+[11-Jul-2025 12:02:21 Europe/Rome] Starting image optimization for: ../assets/img/products/deo-flasf.jpg
+[11-Jul-2025 12:02:21 Europe/Rome] Original dimensions: 2000x2000
+[11-Jul-2025 12:02:21 Europe/Rome] New dimensions: 600x600
+[11-Jul-2025 12:02:21 Europe/Rome] Image optimization completed, save result: true
+[11-Jul-2025 12:02:21 Europe/Rome] Image optimization result: true
+[11-Jul-2025 12:02:21 Europe/Rome] Success response: {"success":true,"message":"Immagine caricata con successo","fileName":"deo-flasf.jpg","filePath":"assets\/img\/products\/deo-flasf.jpg","optimized":true}
+[11-Jul-2025 12:02:21 Europe/Rome] === UPLOAD REQUEST END ===
+[11-Jul-2025 12:02:21 Europe/Rome] Image optimization completed, save result: true
+[11-Jul-2025 12:02:21 Europe/Rome] Image optimization result: true
+[11-Jul-2025 12:02:21 Europe/Rome] Success response: {"success":true,"message":"Immagine caricata con successo","fileName":"deo-flasf.jpg","filePath":"assets\/img\/products\/deo-flasf.jpg","optimized":true}
+[11-Jul-2025 12:02:21 Europe/Rome] === UPLOAD REQUEST END ===
+[11-Jul-2025 12:14:05 Europe/Rome] === UPLOAD REQUEST START ===
+[11-Jul-2025 12:14:05 Europe/Rome] Method: POST
+[11-Jul-2025 12:14:05 Europe/Rome] URI: /TestOre/api/upload-product-image.php
+[11-Jul-2025 12:14:05 Europe/Rome] Headers: {"Cookie":"artigea-cookie-consent={\"necessary\":true,\"analytics\":false,\"marketing\":false,\"preferences\":false,\"timestamp\":1752156054940,\"version\":\"1.0\"}; artigea-cookie-consent_timestamp=1752156054941","Priority":"u=1, i","Accept-Language":"it-IT,it;q=0.9,en-US;q=0.8,en;q=0.7","Accept-Encoding":"gzip, deflate, br, zstd","Referer":"https:\/\/www.artigea.it\/TestOre\/pages\/admin.html","Sec-Fetch-Dest":"empty","Sec-Fetch-Mode":"cors","Sec-Fetch-Site":"same-origin","Origin":"https:\/\/www.artigea.it","Accept":"*\/*","Sec-Ch-Ua-Mobile":"?0","Content-Type":"multipart\/form-data; boundary=----WebKitFormBoundaryQoraXUMKAHEhIAA6","Sec-Ch-Ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Google Chrome\";v=\"138\"","User-Agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/138.0.0.0 Safari\/537.36","Sec-Ch-Ua-Platform":"\"Windows\"","Cache-Control":"no-cache","Pragma":"no-cache","Content-Length":"103175","Connection":"close","X-Forwarded-Proto":"https","X-Forwarded-Port":"443","X-Real-Ip":"79.10.63.3","Host":"www.artigea.it"}
+[11-Jul-2025 12:14:05 Europe/Rome] POST request processing...
+[11-Jul-2025 12:14:05 Europe/Rome] Upload directory: ../assets/img/products/
+[11-Jul-2025 12:14:05 Europe/Rome] Max file size: 5242880
+[11-Jul-2025 12:14:05 Europe/Rome] POST data: {"productId":"tex-fresh"}
+[11-Jul-2025 12:14:05 Europe/Rome] FILES data: {"productImage":{"name":"texfresh.jpg","full_path":"texfresh.jpg","type":"image\/jpeg","tmp_name":"\/tmp\/phpQz1rs9","error":0,"size":102876}}
+[11-Jul-2025 12:14:05 Europe/Rome] File info - Name: texfresh.jpg, Size: 102876, Type: image/jpeg
+[11-Jul-2025 12:14:05 Europe/Rome] File extension: jpg
+[11-Jul-2025 12:14:05 Europe/Rome] Target file path: ../assets/img/products/tex-fresh.jpg
+[11-Jul-2025 12:14:05 Europe/Rome] Image info: {"0":2000,"1":2000,"2":2,"3":"width=\"2000\" height=\"2000\"","bits":8,"channels":3,"mime":"image\/jpeg"}
+[11-Jul-2025 12:14:05 Europe/Rome] File moved successfully to: ../assets/img/products/tex-fresh.jpg
+[11-Jul-2025 12:14:05 Europe/Rome] Starting image optimization for: ../assets/img/products/tex-fresh.jpg
+[11-Jul-2025 12:14:05 Europe/Rome] Original dimensions: 2000x2000
+[11-Jul-2025 12:14:05 Europe/Rome] New dimensions: 600x600
+[11-Jul-2025 12:14:05 Europe/Rome] === UPLOAD REQUEST START ===
+[11-Jul-2025 12:14:05 Europe/Rome] Method: POST
+[11-Jul-2025 12:14:05 Europe/Rome] URI: /TestOre/api/upload-product-image.php
+[11-Jul-2025 12:14:05 Europe/Rome] Headers: {"Cookie":"artigea-cookie-consent={\"necessary\":true,\"analytics\":false,\"marketing\":false,\"preferences\":false,\"timestamp\":1752156054940,\"version\":\"1.0\"}; artigea-cookie-consent_timestamp=1752156054941","Priority":"u=1, i","Accept-Language":"it-IT,it;q=0.9,en-US;q=0.8,en;q=0.7","Accept-Encoding":"gzip, deflate, br, zstd","Referer":"https:\/\/www.artigea.it\/TestOre\/pages\/admin.html","Sec-Fetch-Dest":"empty","Sec-Fetch-Mode":"cors","Sec-Fetch-Site":"same-origin","Origin":"https:\/\/www.artigea.it","Accept":"*\/*","Sec-Ch-Ua-Mobile":"?0","Content-Type":"multipart\/form-data; boundary=----WebKitFormBoundaryJzU5ihA5i9HXEA5a","Sec-Ch-Ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Google Chrome\";v=\"138\"","User-Agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/138.0.0.0 Safari\/537.36","Sec-Ch-Ua-Platform":"\"Windows\"","Cache-Control":"no-cache","Pragma":"no-cache","Content-Length":"103175","Connection":"close","X-Forwarded-Proto":"https","X-Forwarded-Port":"443","X-Real-Ip":"79.10.63.3","Host":"www.artigea.it"}
+[11-Jul-2025 12:14:05 Europe/Rome] POST request processing...
+[11-Jul-2025 12:14:05 Europe/Rome] Upload directory: ../assets/img/products/
+[11-Jul-2025 12:14:05 Europe/Rome] Max file size: 5242880
+[11-Jul-2025 12:14:05 Europe/Rome] POST data: {"productId":"tex-fresh"}
+[11-Jul-2025 12:14:05 Europe/Rome] FILES data: {"productImage":{"name":"texfresh.jpg","full_path":"texfresh.jpg","type":"image\/jpeg","tmp_name":"\/tmp\/phpANVjia","error":0,"size":102876}}
+[11-Jul-2025 12:14:05 Europe/Rome] File info - Name: texfresh.jpg, Size: 102876, Type: image/jpeg
+[11-Jul-2025 12:14:05 Europe/Rome] File extension: jpg
+[11-Jul-2025 12:14:05 Europe/Rome] Target file path: ../assets/img/products/tex-fresh.jpg
+[11-Jul-2025 12:14:05 Europe/Rome] Image info: {"0":2000,"1":2000,"2":2,"3":"width=\"2000\" height=\"2000\"","bits":8,"channels":3,"mime":"image\/jpeg"}
+[11-Jul-2025 12:14:05 Europe/Rome] File moved successfully to: ../assets/img/products/tex-fresh.jpg
+[11-Jul-2025 12:14:05 Europe/Rome] Starting image optimization for: ../assets/img/products/tex-fresh.jpg
+[11-Jul-2025 12:14:05 Europe/Rome] Original dimensions: 2000x2000
+[11-Jul-2025 12:14:05 Europe/Rome] New dimensions: 600x600
+[11-Jul-2025 12:14:05 Europe/Rome] Image optimization completed, save result: true
+[11-Jul-2025 12:14:05 Europe/Rome] Image optimization result: true
+[11-Jul-2025 12:14:05 Europe/Rome] Success response: {"success":true,"message":"Immagine caricata con successo","fileName":"tex-fresh.jpg","filePath":"..\/assets\/img\/products\/tex-fresh.jpg","optimized":true}
+[11-Jul-2025 12:14:05 Europe/Rome] === UPLOAD REQUEST END ===
+[11-Jul-2025 12:14:05 Europe/Rome] Image optimization completed, save result: true
+[11-Jul-2025 12:14:05 Europe/Rome] Image optimization result: true
+[11-Jul-2025 12:14:05 Europe/Rome] Success response: {"success":true,"message":"Immagine caricata con successo","fileName":"tex-fresh.jpg","filePath":"..\/assets\/img\/products\/tex-fresh.jpg","optimized":true}
+[11-Jul-2025 12:14:05 Europe/Rome] === UPLOAD REQUEST END ===
+[11-Jul-2025 12:22:30 Europe/Rome] === UPLOAD REQUEST START ===
+[11-Jul-2025 12:22:30 Europe/Rome] Method: POST
+[11-Jul-2025 12:22:30 Europe/Rome] URI: /TestOre/api/upload-product-image.php
+[11-Jul-2025 12:22:30 Europe/Rome] Headers: {"Cookie":"artigea-cookie-consent={\"necessary\":true,\"analytics\":false,\"marketing\":false,\"preferences\":false,\"timestamp\":1752156054940,\"version\":\"1.0\"}; artigea-cookie-consent_timestamp=1752156054941","Priority":"u=1, i","Accept-Language":"it-IT,it;q=0.9,en-US;q=0.8,en;q=0.7","Accept-Encoding":"gzip, deflate, br, zstd","Referer":"https:\/\/www.artigea.it\/TestOre\/pages\/admin.html","Sec-Fetch-Dest":"empty","Sec-Fetch-Mode":"cors","Sec-Fetch-Site":"same-origin","Origin":"https:\/\/www.artigea.it","Accept":"*\/*","Sec-Ch-Ua-Mobile":"?0","Content-Type":"multipart\/form-data; boundary=----WebKitFormBoundaryq1haILLSTHTKw3oF","Sec-Ch-Ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Google Chrome\";v=\"138\"","User-Agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/138.0.0.0 Safari\/537.36","Sec-Ch-Ua-Platform":"\"Windows\"","Cache-Control":"no-cache","Pragma":"no-cache","Content-Length":"201634","Connection":"close","X-Forwarded-Proto":"https","X-Forwarded-Port":"443","X-Real-Ip":"79.10.63.3","Host":"www.artigea.it"}
+[11-Jul-2025 12:22:30 Europe/Rome] POST request processing...
+[11-Jul-2025 12:22:30 Europe/Rome] Upload directory: ../assets/img/products/
+[11-Jul-2025 12:22:30 Europe/Rome] Max file size: 5242880
+[11-Jul-2025 12:22:30 Europe/Rome] POST data: {"productId":"top-gres"}
+[11-Jul-2025 12:22:30 Europe/Rome] FILES data: {"productImage":{"name":"topgress.jpg","full_path":"topgress.jpg","type":"image\/jpeg","tmp_name":"\/tmp\/php3sEhMB","error":0,"size":201336}}
+[11-Jul-2025 12:22:30 Europe/Rome] File info - Name: topgress.jpg, Size: 201336, Type: image/jpeg
+[11-Jul-2025 12:22:30 Europe/Rome] File extension: jpg
+[11-Jul-2025 12:22:30 Europe/Rome] Target file path: ../assets/img/products/top-gres.jpg
+[11-Jul-2025 12:22:30 Europe/Rome] Image info: {"0":2000,"1":2000,"2":2,"3":"width=\"2000\" height=\"2000\"","bits":8,"channels":3,"mime":"image\/jpeg"}
+[11-Jul-2025 12:22:30 Europe/Rome] File moved successfully to: ../assets/img/products/top-gres.jpg
+[11-Jul-2025 12:22:30 Europe/Rome] Starting image optimization for: ../assets/img/products/top-gres.jpg
+[11-Jul-2025 12:22:30 Europe/Rome] Original dimensions: 2000x2000
+[11-Jul-2025 12:22:30 Europe/Rome] New dimensions: 600x600
+[11-Jul-2025 12:22:30 Europe/Rome] Image optimization completed, save result: true
+[11-Jul-2025 12:22:30 Europe/Rome] Image optimization result: true
+[11-Jul-2025 12:22:30 Europe/Rome] Success response: {"success":true,"message":"Immagine caricata con successo","fileName":"top-gres.jpg","filePath":"..\/assets\/img\/products\/top-gres.jpg","optimized":true}
+[11-Jul-2025 12:22:30 Europe/Rome] === UPLOAD REQUEST END ===
+[11-Jul-2025 12:22:31 Europe/Rome] === UPLOAD REQUEST START ===
+[11-Jul-2025 12:22:31 Europe/Rome] Method: POST
+[11-Jul-2025 12:22:31 Europe/Rome] URI: /TestOre/api/upload-product-image.php
+[11-Jul-2025 12:22:31 Europe/Rome] Headers: {"Cookie":"artigea-cookie-consent={\"necessary\":true,\"analytics\":false,\"marketing\":false,\"preferences\":false,\"timestamp\":1752156054940,\"version\":\"1.0\"}; artigea-cookie-consent_timestamp=1752156054941","Priority":"u=1, i","Accept-Language":"it-IT,it;q=0.9,en-US;q=0.8,en;q=0.7","Accept-Encoding":"gzip, deflate, br, zstd","Referer":"https:\/\/www.artigea.it\/TestOre\/pages\/admin.html","Sec-Fetch-Dest":"empty","Sec-Fetch-Mode":"cors","Sec-Fetch-Site":"same-origin","Origin":"https:\/\/www.artigea.it","Accept":"*\/*","Sec-Ch-Ua-Mobile":"?0","Content-Type":"multipart\/form-data; boundary=----WebKitFormBoundarysoouOvmtgOLEGL3N","Sec-Ch-Ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Google Chrome\";v=\"138\"","User-Agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/138.0.0.0 Safari\/537.36","Sec-Ch-Ua-Platform":"\"Windows\"","Cache-Control":"no-cache","Pragma":"no-cache","Content-Length":"201634","Connection":"close","X-Forwarded-Proto":"https","X-Forwarded-Port":"443","X-Real-Ip":"79.10.63.3","Host":"www.artigea.it"}
+[11-Jul-2025 12:22:31 Europe/Rome] POST request processing...
+[11-Jul-2025 12:22:31 Europe/Rome] Upload directory: ../assets/img/products/
+[11-Jul-2025 12:22:31 Europe/Rome] Max file size: 5242880
+[11-Jul-2025 12:22:31 Europe/Rome] POST data: {"productId":"top-gres"}
+[11-Jul-2025 12:22:31 Europe/Rome] FILES data: {"productImage":{"name":"topgress.jpg","full_path":"topgress.jpg","type":"image\/jpeg","tmp_name":"\/tmp\/phpamxOSI","error":0,"size":201336}}
+[11-Jul-2025 12:22:31 Europe/Rome] File info - Name: topgress.jpg, Size: 201336, Type: image/jpeg
+[11-Jul-2025 12:22:31 Europe/Rome] File extension: jpg
+[11-Jul-2025 12:22:31 Europe/Rome] Target file path: ../assets/img/products/top-gres.jpg
+[11-Jul-2025 12:22:31 Europe/Rome] Image info: {"0":2000,"1":2000,"2":2,"3":"width=\"2000\" height=\"2000\"","bits":8,"channels":3,"mime":"image\/jpeg"}
+[11-Jul-2025 12:22:31 Europe/Rome] File moved successfully to: ../assets/img/products/top-gres.jpg
+[11-Jul-2025 12:22:31 Europe/Rome] Starting image optimization for: ../assets/img/products/top-gres.jpg
+[11-Jul-2025 12:22:31 Europe/Rome] Original dimensions: 2000x2000
+[11-Jul-2025 12:22:31 Europe/Rome] New dimensions: 600x600
+[11-Jul-2025 12:22:31 Europe/Rome] === UPLOAD REQUEST START ===
+[11-Jul-2025 12:22:31 Europe/Rome] Method: POST
+[11-Jul-2025 12:22:31 Europe/Rome] URI: /TestOre/api/upload-product-image.php
+[11-Jul-2025 12:22:31 Europe/Rome] Headers: {"Cookie":"artigea-cookie-consent={\"necessary\":true,\"analytics\":false,\"marketing\":false,\"preferences\":false,\"timestamp\":1752156054940,\"version\":\"1.0\"}; artigea-cookie-consent_timestamp=1752156054941","Priority":"u=1, i","Accept-Language":"it-IT,it;q=0.9,en-US;q=0.8,en;q=0.7","Accept-Encoding":"gzip, deflate, br, zstd","Referer":"https:\/\/www.artigea.it\/TestOre\/pages\/admin.html","Sec-Fetch-Dest":"empty","Sec-Fetch-Mode":"cors","Sec-Fetch-Site":"same-origin","Origin":"https:\/\/www.artigea.it","Accept":"*\/*","Sec-Ch-Ua-Mobile":"?0","Content-Type":"multipart\/form-data; boundary=----WebKitFormBoundaryM3B8cNF0pXjL3J30","Sec-Ch-Ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Google Chrome\";v=\"138\"","User-Agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/138.0.0.0 Safari\/537.36","Sec-Ch-Ua-Platform":"\"Windows\"","Cache-Control":"no-cache","Pragma":"no-cache","Content-Length":"201634","Connection":"close","X-Forwarded-Proto":"https","X-Forwarded-Port":"443","X-Real-Ip":"79.10.63.3","Host":"www.artigea.it"}
+[11-Jul-2025 12:22:31 Europe/Rome] POST request processing...
+[11-Jul-2025 12:22:31 Europe/Rome] Upload directory: ../assets/img/products/
+[11-Jul-2025 12:22:31 Europe/Rome] Max file size: 5242880
+[11-Jul-2025 12:22:31 Europe/Rome] POST data: {"productId":"top-gres"}
+[11-Jul-2025 12:22:31 Europe/Rome] FILES data: {"productImage":{"name":"topgress.jpg","full_path":"topgress.jpg","type":"image\/jpeg","tmp_name":"\/tmp\/php0YqHi1","error":0,"size":201336}}
+[11-Jul-2025 12:22:31 Europe/Rome] File info - Name: topgress.jpg, Size: 201336, Type: image/jpeg
+[11-Jul-2025 12:22:31 Europe/Rome] File extension: jpg
+[11-Jul-2025 12:22:31 Europe/Rome] Target file path: ../assets/img/products/top-gres.jpg
+[11-Jul-2025 12:22:31 Europe/Rome] Image info: {"0":2000,"1":2000,"2":2,"3":"width=\"2000\" height=\"2000\"","bits":8,"channels":3,"mime":"image\/jpeg"}
+[11-Jul-2025 12:22:31 Europe/Rome] File moved successfully to: ../assets/img/products/top-gres.jpg
+[11-Jul-2025 12:22:31 Europe/Rome] Starting image optimization for: ../assets/img/products/top-gres.jpg
+[11-Jul-2025 12:22:31 Europe/Rome] Original dimensions: 2000x2000
+[11-Jul-2025 12:22:31 Europe/Rome] New dimensions: 600x600
+[11-Jul-2025 12:22:31 Europe/Rome] === UPLOAD REQUEST START ===
+[11-Jul-2025 12:22:31 Europe/Rome] Method: POST
+[11-Jul-2025 12:22:31 Europe/Rome] URI: /TestOre/api/upload-product-image.php
+[11-Jul-2025 12:22:31 Europe/Rome] Headers: {"Cookie":"artigea-cookie-consent={\"necessary\":true,\"analytics\":false,\"marketing\":false,\"preferences\":false,\"timestamp\":1752156054940,\"version\":\"1.0\"}; artigea-cookie-consent_timestamp=1752156054941","Priority":"u=1, i","Accept-Language":"it-IT,it;q=0.9,en-US;q=0.8,en;q=0.7","Accept-Encoding":"gzip, deflate, br, zstd","Referer":"https:\/\/www.artigea.it\/TestOre\/pages\/admin.html","Sec-Fetch-Dest":"empty","Sec-Fetch-Mode":"cors","Sec-Fetch-Site":"same-origin","Origin":"https:\/\/www.artigea.it","Accept":"*\/*","Sec-Ch-Ua-Mobile":"?0","Content-Type":"multipart\/form-data; boundary=----WebKitFormBoundarysqsd2Yz1KpSuDV9P","Sec-Ch-Ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Google Chrome\";v=\"138\"","User-Agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/138.0.0.0 Safari\/537.36","Sec-Ch-Ua-Platform":"\"Windows\"","Cache-Control":"no-cache","Pragma":"no-cache","Content-Length":"201634","Connection":"close","X-Forwarded-Proto":"https","X-Forwarded-Port":"443","X-Real-Ip":"79.10.63.3","Host":"www.artigea.it"}
+[11-Jul-2025 12:22:31 Europe/Rome] POST request processing...
+[11-Jul-2025 12:22:31 Europe/Rome] Upload directory: ../assets/img/products/
+[11-Jul-2025 12:22:31 Europe/Rome] Max file size: 5242880
+[11-Jul-2025 12:22:31 Europe/Rome] POST data: {"productId":"top-gres"}
+[11-Jul-2025 12:22:31 Europe/Rome] FILES data: {"productImage":{"name":"topgress.jpg","full_path":"topgress.jpg","type":"image\/jpeg","tmp_name":"\/tmp\/php8H6ti9","error":0,"size":201336}}
+[11-Jul-2025 12:22:31 Europe/Rome] File info - Name: topgress.jpg, Size: 201336, Type: image/jpeg
+[11-Jul-2025 12:22:31 Europe/Rome] File extension: jpg
+[11-Jul-2025 12:22:31 Europe/Rome] Target file path: ../assets/img/products/top-gres.jpg
+[11-Jul-2025 12:22:31 Europe/Rome] Image info: {"0":2000,"1":2000,"2":2,"3":"width=\"2000\" height=\"2000\"","bits":8,"channels":3,"mime":"image\/jpeg"}
+[11-Jul-2025 12:22:31 Europe/Rome] File moved successfully to: ../assets/img/products/top-gres.jpg
+[11-Jul-2025 12:22:31 Europe/Rome] Starting image optimization for: ../assets/img/products/top-gres.jpg
+[11-Jul-2025 12:22:31 Europe/Rome] Original dimensions: 2000x2000
+[11-Jul-2025 12:22:31 Europe/Rome] New dimensions: 600x600
+[11-Jul-2025 12:22:31 Europe/Rome] Image optimization completed, save result: true
+[11-Jul-2025 12:22:31 Europe/Rome] Image optimization result: true
+[11-Jul-2025 12:22:31 Europe/Rome] Success response: {"success":true,"message":"Immagine caricata con successo","fileName":"top-gres.jpg","filePath":"..\/assets\/img\/products\/top-gres.jpg","optimized":true}
+[11-Jul-2025 12:22:31 Europe/Rome] === UPLOAD REQUEST END ===
+[11-Jul-2025 12:22:31 Europe/Rome] Image optimization completed, save result: true
+[11-Jul-2025 12:22:31 Europe/Rome] Image optimization result: true
+[11-Jul-2025 12:22:31 Europe/Rome] Success response: {"success":true,"message":"Immagine caricata con successo","fileName":"top-gres.jpg","filePath":"..\/assets\/img\/products\/top-gres.jpg","optimized":true}
+[11-Jul-2025 12:22:31 Europe/Rome] === UPLOAD REQUEST END ===
+[11-Jul-2025 12:22:31 Europe/Rome] Image optimization completed, save result: true
+[11-Jul-2025 12:22:31 Europe/Rome] Image optimization result: true
+[11-Jul-2025 12:22:31 Europe/Rome] Success response: {"success":true,"message":"Immagine caricata con successo","fileName":"top-gres.jpg","filePath":"..\/assets\/img\/products\/top-gres.jpg","optimized":true}
+[11-Jul-2025 12:22:31 Europe/Rome] === UPLOAD REQUEST END ===
+[21-Jul-2025 10:39:52 Europe/Rome] === UPLOAD REQUEST START ===
+[21-Jul-2025 10:39:52 Europe/Rome] Method: POST
+[21-Jul-2025 10:39:52 Europe/Rome] URI: /TestOre/api/upload-product-image.php
+[21-Jul-2025 10:39:52 Europe/Rome] Headers: {"Cookie":"_ga=GA1.1.217452127.1752652398; artigea-cookie-consent={\"necessary\":true,\"analytics\":false,\"marketing\":false,\"preferences\":false,\"timestamp\":1752654829084,\"version\":\"1.0\"}; artigea-cookie-consent_timestamp=1752654829085; _ga_M4MW5QEKQ4=GS2.1.s1752833515$o6$g0$t1752833515$j60$l0$h0","Priority":"u=1, i","Accept-Language":"it-IT,it;q=0.9,en-US;q=0.8,en;q=0.7","Accept-Encoding":"gzip, deflate, br, zstd","Referer":"https:\/\/www.artigea.it\/TestOre\/pages\/admin.html","Sec-Fetch-Dest":"empty","Sec-Fetch-Mode":"cors","Sec-Fetch-Site":"same-origin","Origin":"https:\/\/www.artigea.it","Accept":"*\/*","Sec-Ch-Ua-Mobile":"?0","Content-Type":"multipart\/form-data; boundary=----WebKitFormBoundarySCmdttGYDV1J3vKZ","Sec-Ch-Ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Google Chrome\";v=\"138\"","User-Agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/138.0.0.0 Safari\/537.36","Sec-Ch-Ua-Platform":"\"Windows\"","Content-Length":"37129","Connection":"close","X-Forwarded-Proto":"https","X-Forwarded-Port":"443","X-Real-Ip":"79.10.63.3","Host":"www.artigea.it"}
+[21-Jul-2025 10:39:52 Europe/Rome] POST request processing...
+[21-Jul-2025 10:39:52 Europe/Rome] Upload directory: ../assets/img/products/
+[21-Jul-2025 10:39:52 Europe/Rome] Max file size: 5242880
+[21-Jul-2025 10:39:52 Europe/Rome] POST data: {"productId":"chlor-wc-gel-sanitec"}
+[21-Jul-2025 10:39:52 Europe/Rome] FILES data: {"productImage":{"name":"chlor-wc-gel-sanitec.jpg","full_path":"chlor-wc-gel-sanitec.jpg","type":"image\/jpeg","tmp_name":"\/tmp\/phppsqOms","error":0,"size":36807}}
+[21-Jul-2025 10:39:52 Europe/Rome] File info - Name: chlor-wc-gel-sanitec.jpg, Size: 36807, Type: image/jpeg
+[21-Jul-2025 10:39:52 Europe/Rome] File extension: jpg
+[21-Jul-2025 10:39:52 Europe/Rome] Target file path: ../assets/img/products/chlor-wc-gel-sanitec.jpg
+[21-Jul-2025 10:39:52 Europe/Rome] Image info: {"0":600,"1":600,"2":2,"3":"width=\"600\" height=\"600\"","bits":8,"channels":3,"mime":"image\/jpeg"}
+[21-Jul-2025 10:39:52 Europe/Rome] File moved successfully to: ../assets/img/products/chlor-wc-gel-sanitec.jpg
+[21-Jul-2025 10:39:52 Europe/Rome] Starting image optimization for: ../assets/img/products/chlor-wc-gel-sanitec.jpg
+[21-Jul-2025 10:39:52 Europe/Rome] Original dimensions: 600x600
+[21-Jul-2025 10:39:52 Europe/Rome] Image already small enough, no optimization needed
+[21-Jul-2025 10:39:52 Europe/Rome] Image optimization result: false
+[21-Jul-2025 10:39:52 Europe/Rome] Success response: {"success":true,"message":"Immagine caricata con successo","fileName":"chlor-wc-gel-sanitec.jpg","filePath":"assets\/img\/products\/chlor-wc-gel-sanitec.jpg","optimized":false}
+[21-Jul-2025 10:39:52 Europe/Rome] === UPLOAD REQUEST END ===
+[21-Jul-2025 10:39:52 Europe/Rome] === UPLOAD REQUEST START ===
+[21-Jul-2025 10:39:52 Europe/Rome] Method: POST
+[21-Jul-2025 10:39:52 Europe/Rome] URI: /TestOre/api/upload-product-image.php
+[21-Jul-2025 10:39:52 Europe/Rome] Headers: {"Cookie":"_ga=GA1.1.217452127.1752652398; artigea-cookie-consent={\"necessary\":true,\"analytics\":false,\"marketing\":false,\"preferences\":false,\"timestamp\":1752654829084,\"version\":\"1.0\"}; artigea-cookie-consent_timestamp=1752654829085; _ga_M4MW5QEKQ4=GS2.1.s1752833515$o6$g0$t1752833515$j60$l0$h0","Priority":"u=1, i","Accept-Language":"it-IT,it;q=0.9,en-US;q=0.8,en;q=0.7","Accept-Encoding":"gzip, deflate, br, zstd","Referer":"https:\/\/www.artigea.it\/TestOre\/pages\/admin.html","Sec-Fetch-Dest":"empty","Sec-Fetch-Mode":"cors","Sec-Fetch-Site":"same-origin","Origin":"https:\/\/www.artigea.it","Accept":"*\/*","Sec-Ch-Ua-Mobile":"?0","Content-Type":"multipart\/form-data; boundary=----WebKitFormBoundarydvx4fSTECQCAW9wY","Sec-Ch-Ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Google Chrome\";v=\"138\"","User-Agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/138.0.0.0 Safari\/537.36","Sec-Ch-Ua-Platform":"\"Windows\"","Content-Length":"37129","Connection":"close","X-Forwarded-Proto":"https","X-Forwarded-Port":"443","X-Real-Ip":"79.10.63.3","Host":"www.artigea.it"}
+[21-Jul-2025 10:39:52 Europe/Rome] POST request processing...
+[21-Jul-2025 10:39:52 Europe/Rome] Upload directory: ../assets/img/products/
+[21-Jul-2025 10:39:52 Europe/Rome] Max file size: 5242880
+[21-Jul-2025 10:39:52 Europe/Rome] POST data: {"productId":"chlor-wc-gel-sanitec"}
+[21-Jul-2025 10:39:52 Europe/Rome] FILES data: {"productImage":{"name":"chlor-wc-gel-sanitec.jpg","full_path":"chlor-wc-gel-sanitec.jpg","type":"image\/jpeg","tmp_name":"\/tmp\/phptrXtFD","error":0,"size":36807}}
+[21-Jul-2025 10:39:52 Europe/Rome] File info - Name: chlor-wc-gel-sanitec.jpg, Size: 36807, Type: image/jpeg
+[21-Jul-2025 10:39:52 Europe/Rome] File extension: jpg
+[21-Jul-2025 10:39:52 Europe/Rome] Target file path: ../assets/img/products/chlor-wc-gel-sanitec.jpg
+[21-Jul-2025 10:39:52 Europe/Rome] Image info: {"0":600,"1":600,"2":2,"3":"width=\"600\" height=\"600\"","bits":8,"channels":3,"mime":"image\/jpeg"}
+[21-Jul-2025 10:39:52 Europe/Rome] File moved successfully to: ../assets/img/products/chlor-wc-gel-sanitec.jpg
+[21-Jul-2025 10:39:52 Europe/Rome] Starting image optimization for: ../assets/img/products/chlor-wc-gel-sanitec.jpg
+[21-Jul-2025 10:39:52 Europe/Rome] Original dimensions: 600x600
+[21-Jul-2025 10:39:52 Europe/Rome] Image already small enough, no optimization needed
+[21-Jul-2025 10:39:52 Europe/Rome] Image optimization result: false
+[21-Jul-2025 10:39:52 Europe/Rome] Success response: {"success":true,"message":"Immagine caricata con successo","fileName":"chlor-wc-gel-sanitec.jpg","filePath":"assets\/img\/products\/chlor-wc-gel-sanitec.jpg","optimized":false}
+[21-Jul-2025 10:39:52 Europe/Rome] === UPLOAD REQUEST END ===
+[21-Jul-2025 11:30:37 Europe/Rome] === UPLOAD REQUEST START ===
+[21-Jul-2025 11:30:37 Europe/Rome] Method: POST
+[21-Jul-2025 11:30:37 Europe/Rome] URI: /TestOre/api/upload-product-image.php
+[21-Jul-2025 11:30:37 Europe/Rome] Headers: {"Cookie":"_ga=GA1.1.217452127.1752652398; artigea-cookie-consent={\"necessary\":true,\"analytics\":false,\"marketing\":false,\"preferences\":false,\"timestamp\":1752654829084,\"version\":\"1.0\"}; artigea-cookie-consent_timestamp=1752654829085; _ga_M4MW5QEKQ4=GS2.1.s1752833515$o6$g0$t1752833515$j60$l0$h0","Priority":"u=1, i","Accept-Language":"it-IT,it;q=0.9,en-US;q=0.8,en;q=0.7","Accept-Encoding":"gzip, deflate, br, zstd","Referer":"https:\/\/www.artigea.it\/TestOre\/pages\/admin.html","Sec-Fetch-Dest":"empty","Sec-Fetch-Mode":"cors","Sec-Fetch-Site":"same-origin","Origin":"https:\/\/www.artigea.it","Accept":"*\/*","Sec-Ch-Ua-Mobile":"?0","Content-Type":"multipart\/form-data; boundary=----WebKitFormBoundary4AxwzBeMv0GQwZYh","Sec-Ch-Ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Google Chrome\";v=\"138\"","User-Agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/138.0.0.0 Safari\/537.36","Sec-Ch-Ua-Platform":"\"Windows\"","Content-Length":"32527","Connection":"close","X-Forwarded-Proto":"https","X-Forwarded-Port":"443","X-Real-Ip":"79.10.63.3","Host":"www.artigea.it"}
+[21-Jul-2025 11:30:37 Europe/Rome] POST request processing...
+[21-Jul-2025 11:30:37 Europe/Rome] Upload directory: ../assets/img/products/
+[21-Jul-2025 11:30:37 Europe/Rome] Max file size: 5242880
+[21-Jul-2025 11:30:37 Europe/Rome] POST data: {"productId":"biocide-lct"}
+[21-Jul-2025 11:30:37 Europe/Rome] FILES data: {"productImage":{"name":"biocide.jpg","full_path":"biocide.jpg","type":"image\/jpeg","tmp_name":"\/tmp\/phpmJCCvL","error":0,"size":32227}}
+[21-Jul-2025 11:30:37 Europe/Rome] File info - Name: biocide.jpg, Size: 32227, Type: image/jpeg
+[21-Jul-2025 11:30:37 Europe/Rome] File extension: jpg
+[21-Jul-2025 11:30:37 Europe/Rome] Target file path: ../assets/img/products/biocide-lct.jpg
+[21-Jul-2025 11:30:37 Europe/Rome] Image info: {"0":800,"1":1066,"2":2,"3":"width=\"800\" height=\"1066\"","bits":8,"channels":3,"mime":"image\/jpeg"}
+[21-Jul-2025 11:30:37 Europe/Rome] File moved successfully to: ../assets/img/products/biocide-lct.jpg
+[21-Jul-2025 11:30:37 Europe/Rome] Starting image optimization for: ../assets/img/products/biocide-lct.jpg
+[21-Jul-2025 11:30:37 Europe/Rome] Original dimensions: 800x1066
+[21-Jul-2025 11:30:37 Europe/Rome] New dimensions: 450x600
+[21-Jul-2025 11:30:37 Europe/Rome] Image optimization completed, save result: true
+[21-Jul-2025 11:30:37 Europe/Rome] Image optimization result: true
+[21-Jul-2025 11:30:37 Europe/Rome] Success response: {"success":true,"message":"Immagine caricata con successo","fileName":"biocide-lct.jpg","filePath":"assets\/img\/products\/biocide-lct.jpg","optimized":true}
+[21-Jul-2025 11:30:37 Europe/Rome] === UPLOAD REQUEST END ===
+[21-Jul-2025 11:32:35 Europe/Rome] === UPLOAD REQUEST START ===
+[21-Jul-2025 11:32:35 Europe/Rome] Method: POST
+[21-Jul-2025 11:32:35 Europe/Rome] URI: /TestOre/api/upload-product-image.php
+[21-Jul-2025 11:32:35 Europe/Rome] Headers: {"Cookie":"_ga=GA1.1.217452127.1752652398; artigea-cookie-consent={\"necessary\":true,\"analytics\":false,\"marketing\":false,\"preferences\":false,\"timestamp\":1752654829084,\"version\":\"1.0\"}; artigea-cookie-consent_timestamp=1752654829085; _ga_M4MW5QEKQ4=GS2.1.s1752833515$o6$g0$t1752833515$j60$l0$h0","Priority":"u=1, i","Accept-Language":"it-IT,it;q=0.9,en-US;q=0.8,en;q=0.7","Accept-Encoding":"gzip, deflate, br, zstd","Referer":"https:\/\/www.artigea.it\/TestOre\/pages\/admin.html","Sec-Fetch-Dest":"empty","Sec-Fetch-Mode":"cors","Sec-Fetch-Site":"same-origin","Origin":"https:\/\/www.artigea.it","Accept":"*\/*","Sec-Ch-Ua-Mobile":"?0","Content-Type":"multipart\/form-data; boundary=----WebKitFormBoundaryW2GVOEd1Gx48V7ho","Sec-Ch-Ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Google Chrome\";v=\"138\"","User-Agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/138.0.0.0 Safari\/537.36","Sec-Ch-Ua-Platform":"\"Windows\"","Content-Length":"6883","Connection":"close","X-Forwarded-Proto":"https","X-Forwarded-Port":"443","X-Real-Ip":"79.10.63.3","Host":"www.artigea.it"}
+[21-Jul-2025 11:32:35 Europe/Rome] POST request processing...
+[21-Jul-2025 11:32:35 Europe/Rome] Upload directory: ../assets/img/products/
+[21-Jul-2025 11:32:35 Europe/Rome] Max file size: 5242880
+[21-Jul-2025 11:32:35 Europe/Rome] POST data: {"productId":"deo-flash-cedro"}
+[21-Jul-2025 11:32:35 Europe/Rome] FILES data: {"productImage":{"name":"Deo FlashCedro.jpeg","full_path":"Deo FlashCedro.jpeg","type":"image\/jpeg","tmp_name":"\/tmp\/phpd8pLMt","error":0,"size":6571}}
+[21-Jul-2025 11:32:35 Europe/Rome] File info - Name: Deo FlashCedro.jpeg, Size: 6571, Type: image/jpeg
+[21-Jul-2025 11:32:35 Europe/Rome] File extension: jpeg
+[21-Jul-2025 11:32:35 Europe/Rome] Target file path: ../assets/img/products/deo-flash-cedro.jpeg
+[21-Jul-2025 11:32:35 Europe/Rome] Image info: {"0":225,"1":225,"2":2,"3":"width=\"225\" height=\"225\"","bits":8,"channels":3,"mime":"image\/jpeg"}
+[21-Jul-2025 11:32:35 Europe/Rome] File moved successfully to: ../assets/img/products/deo-flash-cedro.jpeg
+[21-Jul-2025 11:32:35 Europe/Rome] Starting image optimization for: ../assets/img/products/deo-flash-cedro.jpeg
+[21-Jul-2025 11:32:35 Europe/Rome] Original dimensions: 225x225
+[21-Jul-2025 11:32:35 Europe/Rome] Image already small enough, no optimization needed
+[21-Jul-2025 11:32:35 Europe/Rome] Image optimization result: false
+[21-Jul-2025 11:32:35 Europe/Rome] Success response: {"success":true,"message":"Immagine caricata con successo","fileName":"deo-flash-cedro.jpeg","filePath":"assets\/img\/products\/deo-flash-cedro.jpeg","optimized":false}
+[21-Jul-2025 11:32:35 Europe/Rome] === UPLOAD REQUEST END ===
+[21-Jul-2025 11:34:36 Europe/Rome] === UPLOAD REQUEST START ===
+[21-Jul-2025 11:34:36 Europe/Rome] Method: POST
+[21-Jul-2025 11:34:36 Europe/Rome] URI: /TestOre/api/upload-product-image.php
+[21-Jul-2025 11:34:36 Europe/Rome] Headers: {"Cookie":"_ga=GA1.1.217452127.1752652398; artigea-cookie-consent={\"necessary\":true,\"analytics\":false,\"marketing\":false,\"preferences\":false,\"timestamp\":1752654829084,\"version\":\"1.0\"}; artigea-cookie-consent_timestamp=1752654829085; _ga_M4MW5QEKQ4=GS2.1.s1752833515$o6$g0$t1752833515$j60$l0$h0","Priority":"u=1, i","Accept-Language":"it-IT,it;q=0.9,en-US;q=0.8,en;q=0.7","Accept-Encoding":"gzip, deflate, br, zstd","Referer":"https:\/\/www.artigea.it\/TestOre\/pages\/admin.html","Sec-Fetch-Dest":"empty","Sec-Fetch-Mode":"cors","Sec-Fetch-Site":"same-origin","Origin":"https:\/\/www.artigea.it","Accept":"*\/*","Sec-Ch-Ua-Mobile":"?0","Content-Type":"multipart\/form-data; boundary=----WebKitFormBoundary7KFjM7AuKufloi8o","Sec-Ch-Ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Google Chrome\";v=\"138\"","User-Agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/138.0.0.0 Safari\/537.36","Sec-Ch-Ua-Platform":"\"Windows\"","Content-Length":"146185","Connection":"close","X-Forwarded-Proto":"https","X-Forwarded-Port":"443","X-Real-Ip":"79.10.63.3","Host":"www.artigea.it"}
+[21-Jul-2025 11:34:36 Europe/Rome] POST request processing...
+[21-Jul-2025 11:34:36 Europe/Rome] Upload directory: ../assets/img/products/
+[21-Jul-2025 11:34:36 Europe/Rome] Max file size: 5242880
+[21-Jul-2025 11:34:36 Europe/Rome] POST data: {"productId":"hygenist-pavimenti"}
+[21-Jul-2025 11:34:36 Europe/Rome] FILES data: {"productImage":{"name":"HygenistPaviumenti.jpg","full_path":"HygenistPaviumenti.jpg","type":"image\/jpeg","tmp_name":"\/tmp\/phpJGnDH3","error":0,"size":145867}}
+[21-Jul-2025 11:34:36 Europe/Rome] File info - Name: HygenistPaviumenti.jpg, Size: 145867, Type: image/jpeg
+[21-Jul-2025 11:34:36 Europe/Rome] File extension: jpg
+[21-Jul-2025 11:34:36 Europe/Rome] Target file path: ../assets/img/products/hygenist-pavimenti.jpg
+[21-Jul-2025 11:34:36 Europe/Rome] Image info: {"0":800,"1":800,"2":2,"3":"width=\"800\" height=\"800\"","bits":8,"channels":3,"mime":"image\/jpeg"}
+[21-Jul-2025 11:34:36 Europe/Rome] File moved successfully to: ../assets/img/products/hygenist-pavimenti.jpg
+[21-Jul-2025 11:34:36 Europe/Rome] Starting image optimization for: ../assets/img/products/hygenist-pavimenti.jpg
+[21-Jul-2025 11:34:36 Europe/Rome] Original dimensions: 800x800
+[21-Jul-2025 11:34:36 Europe/Rome] New dimensions: 600x600
+[21-Jul-2025 11:34:36 Europe/Rome] Image optimization completed, save result: true
+[21-Jul-2025 11:34:36 Europe/Rome] Image optimization result: true
+[21-Jul-2025 11:34:36 Europe/Rome] Success response: {"success":true,"message":"Immagine caricata con successo","fileName":"hygenist-pavimenti.jpg","filePath":"assets\/img\/products\/hygenist-pavimenti.jpg","optimized":true}
+[21-Jul-2025 11:34:36 Europe/Rome] === UPLOAD REQUEST END ===
+[21-Jul-2025 11:36:42 Europe/Rome] === UPLOAD REQUEST START ===
+[21-Jul-2025 11:36:42 Europe/Rome] Method: POST
+[21-Jul-2025 11:36:42 Europe/Rome] URI: /TestOre/api/upload-product-image.php
+[21-Jul-2025 11:36:42 Europe/Rome] Headers: {"Cookie":"_ga=GA1.1.217452127.1752652398; artigea-cookie-consent={\"necessary\":true,\"analytics\":false,\"marketing\":false,\"preferences\":false,\"timestamp\":1752654829084,\"version\":\"1.0\"}; artigea-cookie-consent_timestamp=1752654829085; _ga_M4MW5QEKQ4=GS2.1.s1752833515$o6$g0$t1752833515$j60$l0$h0","Priority":"u=1, i","Accept-Language":"it-IT,it;q=0.9,en-US;q=0.8,en;q=0.7","Accept-Encoding":"gzip, deflate, br, zstd","Referer":"https:\/\/www.artigea.it\/TestOre\/pages\/admin.html","Sec-Fetch-Dest":"empty","Sec-Fetch-Mode":"cors","Sec-Fetch-Site":"same-origin","Origin":"https:\/\/www.artigea.it","Accept":"*\/*","Sec-Ch-Ua-Mobile":"?0","Content-Type":"multipart\/form-data; boundary=----WebKitFormBoundaryO3Gg19aszzfyI5eM","Sec-Ch-Ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Google Chrome\";v=\"138\"","User-Agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/138.0.0.0 Safari\/537.36","Sec-Ch-Ua-Platform":"\"Windows\"","Content-Length":"194759","Connection":"close","X-Forwarded-Proto":"https","X-Forwarded-Port":"443","X-Real-Ip":"79.10.63.3","Host":"www.artigea.it"}
+[21-Jul-2025 11:36:42 Europe/Rome] POST request processing...
+[21-Jul-2025 11:36:42 Europe/Rome] Upload directory: ../assets/img/products/
+[21-Jul-2025 11:36:42 Europe/Rome] Max file size: 5242880
+[21-Jul-2025 11:36:42 Europe/Rome] POST data: {"productId":"delta-bagno"}
+[21-Jul-2025 11:36:42 Europe/Rome] FILES data: {"productImage":{"name":"deltaBagno.jpg","full_path":"deltaBagno.jpg","type":"image\/jpeg","tmp_name":"\/tmp\/phpFEgE6M","error":0,"size":194456}}
+[21-Jul-2025 11:36:42 Europe/Rome] File info - Name: deltaBagno.jpg, Size: 194456, Type: image/jpeg
+[21-Jul-2025 11:36:42 Europe/Rome] File extension: jpg
+[21-Jul-2025 11:36:42 Europe/Rome] Target file path: ../assets/img/products/delta-bagno.jpg
+[21-Jul-2025 11:36:42 Europe/Rome] Image info: {"0":2000,"1":2000,"2":2,"3":"width=\"2000\" height=\"2000\"","bits":8,"channels":3,"mime":"image\/jpeg"}
+[21-Jul-2025 11:36:42 Europe/Rome] File moved successfully to: ../assets/img/products/delta-bagno.jpg
+[21-Jul-2025 11:36:42 Europe/Rome] Starting image optimization for: ../assets/img/products/delta-bagno.jpg
+[21-Jul-2025 11:36:42 Europe/Rome] Original dimensions: 2000x2000
+[21-Jul-2025 11:36:42 Europe/Rome] New dimensions: 600x600
+[21-Jul-2025 11:36:42 Europe/Rome] Image optimization completed, save result: true
+[21-Jul-2025 11:36:42 Europe/Rome] Image optimization result: true
+[21-Jul-2025 11:36:42 Europe/Rome] Success response: {"success":true,"message":"Immagine caricata con successo","fileName":"delta-bagno.jpg","filePath":"assets\/img\/products\/delta-bagno.jpg","optimized":true}
+[21-Jul-2025 11:36:42 Europe/Rome] === UPLOAD REQUEST END ===
+[21-Jul-2025 11:39:35 Europe/Rome] === UPLOAD REQUEST START ===
+[21-Jul-2025 11:39:35 Europe/Rome] Method: POST
+[21-Jul-2025 11:39:35 Europe/Rome] URI: /TestOre/api/upload-product-image.php
+[21-Jul-2025 11:39:35 Europe/Rome] Headers: {"Cookie":"_ga=GA1.1.217452127.1752652398; artigea-cookie-consent={\"necessary\":true,\"analytics\":false,\"marketing\":false,\"preferences\":false,\"timestamp\":1752654829084,\"version\":\"1.0\"}; artigea-cookie-consent_timestamp=1752654829085; _ga_M4MW5QEKQ4=GS2.1.s1752833515$o6$g0$t1752833515$j60$l0$h0","Priority":"u=1, i","Accept-Language":"it-IT,it;q=0.9,en-US;q=0.8,en;q=0.7","Accept-Encoding":"gzip, deflate, br, zstd","Referer":"https:\/\/www.artigea.it\/TestOre\/pages\/admin.html","Sec-Fetch-Dest":"empty","Sec-Fetch-Mode":"cors","Sec-Fetch-Site":"same-origin","Origin":"https:\/\/www.artigea.it","Accept":"*\/*","Sec-Ch-Ua-Mobile":"?0","Content-Type":"multipart\/form-data; boundary=----WebKitFormBoundaryxPzPObEj6BRzzMLS","Sec-Ch-Ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Google Chrome\";v=\"138\"","User-Agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/138.0.0.0 Safari\/537.36","Sec-Ch-Ua-Platform":"\"Windows\"","Content-Length":"17890","Connection":"close","X-Forwarded-Proto":"https","X-Forwarded-Port":"443","X-Real-Ip":"79.10.63.3","Host":"www.artigea.it"}
+[21-Jul-2025 11:39:35 Europe/Rome] POST request processing...
+[21-Jul-2025 11:39:35 Europe/Rome] Upload directory: ../assets/img/products/
+[21-Jul-2025 11:39:35 Europe/Rome] Max file size: 5242880
+[21-Jul-2025 11:39:35 Europe/Rome] POST data: {"productId":"pom-ambience-spring"}
+[21-Jul-2025 11:39:35 Europe/Rome] FILES data: {"productImage":{"name":"spring.webp","full_path":"spring.webp","type":"image\/webp","tmp_name":"\/tmp\/php13tpMQ","error":0,"size":17582}}
+[21-Jul-2025 11:39:35 Europe/Rome] File info - Name: spring.webp, Size: 17582, Type: image/webp
+[21-Jul-2025 11:39:35 Europe/Rome] File extension: webp
+[21-Jul-2025 11:39:35 Europe/Rome] Target file path: ../assets/img/products/pom-ambience-spring.webp
+[21-Jul-2025 11:39:35 Europe/Rome] Image info: {"0":600,"1":600,"2":18,"3":"width=\"600\" height=\"600\"","bits":8,"mime":"image\/webp"}
+[21-Jul-2025 11:39:35 Europe/Rome] File moved successfully to: ../assets/img/products/pom-ambience-spring.webp
+[21-Jul-2025 11:39:35 Europe/Rome] Starting image optimization for: ../assets/img/products/pom-ambience-spring.webp
+[21-Jul-2025 11:39:35 Europe/Rome] Original dimensions: 600x600
+[21-Jul-2025 11:39:35 Europe/Rome] Image already small enough, no optimization needed
+[21-Jul-2025 11:39:35 Europe/Rome] Image optimization result: false
+[21-Jul-2025 11:39:35 Europe/Rome] Success response: {"success":true,"message":"Immagine caricata con successo","fileName":"pom-ambience-spring.webp","filePath":"assets\/img\/products\/pom-ambience-spring.webp","optimized":false}
+[21-Jul-2025 11:39:35 Europe/Rome] === UPLOAD REQUEST END ===
+[21-Jul-2025 11:40:39 Europe/Rome] === UPLOAD REQUEST START ===
+[21-Jul-2025 11:40:39 Europe/Rome] Method: POST
+[21-Jul-2025 11:40:39 Europe/Rome] URI: /TestOre/api/upload-product-image.php
+[21-Jul-2025 11:40:39 Europe/Rome] Headers: {"Cookie":"_ga=GA1.1.217452127.1752652398; artigea-cookie-consent={\"necessary\":true,\"analytics\":false,\"marketing\":false,\"preferences\":false,\"timestamp\":1752654829084,\"version\":\"1.0\"}; artigea-cookie-consent_timestamp=1752654829085; _ga_M4MW5QEKQ4=GS2.1.s1752833515$o6$g0$t1752833515$j60$l0$h0","Priority":"u=1, i","Accept-Language":"it-IT,it;q=0.9,en-US;q=0.8,en;q=0.7","Accept-Encoding":"gzip, deflate, br, zstd","Referer":"https:\/\/www.artigea.it\/TestOre\/pages\/admin.html","Sec-Fetch-Dest":"empty","Sec-Fetch-Mode":"cors","Sec-Fetch-Site":"same-origin","Origin":"https:\/\/www.artigea.it","Accept":"*\/*","Sec-Ch-Ua-Mobile":"?0","Content-Type":"multipart\/form-data; boundary=----WebKitFormBoundaryLSJbgcqWGjX6YvqJ","Sec-Ch-Ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Google Chrome\";v=\"138\"","User-Agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/138.0.0.0 Safari\/537.36","Sec-Ch-Ua-Platform":"\"Windows\"","Content-Length":"345931","Connection":"close","X-Forwarded-Proto":"https","X-Forwarded-Port":"443","X-Real-Ip":"79.10.63.3","Host":"www.artigea.it"}
+[21-Jul-2025 11:40:39 Europe/Rome] POST request processing...
+[21-Jul-2025 11:40:39 Europe/Rome] Upload directory: ../assets/img/products/
+[21-Jul-2025 11:40:39 Europe/Rome] Max file size: 5242880
+[21-Jul-2025 11:40:39 Europe/Rome] POST data: {"productId":"pom-ambience-autumn"}
+[21-Jul-2025 11:40:39 Europe/Rome] FILES data: {"productImage":{"name":"autun.png","full_path":"autun.png","type":"image\/png","tmp_name":"\/tmp\/phpUX7bNG","error":0,"size":345626}}
+[21-Jul-2025 11:40:39 Europe/Rome] File info - Name: autun.png, Size: 345626, Type: image/png
+[21-Jul-2025 11:40:39 Europe/Rome] File extension: png
+[21-Jul-2025 11:40:39 Europe/Rome] Target file path: ../assets/img/products/pom-ambience-autumn.png
+[21-Jul-2025 11:40:39 Europe/Rome] Image info: {"0":966,"1":966,"2":3,"3":"width=\"966\" height=\"966\"","bits":8,"mime":"image\/png"}
+[21-Jul-2025 11:40:39 Europe/Rome] File moved successfully to: ../assets/img/products/pom-ambience-autumn.png
+[21-Jul-2025 11:40:39 Europe/Rome] Starting image optimization for: ../assets/img/products/pom-ambience-autumn.png
+[21-Jul-2025 11:40:39 Europe/Rome] Original dimensions: 966x966
+[21-Jul-2025 11:40:39 Europe/Rome] New dimensions: 600x600
+[21-Jul-2025 11:40:40 Europe/Rome] Image optimization completed, save result: true
+[21-Jul-2025 11:40:40 Europe/Rome] Image optimization result: true
+[21-Jul-2025 11:40:40 Europe/Rome] Success response: {"success":true,"message":"Immagine caricata con successo","fileName":"pom-ambience-autumn.png","filePath":"assets\/img\/products\/pom-ambience-autumn.png","optimized":true}
+[21-Jul-2025 11:40:40 Europe/Rome] === UPLOAD REQUEST END ===
+[21-Jul-2025 11:41:26 Europe/Rome] === UPLOAD REQUEST START ===
+[21-Jul-2025 11:41:26 Europe/Rome] Method: POST
+[21-Jul-2025 11:41:26 Europe/Rome] URI: /TestOre/api/upload-product-image.php
+[21-Jul-2025 11:41:26 Europe/Rome] Headers: {"Cookie":"_ga=GA1.1.217452127.1752652398; artigea-cookie-consent={\"necessary\":true,\"analytics\":false,\"marketing\":false,\"preferences\":false,\"timestamp\":1752654829084,\"version\":\"1.0\"}; artigea-cookie-consent_timestamp=1752654829085; _ga_M4MW5QEKQ4=GS2.1.s1752833515$o6$g0$t1752833515$j60$l0$h0","Priority":"u=1, i","Accept-Language":"it-IT,it;q=0.9,en-US;q=0.8,en;q=0.7","Accept-Encoding":"gzip, deflate, br, zstd","Referer":"https:\/\/www.artigea.it\/TestOre\/pages\/admin.html","Sec-Fetch-Dest":"empty","Sec-Fetch-Mode":"cors","Sec-Fetch-Site":"same-origin","Origin":"https:\/\/www.artigea.it","Accept":"*\/*","Sec-Ch-Ua-Mobile":"?0","Content-Type":"multipart\/form-data; boundary=----WebKitFormBoundaryGhs4RTkBAv6JCJTB","Sec-Ch-Ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Google Chrome\";v=\"138\"","User-Agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/138.0.0.0 Safari\/537.36","Sec-Ch-Ua-Platform":"\"Windows\"","Content-Length":"365435","Connection":"close","X-Forwarded-Proto":"https","X-Forwarded-Port":"443","X-Real-Ip":"79.10.63.3","Host":"www.artigea.it"}
+[21-Jul-2025 11:41:26 Europe/Rome] POST request processing...
+[21-Jul-2025 11:41:26 Europe/Rome] Upload directory: ../assets/img/products/
+[21-Jul-2025 11:41:26 Europe/Rome] Max file size: 5242880
+[21-Jul-2025 11:41:26 Europe/Rome] POST data: {"productId":"pom-ambience-summer"}
+[21-Jul-2025 11:41:26 Europe/Rome] FILES data: {"productImage":{"name":"summer.png","full_path":"summer.png","type":"image\/png","tmp_name":"\/tmp\/phpjePMe6","error":0,"size":365129}}
+[21-Jul-2025 11:41:26 Europe/Rome] File info - Name: summer.png, Size: 365129, Type: image/png
+[21-Jul-2025 11:41:26 Europe/Rome] File extension: png
+[21-Jul-2025 11:41:26 Europe/Rome] Target file path: ../assets/img/products/pom-ambience-summer.png
+[21-Jul-2025 11:41:26 Europe/Rome] Image info: {"0":966,"1":966,"2":3,"3":"width=\"966\" height=\"966\"","bits":8,"mime":"image\/png"}
+[21-Jul-2025 11:41:26 Europe/Rome] File moved successfully to: ../assets/img/products/pom-ambience-summer.png
+[21-Jul-2025 11:41:26 Europe/Rome] Starting image optimization for: ../assets/img/products/pom-ambience-summer.png
+[21-Jul-2025 11:41:26 Europe/Rome] Original dimensions: 966x966
+[21-Jul-2025 11:41:26 Europe/Rome] New dimensions: 600x600
+[21-Jul-2025 11:41:27 Europe/Rome] Image optimization completed, save result: true
+[21-Jul-2025 11:41:27 Europe/Rome] Image optimization result: true
+[21-Jul-2025 11:41:27 Europe/Rome] Success response: {"success":true,"message":"Immagine caricata con successo","fileName":"pom-ambience-summer.png","filePath":"assets\/img\/products\/pom-ambience-summer.png","optimized":true}
+[21-Jul-2025 11:41:27 Europe/Rome] === UPLOAD REQUEST END ===
+[21-Jul-2025 11:44:07 Europe/Rome] === UPLOAD REQUEST START ===
+[21-Jul-2025 11:44:07 Europe/Rome] Method: POST
+[21-Jul-2025 11:44:07 Europe/Rome] URI: /TestOre/api/upload-product-image.php
+[21-Jul-2025 11:44:07 Europe/Rome] Headers: {"Cookie":"_ga=GA1.1.217452127.1752652398; artigea-cookie-consent={\"necessary\":true,\"analytics\":false,\"marketing\":false,\"preferences\":false,\"timestamp\":1752654829084,\"version\":\"1.0\"}; artigea-cookie-consent_timestamp=1752654829085; _ga_M4MW5QEKQ4=GS2.1.s1752833515$o6$g0$t1752833515$j60$l0$h0","Priority":"u=1, i","Accept-Language":"it-IT,it;q=0.9,en-US;q=0.8,en;q=0.7","Accept-Encoding":"gzip, deflate, br, zstd","Referer":"https:\/\/www.artigea.it\/TestOre\/pages\/admin.html","Sec-Fetch-Dest":"empty","Sec-Fetch-Mode":"cors","Sec-Fetch-Site":"same-origin","Origin":"https:\/\/www.artigea.it","Accept":"*\/*","Sec-Ch-Ua-Mobile":"?0","Content-Type":"multipart\/form-data; boundary=----WebKitFormBoundary5YykSBSRObKMY2Tl","Sec-Ch-Ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Google Chrome\";v=\"138\"","User-Agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/138.0.0.0 Safari\/537.36","Sec-Ch-Ua-Platform":"\"Windows\"","Content-Length":"356272","Connection":"close","X-Forwarded-Proto":"https","X-Forwarded-Port":"443","X-Real-Ip":"79.10.63.3","Host":"www.artigea.it"}
+[21-Jul-2025 11:44:07 Europe/Rome] POST request processing...
+[21-Jul-2025 11:44:07 Europe/Rome] Upload directory: ../assets/img/products/
+[21-Jul-2025 11:44:07 Europe/Rome] Max file size: 5242880
+[21-Jul-2025 11:44:07 Europe/Rome] POST data: {"productId":"igenikal"}
+[21-Jul-2025 11:44:07 Europe/Rome] FILES data: {"productImage":{"name":"igenika.png","full_path":"igenika.png","type":"image\/png","tmp_name":"\/tmp\/phpdYGKhk","error":0,"size":355976}}
+[21-Jul-2025 11:44:07 Europe/Rome] File info - Name: igenika.png, Size: 355976, Type: image/png
+[21-Jul-2025 11:44:07 Europe/Rome] File extension: png
+[21-Jul-2025 11:44:07 Europe/Rome] Target file path: ../assets/img/products/igenikal.png
+[21-Jul-2025 11:44:07 Europe/Rome] Image info: {"0":1400,"1":1400,"2":3,"3":"width=\"1400\" height=\"1400\"","bits":8,"mime":"image\/png"}
+[21-Jul-2025 11:44:07 Europe/Rome] File moved successfully to: ../assets/img/products/igenikal.png
+[21-Jul-2025 11:44:07 Europe/Rome] Starting image optimization for: ../assets/img/products/igenikal.png
+[21-Jul-2025 11:44:07 Europe/Rome] Original dimensions: 1400x1400
+[21-Jul-2025 11:44:07 Europe/Rome] New dimensions: 600x600
+[21-Jul-2025 11:44:08 Europe/Rome] Image optimization completed, save result: true
+[21-Jul-2025 11:44:08 Europe/Rome] Image optimization result: true
+[21-Jul-2025 11:44:08 Europe/Rome] Success response: {"success":true,"message":"Immagine caricata con successo","fileName":"igenikal.png","filePath":"assets\/img\/products\/igenikal.png","optimized":true}
+[21-Jul-2025 11:44:08 Europe/Rome] === UPLOAD REQUEST END ===
+[21-Jul-2025 11:45:59 Europe/Rome] === UPLOAD REQUEST START ===
+[21-Jul-2025 11:45:59 Europe/Rome] Method: POST
+[21-Jul-2025 11:45:59 Europe/Rome] URI: /TestOre/api/upload-product-image.php
+[21-Jul-2025 11:45:59 Europe/Rome] Headers: {"Cookie":"_ga=GA1.1.217452127.1752652398; artigea-cookie-consent={\"necessary\":true,\"analytics\":false,\"marketing\":false,\"preferences\":false,\"timestamp\":1752654829084,\"version\":\"1.0\"}; artigea-cookie-consent_timestamp=1752654829085; _ga_M4MW5QEKQ4=GS2.1.s1752833515$o6$g0$t1752833515$j60$l0$h0","Priority":"u=1, i","Accept-Language":"it-IT,it;q=0.9,en-US;q=0.8,en;q=0.7","Accept-Encoding":"gzip, deflate, br, zstd","Referer":"https:\/\/www.artigea.it\/TestOre\/pages\/admin.html","Sec-Fetch-Dest":"empty","Sec-Fetch-Mode":"cors","Sec-Fetch-Site":"same-origin","Origin":"https:\/\/www.artigea.it","Accept":"*\/*","Sec-Ch-Ua-Mobile":"?0","Content-Type":"multipart\/form-data; boundary=----WebKitFormBoundarypMbXEVtGUt944jbB","Sec-Ch-Ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Google Chrome\";v=\"138\"","User-Agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/138.0.0.0 Safari\/537.36","Sec-Ch-Ua-Platform":"\"Windows\"","Content-Length":"4411","Connection":"close","X-Forwarded-Proto":"https","X-Forwarded-Port":"443","X-Real-Ip":"79.10.63.3","Host":"www.artigea.it"}
+[21-Jul-2025 11:45:59 Europe/Rome] POST request processing...
+[21-Jul-2025 11:45:59 Europe/Rome] Upload directory: ../assets/img/products/
+[21-Jul-2025 11:45:59 Europe/Rome] Max file size: 5242880
+[21-Jul-2025 11:45:59 Europe/Rome] POST data: {"productId":"viakal"}
+[21-Jul-2025 11:45:59 Europe/Rome] FILES data: {"productImage":{"name":"viakal.jpeg","full_path":"viakal.jpeg","type":"image\/jpeg","tmp_name":"\/tmp\/phpLV0AMW","error":0,"size":4116}}
+[21-Jul-2025 11:45:59 Europe/Rome] File info - Name: viakal.jpeg, Size: 4116, Type: image/jpeg
+[21-Jul-2025 11:45:59 Europe/Rome] File extension: jpeg
+[21-Jul-2025 11:45:59 Europe/Rome] Target file path: ../assets/img/products/viakal.jpeg
+[21-Jul-2025 11:45:59 Europe/Rome] Image info: {"0":225,"1":225,"2":2,"3":"width=\"225\" height=\"225\"","bits":8,"channels":3,"mime":"image\/jpeg"}
+[21-Jul-2025 11:45:59 Europe/Rome] File moved successfully to: ../assets/img/products/viakal.jpeg
+[21-Jul-2025 11:45:59 Europe/Rome] Starting image optimization for: ../assets/img/products/viakal.jpeg
+[21-Jul-2025 11:45:59 Europe/Rome] Original dimensions: 225x225
+[21-Jul-2025 11:45:59 Europe/Rome] Image already small enough, no optimization needed
+[21-Jul-2025 11:45:59 Europe/Rome] Image optimization result: false
+[21-Jul-2025 11:45:59 Europe/Rome] Success response: {"success":true,"message":"Immagine caricata con successo","fileName":"viakal.jpeg","filePath":"assets\/img\/products\/viakal.jpeg","optimized":false}
+[21-Jul-2025 11:45:59 Europe/Rome] === UPLOAD REQUEST END ===
+[22-Jul-2025 11:03:38 Europe/Rome] === UPLOAD REQUEST START ===
+[22-Jul-2025 11:03:38 Europe/Rome] Method: POST
+[22-Jul-2025 11:03:38 Europe/Rome] URI: /TestOre/api/upload-product-image.php
+[22-Jul-2025 11:03:38 Europe/Rome] Headers: {"Cookie":"_ga=GA1.1.217452127.1752652398; artigea-cookie-consent={\"necessary\":true,\"analytics\":false,\"marketing\":false,\"preferences\":false,\"timestamp\":1752654829084,\"version\":\"1.0\"}; artigea-cookie-consent_timestamp=1752654829085; _ga_M4MW5QEKQ4=GS2.1.s1752833515$o6$g0$t1752833515$j60$l0$h0","Priority":"u=1, i","Accept-Language":"it-IT,it;q=0.9,en-US;q=0.8,en;q=0.7","Accept-Encoding":"gzip, deflate, br, zstd","Referer":"https:\/\/www.artigea.it\/TestOre\/pages\/admin.html","Sec-Fetch-Dest":"empty","Sec-Fetch-Mode":"cors","Sec-Fetch-Site":"same-origin","Origin":"https:\/\/www.artigea.it","Accept":"*\/*","Sec-Ch-Ua-Mobile":"?0","Content-Type":"multipart\/form-data; boundary=----WebKitFormBoundary34nY9YJLvPmmILsx","Sec-Ch-Ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Google Chrome\";v=\"138\"","User-Agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/138.0.0.0 Safari\/537.36","Sec-Ch-Ua-Platform":"\"Windows\"","Content-Length":"658697","Connection":"close","X-Forwarded-Proto":"https","X-Forwarded-Port":"443","X-Real-Ip":"79.10.63.3","Host":"www.artigea.it"}
+[22-Jul-2025 11:03:38 Europe/Rome] POST request processing...
+[22-Jul-2025 11:03:38 Europe/Rome] === UPLOAD REQUEST START ===
+[22-Jul-2025 11:03:38 Europe/Rome] Upload directory: ../assets/img/products/
+[22-Jul-2025 11:03:38 Europe/Rome] Method: POST
+[22-Jul-2025 11:03:38 Europe/Rome] Max file size: 5242880
+[22-Jul-2025 11:03:38 Europe/Rome] URI: /TestOre/api/upload-product-image.php
+[22-Jul-2025 11:03:38 Europe/Rome] Headers: {"Cookie":"_ga=GA1.1.217452127.1752652398; artigea-cookie-consent={\"necessary\":true,\"analytics\":false,\"marketing\":false,\"preferences\":false,\"timestamp\":1752654829084,\"version\":\"1.0\"}; artigea-cookie-consent_timestamp=1752654829085; _ga_M4MW5QEKQ4=GS2.1.s1752833515$o6$g0$t1752833515$j60$l0$h0","Priority":"u=1, i","Accept-Language":"it-IT,it;q=0.9,en-US;q=0.8,en;q=0.7","Accept-Encoding":"gzip, deflate, br, zstd","Referer":"https:\/\/www.artigea.it\/TestOre\/pages\/admin.html","Sec-Fetch-Dest":"empty","Sec-Fetch-Mode":"cors","Sec-Fetch-Site":"same-origin","Origin":"https:\/\/www.artigea.it","Accept":"*\/*","Sec-Ch-Ua-Mobile":"?0","Content-Type":"multipart\/form-data; boundary=----WebKitFormBoundaryBN66l0Til5rKMQBj","Sec-Ch-Ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Google Chrome\";v=\"138\"","User-Agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/138.0.0.0 Safari\/537.36","Sec-Ch-Ua-Platform":"\"Windows\"","Content-Length":"658697","Connection":"close","X-Forwarded-Proto":"https","X-Forwarded-Port":"443","X-Real-Ip":"79.10.63.3","Host":"www.artigea.it"}
+[22-Jul-2025 11:03:38 Europe/Rome] POST data: {"productId":"detergente-acido-ruby"}
+[22-Jul-2025 11:03:38 Europe/Rome] POST request processing...
+[22-Jul-2025 11:03:38 Europe/Rome] FILES data: {"productImage":{"name":"RUBY_gruppo_9L.png","full_path":"RUBY_gruppo_9L.png","type":"image\/png","tmp_name":"\/tmp\/phpZ8qprE","error":0,"size":658381}}
+[22-Jul-2025 11:03:38 Europe/Rome] Upload directory: ../assets/img/products/
+[22-Jul-2025 11:03:38 Europe/Rome] File info - Name: RUBY_gruppo_9L.png, Size: 658381, Type: image/png
+[22-Jul-2025 11:03:38 Europe/Rome] Max file size: 5242880
+[22-Jul-2025 11:03:38 Europe/Rome] File extension: png
+[22-Jul-2025 11:03:38 Europe/Rome] POST data: {"productId":"detergente-acido-ruby"}
+[22-Jul-2025 11:03:38 Europe/Rome] Target file path: ../assets/img/products/detergente-acido-ruby.png
+[22-Jul-2025 11:03:38 Europe/Rome] FILES data: {"productImage":{"name":"RUBY_gruppo_9L.png","full_path":"RUBY_gruppo_9L.png","type":"image\/png","tmp_name":"\/tmp\/phpxGBZAM","error":0,"size":658381}}
+[22-Jul-2025 11:03:38 Europe/Rome] Image info: {"0":966,"1":966,"2":3,"3":"width=\"966\" height=\"966\"","bits":8,"mime":"image\/png"}
+[22-Jul-2025 11:03:38 Europe/Rome] File info - Name: RUBY_gruppo_9L.png, Size: 658381, Type: image/png
+[22-Jul-2025 11:03:38 Europe/Rome] File extension: png
+[22-Jul-2025 11:03:38 Europe/Rome] Target file path: ../assets/img/products/detergente-acido-ruby.png
+[22-Jul-2025 11:03:38 Europe/Rome] Image info: {"0":966,"1":966,"2":3,"3":"width=\"966\" height=\"966\"","bits":8,"mime":"image\/png"}
+[22-Jul-2025 11:03:38 Europe/Rome] File moved successfully to: ../assets/img/products/detergente-acido-ruby.png
+[22-Jul-2025 11:03:38 Europe/Rome] Starting image optimization for: ../assets/img/products/detergente-acido-ruby.png
+[22-Jul-2025 11:03:38 Europe/Rome] PHP Notice:  getimagesize(): Error reading from ../assets/img/products/detergente-acido-ruby.png! in /web/htdocs/www.artigea.it/home/TestOre/api/upload-product-image.php on line 180
+[22-Jul-2025 11:03:38 Europe/Rome] Original dimensions: x
+[22-Jul-2025 11:03:38 Europe/Rome] Image already small enough, no optimization needed
+[22-Jul-2025 11:03:38 Europe/Rome] File moved successfully to: ../assets/img/products/detergente-acido-ruby.png
+[22-Jul-2025 11:03:38 Europe/Rome] Image optimization result: false
+[22-Jul-2025 11:03:38 Europe/Rome] Starting image optimization for: ../assets/img/products/detergente-acido-ruby.png
+[22-Jul-2025 11:03:38 Europe/Rome] Success response: {"success":true,"message":"Immagine caricata con successo","fileName":"detergente-acido-ruby.png","filePath":"..\/assets\/img\/products\/detergente-acido-ruby.png","optimized":false}
+[22-Jul-2025 11:03:38 Europe/Rome] Original dimensions: 966x966
+[22-Jul-2025 11:03:38 Europe/Rome] === UPLOAD REQUEST END ===
+[22-Jul-2025 11:03:38 Europe/Rome] New dimensions: 600x600
+[22-Jul-2025 11:03:39 Europe/Rome] Image optimization completed, save result: true
+[22-Jul-2025 11:03:39 Europe/Rome] Image optimization result: true
+[22-Jul-2025 11:03:39 Europe/Rome] Success response: {"success":true,"message":"Immagine caricata con successo","fileName":"detergente-acido-ruby.png","filePath":"..\/assets\/img\/products\/detergente-acido-ruby.png","optimized":true}
+[22-Jul-2025 11:03:39 Europe/Rome] === UPLOAD REQUEST END ===
+[22-Jul-2025 11:16:09 Europe/Rome] === UPLOAD REQUEST START ===
+[22-Jul-2025 11:16:09 Europe/Rome] Method: POST
+[22-Jul-2025 11:16:09 Europe/Rome] URI: /TestOre/api/upload-product-image.php
+[22-Jul-2025 11:16:09 Europe/Rome] Headers: {"Cookie":"_ga=GA1.1.217452127.1752652398; artigea-cookie-consent={\"necessary\":true,\"analytics\":false,\"marketing\":false,\"preferences\":false,\"timestamp\":1752654829084,\"version\":\"1.0\"}; artigea-cookie-consent_timestamp=1752654829085; _ga_M4MW5QEKQ4=GS2.1.s1753175193$o7$g0$t1753175193$j60$l0$h0","Priority":"u=1, i","Accept-Language":"it-IT,it;q=0.9,en-US;q=0.8,en;q=0.7","Accept-Encoding":"gzip, deflate, br, zstd","Referer":"https:\/\/www.artigea.it\/TestOre\/pages\/admin.html","Sec-Fetch-Dest":"empty","Sec-Fetch-Mode":"cors","Sec-Fetch-Site":"same-origin","Origin":"https:\/\/www.artigea.it","Accept":"*\/*","Sec-Ch-Ua-Mobile":"?0","Content-Type":"multipart\/form-data; boundary=----WebKitFormBoundarySokiO1KrJDrk2nWV","Sec-Ch-Ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Google Chrome\";v=\"138\"","User-Agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/138.0.0.0 Safari\/537.36","Sec-Ch-Ua-Platform":"\"Windows\"","Cache-Control":"no-cache","Pragma":"no-cache","Content-Length":"230229","Connection":"close","X-Forwarded-Proto":"https","X-Forwarded-Port":"443","X-Real-Ip":"79.10.63.3","Host":"www.artigea.it"}
+[22-Jul-2025 11:16:09 Europe/Rome] POST request processing...
+[22-Jul-2025 11:16:09 Europe/Rome] Upload directory: ../assets/img/products/
+[22-Jul-2025 11:16:09 Europe/Rome] Max file size: 5242880
+[22-Jul-2025 11:16:09 Europe/Rome] POST data: {"productId":"strong"}
+[22-Jul-2025 11:16:09 Europe/Rome] FILES data: {"productImage":{"name":"54355HD.jpg","full_path":"54355HD.jpg","type":"image\/jpeg","tmp_name":"\/tmp\/phpBX5kFZ","error":0,"size":229934}}
+[22-Jul-2025 11:16:09 Europe/Rome] File info - Name: 54355HD.jpg, Size: 229934, Type: image/jpeg
+[22-Jul-2025 11:16:09 Europe/Rome] File extension: jpg
+[22-Jul-2025 11:16:09 Europe/Rome] Target file path: ../assets/img/products/strong.jpg
+[22-Jul-2025 11:16:09 Europe/Rome] Image info: {"0":2000,"1":2000,"2":2,"3":"width=\"2000\" height=\"2000\"","bits":8,"channels":3,"mime":"image\/jpeg"}
+[22-Jul-2025 11:16:09 Europe/Rome] File moved successfully to: ../assets/img/products/strong.jpg
+[22-Jul-2025 11:16:09 Europe/Rome] Starting image optimization for: ../assets/img/products/strong.jpg
+[22-Jul-2025 11:16:09 Europe/Rome] Original dimensions: 2000x2000
+[22-Jul-2025 11:16:09 Europe/Rome] New dimensions: 600x600
+[22-Jul-2025 11:16:09 Europe/Rome] === UPLOAD REQUEST START ===
+[22-Jul-2025 11:16:09 Europe/Rome] Method: POST
+[22-Jul-2025 11:16:09 Europe/Rome] URI: /TestOre/api/upload-product-image.php
+[22-Jul-2025 11:16:09 Europe/Rome] Headers: {"Cookie":"_ga=GA1.1.217452127.1752652398; artigea-cookie-consent={\"necessary\":true,\"analytics\":false,\"marketing\":false,\"preferences\":false,\"timestamp\":1752654829084,\"version\":\"1.0\"}; artigea-cookie-consent_timestamp=1752654829085; _ga_M4MW5QEKQ4=GS2.1.s1753175193$o7$g0$t1753175193$j60$l0$h0","Priority":"u=1, i","Accept-Language":"it-IT,it;q=0.9,en-US;q=0.8,en;q=0.7","Accept-Encoding":"gzip, deflate, br, zstd","Referer":"https:\/\/www.artigea.it\/TestOre\/pages\/admin.html","Sec-Fetch-Dest":"empty","Sec-Fetch-Mode":"cors","Sec-Fetch-Site":"same-origin","Origin":"https:\/\/www.artigea.it","Accept":"*\/*","Sec-Ch-Ua-Mobile":"?0","Content-Type":"multipart\/form-data; boundary=----WebKitFormBoundaryGnuOMtvXMHk6YJDh","Sec-Ch-Ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Google Chrome\";v=\"138\"","User-Agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/138.0.0.0 Safari\/537.36","Sec-Ch-Ua-Platform":"\"Windows\"","Cache-Control":"no-cache","Pragma":"no-cache","Content-Length":"230229","Connection":"close","X-Forwarded-Proto":"https","X-Forwarded-Port":"443","X-Real-Ip":"79.10.63.3","Host":"www.artigea.it"}
+[22-Jul-2025 11:16:09 Europe/Rome] POST request processing...
+[22-Jul-2025 11:16:09 Europe/Rome] Upload directory: ../assets/img/products/
+[22-Jul-2025 11:16:09 Europe/Rome] Max file size: 5242880
+[22-Jul-2025 11:16:09 Europe/Rome] POST data: {"productId":"strong"}
+[22-Jul-2025 11:16:09 Europe/Rome] FILES data: {"productImage":{"name":"54355HD.jpg","full_path":"54355HD.jpg","type":"image\/jpeg","tmp_name":"\/tmp\/phpnB0FT7","error":0,"size":229934}}
+[22-Jul-2025 11:16:09 Europe/Rome] File info - Name: 54355HD.jpg, Size: 229934, Type: image/jpeg
+[22-Jul-2025 11:16:09 Europe/Rome] File extension: jpg
+[22-Jul-2025 11:16:09 Europe/Rome] Target file path: ../assets/img/products/strong.jpg
+[22-Jul-2025 11:16:09 Europe/Rome] === UPLOAD REQUEST START ===
+[22-Jul-2025 11:16:09 Europe/Rome] Image info: {"0":2000,"1":2000,"2":2,"3":"width=\"2000\" height=\"2000\"","bits":8,"channels":3,"mime":"image\/jpeg"}
+[22-Jul-2025 11:16:09 Europe/Rome] Method: POST
+[22-Jul-2025 11:16:09 Europe/Rome] URI: /TestOre/api/upload-product-image.php
+[22-Jul-2025 11:16:09 Europe/Rome] Headers: {"Cookie":"_ga=GA1.1.217452127.1752652398; artigea-cookie-consent={\"necessary\":true,\"analytics\":false,\"marketing\":false,\"preferences\":false,\"timestamp\":1752654829084,\"version\":\"1.0\"}; artigea-cookie-consent_timestamp=1752654829085; _ga_M4MW5QEKQ4=GS2.1.s1753175193$o7$g0$t1753175193$j60$l0$h0","Priority":"u=1, i","Accept-Language":"it-IT,it;q=0.9,en-US;q=0.8,en;q=0.7","Accept-Encoding":"gzip, deflate, br, zstd","Referer":"https:\/\/www.artigea.it\/TestOre\/pages\/admin.html","Sec-Fetch-Dest":"empty","Sec-Fetch-Mode":"cors","Sec-Fetch-Site":"same-origin","Origin":"https:\/\/www.artigea.it","Accept":"*\/*","Sec-Ch-Ua-Mobile":"?0","Content-Type":"multipart\/form-data; boundary=----WebKitFormBoundarylJdih86wVCWzq60Z","Sec-Ch-Ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Google Chrome\";v=\"138\"","User-Agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/138.0.0.0 Safari\/537.36","Sec-Ch-Ua-Platform":"\"Windows\"","Cache-Control":"no-cache","Pragma":"no-cache","Content-Length":"230229","Connection":"close","X-Forwarded-Proto":"https","X-Forwarded-Port":"443","X-Real-Ip":"79.10.63.3","Host":"www.artigea.it"}
+[22-Jul-2025 11:16:09 Europe/Rome] === UPLOAD REQUEST START ===
+[22-Jul-2025 11:16:09 Europe/Rome] File moved successfully to: ../assets/img/products/strong.jpg
+[22-Jul-2025 11:16:09 Europe/Rome] POST request processing...
+[22-Jul-2025 11:16:09 Europe/Rome] Method: POST
+[22-Jul-2025 11:16:09 Europe/Rome] Starting image optimization for: ../assets/img/products/strong.jpg
+[22-Jul-2025 11:16:09 Europe/Rome] URI: /TestOre/api/upload-product-image.php
+[22-Jul-2025 11:16:09 Europe/Rome] Upload directory: ../assets/img/products/
+[22-Jul-2025 11:16:09 Europe/Rome] Headers: {"Cookie":"_ga=GA1.1.217452127.1752652398; artigea-cookie-consent={\"necessary\":true,\"analytics\":false,\"marketing\":false,\"preferences\":false,\"timestamp\":1752654829084,\"version\":\"1.0\"}; artigea-cookie-consent_timestamp=1752654829085; _ga_M4MW5QEKQ4=GS2.1.s1753175193$o7$g0$t1753175193$j60$l0$h0","Priority":"u=1, i","Accept-Language":"it-IT,it;q=0.9,en-US;q=0.8,en;q=0.7","Accept-Encoding":"gzip, deflate, br, zstd","Referer":"https:\/\/www.artigea.it\/TestOre\/pages\/admin.html","Sec-Fetch-Dest":"empty","Sec-Fetch-Mode":"cors","Sec-Fetch-Site":"same-origin","Origin":"https:\/\/www.artigea.it","Accept":"*\/*","Sec-Ch-Ua-Mobile":"?0","Content-Type":"multipart\/form-data; boundary=----WebKitFormBoundaryMCkMHVSAu8hkDNUK","Sec-Ch-Ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Google Chrome\";v=\"138\"","User-Agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/138.0.0.0 Safari\/537.36","Sec-Ch-Ua-Platform":"\"Windows\"","Cache-Control":"no-cache","Pragma":"no-cache","Content-Length":"230229","Connection":"close","X-Forwarded-Proto":"https","X-Forwarded-Port":"443","X-Real-Ip":"79.10.63.3","Host":"www.artigea.it"}
+[22-Jul-2025 11:16:09 Europe/Rome] Original dimensions: 2000x2000
+[22-Jul-2025 11:16:09 Europe/Rome] Max file size: 5242880
+[22-Jul-2025 11:16:09 Europe/Rome] POST request processing...
+[22-Jul-2025 11:16:09 Europe/Rome] New dimensions: 600x600
+[22-Jul-2025 11:16:09 Europe/Rome] POST data: {"productId":"strong"}
+[22-Jul-2025 11:16:09 Europe/Rome] Upload directory: ../assets/img/products/
+[22-Jul-2025 11:16:09 Europe/Rome] FILES data: {"productImage":{"name":"54355HD.jpg","full_path":"54355HD.jpg","type":"image\/jpeg","tmp_name":"\/tmp\/phpzPrdwD","error":0,"size":229934}}
+[22-Jul-2025 11:16:09 Europe/Rome] Max file size: 5242880
+[22-Jul-2025 11:16:09 Europe/Rome] File info - Name: 54355HD.jpg, Size: 229934, Type: image/jpeg
+[22-Jul-2025 11:16:09 Europe/Rome] POST data: {"productId":"strong"}
+[22-Jul-2025 11:16:09 Europe/Rome] File extension: jpg
+[22-Jul-2025 11:16:09 Europe/Rome] FILES data: {"productImage":{"name":"54355HD.jpg","full_path":"54355HD.jpg","type":"image\/jpeg","tmp_name":"\/tmp\/phpu7dCei","error":0,"size":229934}}
+[22-Jul-2025 11:16:09 Europe/Rome] Target file path: ../assets/img/products/strong.jpg
+[22-Jul-2025 11:16:09 Europe/Rome] File info - Name: 54355HD.jpg, Size: 229934, Type: image/jpeg
+[22-Jul-2025 11:16:09 Europe/Rome] Image info: {"0":2000,"1":2000,"2":2,"3":"width=\"2000\" height=\"2000\"","bits":8,"channels":3,"mime":"image\/jpeg"}
+[22-Jul-2025 11:16:09 Europe/Rome] File extension: jpg
+[22-Jul-2025 11:16:09 Europe/Rome] Target file path: ../assets/img/products/strong.jpg
+[22-Jul-2025 11:16:09 Europe/Rome] Image info: {"0":2000,"1":2000,"2":2,"3":"width=\"2000\" height=\"2000\"","bits":8,"channels":3,"mime":"image\/jpeg"}
+[22-Jul-2025 11:16:09 Europe/Rome] File moved successfully to: ../assets/img/products/strong.jpg
+[22-Jul-2025 11:16:09 Europe/Rome] Starting image optimization for: ../assets/img/products/strong.jpg
+[22-Jul-2025 11:16:09 Europe/Rome] PHP Notice:  getimagesize(): Error reading from ../assets/img/products/strong.jpg! in /web/htdocs/www.artigea.it/home/TestOre/api/upload-product-image.php on line 180
+[22-Jul-2025 11:16:09 Europe/Rome] Original dimensions: x
+[22-Jul-2025 11:16:09 Europe/Rome] File moved successfully to: ../assets/img/products/strong.jpg
+[22-Jul-2025 11:16:09 Europe/Rome] Image already small enough, no optimization needed
+[22-Jul-2025 11:16:09 Europe/Rome] Starting image optimization for: ../assets/img/products/strong.jpg
+[22-Jul-2025 11:16:09 Europe/Rome] Image optimization result: false
+[22-Jul-2025 11:16:09 Europe/Rome] Success response: {"success":true,"message":"Immagine caricata con successo","fileName":"strong.jpg","filePath":"..\/assets\/img\/products\/strong.jpg","optimized":false}
+[22-Jul-2025 11:16:09 Europe/Rome] Original dimensions: 2000x2000
+[22-Jul-2025 11:16:09 Europe/Rome] === UPLOAD REQUEST END ===
+[22-Jul-2025 11:16:09 Europe/Rome] New dimensions: 600x600
+[22-Jul-2025 11:16:09 Europe/Rome] Image optimization completed, save result: true
+[22-Jul-2025 11:16:09 Europe/Rome] Image optimization result: true
+[22-Jul-2025 11:16:09 Europe/Rome] Success response: {"success":true,"message":"Immagine caricata con successo","fileName":"strong.jpg","filePath":"..\/assets\/img\/products\/strong.jpg","optimized":true}
+[22-Jul-2025 11:16:09 Europe/Rome] === UPLOAD REQUEST END ===
+[22-Jul-2025 11:16:09 Europe/Rome] Image optimization completed, save result: true
+[22-Jul-2025 11:16:09 Europe/Rome] Image optimization result: true
+[22-Jul-2025 11:16:09 Europe/Rome] Success response: {"success":true,"message":"Immagine caricata con successo","fileName":"strong.jpg","filePath":"..\/assets\/img\/products\/strong.jpg","optimized":true}
+[22-Jul-2025 11:16:09 Europe/Rome] === UPLOAD REQUEST END ===
+[22-Jul-2025 11:16:09 Europe/Rome] Image optimization completed, save result: true
+[22-Jul-2025 11:16:09 Europe/Rome] Image optimization result: true
+[22-Jul-2025 11:16:09 Europe/Rome] Success response: {"success":true,"message":"Immagine caricata con successo","fileName":"strong.jpg","filePath":"..\/assets\/img\/products\/strong.jpg","optimized":true}
+[22-Jul-2025 11:16:09 Europe/Rome] === UPLOAD REQUEST END ===
+[22-Jul-2025 11:25:26 Europe/Rome] === UPLOAD REQUEST START ===
+[22-Jul-2025 11:25:26 Europe/Rome] === UPLOAD REQUEST START ===
+[22-Jul-2025 11:25:26 Europe/Rome] Method: POST
+[22-Jul-2025 11:25:26 Europe/Rome] Method: POST
+[22-Jul-2025 11:25:26 Europe/Rome] URI: /TestOre/api/upload-product-image.php
+[22-Jul-2025 11:25:26 Europe/Rome] URI: /TestOre/api/upload-product-image.php
+[22-Jul-2025 11:25:26 Europe/Rome] Headers: {"Cookie":"_ga=GA1.1.217452127.1752652398; artigea-cookie-consent={\"necessary\":true,\"analytics\":false,\"marketing\":false,\"preferences\":false,\"timestamp\":1752654829084,\"version\":\"1.0\"}; artigea-cookie-consent_timestamp=1752654829085; _ga_M4MW5QEKQ4=GS2.1.s1753175193$o7$g0$t1753175193$j60$l0$h0","Priority":"u=1, i","Accept-Language":"it-IT,it;q=0.9,en-US;q=0.8,en;q=0.7","Accept-Encoding":"gzip, deflate, br, zstd","Referer":"https:\/\/www.artigea.it\/TestOre\/pages\/admin.html","Sec-Fetch-Dest":"empty","Sec-Fetch-Mode":"cors","Sec-Fetch-Site":"same-origin","Origin":"https:\/\/www.artigea.it","Accept":"*\/*","Sec-Ch-Ua-Mobile":"?0","Content-Type":"multipart\/form-data; boundary=----WebKitFormBoundary2qLDA9wY4Im3S5di","Sec-Ch-Ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Google Chrome\";v=\"138\"","User-Agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/138.0.0.0 Safari\/537.36","Sec-Ch-Ua-Platform":"\"Windows\"","Cache-Control":"no-cache","Pragma":"no-cache","Content-Length":"230229","Connection":"close","X-Forwarded-Proto":"https","X-Forwarded-Port":"443","X-Real-Ip":"79.10.63.3","Host":"www.artigea.it"}
+[22-Jul-2025 11:25:26 Europe/Rome] Headers: {"Cookie":"_ga=GA1.1.217452127.1752652398; artigea-cookie-consent={\"necessary\":true,\"analytics\":false,\"marketing\":false,\"preferences\":false,\"timestamp\":1752654829084,\"version\":\"1.0\"}; artigea-cookie-consent_timestamp=1752654829085; _ga_M4MW5QEKQ4=GS2.1.s1753175193$o7$g0$t1753175193$j60$l0$h0","Priority":"u=1, i","Accept-Language":"it-IT,it;q=0.9,en-US;q=0.8,en;q=0.7","Accept-Encoding":"gzip, deflate, br, zstd","Referer":"https:\/\/www.artigea.it\/TestOre\/pages\/admin.html","Sec-Fetch-Dest":"empty","Sec-Fetch-Mode":"cors","Sec-Fetch-Site":"same-origin","Origin":"https:\/\/www.artigea.it","Accept":"*\/*","Sec-Ch-Ua-Mobile":"?0","Content-Type":"multipart\/form-data; boundary=----WebKitFormBoundary5v2oDvr9cmYlN7xb","Sec-Ch-Ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Google Chrome\";v=\"138\"","User-Agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/138.0.0.0 Safari\/537.36","Sec-Ch-Ua-Platform":"\"Windows\"","Cache-Control":"no-cache","Pragma":"no-cache","Content-Length":"230229","Connection":"close","X-Forwarded-Proto":"https","X-Forwarded-Port":"443","X-Real-Ip":"79.10.63.3","Host":"www.artigea.it"}
+[22-Jul-2025 11:25:26 Europe/Rome] POST request processing...
+[22-Jul-2025 11:25:26 Europe/Rome] POST request processing...
+[22-Jul-2025 11:25:26 Europe/Rome] Upload directory: ../assets/img/products/
+[22-Jul-2025 11:25:26 Europe/Rome] Upload directory: ../assets/img/products/
+[22-Jul-2025 11:25:26 Europe/Rome] Max file size: 5242880
+[22-Jul-2025 11:25:26 Europe/Rome] Max file size: 5242880
+[22-Jul-2025 11:25:26 Europe/Rome] POST data: {"productId":"strong"}
+[22-Jul-2025 11:25:26 Europe/Rome] POST data: {"productId":"strong"}
+[22-Jul-2025 11:25:26 Europe/Rome] FILES data: {"productImage":{"name":"54355HD.jpg","full_path":"54355HD.jpg","type":"image\/jpeg","tmp_name":"\/tmp\/phpxqhr6b","error":0,"size":229934}}
+[22-Jul-2025 11:25:26 Europe/Rome] FILES data: {"productImage":{"name":"54355HD.jpg","full_path":"54355HD.jpg","type":"image\/jpeg","tmp_name":"\/tmp\/phpHPn99l","error":0,"size":229934}}
+[22-Jul-2025 11:25:26 Europe/Rome] File info - Name: 54355HD.jpg, Size: 229934, Type: image/jpeg
+[22-Jul-2025 11:25:26 Europe/Rome] File info - Name: 54355HD.jpg, Size: 229934, Type: image/jpeg
+[22-Jul-2025 11:25:26 Europe/Rome] File extension: jpg
+[22-Jul-2025 11:25:26 Europe/Rome] File extension: jpg
+[22-Jul-2025 11:25:26 Europe/Rome] Target file path: ../assets/img/products/strong.jpg
+[22-Jul-2025 11:25:26 Europe/Rome] Target file path: ../assets/img/products/strong.jpg
+[22-Jul-2025 11:25:26 Europe/Rome] Image info: {"0":2000,"1":2000,"2":2,"3":"width=\"2000\" height=\"2000\"","bits":8,"channels":3,"mime":"image\/jpeg"}
+[22-Jul-2025 11:25:26 Europe/Rome] Image info: {"0":2000,"1":2000,"2":2,"3":"width=\"2000\" height=\"2000\"","bits":8,"channels":3,"mime":"image\/jpeg"}
+[22-Jul-2025 11:25:26 Europe/Rome] File moved successfully to: ../assets/img/products/strong.jpg
+[22-Jul-2025 11:25:26 Europe/Rome] File moved successfully to: ../assets/img/products/strong.jpg
+[22-Jul-2025 11:25:26 Europe/Rome] Starting image optimization for: ../assets/img/products/strong.jpg
+[22-Jul-2025 11:25:26 Europe/Rome] Starting image optimization for: ../assets/img/products/strong.jpg
+[22-Jul-2025 11:25:26 Europe/Rome] Original dimensions: 2000x2000
+[22-Jul-2025 11:25:26 Europe/Rome] Original dimensions: 2000x2000
+[22-Jul-2025 11:25:26 Europe/Rome] New dimensions: 600x600
+[22-Jul-2025 11:25:26 Europe/Rome] New dimensions: 600x600
+[22-Jul-2025 11:25:26 Europe/Rome] === UPLOAD REQUEST START ===
+[22-Jul-2025 11:25:26 Europe/Rome] Method: POST
+[22-Jul-2025 11:25:26 Europe/Rome] URI: /TestOre/api/upload-product-image.php
+[22-Jul-2025 11:25:26 Europe/Rome] Headers: {"Cookie":"_ga=GA1.1.217452127.1752652398; artigea-cookie-consent={\"necessary\":true,\"analytics\":false,\"marketing\":false,\"preferences\":false,\"timestamp\":1752654829084,\"version\":\"1.0\"}; artigea-cookie-consent_timestamp=1752654829085; _ga_M4MW5QEKQ4=GS2.1.s1753175193$o7$g0$t1753175193$j60$l0$h0","Priority":"u=1, i","Accept-Language":"it-IT,it;q=0.9,en-US;q=0.8,en;q=0.7","Accept-Encoding":"gzip, deflate, br, zstd","Referer":"https:\/\/www.artigea.it\/TestOre\/pages\/admin.html","Sec-Fetch-Dest":"empty","Sec-Fetch-Mode":"cors","Sec-Fetch-Site":"same-origin","Origin":"https:\/\/www.artigea.it","Accept":"*\/*","Sec-Ch-Ua-Mobile":"?0","Content-Type":"multipart\/form-data; boundary=----WebKitFormBoundarylZfh3AtTXr8oCpKb","Sec-Ch-Ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Google Chrome\";v=\"138\"","User-Agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/138.0.0.0 Safari\/537.36","Sec-Ch-Ua-Platform":"\"Windows\"","Cache-Control":"no-cache","Pragma":"no-cache","Content-Length":"230229","Connection":"close","X-Forwarded-Proto":"https","X-Forwarded-Port":"443","X-Real-Ip":"79.10.63.3","Host":"www.artigea.it"}
+[22-Jul-2025 11:25:26 Europe/Rome] POST request processing...
+[22-Jul-2025 11:25:26 Europe/Rome] Upload directory: ../assets/img/products/
+[22-Jul-2025 11:25:26 Europe/Rome] Max file size: 5242880
+[22-Jul-2025 11:25:26 Europe/Rome] POST data: {"productId":"strong"}
+[22-Jul-2025 11:25:26 Europe/Rome] FILES data: {"productImage":{"name":"54355HD.jpg","full_path":"54355HD.jpg","type":"image\/jpeg","tmp_name":"\/tmp\/phpDXjQI0","error":0,"size":229934}}
+[22-Jul-2025 11:25:26 Europe/Rome] File info - Name: 54355HD.jpg, Size: 229934, Type: image/jpeg
+[22-Jul-2025 11:25:26 Europe/Rome] File extension: jpg
+[22-Jul-2025 11:25:26 Europe/Rome] Target file path: ../assets/img/products/strong.jpg
+[22-Jul-2025 11:25:26 Europe/Rome] Image info: {"0":2000,"1":2000,"2":2,"3":"width=\"2000\" height=\"2000\"","bits":8,"channels":3,"mime":"image\/jpeg"}
+[22-Jul-2025 11:25:26 Europe/Rome] File moved successfully to: ../assets/img/products/strong.jpg
+[22-Jul-2025 11:25:26 Europe/Rome] Starting image optimization for: ../assets/img/products/strong.jpg
+[22-Jul-2025 11:25:26 Europe/Rome] Original dimensions: 2000x2000
+[22-Jul-2025 11:25:26 Europe/Rome] New dimensions: 600x600
+[22-Jul-2025 11:25:26 Europe/Rome] === UPLOAD REQUEST START ===
+[22-Jul-2025 11:25:26 Europe/Rome] Method: POST
+[22-Jul-2025 11:25:26 Europe/Rome] URI: /TestOre/api/upload-product-image.php
+[22-Jul-2025 11:25:26 Europe/Rome] Headers: {"Cookie":"_ga=GA1.1.217452127.1752652398; artigea-cookie-consent={\"necessary\":true,\"analytics\":false,\"marketing\":false,\"preferences\":false,\"timestamp\":1752654829084,\"version\":\"1.0\"}; artigea-cookie-consent_timestamp=1752654829085; _ga_M4MW5QEKQ4=GS2.1.s1753175193$o7$g0$t1753175193$j60$l0$h0","Priority":"u=1, i","Accept-Language":"it-IT,it;q=0.9,en-US;q=0.8,en;q=0.7","Accept-Encoding":"gzip, deflate, br, zstd","Referer":"https:\/\/www.artigea.it\/TestOre\/pages\/admin.html","Sec-Fetch-Dest":"empty","Sec-Fetch-Mode":"cors","Sec-Fetch-Site":"same-origin","Origin":"https:\/\/www.artigea.it","Accept":"*\/*","Sec-Ch-Ua-Mobile":"?0","Content-Type":"multipart\/form-data; boundary=----WebKitFormBoundaryGHqpAXkWIshaOn2k","Sec-Ch-Ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Google Chrome\";v=\"138\"","User-Agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/138.0.0.0 Safari\/537.36","Sec-Ch-Ua-Platform":"\"Windows\"","Cache-Control":"no-cache","Pragma":"no-cache","Content-Length":"230229","Connection":"close","X-Forwarded-Proto":"https","X-Forwarded-Port":"443","X-Real-Ip":"79.10.63.3","Host":"www.artigea.it"}
+[22-Jul-2025 11:25:26 Europe/Rome] POST request processing...
+[22-Jul-2025 11:25:26 Europe/Rome] Upload directory: ../assets/img/products/
+[22-Jul-2025 11:25:26 Europe/Rome] Max file size: 5242880
+[22-Jul-2025 11:25:26 Europe/Rome] POST data: {"productId":"strong"}
+[22-Jul-2025 11:25:26 Europe/Rome] FILES data: {"productImage":{"name":"54355HD.jpg","full_path":"54355HD.jpg","type":"image\/jpeg","tmp_name":"\/tmp\/php5vKo86","error":0,"size":229934}}
+[22-Jul-2025 11:25:26 Europe/Rome] File info - Name: 54355HD.jpg, Size: 229934, Type: image/jpeg
+[22-Jul-2025 11:25:26 Europe/Rome] File extension: jpg
+[22-Jul-2025 11:25:26 Europe/Rome] Target file path: ../assets/img/products/strong.jpg
+[22-Jul-2025 11:25:26 Europe/Rome] Image info: {"0":2000,"1":2000,"2":2,"3":"width=\"2000\" height=\"2000\"","bits":8,"channels":3,"mime":"image\/jpeg"}
+[22-Jul-2025 11:25:26 Europe/Rome] File moved successfully to: ../assets/img/products/strong.jpg
+[22-Jul-2025 11:25:26 Europe/Rome] Starting image optimization for: ../assets/img/products/strong.jpg
+[22-Jul-2025 11:25:26 Europe/Rome] Original dimensions: 2000x2000
+[22-Jul-2025 11:25:26 Europe/Rome] New dimensions: 600x600
+[22-Jul-2025 11:25:26 Europe/Rome] Image optimization completed, save result: true
+[22-Jul-2025 11:25:26 Europe/Rome] Image optimization result: true
+[22-Jul-2025 11:25:26 Europe/Rome] Success response: {"success":true,"message":"Immagine caricata con successo","fileName":"strong.jpg","filePath":"..\/assets\/img\/products\/strong.jpg","optimized":true}
+[22-Jul-2025 11:25:26 Europe/Rome] === UPLOAD REQUEST END ===
+[22-Jul-2025 11:25:26 Europe/Rome] Image optimization completed, save result: true
+[22-Jul-2025 11:25:26 Europe/Rome] Image optimization result: true
+[22-Jul-2025 11:25:26 Europe/Rome] Success response: {"success":true,"message":"Immagine caricata con successo","fileName":"strong.jpg","filePath":"..\/assets\/img\/products\/strong.jpg","optimized":true}
+[22-Jul-2025 11:25:26 Europe/Rome] === UPLOAD REQUEST END ===
+[22-Jul-2025 11:25:26 Europe/Rome] Image optimization completed, save result: true
+[22-Jul-2025 11:25:26 Europe/Rome] Image optimization result: true
+[22-Jul-2025 11:25:26 Europe/Rome] Success response: {"success":true,"message":"Immagine caricata con successo","fileName":"strong.jpg","filePath":"..\/assets\/img\/products\/strong.jpg","optimized":true}
+[22-Jul-2025 11:25:26 Europe/Rome] === UPLOAD REQUEST END ===
+[22-Jul-2025 11:25:26 Europe/Rome] Image optimization completed, save result: true
+[22-Jul-2025 11:25:26 Europe/Rome] Image optimization result: true
+[22-Jul-2025 11:25:26 Europe/Rome] Success response: {"success":true,"message":"Immagine caricata con successo","fileName":"strong.jpg","filePath":"..\/assets\/img\/products\/strong.jpg","optimized":true}
+[22-Jul-2025 11:25:26 Europe/Rome] === UPLOAD REQUEST END ===
+[22-Jul-2025 11:26:39 Europe/Rome] === UPLOAD REQUEST START ===
+[22-Jul-2025 11:26:39 Europe/Rome] Method: POST
+[22-Jul-2025 11:26:39 Europe/Rome] URI: /TestOre/api/upload-product-image.php
+[22-Jul-2025 11:26:39 Europe/Rome] Headers: {"Cookie":"_ga=GA1.1.217452127.1752652398; artigea-cookie-consent={\"necessary\":true,\"analytics\":false,\"marketing\":false,\"preferences\":false,\"timestamp\":1752654829084,\"version\":\"1.0\"}; artigea-cookie-consent_timestamp=1752654829085; _ga_M4MW5QEKQ4=GS2.1.s1753175193$o7$g0$t1753175193$j60$l0$h0","Priority":"u=1, i","Accept-Language":"it-IT,it;q=0.9,en-US;q=0.8,en;q=0.7","Accept-Encoding":"gzip, deflate, br, zstd","Referer":"https:\/\/www.artigea.it\/TestOre\/pages\/admin.html","Sec-Fetch-Dest":"empty","Sec-Fetch-Mode":"cors","Sec-Fetch-Site":"same-origin","Origin":"https:\/\/www.artigea.it","Accept":"*\/*","Sec-Ch-Ua-Mobile":"?0","Content-Type":"multipart\/form-data; boundary=----WebKitFormBoundaryEwx8pMRzdsXEXUwx","Sec-Ch-Ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Google Chrome\";v=\"138\"","User-Agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/138.0.0.0 Safari\/537.36","Sec-Ch-Ua-Platform":"\"Windows\"","Cache-Control":"no-cache","Pragma":"no-cache","Content-Length":"230228","Connection":"close","X-Forwarded-Proto":"https","X-Forwarded-Port":"443","X-Real-Ip":"79.10.63.3","Host":"www.artigea.it"}
+[22-Jul-2025 11:26:39 Europe/Rome] POST request processing...
+[22-Jul-2025 11:26:39 Europe/Rome] Upload directory: ../assets/img/products/
+[22-Jul-2025 11:26:39 Europe/Rome] Max file size: 5242880
+[22-Jul-2025 11:26:39 Europe/Rome] POST data: {"productId":"strong"}
+[22-Jul-2025 11:26:39 Europe/Rome] FILES data: {"productImage":{"name":"strong.jpg","full_path":"strong.jpg","type":"image\/jpeg","tmp_name":"\/tmp\/phpEtRmCm","error":0,"size":229934}}
+[22-Jul-2025 11:26:39 Europe/Rome] File info - Name: strong.jpg, Size: 229934, Type: image/jpeg
+[22-Jul-2025 11:26:39 Europe/Rome] File extension: jpg
+[22-Jul-2025 11:26:39 Europe/Rome] Target file path: ../assets/img/products/strong.jpg
+[22-Jul-2025 11:26:39 Europe/Rome] Image info: {"0":2000,"1":2000,"2":2,"3":"width=\"2000\" height=\"2000\"","bits":8,"channels":3,"mime":"image\/jpeg"}
+[22-Jul-2025 11:26:39 Europe/Rome] File moved successfully to: ../assets/img/products/strong.jpg
+[22-Jul-2025 11:26:39 Europe/Rome] Starting image optimization for: ../assets/img/products/strong.jpg
+[22-Jul-2025 11:26:39 Europe/Rome] Original dimensions: 2000x2000
+[22-Jul-2025 11:26:39 Europe/Rome] New dimensions: 600x600
+[22-Jul-2025 11:26:39 Europe/Rome] === UPLOAD REQUEST START ===
+[22-Jul-2025 11:26:39 Europe/Rome] Method: POST
+[22-Jul-2025 11:26:39 Europe/Rome] URI: /TestOre/api/upload-product-image.php
+[22-Jul-2025 11:26:39 Europe/Rome] Headers: {"Cookie":"_ga=GA1.1.217452127.1752652398; artigea-cookie-consent={\"necessary\":true,\"analytics\":false,\"marketing\":false,\"preferences\":false,\"timestamp\":1752654829084,\"version\":\"1.0\"}; artigea-cookie-consent_timestamp=1752654829085; _ga_M4MW5QEKQ4=GS2.1.s1753175193$o7$g0$t1753175193$j60$l0$h0","Priority":"u=1, i","Accept-Language":"it-IT,it;q=0.9,en-US;q=0.8,en;q=0.7","Accept-Encoding":"gzip, deflate, br, zstd","Referer":"https:\/\/www.artigea.it\/TestOre\/pages\/admin.html","Sec-Fetch-Dest":"empty","Sec-Fetch-Mode":"cors","Sec-Fetch-Site":"same-origin","Origin":"https:\/\/www.artigea.it","Accept":"*\/*","Sec-Ch-Ua-Mobile":"?0","Content-Type":"multipart\/form-data; boundary=----WebKitFormBoundarybJURhN3HZ6BU72XJ","Sec-Ch-Ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Google Chrome\";v=\"138\"","User-Agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/138.0.0.0 Safari\/537.36","Sec-Ch-Ua-Platform":"\"Windows\"","Cache-Control":"no-cache","Pragma":"no-cache","Content-Length":"230228","Connection":"close","X-Forwarded-Proto":"https","X-Forwarded-Port":"443","X-Real-Ip":"79.10.63.3","Host":"www.artigea.it"}
+[22-Jul-2025 11:26:39 Europe/Rome] POST request processing...
+[22-Jul-2025 11:26:39 Europe/Rome] Upload directory: ../assets/img/products/
+[22-Jul-2025 11:26:39 Europe/Rome] Max file size: 5242880
+[22-Jul-2025 11:26:39 Europe/Rome] POST data: {"productId":"strong"}
+[22-Jul-2025 11:26:39 Europe/Rome] FILES data: {"productImage":{"name":"strong.jpg","full_path":"strong.jpg","type":"image\/jpeg","tmp_name":"\/tmp\/phpnZABgV","error":0,"size":229934}}
+[22-Jul-2025 11:26:39 Europe/Rome] File info - Name: strong.jpg, Size: 229934, Type: image/jpeg
+[22-Jul-2025 11:26:39 Europe/Rome] File extension: jpg
+[22-Jul-2025 11:26:39 Europe/Rome] Target file path: ../assets/img/products/strong.jpg
+[22-Jul-2025 11:26:39 Europe/Rome] Image info: {"0":2000,"1":2000,"2":2,"3":"width=\"2000\" height=\"2000\"","bits":8,"channels":3,"mime":"image\/jpeg"}
+[22-Jul-2025 11:26:39 Europe/Rome] File moved successfully to: ../assets/img/products/strong.jpg
+[22-Jul-2025 11:26:39 Europe/Rome] Starting image optimization for: ../assets/img/products/strong.jpg
+[22-Jul-2025 11:26:39 Europe/Rome] Original dimensions: 2000x2000
+[22-Jul-2025 11:26:39 Europe/Rome] New dimensions: 600x600
+[22-Jul-2025 11:26:39 Europe/Rome] Image optimization completed, save result: true
+[22-Jul-2025 11:26:39 Europe/Rome] Image optimization result: true
+[22-Jul-2025 11:26:39 Europe/Rome] Success response: {"success":true,"message":"Immagine caricata con successo","fileName":"strong.jpg","filePath":"..\/assets\/img\/products\/strong.jpg","optimized":true}
+[22-Jul-2025 11:26:39 Europe/Rome] === UPLOAD REQUEST END ===
+[22-Jul-2025 11:26:40 Europe/Rome] === UPLOAD REQUEST START ===
+[22-Jul-2025 11:26:40 Europe/Rome] Method: POST
+[22-Jul-2025 11:26:40 Europe/Rome] URI: /TestOre/api/upload-product-image.php
+[22-Jul-2025 11:26:40 Europe/Rome] Headers: {"Cookie":"_ga=GA1.1.217452127.1752652398; artigea-cookie-consent={\"necessary\":true,\"analytics\":false,\"marketing\":false,\"preferences\":false,\"timestamp\":1752654829084,\"version\":\"1.0\"}; artigea-cookie-consent_timestamp=1752654829085; _ga_M4MW5QEKQ4=GS2.1.s1753175193$o7$g0$t1753175193$j60$l0$h0","Priority":"u=1, i","Accept-Language":"it-IT,it;q=0.9,en-US;q=0.8,en;q=0.7","Accept-Encoding":"gzip, deflate, br, zstd","Referer":"https:\/\/www.artigea.it\/TestOre\/pages\/admin.html","Sec-Fetch-Dest":"empty","Sec-Fetch-Mode":"cors","Sec-Fetch-Site":"same-origin","Origin":"https:\/\/www.artigea.it","Accept":"*\/*","Sec-Ch-Ua-Mobile":"?0","Content-Type":"multipart\/form-data; boundary=----WebKitFormBoundarywMTbWALiYw9F31Du","Sec-Ch-Ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Google Chrome\";v=\"138\"","User-Agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/138.0.0.0 Safari\/537.36","Sec-Ch-Ua-Platform":"\"Windows\"","Cache-Control":"no-cache","Pragma":"no-cache","Content-Length":"230228","Connection":"close","X-Forwarded-Proto":"https","X-Forwarded-Port":"443","X-Real-Ip":"79.10.63.3","Host":"www.artigea.it"}
+[22-Jul-2025 11:26:40 Europe/Rome] === UPLOAD REQUEST START ===
+[22-Jul-2025 11:26:40 Europe/Rome] POST request processing...
+[22-Jul-2025 11:26:40 Europe/Rome] Method: POST
+[22-Jul-2025 11:26:40 Europe/Rome] Upload directory: ../assets/img/products/
+[22-Jul-2025 11:26:40 Europe/Rome] URI: /TestOre/api/upload-product-image.php
+[22-Jul-2025 11:26:40 Europe/Rome] Max file size: 5242880
+[22-Jul-2025 11:26:40 Europe/Rome] Headers: {"Cookie":"_ga=GA1.1.217452127.1752652398; artigea-cookie-consent={\"necessary\":true,\"analytics\":false,\"marketing\":false,\"preferences\":false,\"timestamp\":1752654829084,\"version\":\"1.0\"}; artigea-cookie-consent_timestamp=1752654829085; _ga_M4MW5QEKQ4=GS2.1.s1753175193$o7$g0$t1753175193$j60$l0$h0","Priority":"u=1, i","Accept-Language":"it-IT,it;q=0.9,en-US;q=0.8,en;q=0.7","Accept-Encoding":"gzip, deflate, br, zstd","Referer":"https:\/\/www.artigea.it\/TestOre\/pages\/admin.html","Sec-Fetch-Dest":"empty","Sec-Fetch-Mode":"cors","Sec-Fetch-Site":"same-origin","Origin":"https:\/\/www.artigea.it","Accept":"*\/*","Sec-Ch-Ua-Mobile":"?0","Content-Type":"multipart\/form-data; boundary=----WebKitFormBoundaryOMsKWPJoHp6msCGW","Sec-Ch-Ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Google Chrome\";v=\"138\"","User-Agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/138.0.0.0 Safari\/537.36","Sec-Ch-Ua-Platform":"\"Windows\"","Cache-Control":"no-cache","Pragma":"no-cache","Content-Length":"230228","Connection":"close","X-Forwarded-Proto":"https","X-Forwarded-Port":"443","X-Real-Ip":"79.10.63.3","Host":"www.artigea.it"}
+[22-Jul-2025 11:26:40 Europe/Rome] POST data: {"productId":"strong"}
+[22-Jul-2025 11:26:40 Europe/Rome] POST request processing...
+[22-Jul-2025 11:26:40 Europe/Rome] FILES data: {"productImage":{"name":"strong.jpg","full_path":"strong.jpg","type":"image\/jpeg","tmp_name":"\/tmp\/phpmOHlGV","error":0,"size":229934}}
+[22-Jul-2025 11:26:40 Europe/Rome] Upload directory: ../assets/img/products/
+[22-Jul-2025 11:26:40 Europe/Rome] File info - Name: strong.jpg, Size: 229934, Type: image/jpeg
+[22-Jul-2025 11:26:40 Europe/Rome] Max file size: 5242880
+[22-Jul-2025 11:26:40 Europe/Rome] File extension: jpg
+[22-Jul-2025 11:26:40 Europe/Rome] POST data: {"productId":"strong"}
+[22-Jul-2025 11:26:40 Europe/Rome] Target file path: ../assets/img/products/strong.jpg
+[22-Jul-2025 11:26:40 Europe/Rome] FILES data: {"productImage":{"name":"strong.jpg","full_path":"strong.jpg","type":"image\/jpeg","tmp_name":"\/tmp\/phpc0L5E8","error":0,"size":229934}}
+[22-Jul-2025 11:26:40 Europe/Rome] Image optimization completed, save result: true
+[22-Jul-2025 11:26:40 Europe/Rome] Image info: {"0":2000,"1":2000,"2":2,"3":"width=\"2000\" height=\"2000\"","bits":8,"channels":3,"mime":"image\/jpeg"}
+[22-Jul-2025 11:26:40 Europe/Rome] File info - Name: strong.jpg, Size: 229934, Type: image/jpeg
+[22-Jul-2025 11:26:40 Europe/Rome] Image optimization result: true
+[22-Jul-2025 11:26:40 Europe/Rome] File extension: jpg
+[22-Jul-2025 11:26:40 Europe/Rome] Success response: {"success":true,"message":"Immagine caricata con successo","fileName":"strong.jpg","filePath":"..\/assets\/img\/products\/strong.jpg","optimized":true}
+[22-Jul-2025 11:26:40 Europe/Rome] Target file path: ../assets/img/products/strong.jpg
+[22-Jul-2025 11:26:40 Europe/Rome] === UPLOAD REQUEST END ===
+[22-Jul-2025 11:26:40 Europe/Rome] File moved successfully to: ../assets/img/products/strong.jpg
+[22-Jul-2025 11:26:40 Europe/Rome] Image info: {"0":2000,"1":2000,"2":2,"3":"width=\"2000\" height=\"2000\"","bits":8,"channels":3,"mime":"image\/jpeg"}
+[22-Jul-2025 11:26:40 Europe/Rome] Starting image optimization for: ../assets/img/products/strong.jpg
+[22-Jul-2025 11:26:40 Europe/Rome] PHP Notice:  getimagesize(): Error reading from ../assets/img/products/strong.jpg! in /web/htdocs/www.artigea.it/home/TestOre/api/upload-product-image.php on line 180
+[22-Jul-2025 11:26:40 Europe/Rome] Original dimensions: x
+[22-Jul-2025 11:26:40 Europe/Rome] File moved successfully to: ../assets/img/products/strong.jpg
+[22-Jul-2025 11:26:40 Europe/Rome] Image already small enough, no optimization needed
+[22-Jul-2025 11:26:40 Europe/Rome] Starting image optimization for: ../assets/img/products/strong.jpg
+[22-Jul-2025 11:26:40 Europe/Rome] Image optimization result: false
+[22-Jul-2025 11:26:40 Europe/Rome] Original dimensions: 2000x2000
+[22-Jul-2025 11:26:40 Europe/Rome] Success response: {"success":true,"message":"Immagine caricata con successo","fileName":"strong.jpg","filePath":"..\/assets\/img\/products\/strong.jpg","optimized":false}
+[22-Jul-2025 11:26:40 Europe/Rome] New dimensions: 600x600
+[22-Jul-2025 11:26:40 Europe/Rome] === UPLOAD REQUEST END ===
+[22-Jul-2025 11:26:40 Europe/Rome] Image optimization completed, save result: true
+[22-Jul-2025 11:26:40 Europe/Rome] Image optimization result: true
+[22-Jul-2025 11:26:40 Europe/Rome] Success response: {"success":true,"message":"Immagine caricata con successo","fileName":"strong.jpg","filePath":"..\/assets\/img\/products\/strong.jpg","optimized":true}
+[22-Jul-2025 11:26:40 Europe/Rome] === UPLOAD REQUEST END ===
+[22-Jul-2025 11:37:37 Europe/Rome] === UPLOAD REQUEST START ===
+[22-Jul-2025 11:37:37 Europe/Rome] Method: POST
+[22-Jul-2025 11:37:37 Europe/Rome] URI: /TestOre/api/upload-product-image.php
+[22-Jul-2025 11:37:37 Europe/Rome] Headers: {"Cookie":"_ga=GA1.1.217452127.1752652398; artigea-cookie-consent={\"necessary\":true,\"analytics\":false,\"marketing\":false,\"preferences\":false,\"timestamp\":1752654829084,\"version\":\"1.0\"}; artigea-cookie-consent_timestamp=1752654829085; _ga_M4MW5QEKQ4=GS2.1.s1753175193$o7$g0$t1753175193$j60$l0$h0","Priority":"u=1, i","Accept-Language":"it-IT,it;q=0.9,en-US;q=0.8,en;q=0.7","Accept-Encoding":"gzip, deflate, br, zstd","Referer":"https:\/\/www.artigea.it\/TestOre\/pages\/admin.html","Sec-Fetch-Dest":"empty","Sec-Fetch-Mode":"cors","Sec-Fetch-Site":"same-origin","Origin":"https:\/\/www.artigea.it","Accept":"*\/*","Sec-Ch-Ua-Mobile":"?0","Content-Type":"multipart\/form-data; boundary=----WebKitFormBoundaryrReijvXcmyTYjNb0","Sec-Ch-Ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Google Chrome\";v=\"138\"","User-Agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/138.0.0.0 Safari\/537.36","Sec-Ch-Ua-Platform":"\"Windows\"","Cache-Control":"no-cache","Pragma":"no-cache","Content-Length":"91690","Connection":"close","X-Forwarded-Proto":"https","X-Forwarded-Port":"443","X-Real-Ip":"79.10.63.3","Host":"www.artigea.it"}
+[22-Jul-2025 11:37:37 Europe/Rome] POST request processing...
+[22-Jul-2025 11:37:37 Europe/Rome] Upload directory: ../assets/img/products/
+[22-Jul-2025 11:37:37 Europe/Rome] Max file size: 5242880
+[22-Jul-2025 11:37:37 Europe/Rome] POST data: {"productId":"trattamento-tessuti-3in1"}
+[22-Jul-2025 11:37:37 Europe/Rome] FILES data: {"productImage":{"name":"pulire-sedili-auto-3-in-1-tessuti.jpg","full_path":"pulire-sedili-auto-3-in-1-tessuti.jpg","type":"image\/jpeg","tmp_name":"\/tmp\/phpX3e3oE","error":0,"size":91351}}
+[22-Jul-2025 11:37:37 Europe/Rome] File info - Name: pulire-sedili-auto-3-in-1-tessuti.jpg, Size: 91351, Type: image/jpeg
+[22-Jul-2025 11:37:37 Europe/Rome] File extension: jpg
+[22-Jul-2025 11:37:37 Europe/Rome] Target file path: ../assets/img/products/trattamento-tessuti-3in1.jpg
+[22-Jul-2025 11:37:37 Europe/Rome] Image info: {"0":961,"1":1000,"2":2,"3":"width=\"961\" height=\"1000\"","bits":8,"channels":3,"mime":"image\/jpeg"}
+[22-Jul-2025 11:37:37 Europe/Rome] File moved successfully to: ../assets/img/products/trattamento-tessuti-3in1.jpg
+[22-Jul-2025 11:37:37 Europe/Rome] Starting image optimization for: ../assets/img/products/trattamento-tessuti-3in1.jpg
+[22-Jul-2025 11:37:37 Europe/Rome] Original dimensions: 961x1000
+[22-Jul-2025 11:37:37 Europe/Rome] New dimensions: 576x600
+[22-Jul-2025 11:37:37 Europe/Rome] Image optimization completed, save result: true
+[22-Jul-2025 11:37:37 Europe/Rome] Image optimization result: true
+[22-Jul-2025 11:37:37 Europe/Rome] Success response: {"success":true,"message":"Immagine caricata con successo","fileName":"trattamento-tessuti-3in1.jpg","filePath":"..\/assets\/img\/products\/trattamento-tessuti-3in1.jpg","optimized":true}
+[22-Jul-2025 11:37:37 Europe/Rome] === UPLOAD REQUEST END ===
+[22-Jul-2025 11:37:38 Europe/Rome] === UPLOAD REQUEST START ===
+[22-Jul-2025 11:37:38 Europe/Rome] Method: POST
+[22-Jul-2025 11:37:38 Europe/Rome] URI: /TestOre/api/upload-product-image.php
+[22-Jul-2025 11:37:38 Europe/Rome] Headers: {"Cookie":"_ga=GA1.1.217452127.1752652398; artigea-cookie-consent={\"necessary\":true,\"analytics\":false,\"marketing\":false,\"preferences\":false,\"timestamp\":1752654829084,\"version\":\"1.0\"}; artigea-cookie-consent_timestamp=1752654829085; _ga_M4MW5QEKQ4=GS2.1.s1753175193$o7$g0$t1753175193$j60$l0$h0","Priority":"u=1, i","Accept-Language":"it-IT,it;q=0.9,en-US;q=0.8,en;q=0.7","Accept-Encoding":"gzip, deflate, br, zstd","Referer":"https:\/\/www.artigea.it\/TestOre\/pages\/admin.html","Sec-Fetch-Dest":"empty","Sec-Fetch-Mode":"cors","Sec-Fetch-Site":"same-origin","Origin":"https:\/\/www.artigea.it","Accept":"*\/*","Sec-Ch-Ua-Mobile":"?0","Content-Type":"multipart\/form-data; boundary=----WebKitFormBoundaryNb67Io6n0pcisO9s","Sec-Ch-Ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Google Chrome\";v=\"138\"","User-Agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/138.0.0.0 Safari\/537.36","Sec-Ch-Ua-Platform":"\"Windows\"","Cache-Control":"no-cache","Pragma":"no-cache","Content-Length":"91690","Connection":"close","X-Forwarded-Proto":"https","X-Forwarded-Port":"443","X-Real-Ip":"79.10.63.3","Host":"www.artigea.it"}
+[22-Jul-2025 11:37:38 Europe/Rome] POST request processing...
+[22-Jul-2025 11:37:38 Europe/Rome] Upload directory: ../assets/img/products/
+[22-Jul-2025 11:37:38 Europe/Rome] === UPLOAD REQUEST START ===
+[22-Jul-2025 11:37:38 Europe/Rome] Max file size: 5242880
+[22-Jul-2025 11:37:38 Europe/Rome] Method: POST
+[22-Jul-2025 11:37:38 Europe/Rome] POST data: {"productId":"trattamento-tessuti-3in1"}
+[22-Jul-2025 11:37:38 Europe/Rome] URI: /TestOre/api/upload-product-image.php
+[22-Jul-2025 11:37:38 Europe/Rome] FILES data: {"productImage":{"name":"pulire-sedili-auto-3-in-1-tessuti.jpg","full_path":"pulire-sedili-auto-3-in-1-tessuti.jpg","type":"image\/jpeg","tmp_name":"\/tmp\/phpJ7CSVN","error":0,"size":91351}}
+[22-Jul-2025 11:37:38 Europe/Rome] Headers: {"Cookie":"_ga=GA1.1.217452127.1752652398; artigea-cookie-consent={\"necessary\":true,\"analytics\":false,\"marketing\":false,\"preferences\":false,\"timestamp\":1752654829084,\"version\":\"1.0\"}; artigea-cookie-consent_timestamp=1752654829085; _ga_M4MW5QEKQ4=GS2.1.s1753175193$o7$g0$t1753175193$j60$l0$h0","Priority":"u=1, i","Accept-Language":"it-IT,it;q=0.9,en-US;q=0.8,en;q=0.7","Accept-Encoding":"gzip, deflate, br, zstd","Referer":"https:\/\/www.artigea.it\/TestOre\/pages\/admin.html","Sec-Fetch-Dest":"empty","Sec-Fetch-Mode":"cors","Sec-Fetch-Site":"same-origin","Origin":"https:\/\/www.artigea.it","Accept":"*\/*","Sec-Ch-Ua-Mobile":"?0","Content-Type":"multipart\/form-data; boundary=----WebKitFormBoundaryhYV1Ohv0GNTcvc7D","Sec-Ch-Ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Google Chrome\";v=\"138\"","User-Agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/138.0.0.0 Safari\/537.36","Sec-Ch-Ua-Platform":"\"Windows\"","Cache-Control":"no-cache","Pragma":"no-cache","Content-Length":"91690","Connection":"close","X-Forwarded-Proto":"https","X-Forwarded-Port":"443","X-Real-Ip":"79.10.63.3","Host":"www.artigea.it"}
+[22-Jul-2025 11:37:38 Europe/Rome] File info - Name: pulire-sedili-auto-3-in-1-tessuti.jpg, Size: 91351, Type: image/jpeg
+[22-Jul-2025 11:37:38 Europe/Rome] POST request processing...
+[22-Jul-2025 11:37:38 Europe/Rome] File extension: jpg
+[22-Jul-2025 11:37:38 Europe/Rome] Upload directory: ../assets/img/products/
+[22-Jul-2025 11:37:38 Europe/Rome] Target file path: ../assets/img/products/trattamento-tessuti-3in1.jpg
+[22-Jul-2025 11:37:38 Europe/Rome] Max file size: 5242880
+[22-Jul-2025 11:37:38 Europe/Rome] Image info: {"0":961,"1":1000,"2":2,"3":"width=\"961\" height=\"1000\"","bits":8,"channels":3,"mime":"image\/jpeg"}
+[22-Jul-2025 11:37:38 Europe/Rome] POST data: {"productId":"trattamento-tessuti-3in1"}
+[22-Jul-2025 11:37:38 Europe/Rome] FILES data: {"productImage":{"name":"pulire-sedili-auto-3-in-1-tessuti.jpg","full_path":"pulire-sedili-auto-3-in-1-tessuti.jpg","type":"image\/jpeg","tmp_name":"\/tmp\/phpB4Jvtl","error":0,"size":91351}}
+[22-Jul-2025 11:37:38 Europe/Rome] File info - Name: pulire-sedili-auto-3-in-1-tessuti.jpg, Size: 91351, Type: image/jpeg
+[22-Jul-2025 11:37:38 Europe/Rome] File moved successfully to: ../assets/img/products/trattamento-tessuti-3in1.jpg
+[22-Jul-2025 11:37:38 Europe/Rome] File extension: jpg
+[22-Jul-2025 11:37:38 Europe/Rome] Starting image optimization for: ../assets/img/products/trattamento-tessuti-3in1.jpg
+[22-Jul-2025 11:37:38 Europe/Rome] Target file path: ../assets/img/products/trattamento-tessuti-3in1.jpg
+[22-Jul-2025 11:37:38 Europe/Rome] Original dimensions: 961x1000
+[22-Jul-2025 11:37:38 Europe/Rome] Image info: {"0":961,"1":1000,"2":2,"3":"width=\"961\" height=\"1000\"","bits":8,"channels":3,"mime":"image\/jpeg"}
+[22-Jul-2025 11:37:38 Europe/Rome] New dimensions: 576x600
+[22-Jul-2025 11:37:38 Europe/Rome] PHP Warning:  imagecreatefromjpeg(): gd-jpeg: JPEG library reports unrecoverable error: Empty input file in /web/htdocs/www.artigea.it/home/TestOre/api/upload-product-image.php on line 198
+[22-Jul-2025 11:37:38 Europe/Rome] PHP Warning:  imagecreatefromjpeg(): &quot;../assets/img/products/trattamento-tessuti-3in1.jpg&quot; is not a valid JPEG file in /web/htdocs/www.artigea.it/home/TestOre/api/upload-product-image.php on line 198
+[22-Jul-2025 11:37:38 Europe/Rome] File moved successfully to: ../assets/img/products/trattamento-tessuti-3in1.jpg
+[22-Jul-2025 11:37:38 Europe/Rome] Failed to create source image
+[22-Jul-2025 11:37:38 Europe/Rome] Starting image optimization for: ../assets/img/products/trattamento-tessuti-3in1.jpg
+[22-Jul-2025 11:37:38 Europe/Rome] Image optimization result: false
+[22-Jul-2025 11:37:38 Europe/Rome] Original dimensions: 961x1000
+[22-Jul-2025 11:37:38 Europe/Rome] Success response: {"success":true,"message":"Immagine caricata con successo","fileName":"trattamento-tessuti-3in1.jpg","filePath":"..\/assets\/img\/products\/trattamento-tessuti-3in1.jpg","optimized":false}
+[22-Jul-2025 11:37:38 Europe/Rome] New dimensions: 576x600
+[22-Jul-2025 11:37:38 Europe/Rome] === UPLOAD REQUEST START ===
+[22-Jul-2025 11:37:38 Europe/Rome] === UPLOAD REQUEST END ===
+[22-Jul-2025 11:37:38 Europe/Rome] Method: POST
+[22-Jul-2025 11:37:38 Europe/Rome] URI: /TestOre/api/upload-product-image.php
+[22-Jul-2025 11:37:38 Europe/Rome] Headers: {"Cookie":"_ga=GA1.1.217452127.1752652398; artigea-cookie-consent={\"necessary\":true,\"analytics\":false,\"marketing\":false,\"preferences\":false,\"timestamp\":1752654829084,\"version\":\"1.0\"}; artigea-cookie-consent_timestamp=1752654829085; _ga_M4MW5QEKQ4=GS2.1.s1753175193$o7$g0$t1753175193$j60$l0$h0","Priority":"u=1, i","Accept-Language":"it-IT,it;q=0.9,en-US;q=0.8,en;q=0.7","Accept-Encoding":"gzip, deflate, br, zstd","Referer":"https:\/\/www.artigea.it\/TestOre\/pages\/admin.html","Sec-Fetch-Dest":"empty","Sec-Fetch-Mode":"cors","Sec-Fetch-Site":"same-origin","Origin":"https:\/\/www.artigea.it","Accept":"*\/*","Sec-Ch-Ua-Mobile":"?0","Content-Type":"multipart\/form-data; boundary=----WebKitFormBoundaryn5BUP2iBLXkWGmXi","Sec-Ch-Ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Google Chrome\";v=\"138\"","User-Agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/138.0.0.0 Safari\/537.36","Sec-Ch-Ua-Platform":"\"Windows\"","Cache-Control":"no-cache","Pragma":"no-cache","Content-Length":"91690","Connection":"close","X-Forwarded-Proto":"https","X-Forwarded-Port":"443","X-Real-Ip":"79.10.63.3","Host":"www.artigea.it"}
+[22-Jul-2025 11:37:38 Europe/Rome] POST request processing...
+[22-Jul-2025 11:37:38 Europe/Rome] Upload directory: ../assets/img/products/
+[22-Jul-2025 11:37:38 Europe/Rome] Max file size: 5242880
+[22-Jul-2025 11:37:38 Europe/Rome] POST data: {"productId":"trattamento-tessuti-3in1"}
+[22-Jul-2025 11:37:38 Europe/Rome] FILES data: {"productImage":{"name":"pulire-sedili-auto-3-in-1-tessuti.jpg","full_path":"pulire-sedili-auto-3-in-1-tessuti.jpg","type":"image\/jpeg","tmp_name":"\/tmp\/phphMYySv","error":0,"size":91351}}
+[22-Jul-2025 11:37:38 Europe/Rome] File info - Name: pulire-sedili-auto-3-in-1-tessuti.jpg, Size: 91351, Type: image/jpeg
+[22-Jul-2025 11:37:38 Europe/Rome] File extension: jpg
+[22-Jul-2025 11:37:38 Europe/Rome] Target file path: ../assets/img/products/trattamento-tessuti-3in1.jpg
+[22-Jul-2025 11:37:38 Europe/Rome] Image info: {"0":961,"1":1000,"2":2,"3":"width=\"961\" height=\"1000\"","bits":8,"channels":3,"mime":"image\/jpeg"}
+[22-Jul-2025 11:37:38 Europe/Rome] File moved successfully to: ../assets/img/products/trattamento-tessuti-3in1.jpg
+[22-Jul-2025 11:37:38 Europe/Rome] Starting image optimization for: ../assets/img/products/trattamento-tessuti-3in1.jpg
+[22-Jul-2025 11:37:38 Europe/Rome] Original dimensions: 961x1000
+[22-Jul-2025 11:37:38 Europe/Rome] New dimensions: 576x600
+[22-Jul-2025 11:37:38 Europe/Rome] Image optimization completed, save result: true
+[22-Jul-2025 11:37:38 Europe/Rome] Image optimization result: true
+[22-Jul-2025 11:37:38 Europe/Rome] Success response: {"success":true,"message":"Immagine caricata con successo","fileName":"trattamento-tessuti-3in1.jpg","filePath":"..\/assets\/img\/products\/trattamento-tessuti-3in1.jpg","optimized":true}
+[22-Jul-2025 11:37:38 Europe/Rome] === UPLOAD REQUEST END ===
+[22-Jul-2025 11:37:38 Europe/Rome] Image optimization completed, save result: true
+[22-Jul-2025 11:37:38 Europe/Rome] Image optimization result: true
+[22-Jul-2025 11:37:38 Europe/Rome] Success response: {"success":true,"message":"Immagine caricata con successo","fileName":"trattamento-tessuti-3in1.jpg","filePath":"..\/assets\/img\/products\/trattamento-tessuti-3in1.jpg","optimized":true}
+[22-Jul-2025 11:37:38 Europe/Rome] === UPLOAD REQUEST END ===
+[22-Jul-2025 11:46:29 Europe/Rome] === UPLOAD REQUEST START ===
+[22-Jul-2025 11:46:29 Europe/Rome] Method: POST
+[22-Jul-2025 11:46:29 Europe/Rome] URI: /TestOre/api/upload-product-image.php
+[22-Jul-2025 11:46:29 Europe/Rome] Headers: {"Cookie":"_ga=GA1.1.217452127.1752652398; artigea-cookie-consent={\"necessary\":true,\"analytics\":false,\"marketing\":false,\"preferences\":false,\"timestamp\":1752654829084,\"version\":\"1.0\"}; artigea-cookie-consent_timestamp=1752654829085; _ga_M4MW5QEKQ4=GS2.1.s1753175193$o7$g0$t1753175193$j60$l0$h0","Priority":"u=1, i","Accept-Language":"it-IT,it;q=0.9,en-US;q=0.8,en;q=0.7","Accept-Encoding":"gzip, deflate, br, zstd","Referer":"https:\/\/www.artigea.it\/TestOre\/pages\/admin.html","Sec-Fetch-Dest":"empty","Sec-Fetch-Mode":"cors","Sec-Fetch-Site":"same-origin","Origin":"https:\/\/www.artigea.it","Accept":"*\/*","Sec-Ch-Ua-Mobile":"?0","Content-Type":"multipart\/form-data; boundary=----WebKitFormBoundary6OvfnRaUA0NHOpsT","Sec-Ch-Ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Google Chrome\";v=\"138\"","User-Agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/138.0.0.0 Safari\/537.36","Sec-Ch-Ua-Platform":"\"Windows\"","Cache-Control":"no-cache","Pragma":"no-cache","Content-Length":"219073","Connection":"close","X-Forwarded-Proto":"https","X-Forwarded-Port":"443","X-Real-Ip":"79.10.63.3","Host":"www.artigea.it"}
+[22-Jul-2025 11:46:29 Europe/Rome] POST request processing...
+[22-Jul-2025 11:46:29 Europe/Rome] Upload directory: ../assets/img/products/
+[22-Jul-2025 11:46:29 Europe/Rome] Max file size: 5242880
+[22-Jul-2025 11:46:29 Europe/Rome] POST data: {"productId":"solfamk"}
+[22-Jul-2025 11:46:29 Europe/Rome] FILES data: {"productImage":{"name":"54810HD.jpg","full_path":"54810HD.jpg","type":"image\/jpeg","tmp_name":"\/tmp\/phpTpXCCJ","error":0,"size":218777}}
+[22-Jul-2025 11:46:29 Europe/Rome] File info - Name: 54810HD.jpg, Size: 218777, Type: image/jpeg
+[22-Jul-2025 11:46:29 Europe/Rome] File extension: jpg
+[22-Jul-2025 11:46:29 Europe/Rome] Target file path: ../assets/img/products/solfamk.jpg
+[22-Jul-2025 11:46:29 Europe/Rome] Image info: {"0":2000,"1":2000,"2":2,"3":"width=\"2000\" height=\"2000\"","bits":8,"channels":3,"mime":"image\/jpeg"}
+[22-Jul-2025 11:46:29 Europe/Rome] File moved successfully to: ../assets/img/products/solfamk.jpg
+[22-Jul-2025 11:46:29 Europe/Rome] Starting image optimization for: ../assets/img/products/solfamk.jpg
+[22-Jul-2025 11:46:29 Europe/Rome] Original dimensions: 2000x2000
+[22-Jul-2025 11:46:29 Europe/Rome] New dimensions: 600x600
+[22-Jul-2025 11:46:29 Europe/Rome] Image optimization completed, save result: true
+[22-Jul-2025 11:46:29 Europe/Rome] === UPLOAD REQUEST START ===
+[22-Jul-2025 11:46:29 Europe/Rome] Image optimization result: true
+[22-Jul-2025 11:46:29 Europe/Rome] Method: POST
+[22-Jul-2025 11:46:29 Europe/Rome] === UPLOAD REQUEST START ===
+[22-Jul-2025 11:46:29 Europe/Rome] Success response: {"success":true,"message":"Immagine caricata con successo","fileName":"solfamk.jpg","filePath":"..\/assets\/img\/products\/solfamk.jpg","optimized":true}
+[22-Jul-2025 11:46:29 Europe/Rome] URI: /TestOre/api/upload-product-image.php
+[22-Jul-2025 11:46:29 Europe/Rome] Method: POST
+[22-Jul-2025 11:46:29 Europe/Rome] === UPLOAD REQUEST END ===
+[22-Jul-2025 11:46:29 Europe/Rome] Headers: {"Cookie":"_ga=GA1.1.217452127.1752652398; artigea-cookie-consent={\"necessary\":true,\"analytics\":false,\"marketing\":false,\"preferences\":false,\"timestamp\":1752654829084,\"version\":\"1.0\"}; artigea-cookie-consent_timestamp=1752654829085; _ga_M4MW5QEKQ4=GS2.1.s1753175193$o7$g0$t1753175193$j60$l0$h0","Priority":"u=1, i","Accept-Language":"it-IT,it;q=0.9,en-US;q=0.8,en;q=0.7","Accept-Encoding":"gzip, deflate, br, zstd","Referer":"https:\/\/www.artigea.it\/TestOre\/pages\/admin.html","Sec-Fetch-Dest":"empty","Sec-Fetch-Mode":"cors","Sec-Fetch-Site":"same-origin","Origin":"https:\/\/www.artigea.it","Accept":"*\/*","Sec-Ch-Ua-Mobile":"?0","Content-Type":"multipart\/form-data; boundary=----WebKitFormBoundaryW8hJrYrE740xMW2S","Sec-Ch-Ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Google Chrome\";v=\"138\"","User-Agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/138.0.0.0 Safari\/537.36","Sec-Ch-Ua-Platform":"\"Windows\"","Cache-Control":"no-cache","Pragma":"no-cache","Content-Length":"219073","Connection":"close","X-Forwarded-Proto":"https","X-Forwarded-Port":"443","X-Real-Ip":"79.10.63.3","Host":"www.artigea.it"}
+[22-Jul-2025 11:46:29 Europe/Rome] === UPLOAD REQUEST START ===
+[22-Jul-2025 11:46:29 Europe/Rome] URI: /TestOre/api/upload-product-image.php
+[22-Jul-2025 11:46:29 Europe/Rome] POST request processing...
+[22-Jul-2025 11:46:29 Europe/Rome] Method: POST
+[22-Jul-2025 11:46:29 Europe/Rome] Headers: {"Cookie":"_ga=GA1.1.217452127.1752652398; artigea-cookie-consent={\"necessary\":true,\"analytics\":false,\"marketing\":false,\"preferences\":false,\"timestamp\":1752654829084,\"version\":\"1.0\"}; artigea-cookie-consent_timestamp=1752654829085; _ga_M4MW5QEKQ4=GS2.1.s1753175193$o7$g0$t1753175193$j60$l0$h0","Priority":"u=1, i","Accept-Language":"it-IT,it;q=0.9,en-US;q=0.8,en;q=0.7","Accept-Encoding":"gzip, deflate, br, zstd","Referer":"https:\/\/www.artigea.it\/TestOre\/pages\/admin.html","Sec-Fetch-Dest":"empty","Sec-Fetch-Mode":"cors","Sec-Fetch-Site":"same-origin","Origin":"https:\/\/www.artigea.it","Accept":"*\/*","Sec-Ch-Ua-Mobile":"?0","Content-Type":"multipart\/form-data; boundary=----WebKitFormBoundaryMxcKE0YkQGAiHkRE","Sec-Ch-Ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Google Chrome\";v=\"138\"","User-Agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/138.0.0.0 Safari\/537.36","Sec-Ch-Ua-Platform":"\"Windows\"","Cache-Control":"no-cache","Pragma":"no-cache","Content-Length":"219073","Connection":"close","X-Forwarded-Proto":"https","X-Forwarded-Port":"443","X-Real-Ip":"79.10.63.3","Host":"www.artigea.it"}
+[22-Jul-2025 11:46:30 Europe/Rome] Upload directory: ../assets/img/products/
+[22-Jul-2025 11:46:30 Europe/Rome] URI: /TestOre/api/upload-product-image.php
+[22-Jul-2025 11:46:30 Europe/Rome] POST request processing...
+[22-Jul-2025 11:46:30 Europe/Rome] Max file size: 5242880
+[22-Jul-2025 11:46:30 Europe/Rome] Headers: {"Cookie":"_ga=GA1.1.217452127.1752652398; artigea-cookie-consent={\"necessary\":true,\"analytics\":false,\"marketing\":false,\"preferences\":false,\"timestamp\":1752654829084,\"version\":\"1.0\"}; artigea-cookie-consent_timestamp=1752654829085; _ga_M4MW5QEKQ4=GS2.1.s1753175193$o7$g0$t1753175193$j60$l0$h0","Priority":"u=1, i","Accept-Language":"it-IT,it;q=0.9,en-US;q=0.8,en;q=0.7","Accept-Encoding":"gzip, deflate, br, zstd","Referer":"https:\/\/www.artigea.it\/TestOre\/pages\/admin.html","Sec-Fetch-Dest":"empty","Sec-Fetch-Mode":"cors","Sec-Fetch-Site":"same-origin","Origin":"https:\/\/www.artigea.it","Accept":"*\/*","Sec-Ch-Ua-Mobile":"?0","Content-Type":"multipart\/form-data; boundary=----WebKitFormBoundaryvIcsOkB2bfB9vaBB","Sec-Ch-Ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Google Chrome\";v=\"138\"","User-Agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/138.0.0.0 Safari\/537.36","Sec-Ch-Ua-Platform":"\"Windows\"","Cache-Control":"no-cache","Pragma":"no-cache","Content-Length":"219073","Connection":"close","X-Forwarded-Proto":"https","X-Forwarded-Port":"443","X-Real-Ip":"79.10.63.3","Host":"www.artigea.it"}
+[22-Jul-2025 11:46:30 Europe/Rome] Upload directory: ../assets/img/products/
+[22-Jul-2025 11:46:30 Europe/Rome] POST data: {"productId":"solfamk"}
+[22-Jul-2025 11:46:30 Europe/Rome] POST request processing...
+[22-Jul-2025 11:46:30 Europe/Rome] Max file size: 5242880
+[22-Jul-2025 11:46:30 Europe/Rome] FILES data: {"productImage":{"name":"54810HD.jpg","full_path":"54810HD.jpg","type":"image\/jpeg","tmp_name":"\/tmp\/phpCKMGBf","error":0,"size":218777}}
+[22-Jul-2025 11:46:30 Europe/Rome] Upload directory: ../assets/img/products/
+[22-Jul-2025 11:46:30 Europe/Rome] File info - Name: 54810HD.jpg, Size: 218777, Type: image/jpeg
+[22-Jul-2025 11:46:30 Europe/Rome] POST data: {"productId":"solfamk"}
+[22-Jul-2025 11:46:30 Europe/Rome] Max file size: 5242880
+[22-Jul-2025 11:46:30 Europe/Rome] File extension: jpg
+[22-Jul-2025 11:46:30 Europe/Rome] FILES data: {"productImage":{"name":"54810HD.jpg","full_path":"54810HD.jpg","type":"image\/jpeg","tmp_name":"\/tmp\/phpPorFDj","error":0,"size":218777}}
+[22-Jul-2025 11:46:30 Europe/Rome] POST data: {"productId":"solfamk"}
+[22-Jul-2025 11:46:30 Europe/Rome] Target file path: ../assets/img/products/solfamk.jpg
+[22-Jul-2025 11:46:30 Europe/Rome] File info - Name: 54810HD.jpg, Size: 218777, Type: image/jpeg
+[22-Jul-2025 11:46:30 Europe/Rome] FILES data: {"productImage":{"name":"54810HD.jpg","full_path":"54810HD.jpg","type":"image\/jpeg","tmp_name":"\/tmp\/phpSXauXm","error":0,"size":218777}}
+[22-Jul-2025 11:46:30 Europe/Rome] Image info: {"0":2000,"1":2000,"2":2,"3":"width=\"2000\" height=\"2000\"","bits":8,"channels":3,"mime":"image\/jpeg"}
+[22-Jul-2025 11:46:30 Europe/Rome] File extension: jpg
+[22-Jul-2025 11:46:30 Europe/Rome] File info - Name: 54810HD.jpg, Size: 218777, Type: image/jpeg
+[22-Jul-2025 11:46:30 Europe/Rome] Target file path: ../assets/img/products/solfamk.jpg
+[22-Jul-2025 11:46:30 Europe/Rome] File extension: jpg
+[22-Jul-2025 11:46:30 Europe/Rome] Image info: {"0":2000,"1":2000,"2":2,"3":"width=\"2000\" height=\"2000\"","bits":8,"channels":3,"mime":"image\/jpeg"}
+[22-Jul-2025 11:46:30 Europe/Rome] Target file path: ../assets/img/products/solfamk.jpg
+[22-Jul-2025 11:46:30 Europe/Rome] File moved successfully to: ../assets/img/products/solfamk.jpg
+[22-Jul-2025 11:46:30 Europe/Rome] Image info: {"0":2000,"1":2000,"2":2,"3":"width=\"2000\" height=\"2000\"","bits":8,"channels":3,"mime":"image\/jpeg"}
+[22-Jul-2025 11:46:30 Europe/Rome] Starting image optimization for: ../assets/img/products/solfamk.jpg
+[22-Jul-2025 11:46:30 Europe/Rome] File moved successfully to: ../assets/img/products/solfamk.jpg
+[22-Jul-2025 11:46:30 Europe/Rome] Starting image optimization for: ../assets/img/products/solfamk.jpg
+[22-Jul-2025 11:46:30 Europe/Rome] PHP Notice:  getimagesize(): Error reading from ../assets/img/products/solfamk.jpg! in /web/htdocs/www.artigea.it/home/TestOre/api/upload-product-image.php on line 180
+[22-Jul-2025 11:46:31 Europe/Rome] File moved successfully to: ../assets/img/products/solfamk.jpg
+[22-Jul-2025 11:46:31 Europe/Rome] Original dimensions: 2000x2000
+[22-Jul-2025 11:46:31 Europe/Rome] Original dimensions: x
+[22-Jul-2025 11:46:31 Europe/Rome] Starting image optimization for: ../assets/img/products/solfamk.jpg
+[22-Jul-2025 11:46:31 Europe/Rome] New dimensions: 600x600
+[22-Jul-2025 11:46:31 Europe/Rome] Image already small enough, no optimization needed
+[22-Jul-2025 11:46:31 Europe/Rome] Original dimensions: 2000x2000
+[22-Jul-2025 11:46:31 Europe/Rome] Image optimization result: false
+[22-Jul-2025 11:46:31 Europe/Rome] New dimensions: 600x600
+[22-Jul-2025 11:46:31 Europe/Rome] Success response: {"success":true,"message":"Immagine caricata con successo","fileName":"solfamk.jpg","filePath":"..\/assets\/img\/products\/solfamk.jpg","optimized":false}
+[22-Jul-2025 11:46:31 Europe/Rome] === UPLOAD REQUEST END ===
+[22-Jul-2025 11:46:31 Europe/Rome] Image optimization completed, save result: true
+[22-Jul-2025 11:46:31 Europe/Rome] Image optimization result: true
+[22-Jul-2025 11:46:31 Europe/Rome] Success response: {"success":true,"message":"Immagine caricata con successo","fileName":"solfamk.jpg","filePath":"..\/assets\/img\/products\/solfamk.jpg","optimized":true}
+[22-Jul-2025 11:46:31 Europe/Rome] Image optimization completed, save result: true
+[22-Jul-2025 11:46:31 Europe/Rome] === UPLOAD REQUEST END ===
+[22-Jul-2025 11:46:31 Europe/Rome] Image optimization result: true
+[22-Jul-2025 11:46:31 Europe/Rome] Success response: {"success":true,"message":"Immagine caricata con successo","fileName":"solfamk.jpg","filePath":"..\/assets\/img\/products\/solfamk.jpg","optimized":true}
+[22-Jul-2025 11:46:31 Europe/Rome] === UPLOAD REQUEST END ===
+[22-Jul-2025 12:32:55 Europe/Rome] === UPLOAD REQUEST START ===
+[22-Jul-2025 12:32:55 Europe/Rome] Method: POST
+[22-Jul-2025 12:32:55 Europe/Rome] URI: /TestOre/api/upload-product-image.php
+[22-Jul-2025 12:32:55 Europe/Rome] Headers: {"Cookie":"_ga=GA1.1.217452127.1752652398; artigea-cookie-consent={\"necessary\":true,\"analytics\":false,\"marketing\":false,\"preferences\":false,\"timestamp\":1752654829084,\"version\":\"1.0\"}; artigea-cookie-consent_timestamp=1752654829085; _ga_M4MW5QEKQ4=GS2.1.s1753175193$o7$g0$t1753175193$j60$l0$h0","Priority":"u=1, i","Accept-Language":"it-IT,it;q=0.9,en-US;q=0.8,en;q=0.7","Accept-Encoding":"gzip, deflate, br, zstd","Referer":"https:\/\/www.artigea.it\/TestOre\/pages\/admin.html","Sec-Fetch-Dest":"empty","Sec-Fetch-Mode":"cors","Sec-Fetch-Site":"same-origin","Origin":"https:\/\/www.artigea.it","Accept":"*\/*","Sec-Ch-Ua-Mobile":"?0","Content-Type":"multipart\/form-data; boundary=----WebKitFormBoundaryyv5RawKjwGclivre","Sec-Ch-Ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Google Chrome\";v=\"138\"","User-Agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/138.0.0.0 Safari\/537.36","Sec-Ch-Ua-Platform":"\"Windows\"","Cache-Control":"no-cache","Pragma":"no-cache","Content-Length":"151643","Connection":"close","X-Forwarded-Proto":"https","X-Forwarded-Port":"443","X-Real-Ip":"79.10.63.3","Host":"www.artigea.it"}
+[22-Jul-2025 12:32:55 Europe/Rome] POST request processing...
+[22-Jul-2025 12:32:55 Europe/Rome] Upload directory: ../assets/img/products/
+[22-Jul-2025 12:32:55 Europe/Rome] Max file size: 5242880
+[22-Jul-2025 12:32:55 Europe/Rome] POST data: {"productId":"eco-fatto-pavimenti"}
+[22-Jul-2025 12:32:55 Europe/Rome] FILES data: {"productImage":{"name":"56127HD.jpg","full_path":"56127HD.jpg","type":"image\/jpeg","tmp_name":"\/tmp\/phpKcreEB","error":0,"size":151335}}
+[22-Jul-2025 12:32:55 Europe/Rome] File info - Name: 56127HD.jpg, Size: 151335, Type: image/jpeg
+[22-Jul-2025 12:32:55 Europe/Rome] File extension: jpg
+[22-Jul-2025 12:32:55 Europe/Rome] Target file path: ../assets/img/products/eco-fatto-pavimenti.jpg
+[22-Jul-2025 12:32:55 Europe/Rome] Image info: {"0":2000,"1":2000,"2":2,"3":"width=\"2000\" height=\"2000\"","bits":8,"channels":3,"mime":"image\/jpeg"}
+[22-Jul-2025 12:32:55 Europe/Rome] File moved successfully to: ../assets/img/products/eco-fatto-pavimenti.jpg
+[22-Jul-2025 12:32:55 Europe/Rome] Starting image optimization for: ../assets/img/products/eco-fatto-pavimenti.jpg
+[22-Jul-2025 12:32:55 Europe/Rome] Original dimensions: 2000x2000
+[22-Jul-2025 12:32:55 Europe/Rome] New dimensions: 600x600
+[22-Jul-2025 12:32:55 Europe/Rome] === UPLOAD REQUEST START ===
+[22-Jul-2025 12:32:55 Europe/Rome] Method: POST
+[22-Jul-2025 12:32:55 Europe/Rome] URI: /TestOre/api/upload-product-image.php
+[22-Jul-2025 12:32:55 Europe/Rome] Headers: {"Cookie":"_ga=GA1.1.217452127.1752652398; artigea-cookie-consent={\"necessary\":true,\"analytics\":false,\"marketing\":false,\"preferences\":false,\"timestamp\":1752654829084,\"version\":\"1.0\"}; artigea-cookie-consent_timestamp=1752654829085; _ga_M4MW5QEKQ4=GS2.1.s1753175193$o7$g0$t1753175193$j60$l0$h0","Priority":"u=1, i","Accept-Language":"it-IT,it;q=0.9,en-US;q=0.8,en;q=0.7","Accept-Encoding":"gzip, deflate, br, zstd","Referer":"https:\/\/www.artigea.it\/TestOre\/pages\/admin.html","Sec-Fetch-Dest":"empty","Sec-Fetch-Mode":"cors","Sec-Fetch-Site":"same-origin","Origin":"https:\/\/www.artigea.it","Accept":"*\/*","Sec-Ch-Ua-Mobile":"?0","Content-Type":"multipart\/form-data; boundary=----WebKitFormBoundaryfWk35sSZEhLFOZtX","Sec-Ch-Ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Google Chrome\";v=\"138\"","User-Agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/138.0.0.0 Safari\/537.36","Sec-Ch-Ua-Platform":"\"Windows\"","Cache-Control":"no-cache","Pragma":"no-cache","Content-Length":"151643","Connection":"close","X-Forwarded-Proto":"https","X-Forwarded-Port":"443","X-Real-Ip":"79.10.63.3","Host":"www.artigea.it"}
+[22-Jul-2025 12:32:55 Europe/Rome] POST request processing...
+[22-Jul-2025 12:32:55 Europe/Rome] Upload directory: ../assets/img/products/
+[22-Jul-2025 12:32:55 Europe/Rome] Max file size: 5242880
+[22-Jul-2025 12:32:55 Europe/Rome] POST data: {"productId":"eco-fatto-pavimenti"}
+[22-Jul-2025 12:32:55 Europe/Rome] FILES data: {"productImage":{"name":"56127HD.jpg","full_path":"56127HD.jpg","type":"image\/jpeg","tmp_name":"\/tmp\/phpZpaw5p","error":0,"size":151335}}
+[22-Jul-2025 12:32:55 Europe/Rome] File info - Name: 56127HD.jpg, Size: 151335, Type: image/jpeg
+[22-Jul-2025 12:32:55 Europe/Rome] File extension: jpg
+[22-Jul-2025 12:32:55 Europe/Rome] Target file path: ../assets/img/products/eco-fatto-pavimenti.jpg
+[22-Jul-2025 12:32:55 Europe/Rome] Image info: {"0":2000,"1":2000,"2":2,"3":"width=\"2000\" height=\"2000\"","bits":8,"channels":3,"mime":"image\/jpeg"}
+[22-Jul-2025 12:32:55 Europe/Rome] File moved successfully to: ../assets/img/products/eco-fatto-pavimenti.jpg
+[22-Jul-2025 12:32:55 Europe/Rome] Starting image optimization for: ../assets/img/products/eco-fatto-pavimenti.jpg
+[22-Jul-2025 12:32:55 Europe/Rome] Original dimensions: 2000x2000
+[22-Jul-2025 12:32:55 Europe/Rome] New dimensions: 600x600
+[22-Jul-2025 12:32:55 Europe/Rome] === UPLOAD REQUEST START ===
+[22-Jul-2025 12:32:55 Europe/Rome] Method: POST
+[22-Jul-2025 12:32:55 Europe/Rome] URI: /TestOre/api/upload-product-image.php
+[22-Jul-2025 12:32:55 Europe/Rome] Headers: {"Cookie":"_ga=GA1.1.217452127.1752652398; artigea-cookie-consent={\"necessary\":true,\"analytics\":false,\"marketing\":false,\"preferences\":false,\"timestamp\":1752654829084,\"version\":\"1.0\"}; artigea-cookie-consent_timestamp=1752654829085; _ga_M4MW5QEKQ4=GS2.1.s1753175193$o7$g0$t1753175193$j60$l0$h0","Priority":"u=1, i","Accept-Language":"it-IT,it;q=0.9,en-US;q=0.8,en;q=0.7","Accept-Encoding":"gzip, deflate, br, zstd","Referer":"https:\/\/www.artigea.it\/TestOre\/pages\/admin.html","Sec-Fetch-Dest":"empty","Sec-Fetch-Mode":"cors","Sec-Fetch-Site":"same-origin","Origin":"https:\/\/www.artigea.it","Accept":"*\/*","Sec-Ch-Ua-Mobile":"?0","Content-Type":"multipart\/form-data; boundary=----WebKitFormBoundaryNzeHwZlzFNByyiN6","Sec-Ch-Ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Google Chrome\";v=\"138\"","User-Agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/138.0.0.0 Safari\/537.36","Sec-Ch-Ua-Platform":"\"Windows\"","Cache-Control":"no-cache","Pragma":"no-cache","Content-Length":"151643","Connection":"close","X-Forwarded-Proto":"https","X-Forwarded-Port":"443","X-Real-Ip":"79.10.63.3","Host":"www.artigea.it"}
+[22-Jul-2025 12:32:55 Europe/Rome] POST request processing...
+[22-Jul-2025 12:32:55 Europe/Rome] Upload directory: ../assets/img/products/
+[22-Jul-2025 12:32:55 Europe/Rome] Max file size: 5242880
+[22-Jul-2025 12:32:55 Europe/Rome] POST data: {"productId":"eco-fatto-pavimenti"}
+[22-Jul-2025 12:32:55 Europe/Rome] FILES data: {"productImage":{"name":"56127HD.jpg","full_path":"56127HD.jpg","type":"image\/jpeg","tmp_name":"\/tmp\/phplasN22","error":0,"size":151335}}
+[22-Jul-2025 12:32:55 Europe/Rome] File info - Name: 56127HD.jpg, Size: 151335, Type: image/jpeg
+[22-Jul-2025 12:32:55 Europe/Rome] File extension: jpg
+[22-Jul-2025 12:32:55 Europe/Rome] Target file path: ../assets/img/products/eco-fatto-pavimenti.jpg
+[22-Jul-2025 12:32:55 Europe/Rome] Image info: {"0":2000,"1":2000,"2":2,"3":"width=\"2000\" height=\"2000\"","bits":8,"channels":3,"mime":"image\/jpeg"}
+[22-Jul-2025 12:32:55 Europe/Rome] File moved successfully to: ../assets/img/products/eco-fatto-pavimenti.jpg
+[22-Jul-2025 12:32:55 Europe/Rome] Starting image optimization for: ../assets/img/products/eco-fatto-pavimenti.jpg
+[22-Jul-2025 12:32:55 Europe/Rome] Original dimensions: 2000x2000
+[22-Jul-2025 12:32:55 Europe/Rome] New dimensions: 600x600
+[22-Jul-2025 12:32:55 Europe/Rome] Image optimization completed, save result: true
+[22-Jul-2025 12:32:55 Europe/Rome] Image optimization result: true
+[22-Jul-2025 12:32:55 Europe/Rome] === UPLOAD REQUEST START ===
+[22-Jul-2025 12:32:55 Europe/Rome] Success response: {"success":true,"message":"Immagine caricata con successo","fileName":"eco-fatto-pavimenti.jpg","filePath":"..\/assets\/img\/products\/eco-fatto-pavimenti.jpg","optimized":true}
+[22-Jul-2025 12:32:55 Europe/Rome] Method: POST
+[22-Jul-2025 12:32:55 Europe/Rome] === UPLOAD REQUEST END ===
+[22-Jul-2025 12:32:55 Europe/Rome] URI: /TestOre/api/upload-product-image.php
+[22-Jul-2025 12:32:55 Europe/Rome] Headers: {"Cookie":"_ga=GA1.1.217452127.1752652398; artigea-cookie-consent={\"necessary\":true,\"analytics\":false,\"marketing\":false,\"preferences\":false,\"timestamp\":1752654829084,\"version\":\"1.0\"}; artigea-cookie-consent_timestamp=1752654829085; _ga_M4MW5QEKQ4=GS2.1.s1753175193$o7$g0$t1753175193$j60$l0$h0","Priority":"u=1, i","Accept-Language":"it-IT,it;q=0.9,en-US;q=0.8,en;q=0.7","Accept-Encoding":"gzip, deflate, br, zstd","Referer":"https:\/\/www.artigea.it\/TestOre\/pages\/admin.html","Sec-Fetch-Dest":"empty","Sec-Fetch-Mode":"cors","Sec-Fetch-Site":"same-origin","Origin":"https:\/\/www.artigea.it","Accept":"*\/*","Sec-Ch-Ua-Mobile":"?0","Content-Type":"multipart\/form-data; boundary=----WebKitFormBoundary2fqf47jQmoUcvkBo","Sec-Ch-Ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Google Chrome\";v=\"138\"","User-Agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/138.0.0.0 Safari\/537.36","Sec-Ch-Ua-Platform":"\"Windows\"","Cache-Control":"no-cache","Pragma":"no-cache","Content-Length":"151643","Connection":"close","X-Forwarded-Proto":"https","X-Forwarded-Port":"443","X-Real-Ip":"79.10.63.3","Host":"www.artigea.it"}
+[22-Jul-2025 12:32:55 Europe/Rome] POST request processing...
+[22-Jul-2025 12:32:55 Europe/Rome] Upload directory: ../assets/img/products/
+[22-Jul-2025 12:32:55 Europe/Rome] Max file size: 5242880
+[22-Jul-2025 12:32:55 Europe/Rome] POST data: {"productId":"eco-fatto-pavimenti"}
+[22-Jul-2025 12:32:55 Europe/Rome] FILES data: {"productImage":{"name":"56127HD.jpg","full_path":"56127HD.jpg","type":"image\/jpeg","tmp_name":"\/tmp\/phpaGb17i","error":0,"size":151335}}
+[22-Jul-2025 12:32:55 Europe/Rome] File info - Name: 56127HD.jpg, Size: 151335, Type: image/jpeg
+[22-Jul-2025 12:32:55 Europe/Rome] File extension: jpg
+[22-Jul-2025 12:32:55 Europe/Rome] Target file path: ../assets/img/products/eco-fatto-pavimenti.jpg
+[22-Jul-2025 12:32:55 Europe/Rome] Image info: {"0":2000,"1":2000,"2":2,"3":"width=\"2000\" height=\"2000\"","bits":8,"channels":3,"mime":"image\/jpeg"}
+[22-Jul-2025 12:32:55 Europe/Rome] File moved successfully to: ../assets/img/products/eco-fatto-pavimenti.jpg
+[22-Jul-2025 12:32:55 Europe/Rome] Starting image optimization for: ../assets/img/products/eco-fatto-pavimenti.jpg
+[22-Jul-2025 12:32:55 Europe/Rome] Original dimensions: 2000x2000
+[22-Jul-2025 12:32:55 Europe/Rome] New dimensions: 600x600
+[22-Jul-2025 12:32:55 Europe/Rome] Image optimization completed, save result: true
+[22-Jul-2025 12:32:55 Europe/Rome] Image optimization result: true
+[22-Jul-2025 12:32:55 Europe/Rome] Success response: {"success":true,"message":"Immagine caricata con successo","fileName":"eco-fatto-pavimenti.jpg","filePath":"..\/assets\/img\/products\/eco-fatto-pavimenti.jpg","optimized":true}
+[22-Jul-2025 12:32:55 Europe/Rome] === UPLOAD REQUEST END ===
+[22-Jul-2025 12:32:55 Europe/Rome] Image optimization completed, save result: true
+[22-Jul-2025 12:32:55 Europe/Rome] Image optimization result: true
+[22-Jul-2025 12:32:55 Europe/Rome] Success response: {"success":true,"message":"Immagine caricata con successo","fileName":"eco-fatto-pavimenti.jpg","filePath":"..\/assets\/img\/products\/eco-fatto-pavimenti.jpg","optimized":true}
+[22-Jul-2025 12:32:55 Europe/Rome] === UPLOAD REQUEST END ===
+[22-Jul-2025 12:32:55 Europe/Rome] Image optimization completed, save result: true
+[22-Jul-2025 12:32:55 Europe/Rome] Image optimization result: true
+[22-Jul-2025 12:32:55 Europe/Rome] Success response: {"success":true,"message":"Immagine caricata con successo","fileName":"eco-fatto-pavimenti.jpg","filePath":"..\/assets\/img\/products\/eco-fatto-pavimenti.jpg","optimized":true}
+[22-Jul-2025 12:32:55 Europe/Rome] === UPLOAD REQUEST END ===
+[22-Jul-2025 12:34:26 Europe/Rome] === UPLOAD REQUEST START ===
+[22-Jul-2025 12:34:26 Europe/Rome] Method: POST
+[22-Jul-2025 12:34:26 Europe/Rome] URI: /TestOre/api/upload-product-image.php
+[22-Jul-2025 12:34:26 Europe/Rome] Headers: {"Cookie":"_ga=GA1.1.217452127.1752652398; artigea-cookie-consent={\"necessary\":true,\"analytics\":false,\"marketing\":false,\"preferences\":false,\"timestamp\":1752654829084,\"version\":\"1.0\"}; artigea-cookie-consent_timestamp=1752654829085; _ga_M4MW5QEKQ4=GS2.1.s1753175193$o7$g0$t1753175193$j60$l0$h0","Priority":"u=1, i","Accept-Language":"it-IT,it;q=0.9,en-US;q=0.8,en;q=0.7","Accept-Encoding":"gzip, deflate, br, zstd","Referer":"https:\/\/www.artigea.it\/TestOre\/pages\/admin.html","Sec-Fetch-Dest":"empty","Sec-Fetch-Mode":"cors","Sec-Fetch-Site":"same-origin","Origin":"https:\/\/www.artigea.it","Accept":"*\/*","Sec-Ch-Ua-Mobile":"?0","Content-Type":"multipart\/form-data; boundary=----WebKitFormBoundaryOF04jB0lQN3A1jFW","Sec-Ch-Ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Google Chrome\";v=\"138\"","User-Agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/138.0.0.0 Safari\/537.36","Sec-Ch-Ua-Platform":"\"Windows\"","Cache-Control":"no-cache","Pragma":"no-cache","Content-Length":"278802","Connection":"close","X-Forwarded-Proto":"https","X-Forwarded-Port":"443","X-Real-Ip":"79.10.63.3","Host":"www.artigea.it"}
+[22-Jul-2025 12:34:26 Europe/Rome] POST request processing...
+[22-Jul-2025 12:34:26 Europe/Rome] Upload directory: ../assets/img/products/
+[22-Jul-2025 12:34:26 Europe/Rome] Max file size: 5242880
+[22-Jul-2025 12:34:26 Europe/Rome] POST data: {"productId":"ideal-luce"}
+[22-Jul-2025 12:34:26 Europe/Rome] FILES data: {"productImage":{"name":"53301HD.jpg","full_path":"53301HD.jpg","type":"image\/jpeg","tmp_name":"\/tmp\/phpZYXZOF","error":0,"size":278503}}
+[22-Jul-2025 12:34:26 Europe/Rome] File info - Name: 53301HD.jpg, Size: 278503, Type: image/jpeg
+[22-Jul-2025 12:34:26 Europe/Rome] File extension: jpg
+[22-Jul-2025 12:34:26 Europe/Rome] Target file path: ../assets/img/products/ideal-luce.jpg
+[22-Jul-2025 12:34:26 Europe/Rome] Image info: {"0":2000,"1":2000,"2":2,"3":"width=\"2000\" height=\"2000\"","bits":8,"channels":3,"mime":"image\/jpeg"}
+[22-Jul-2025 12:34:26 Europe/Rome] File moved successfully to: ../assets/img/products/ideal-luce.jpg
+[22-Jul-2025 12:34:26 Europe/Rome] Starting image optimization for: ../assets/img/products/ideal-luce.jpg
+[22-Jul-2025 12:34:26 Europe/Rome] Original dimensions: 2000x2000
+[22-Jul-2025 12:34:26 Europe/Rome] New dimensions: 600x600
+[22-Jul-2025 12:34:26 Europe/Rome] === UPLOAD REQUEST START ===
+[22-Jul-2025 12:34:26 Europe/Rome] Method: POST
+[22-Jul-2025 12:34:26 Europe/Rome] URI: /TestOre/api/upload-product-image.php
+[22-Jul-2025 12:34:26 Europe/Rome] Headers: {"Cookie":"_ga=GA1.1.217452127.1752652398; artigea-cookie-consent={\"necessary\":true,\"analytics\":false,\"marketing\":false,\"preferences\":false,\"timestamp\":1752654829084,\"version\":\"1.0\"}; artigea-cookie-consent_timestamp=1752654829085; _ga_M4MW5QEKQ4=GS2.1.s1753175193$o7$g0$t1753175193$j60$l0$h0","Priority":"u=1, i","Accept-Language":"it-IT,it;q=0.9,en-US;q=0.8,en;q=0.7","Accept-Encoding":"gzip, deflate, br, zstd","Referer":"https:\/\/www.artigea.it\/TestOre\/pages\/admin.html","Sec-Fetch-Dest":"empty","Sec-Fetch-Mode":"cors","Sec-Fetch-Site":"same-origin","Origin":"https:\/\/www.artigea.it","Accept":"*\/*","Sec-Ch-Ua-Mobile":"?0","Content-Type":"multipart\/form-data; boundary=----WebKitFormBoundary9a8atrY6roaWGRzM","Sec-Ch-Ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Google Chrome\";v=\"138\"","User-Agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/138.0.0.0 Safari\/537.36","Sec-Ch-Ua-Platform":"\"Windows\"","Cache-Control":"no-cache","Pragma":"no-cache","Content-Length":"278802","Connection":"close","X-Forwarded-Proto":"https","X-Forwarded-Port":"443","X-Real-Ip":"79.10.63.3","Host":"www.artigea.it"}
+[22-Jul-2025 12:34:26 Europe/Rome] POST request processing...
+[22-Jul-2025 12:34:26 Europe/Rome] Upload directory: ../assets/img/products/
+[22-Jul-2025 12:34:26 Europe/Rome] Max file size: 5242880
+[22-Jul-2025 12:34:26 Europe/Rome] POST data: {"productId":"ideal-luce"}
+[22-Jul-2025 12:34:26 Europe/Rome] FILES data: {"productImage":{"name":"53301HD.jpg","full_path":"53301HD.jpg","type":"image\/jpeg","tmp_name":"\/tmp\/phpC9IG5Z","error":0,"size":278503}}
+[22-Jul-2025 12:34:26 Europe/Rome] File info - Name: 53301HD.jpg, Size: 278503, Type: image/jpeg
+[22-Jul-2025 12:34:26 Europe/Rome] File extension: jpg
+[22-Jul-2025 12:34:26 Europe/Rome] Target file path: ../assets/img/products/ideal-luce.jpg
+[22-Jul-2025 12:34:26 Europe/Rome] Image info: {"0":2000,"1":2000,"2":2,"3":"width=\"2000\" height=\"2000\"","bits":8,"channels":3,"mime":"image\/jpeg"}
+[22-Jul-2025 12:34:26 Europe/Rome] File moved successfully to: ../assets/img/products/ideal-luce.jpg
+[22-Jul-2025 12:34:26 Europe/Rome] Starting image optimization for: ../assets/img/products/ideal-luce.jpg
+[22-Jul-2025 12:34:26 Europe/Rome] Original dimensions: 2000x2000
+[22-Jul-2025 12:34:26 Europe/Rome] New dimensions: 600x600
+[22-Jul-2025 12:34:26 Europe/Rome] === UPLOAD REQUEST START ===
+[22-Jul-2025 12:34:26 Europe/Rome] Method: POST
+[22-Jul-2025 12:34:26 Europe/Rome] URI: /TestOre/api/upload-product-image.php
+[22-Jul-2025 12:34:26 Europe/Rome] Headers: {"Cookie":"_ga=GA1.1.217452127.1752652398; artigea-cookie-consent={\"necessary\":true,\"analytics\":false,\"marketing\":false,\"preferences\":false,\"timestamp\":1752654829084,\"version\":\"1.0\"}; artigea-cookie-consent_timestamp=1752654829085; _ga_M4MW5QEKQ4=GS2.1.s1753175193$o7$g0$t1753175193$j60$l0$h0","Priority":"u=1, i","Accept-Language":"it-IT,it;q=0.9,en-US;q=0.8,en;q=0.7","Accept-Encoding":"gzip, deflate, br, zstd","Referer":"https:\/\/www.artigea.it\/TestOre\/pages\/admin.html","Sec-Fetch-Dest":"empty","Sec-Fetch-Mode":"cors","Sec-Fetch-Site":"same-origin","Origin":"https:\/\/www.artigea.it","Accept":"*\/*","Sec-Ch-Ua-Mobile":"?0","Content-Type":"multipart\/form-data; boundary=----WebKitFormBoundaryKQlx1eUcSH3tZuRc","Sec-Ch-Ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Google Chrome\";v=\"138\"","User-Agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/138.0.0.0 Safari\/537.36","Sec-Ch-Ua-Platform":"\"Windows\"","Cache-Control":"no-cache","Pragma":"no-cache","Content-Length":"278802","Connection":"close","X-Forwarded-Proto":"https","X-Forwarded-Port":"443","X-Real-Ip":"79.10.63.3","Host":"www.artigea.it"}
+[22-Jul-2025 12:34:26 Europe/Rome] POST request processing...
+[22-Jul-2025 12:34:26 Europe/Rome] Upload directory: ../assets/img/products/
+[22-Jul-2025 12:34:26 Europe/Rome] Max file size: 5242880
+[22-Jul-2025 12:34:26 Europe/Rome] POST data: {"productId":"ideal-luce"}
+[22-Jul-2025 12:34:26 Europe/Rome] FILES data: {"productImage":{"name":"53301HD.jpg","full_path":"53301HD.jpg","type":"image\/jpeg","tmp_name":"\/tmp\/phpPF4Dbl","error":0,"size":278503}}
+[22-Jul-2025 12:34:26 Europe/Rome] File info - Name: 53301HD.jpg, Size: 278503, Type: image/jpeg
+[22-Jul-2025 12:34:26 Europe/Rome] File extension: jpg
+[22-Jul-2025 12:34:26 Europe/Rome] Target file path: ../assets/img/products/ideal-luce.jpg
+[22-Jul-2025 12:34:26 Europe/Rome] Image info: {"0":2000,"1":2000,"2":2,"3":"width=\"2000\" height=\"2000\"","bits":8,"channels":3,"mime":"image\/jpeg"}
+[22-Jul-2025 12:34:26 Europe/Rome] === UPLOAD REQUEST START ===
+[22-Jul-2025 12:34:26 Europe/Rome] Method: POST
+[22-Jul-2025 12:34:26 Europe/Rome] URI: /TestOre/api/upload-product-image.php
+[22-Jul-2025 12:34:26 Europe/Rome] Headers: {"Cookie":"_ga=GA1.1.217452127.1752652398; artigea-cookie-consent={\"necessary\":true,\"analytics\":false,\"marketing\":false,\"preferences\":false,\"timestamp\":1752654829084,\"version\":\"1.0\"}; artigea-cookie-consent_timestamp=1752654829085; _ga_M4MW5QEKQ4=GS2.1.s1753175193$o7$g0$t1753175193$j60$l0$h0","Priority":"u=1, i","Accept-Language":"it-IT,it;q=0.9,en-US;q=0.8,en;q=0.7","Accept-Encoding":"gzip, deflate, br, zstd","Referer":"https:\/\/www.artigea.it\/TestOre\/pages\/admin.html","Sec-Fetch-Dest":"empty","Sec-Fetch-Mode":"cors","Sec-Fetch-Site":"same-origin","Origin":"https:\/\/www.artigea.it","Accept":"*\/*","Sec-Ch-Ua-Mobile":"?0","Content-Type":"multipart\/form-data; boundary=----WebKitFormBoundaryaMeGj0EefjBXYF3c","Sec-Ch-Ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Google Chrome\";v=\"138\"","User-Agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/138.0.0.0 Safari\/537.36","Sec-Ch-Ua-Platform":"\"Windows\"","Cache-Control":"no-cache","Pragma":"no-cache","Content-Length":"278802","Connection":"close","X-Forwarded-Proto":"https","X-Forwarded-Port":"443","X-Real-Ip":"79.10.63.3","Host":"www.artigea.it"}
+[22-Jul-2025 12:34:26 Europe/Rome] POST request processing...
+[22-Jul-2025 12:34:26 Europe/Rome] Upload directory: ../assets/img/products/
+[22-Jul-2025 12:34:26 Europe/Rome] Max file size: 5242880
+[22-Jul-2025 12:34:26 Europe/Rome] POST data: {"productId":"ideal-luce"}
+[22-Jul-2025 12:34:26 Europe/Rome] FILES data: {"productImage":{"name":"53301HD.jpg","full_path":"53301HD.jpg","type":"image\/jpeg","tmp_name":"\/tmp\/phpP5uLHV","error":0,"size":278503}}
+[22-Jul-2025 12:34:26 Europe/Rome] File info - Name: 53301HD.jpg, Size: 278503, Type: image/jpeg
+[22-Jul-2025 12:34:26 Europe/Rome] File extension: jpg
+[22-Jul-2025 12:34:26 Europe/Rome] Target file path: ../assets/img/products/ideal-luce.jpg
+[22-Jul-2025 12:34:26 Europe/Rome] Image info: {"0":2000,"1":2000,"2":2,"3":"width=\"2000\" height=\"2000\"","bits":8,"channels":3,"mime":"image\/jpeg"}
+[22-Jul-2025 12:34:26 Europe/Rome] File moved successfully to: ../assets/img/products/ideal-luce.jpg
+[22-Jul-2025 12:34:26 Europe/Rome] File moved successfully to: ../assets/img/products/ideal-luce.jpg
+[22-Jul-2025 12:34:26 Europe/Rome] Starting image optimization for: ../assets/img/products/ideal-luce.jpg
+[22-Jul-2025 12:34:26 Europe/Rome] Image optimization completed, save result: true
+[22-Jul-2025 12:34:26 Europe/Rome] Starting image optimization for: ../assets/img/products/ideal-luce.jpg
+[22-Jul-2025 12:34:26 Europe/Rome] Original dimensions: 600x600
+[22-Jul-2025 12:34:26 Europe/Rome] Image optimization result: true
+[22-Jul-2025 12:34:26 Europe/Rome] Original dimensions: 600x600
+[22-Jul-2025 12:34:26 Europe/Rome] Image already small enough, no optimization needed
+[22-Jul-2025 12:34:26 Europe/Rome] Success response: {"success":true,"message":"Immagine caricata con successo","fileName":"ideal-luce.jpg","filePath":"..\/assets\/img\/products\/ideal-luce.jpg","optimized":true}
+[22-Jul-2025 12:34:26 Europe/Rome] Image already small enough, no optimization needed
+[22-Jul-2025 12:34:26 Europe/Rome] Image optimization result: false
+[22-Jul-2025 12:34:26 Europe/Rome] === UPLOAD REQUEST END ===
+[22-Jul-2025 12:34:26 Europe/Rome] Image optimization result: false
+[22-Jul-2025 12:34:26 Europe/Rome] Success response: {"success":true,"message":"Immagine caricata con successo","fileName":"ideal-luce.jpg","filePath":"..\/assets\/img\/products\/ideal-luce.jpg","optimized":false}
+[22-Jul-2025 12:34:26 Europe/Rome] Success response: {"success":true,"message":"Immagine caricata con successo","fileName":"ideal-luce.jpg","filePath":"..\/assets\/img\/products\/ideal-luce.jpg","optimized":false}
+[22-Jul-2025 12:34:26 Europe/Rome] === UPLOAD REQUEST END ===
+[22-Jul-2025 12:34:26 Europe/Rome] === UPLOAD REQUEST END ===
+[22-Jul-2025 12:34:26 Europe/Rome] Image optimization completed, save result: true
+[22-Jul-2025 12:34:26 Europe/Rome] Image optimization result: true
+[22-Jul-2025 12:34:26 Europe/Rome] Success response: {"success":true,"message":"Immagine caricata con successo","fileName":"ideal-luce.jpg","filePath":"..\/assets\/img\/products\/ideal-luce.jpg","optimized":true}
+[22-Jul-2025 12:34:26 Europe/Rome] === UPLOAD REQUEST END ===
+[23-Jul-2025 11:29:37 Europe/Rome] === UPLOAD REQUEST START ===
+[23-Jul-2025 11:29:37 Europe/Rome] Method: POST
+[23-Jul-2025 11:29:37 Europe/Rome] URI: /TestOre/api/upload-product-image.php
+[23-Jul-2025 11:29:37 Europe/Rome] Headers: {"Cookie":"_ga=GA1.1.1998120575.1753259713; artigea-cookie-consent={\"necessary\":true,\"analytics\":true,\"marketing\":false,\"preferences\":true,\"timestamp\":1753260102841,\"version\":\"1.0\"}; artigea-cookie-consent_timestamp=1753260102842; _ga_M4MW5QEKQ4=GS2.1.s1753259713$o1$g1$t1753260111$j52$l0$h0","Priority":"u=1, i","Accept-Language":"it-IT,it;q=0.9,en-US;q=0.8,en;q=0.7","Accept-Encoding":"gzip, deflate, br, zstd","Referer":"https:\/\/www.artigea.it\/TestOre\/pages\/admin.html","Sec-Fetch-Dest":"empty","Sec-Fetch-Mode":"cors","Sec-Fetch-Site":"same-origin","Origin":"https:\/\/www.artigea.it","Accept":"*\/*","Sec-Ch-Ua-Mobile":"?0","Content-Type":"multipart\/form-data; boundary=----WebKitFormBoundarydIL4BLAikGDBKAvk","Sec-Ch-Ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Google Chrome\";v=\"138\"","User-Agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/138.0.0.0 Safari\/537.36","Sec-Ch-Ua-Platform":"\"Windows\"","Content-Length":"278802","Connection":"close","X-Forwarded-Proto":"https","X-Forwarded-Port":"443","X-Real-Ip":"79.10.63.3","Host":"www.artigea.it"}
+[23-Jul-2025 11:29:37 Europe/Rome] POST request processing...
+[23-Jul-2025 11:29:37 Europe/Rome] Upload directory: ../assets/img/products/
+[23-Jul-2025 11:29:37 Europe/Rome] Max file size: 5242880
+[23-Jul-2025 11:29:37 Europe/Rome] POST data: {"productId":"ideal-luce"}
+[23-Jul-2025 11:29:37 Europe/Rome] FILES data: {"productImage":{"name":"53301HD.jpg","full_path":"53301HD.jpg","type":"image\/jpeg","tmp_name":"\/tmp\/phpTqlGRj","error":0,"size":278503}}
+[23-Jul-2025 11:29:37 Europe/Rome] File info - Name: 53301HD.jpg, Size: 278503, Type: image/jpeg
+[23-Jul-2025 11:29:37 Europe/Rome] File extension: jpg
+[23-Jul-2025 11:29:37 Europe/Rome] Target file path: ../assets/img/products/ideal-luce.jpg
+[23-Jul-2025 11:29:37 Europe/Rome] Image info: {"0":2000,"1":2000,"2":2,"3":"width=\"2000\" height=\"2000\"","bits":8,"channels":3,"mime":"image\/jpeg"}
+[23-Jul-2025 11:29:37 Europe/Rome] File moved successfully to: ../assets/img/products/ideal-luce.jpg
+[23-Jul-2025 11:29:37 Europe/Rome] Starting image optimization for: ../assets/img/products/ideal-luce.jpg
+[23-Jul-2025 11:29:37 Europe/Rome] Original dimensions: 2000x2000
+[23-Jul-2025 11:29:37 Europe/Rome] New dimensions: 600x600
+[23-Jul-2025 11:29:37 Europe/Rome] === UPLOAD REQUEST START ===
+[23-Jul-2025 11:29:37 Europe/Rome] Method: POST
+[23-Jul-2025 11:29:37 Europe/Rome] URI: /TestOre/api/upload-product-image.php
+[23-Jul-2025 11:29:37 Europe/Rome] Headers: {"Cookie":"_ga=GA1.1.1998120575.1753259713; artigea-cookie-consent={\"necessary\":true,\"analytics\":true,\"marketing\":false,\"preferences\":true,\"timestamp\":1753260102841,\"version\":\"1.0\"}; artigea-cookie-consent_timestamp=1753260102842; _ga_M4MW5QEKQ4=GS2.1.s1753259713$o1$g1$t1753260111$j52$l0$h0","Priority":"u=1, i","Accept-Language":"it-IT,it;q=0.9,en-US;q=0.8,en;q=0.7","Accept-Encoding":"gzip, deflate, br, zstd","Referer":"https:\/\/www.artigea.it\/TestOre\/pages\/admin.html","Sec-Fetch-Dest":"empty","Sec-Fetch-Mode":"cors","Sec-Fetch-Site":"same-origin","Origin":"https:\/\/www.artigea.it","Accept":"*\/*","Sec-Ch-Ua-Mobile":"?0","Content-Type":"multipart\/form-data; boundary=----WebKitFormBoundaryWaTZEE1wLNZxTu6b","Sec-Ch-Ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Google Chrome\";v=\"138\"","User-Agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/138.0.0.0 Safari\/537.36","Sec-Ch-Ua-Platform":"\"Windows\"","Content-Length":"278802","Connection":"close","X-Forwarded-Proto":"https","X-Forwarded-Port":"443","X-Real-Ip":"79.10.63.3","Host":"www.artigea.it"}
+[23-Jul-2025 11:29:37 Europe/Rome] POST request processing...
+[23-Jul-2025 11:29:37 Europe/Rome] Upload directory: ../assets/img/products/
+[23-Jul-2025 11:29:37 Europe/Rome] Max file size: 5242880
+[23-Jul-2025 11:29:37 Europe/Rome] POST data: {"productId":"ideal-luce"}
+[23-Jul-2025 11:29:37 Europe/Rome] FILES data: {"productImage":{"name":"53301HD.jpg","full_path":"53301HD.jpg","type":"image\/jpeg","tmp_name":"\/tmp\/phpHiyGJ7","error":0,"size":278503}}
+[23-Jul-2025 11:29:37 Europe/Rome] File info - Name: 53301HD.jpg, Size: 278503, Type: image/jpeg
+[23-Jul-2025 11:29:37 Europe/Rome] File extension: jpg
+[23-Jul-2025 11:29:37 Europe/Rome] Target file path: ../assets/img/products/ideal-luce.jpg
+[23-Jul-2025 11:29:37 Europe/Rome] Image info: {"0":2000,"1":2000,"2":2,"3":"width=\"2000\" height=\"2000\"","bits":8,"channels":3,"mime":"image\/jpeg"}
+[23-Jul-2025 11:29:37 Europe/Rome] File moved successfully to: ../assets/img/products/ideal-luce.jpg
+[23-Jul-2025 11:29:37 Europe/Rome] Starting image optimization for: ../assets/img/products/ideal-luce.jpg
+[23-Jul-2025 11:29:37 Europe/Rome] Image optimization completed, save result: true
+[23-Jul-2025 11:29:37 Europe/Rome] Original dimensions: 600x600
+[23-Jul-2025 11:29:37 Europe/Rome] Image already small enough, no optimization needed
+[23-Jul-2025 11:29:37 Europe/Rome] Image optimization result: false
+[23-Jul-2025 11:29:37 Europe/Rome] Image optimization result: true
+[23-Jul-2025 11:29:37 Europe/Rome] Success response: {"success":true,"message":"Immagine caricata con successo","fileName":"ideal-luce.jpg","filePath":"..\/assets\/img\/products\/ideal-luce.jpg","optimized":false}
+[23-Jul-2025 11:29:37 Europe/Rome] Success response: {"success":true,"message":"Immagine caricata con successo","fileName":"ideal-luce.jpg","filePath":"..\/assets\/img\/products\/ideal-luce.jpg","optimized":true}
+[23-Jul-2025 11:29:37 Europe/Rome] === UPLOAD REQUEST END ===
+[23-Jul-2025 11:29:37 Europe/Rome] === UPLOAD REQUEST END ===
