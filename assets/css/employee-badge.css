@@ -344,85 +344,107 @@
 
 /* Admin Badge Management - Layout migliorato */
 .badge-management-container {
-  background: rgba(15, 15, 35, 0.95);
+  background: linear-gradient(135deg, rgba(15, 15, 35, 0.95) 0%, rgba(30, 30, 46, 0.9) 100%);
   border-radius: 20px;
-  padding: 24px;
+  padding: 32px;
   backdrop-filter: blur(20px);
   border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
 }
 
 .badge-form-section {
-  background: linear-gradient(135deg, rgba(55, 65, 81, 0.6) 0%, rgba(75, 85, 99, 0.4) 100%);
+  background: linear-gradient(135deg, rgba(55, 65, 81, 0.8) 0%, rgba(75, 85, 99, 0.6) 100%);
   border-radius: 16px;
-  padding: 24px;
-  margin-bottom: 24px;
+  padding: 32px;
+  margin-bottom: 32px;
   border: 1px solid rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.badge-form-section:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
 }
 
 .badge-form-section h6 {
   color: #60a5fa;
   font-weight: 700;
-  margin-bottom: 20px;
+  margin-bottom: 28px;
   display: flex;
   align-items: center;
-  gap: 12px;
-  font-size: 1.1rem;
+  gap: 16px;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 .badge-form-section h6::before {
   content: '';
-  width: 4px;
-  height: 24px;
+  width: 5px;
+  height: 28px;
   background: linear-gradient(45deg, #60a5fa, #3b82f6);
-  border-radius: 2px;
+  border-radius: 3px;
+  box-shadow: 0 0 10px rgba(96, 165, 250, 0.5);
 }
 
 .badge-preview {
   position: sticky;
-  top: 24px;
+  top: 32px;
   background: linear-gradient(135deg, rgba(15, 15, 35, 0.95) 0%, rgba(30, 30, 46, 0.9) 100%);
   border-radius: 20px;
-  padding: 24px;
+  padding: 32px;
   border: 1px solid rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(20px);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s ease;
+}
+
+.badge-preview:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.5);
 }
 
 .badge-preview h6 {
   color: #34d399;
   font-weight: 700;
-  margin-bottom: 20px;
+  margin-bottom: 28px;
   text-align: center;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
+  gap: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 .badge-preview h6::before {
   content: '👁️';
-  font-size: 1.2rem;
+  font-size: 1.4rem;
+  filter: drop-shadow(0 0 8px rgba(52, 211, 153, 0.6));
 }
 
 /* Employee List migliorata */
 .employee-list-container {
-  max-height: 500px;
+  max-height: 600px;
   overflow-y: auto;
-  padding-right: 8px;
+  padding-right: 12px;
+  margin-bottom: 24px;
 }
 
 .employee-list-item {
-  background: linear-gradient(135deg, rgba(55, 65, 81, 0.4) 0%, rgba(75, 85, 99, 0.2) 100%);
-  border: 2px solid rgba(255, 255, 255, 0.1);
+  background: linear-gradient(135deg, rgba(55, 65, 81, 0.6) 0%, rgba(75, 85, 99, 0.4) 100%);
+  border: 2px solid rgba(255, 255, 255, 0.15);
   border-radius: 16px;
-  padding: 16px;
-  margin-bottom: 12px;
+  padding: 20px;
+  margin-bottom: 16px;
   transition: all 0.3s ease;
   cursor: pointer;
   position: relative;
   overflow: hidden;
+  backdrop-filter: blur(10px);
 }
 
 .employee-list-item::before {
@@ -430,18 +452,19 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 4px;
+  width: 6px;
   height: 100%;
   background: linear-gradient(45deg, #6366f1, #8b5cf6);
   transform: scaleY(0);
   transition: transform 0.3s ease;
+  box-shadow: 0 0 15px rgba(99, 102, 241, 0.6);
 }
 
 .employee-list-item:hover {
-  background: linear-gradient(135deg, rgba(55, 65, 81, 0.6) 0%, rgba(75, 85, 99, 0.4) 100%);
-  border-color: rgba(99, 102, 241, 0.4);
-  transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(135deg, rgba(55, 65, 81, 0.8) 0%, rgba(75, 85, 99, 0.6) 100%);
+  border-color: rgba(99, 102, 241, 0.6);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.3);
 }
 
 .employee-list-item:hover::before {
@@ -449,9 +472,10 @@
 }
 
 .employee-list-item.selected {
-  background: linear-gradient(135deg, rgba(99, 102, 241, 0.2) 0%, rgba(139, 92, 246, 0.1) 100%);
-  border-color: rgba(99, 102, 241, 0.6);
-  box-shadow: 0 8px 25px rgba(99, 102, 241, 0.3);
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.3) 0%, rgba(139, 92, 246, 0.2) 100%);
+  border-color: rgba(99, 102, 241, 0.8);
+  box-shadow: 0 12px 35px rgba(99, 102, 241, 0.4);
+  transform: translateY(-2px);
 }
 
 .employee-list-item.selected::before {
@@ -461,119 +485,133 @@
 .employee-list-item .employee-info {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 20px;
 }
 
 .employee-list-item .employee-photo-small {
-  width: 50px;
-  height: 50px;
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
   object-fit: cover;
-  border: 3px solid rgba(255, 255, 255, 0.2);
+  border: 4px solid rgba(255, 255, 255, 0.3);
   background: #374151;
   transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
 .employee-list-item:hover .employee-photo-small {
-  border-color: rgba(99, 102, 241, 0.6);
-  transform: scale(1.05);
+  border-color: rgba(99, 102, 241, 0.8);
+  transform: scale(1.08);
+  box-shadow: 0 6px 20px rgba(99, 102, 241, 0.4);
 }
 
 .employee-list-item .employee-name-small {
   font-weight: 700;
   color: #f3f4f6;
-  font-size: 1rem;
-  margin-bottom: 4px;
+  font-size: 1.1rem;
+  margin-bottom: 6px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .employee-list-item .employee-id-small {
-  font-size: 0.8rem;
+  font-size: 0.85rem;
   color: #9ca3af;
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 8px;
+  font-weight: 500;
 }
 
 .employee-list-item .status-icon {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   transition: all 0.3s ease;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
 }
 
 .employee-list-item:hover .status-icon {
-  transform: scale(1.1);
+  transform: scale(1.15);
 }
 
 /* Form Improvements */
 .badge-form-group {
-  margin-bottom: 20px;
+  margin-bottom: 28px;
 }
 
 .badge-form-group label {
   font-weight: 600;
   color: #e5e7eb;
-  margin-bottom: 8px;
+  margin-bottom: 12px;
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
 }
 
 .badge-form-group .form-control,
 .badge-form-group .form-select {
-  background: rgba(31, 41, 55, 0.8);
-  border: 2px solid rgba(255, 255, 255, 0.1);
+  background: rgba(31, 41, 55, 0.9);
+  border: 2px solid rgba(255, 255, 255, 0.15);
   border-radius: 12px;
   color: #f3f4f6;
-  padding: 12px 16px;
+  padding: 14px 18px;
   transition: all 0.3s ease;
   font-weight: 500;
+  font-size: 0.95rem;
+  backdrop-filter: blur(5px);
 }
 
 .badge-form-group .form-control:focus,
 .badge-form-group .form-select:focus {
-  background: rgba(31, 41, 55, 0.9);
-  border-color: #6366f1;
-  box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.2);
-  transform: translateY(-1px);
+  background: rgba(31, 41, 55, 1);
+  border-color: #60a5fa;
+  box-shadow: 0 0 0 6px rgba(96, 165, 250, 0.25);
+  transform: translateY(-2px);
 }
 
 /* Image Upload Improvements */
 .image-upload-container {
   position: relative;
-  margin-bottom: 20px;
+  margin-bottom: 28px;
+  text-align: center;
 }
 
 .image-upload-preview {
-  width: 120px;
-  height: 120px;
+  width: 140px;
+  height: 140px;
   border-radius: 50%;
   object-fit: cover;
-  border: 4px solid #e5e7eb;
+  border: 5px solid rgba(255, 255, 255, 0.2);
   background: #f3f4f6;
   display: block;
-  margin: 0 auto 16px;
+  margin: 0 auto 20px;
   transition: all 0.3s ease;
   cursor: pointer;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
 }
 
 .image-upload-preview:hover {
-  border-color: #6366f1;
-  transform: scale(1.05);
+  border-color: #60a5fa;
+  transform: scale(1.08);
+  box-shadow: 0 12px 35px rgba(96, 165, 250, 0.4);
 }
 
 .upload-placeholder {
-  width: 120px;
-  height: 120px;
+  width: 140px;
+  height: 140px;
   border-radius: 50%;
-  background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%);
-  border: 3px dashed #d1d5db;
+  background: linear-gradient(135deg, rgba(243, 244, 246, 0.1) 0%, rgba(229, 231, 235, 0.1) 100%);
+  border: 4px dashed rgba(255, 255, 255, 0.3);
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 auto 16px;
+  margin: 0 auto 20px;
   cursor: pointer;
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
+  backdrop-filter: blur(10px);
 }
 
 .upload-placeholder::before {
@@ -583,16 +621,16 @@
   left: 50%;
   width: 0;
   height: 0;
-  background: rgba(99, 102, 241, 0.1);
+  background: rgba(96, 165, 250, 0.15);
   border-radius: 50%;
   transition: all 0.3s ease;
   transform: translate(-50%, -50%);
 }
 
 .upload-placeholder:hover {
-  border-color: #6366f1;
-  background: linear-gradient(135deg, #f8faff 0%, #e0e7ff 100%);
-  transform: scale(1.05);
+  border-color: #60a5fa;
+  background: linear-gradient(135deg, rgba(248, 250, 255, 0.2) 0%, rgba(224, 231, 255, 0.2) 100%);
+  transform: scale(1.08);
 }
 
 .upload-placeholder:hover::before {
@@ -601,16 +639,17 @@
 }
 
 .upload-placeholder i {
-  font-size: 2rem;
-  color: #9ca3af;
+  font-size: 2.5rem;
+  color: rgba(156, 163, 175, 0.8);
   transition: all 0.3s ease;
   z-index: 1;
   position: relative;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
 }
 
 .upload-placeholder:hover i {
-  color: #6366f1;
-  transform: scale(1.1);
+  color: #60a5fa;
+  transform: scale(1.15);
 }
 
 /* File Input Styling */
@@ -619,6 +658,7 @@
   overflow: hidden;
   display: inline-block;
   width: 100%;
+  margin-top: 12px;
 }
 
 .file-input-wrapper input[type=file] {
@@ -627,25 +667,28 @@
 }
 
 .file-input-label {
-  background: linear-gradient(45deg, #6366f1, #8b5cf6);
+  background: linear-gradient(45deg, #60a5fa, #3b82f6);
   color: white;
-  padding: 12px 20px;
-  border-radius: 12px;
+  padding: 14px 24px;
+  border-radius: 14px;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
+  gap: 10px;
   font-weight: 600;
   transition: all 0.3s ease;
   border: none;
   width: 100%;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 6px 20px rgba(96, 165, 250, 0.3);
 }
 
 .file-input-label:hover {
-  background: linear-gradient(45deg, #4f46e5, #7c3aed);
-  transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(99, 102, 241, 0.4);
+  background: linear-gradient(45deg, #3b82f6, #1d4ed8);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(96, 165, 250, 0.5);
 }
 
 /* Loading States */
@@ -660,13 +703,14 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 24px;
-  height: 24px;
-  margin: -12px 0 0 -12px;
-  border: 3px solid transparent;
-  border-top-color: #6366f1;
+  width: 28px;
+  height: 28px;
+  margin: -14px 0 0 -14px;
+  border: 4px solid transparent;
+  border-top-color: #60a5fa;
   border-radius: 50%;
   animation: spin 1s linear infinite;
+  box-shadow: 0 0 15px rgba(96, 165, 250, 0.5);
 }
 
 @keyframes spin {
@@ -676,61 +720,124 @@
 
 /* Success/Error States */
 .badge-success {
-  border-color: #10b981;
-  box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.2);
+  border-color: #34d399;
+  box-shadow: 0 0 0 6px rgba(52, 211, 153, 0.25);
 }
 
 .badge-error {
-  border-color: #ef4444;
-  box-shadow: 0 0 0 4px rgba(239, 68, 68, 0.2);
+  border-color: #f87171;
+  box-shadow: 0 0 0 6px rgba(248, 113, 113, 0.25);
 }
 
 /* Action Buttons */
 .badge-action-buttons {
   display: flex;
-  gap: 12px;
+  gap: 16px;
   justify-content: center;
-  margin-top: 24px;
+  margin-top: 32px;
+  flex-wrap: wrap;
 }
 
 .badge-action-btn {
-  padding: 12px 24px;
-  border-radius: 12px;
+  padding: 14px 28px;
+  border-radius: 14px;
   font-weight: 600;
   transition: all 0.3s ease;
   border: none;
   display: flex;
   align-items: center;
-  gap: 8px;
-  min-width: 140px;
+  gap: 10px;
+  min-width: 160px;
   justify-content: center;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-size: 0.9rem;
 }
 
 .badge-action-btn.primary {
-  background: linear-gradient(45deg, #6366f1, #8b5cf6);
+  background: linear-gradient(45deg, #60a5fa, #3b82f6);
   color: white;
-  box-shadow: 0 4px 15px rgba(99, 102, 241, 0.3);
+  box-shadow: 0 6px 20px rgba(96, 165, 250, 0.4);
 }
 
 .badge-action-btn.primary:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(99, 102, 241, 0.4);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(96, 165, 250, 0.5);
 }
 
 .badge-action-btn.secondary {
-  background: rgba(75, 85, 99, 0.8);
+  background: rgba(75, 85, 99, 0.9);
   color: #f3f4f6;
-  border: 2px solid rgba(255, 255, 255, 0.2);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 .badge-action-btn.secondary:hover {
   background: rgba(75, 85, 99, 1);
-  border-color: rgba(255, 255, 255, 0.3);
-  transform: translateY(-1px);
+  border-color: rgba(255, 255, 255, 0.4);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Grid Layout Improvements */
+.badge-admin-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  align-items: start;
+}
+
+.badge-admin-left {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.badge-admin-right {
+  position: sticky;
+  top: 32px;
+}
+
+/* Form Section Headers */
+.form-section-header {
+  background: linear-gradient(45deg, #1f2937, #374151);
+  border-radius: 12px;
+  padding: 16px 24px;
+  margin-bottom: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: center;
+}
+
+.form-section-header h5 {
+  color: #60a5fa;
+  font-weight: 700;
+  margin: 0;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Dividers */
+.section-divider {
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #60a5fa, transparent);
+  margin: 32px 0;
+  border-radius: 1px;
+  box-shadow: 0 0 10px rgba(96, 165, 250, 0.3);
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
+  .badge-admin-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  
+  .badge-admin-right {
+    position: static;
+  }
+  
   .employee-badge {
     width: 320px;
     min-height: 200px;
@@ -755,25 +862,40 @@
   
   .badge-preview {
     position: static;
-    margin-top: 24px;
+    margin-top: 32px;
   }
   
   .badge-management-container {
-    padding: 16px;
+    padding: 24px;
   }
   
   .badge-form-section {
-    padding: 16px;
-    margin-bottom: 16px;
+    padding: 24px;
+    margin-bottom: 24px;
   }
   
   .employee-list-item {
-    padding: 12px;
+    padding: 16px;
+    margin-bottom: 12px;
   }
   
   .employee-list-item .employee-photo-small {
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
+  }
+  
+  .badge-form-group {
+    margin-bottom: 20px;
+  }
+  
+  .badge-action-buttons {
+    gap: 12px;
+    margin-top: 24px;
+  }
+  
+  .badge-action-btn {
+    min-width: 140px;
+    padding: 12px 20px;
   }
 }
 
@@ -784,10 +906,12 @@
   
   .badge-action-buttons {
     flex-direction: column;
+    gap: 12px;
   }
   
   .badge-action-btn {
     min-width: auto;
+    width: 100%;
   }
   
   .employee-details .detail-row {
@@ -799,6 +923,21 @@
     text-align: left;
     max-width: 100%;
     margin-top: 2px;
+  }
+  
+  .badge-management-container {
+    padding: 16px;
+  }
+  
+  .badge-form-section {
+    padding: 16px;
+    margin-bottom: 16px;
+  }
+  
+  .upload-placeholder,
+  .image-upload-preview {
+    width: 120px;
+    height: 120px;
   }
 }
 
