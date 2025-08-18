@@ -762,20 +762,22 @@ class AdminBadgeManager {
         this.showUploadProgress(false);
         return {
           success: false,
-          message: `Errore server HTTP ${response.status}. Verifica la configurazione del server.`
+          message: `Errore server HTTP ${response.status}. Verifica che il server PHP sia configurato correttamente e che la cartella assets/img/badges/ sia scrivibile.`
         };
       }
 
       const responseText = await response.text();
       console.log(`${LOG_PREFIX} 📄 Risposta server ricevuta, lunghezza:`, responseText.length);
+      console.log(`${LOG_PREFIX} 📄 Contenuto risposta:`, responseText.substring(0, 200));
       
       // Verifica se la risposta contiene HTML di errore PHP
       if (responseText.includes('<br />') || responseText.includes('<?php') || responseText.includes('<html>')) {
         console.error(`${LOG_PREFIX} ❌ Risposta contiene HTML di errore PHP`);
+        console.error(`${LOG_PREFIX} 📄 Risposta completa:`, responseText);
         this.showUploadProgress(false);
         return {
           success: false,
-          message: 'Errore del server PHP. Verifica la configurazione.'
+          message: 'Errore del server PHP. Verifica che il file upload-badge-image.php sia presente e funzionante.'
         };
       }
       
@@ -785,14 +787,23 @@ class AdminBadgeManager {
         console.log(`${LOG_PREFIX} ✅ Risposta JSON parsata:`, result);
       } catch (parseError) {
         console.error(`${LOG_PREFIX} ❌ Errore parsing JSON:`, parseError);
+        console.error(`${LOG_PREFIX} 📄 Risposta che ha causato errore:`, responseText);
         this.showUploadProgress(false);
         return {
           success: false,
-          message: 'Risposta del server non valida.'
+          message: 'Risposta del server non valida. Controlla i log del server PHP.'
         };
       }
       
       this.showUploadProgress(false);
+      
+      // Log del risultato per debug
+      if (result.success) {
+        console.log(`${LOG_PREFIX} ✅ Upload completato con successo:`, result);
+      } else {
+        console.error(`${LOG_PREFIX} ❌ Upload fallito:`, result);
+      }
+      
       return result;
       
     } catch (error) {
@@ -803,7 +814,7 @@ class AdminBadgeManager {
       if (error.message.includes('Failed to fetch') || error.message.includes('NetworkError')) {
         return {
           success: false,
-          message: 'Errore di connessione al server. Verifica la configurazione del server.'
+          message: 'Errore di connessione al server. Verifica che il server web sia avviato e che il file PHP sia accessibile.'
         };
       }
       
