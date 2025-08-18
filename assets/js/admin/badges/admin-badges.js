@@ -771,9 +771,27 @@ class AdminBadgeManager {
         console.error(`${LOG_PREFIX} ❌ Risposta contiene HTML di errore PHP`);
         console.error(`${LOG_PREFIX} 📄 Risposta completa:`, responseText);
         this.showUploadProgress(false);
+        
+        // Controlla se nonostante gli warning PHP, l'upload è riuscito
+        try {
+          const jsonStart = responseText.indexOf('{');
+          if (jsonStart !== -1) {
+            const jsonPart = responseText.substring(jsonStart);
+            const result = JSON.parse(jsonPart);
+            
+            if (result.success) {
+              console.log(`${LOG_PREFIX} ⚠️ Upload riuscito nonostante warning PHP:`, result);
+              this.showUploadProgress(false);
+              return result;
+            }
+          }
+        } catch (parseError) {
+          console.error(`${LOG_PREFIX} ❌ Impossibile estrarre JSON dalla risposta`);
+        }
+        
         return {
           success: false,
-          message: 'Errore del server PHP. Verifica che il file upload-badge-image.php sia presente e funzionante.'
+          message: 'Il file immagine potrebbe essere corrotto. Prova a salvarlo nuovamente o usa un formato diverso (JPG/WebP).'
         };
       }
       

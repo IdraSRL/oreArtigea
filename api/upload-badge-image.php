@@ -151,6 +151,21 @@ if ($imageInfo === false) {
     sendJsonResponse(['success' => false, 'message' => 'Il file non è un\'immagine valida']);
 }
 
+// Validazione aggiuntiva per PNG corrotti
+if ($imageInfo[2] === IMAGETYPE_PNG) {
+    // Test di lettura PNG per verificare integrità
+    $testResource = @imagecreatefrompng($file['tmp_name']);
+    if ($testResource === false) {
+        logMessage('ERROR', 'PNG file is corrupted or invalid', [
+            'file' => $file['name'],
+            'size' => $file['size'],
+            'mime' => $file['type']
+        ]);
+        sendJsonResponse(['success' => false, 'message' => 'Il file PNG è corrotto o non valido. Prova a salvarlo nuovamente o usa un formato diverso (JPG/WebP)']);
+    }
+    imagedestroy($testResource);
+}
+
 logMessage('INFO', 'Image validation passed', [
     'width' => $imageInfo[0],
     'height' => $imageInfo[1],
@@ -271,7 +286,12 @@ function optimizeImage($filePath, $imageType) {
                 $source = imagecreatefromjpeg($filePath);
                 break;
             case IMAGETYPE_PNG:
-                $source = imagecreatefrompng($filePath);
+                // Gestione più robusta per PNG
+                $source = @imagecreatefrompng($filePath);
+                if ($source === false) {
+                    logMessage('ERROR', 'Failed to create PNG source for optimization - file may be corrupted', ['file' => $filePath]);
+                    return false;
+                }
                 break;
             case IMAGETYPE_GIF:
                 $source = imagecreatefromgif($filePath);
@@ -287,7 +307,10 @@ function optimizeImage($filePath, $imageType) {
         }
         
         if (!$source) {
-            logMessage('ERROR', 'Failed to create source image');
+            logMessage('ERROR', 'Failed to create source image for optimization', [
+                'imageType' => $imageType,
+                'filePath' => $filePath
+            ]);
             return false;
         }
         
@@ -312,7 +335,11 @@ function optimizeImage($filePath, $imageType) {
                 $saveResult = imagejpeg($destination, $filePath, $quality);
                 break;
             case IMAGETYPE_PNG:
-                $saveResult = imagepng($destination, $filePath, 9);
+                // Usa compressione più bassa per PNG per evitare problemi
+                $saveResult = @imagepng($destination, $filePath, 6);
+                if ($saveResult === false) {
+                    logMessage('ERROR', 'Failed to save optimized PNG', ['file' => $filePath]);
+                }
                 break;
             case IMAGETYPE_GIF:
                 $saveResult = imagegif($destination, $filePath);
