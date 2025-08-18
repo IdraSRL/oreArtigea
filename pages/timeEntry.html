@@ -668,29 +668,17 @@
   <script type="module" src="../assets/js/admin/bnb/caricaAppartamenti.js"></script>
   <script type="module" src="../assets/js/admin/bnb/bnb-form.js"></script>
   <script type="module" src="../assets/js/time-entry/product-rating-enhanced.js"></script>
-  
-  <!-- Inizializzazione sistema sincronizzazione database -->
-  <script type="module" src="../assets/js/common/database-sync-indicator.js"></script>
 
   <!-- Inizializzazione BnB -->
   <script type="module">
     import { initBnbTabs } from '../assets/js/admin/bnb/bnb-form.js';
 
     document.addEventListener('DOMContentLoaded', () => {
-      console.log('🚀 Inizializzazione moduli timeEntry...');
-      
       initBnbTabs({
         navContainer: document.getElementById('bnbTabsNav'),
         contentContainer: document.getElementById('bnbTabsContent'),
         addTabBtn: document.getElementById('addBnbTabBtn'),
       });
-      
-      // Debug per tesserini
-      setTimeout(() => {
-        if (window.employeeBadgeManager) {
-          console.log('🆔 Badge Manager Status:', window.employeeBadgeManager.getDebugInfo());
-        }
-      }, 3000);
     });
   </script>
 </body>
