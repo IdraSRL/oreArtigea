@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Esporta raccolta Firestore (con subcollection note)</title>
+  <style>
+    body { font-family: system-ui, sans-serif; padding: 1rem; max-width: 640px; margin: auto; }
+    .row { display: flex; gap: .5rem; align-items: center; flex-wrap: wrap; }
+    select, button { font-size: 1rem; padding: .5rem; }
+    #status { margin-top: 1rem; font-weight: bold; white-space: pre-line; }
+  </style>
+</head>
+<body>
+  <h1>Esporta raccolta Firestore</h1>
+
+  <div class="row">
+    <label>
+      Raccolta:
+      <select id="collectionSelect">
+        <option value="Bigliettini">Bigliettini</option>
+        <option value="Data" selected>Data</option>
+        <option value="ProductRatings">ProductRatings</option>
+        <option value="Products">Products</option>
+        <option value="dipendenti">dipendenti</option>
+      </select>
+    </label>
+    <button id="exportBtn">Esporta</button>
+  </div>
+
+  <p id="status">Pronto…</p>
+
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.1/firebase-app.js";
+    import {
+      getFirestore,
+      collection, getDocs,
+      doc, getDoc,
+      collectionGroup
+    } from "https://www.gstatic.com/firebasejs/9.22.1/firebase-firestore.js";
+    import { firebaseConfig } from "./data.js";
+
+    const app = initializeApp(firebaseConfig);
+    const db  = getFirestore(app);
+
+    const sel = document.getElementById('collectionSelect');
+    const btn = document.getElementById('exportBtn');
+    const statusEl = document.getElementById('status');
+
+    btn.addEventListener('click', async () => {
+      const col = sel.value;
+      btn.disabled = true;
+      statusEl.textContent = `Lettura raccolta "${col}"…`;
+
+      try {
+        const out = {};
+        let rootCount = 0;
+        let subCount  = 0;
+
+        // 1) Esporta tutti i doc root della raccolta
+        try {
+          const snap = await getDocs(collection(db, col));
+          snap.forEach(docSnap => {
+            out[docSnap.id] = docSnap.data() || {};
+            rootCount++;
+          });
+        } catch (e) {
+          console.error(`Errore lettura root ${col}`, e);
+        }
+
+        // 2) Per alcune raccolte, includi subcollection note con collectionGroup
+        if (col === 'dipendenti') {
+          // Raggruppa tutte le subcollection "ore" sotto dipendenti/*/ore
+          try {
+            const qs = await getDocs(collectionGroup(db, 'ore'));
+            qs.forEach(d => {
+              // path tipo: dipendenti/{employeeId}/ore/{dateId}
+              const parentDoc = d.ref.parent.parent; // documento dipendente
+              if (!parentDoc) return;
+              const empId = parentDoc.id;
+              if (!out[empId]) out[empId] = {};               // crea contenitore se manca
+              if (!out[empId].ore) out[empId].ore = {};       // raccoglie tutte le "ore"
+              out[empId].ore[d.id] = d.data() || {};
+              subCount++;
+            });
+          } catch (e) {
+            console.error('Errore lettura collectionGroup "ore"', e);
+          }
+        } else if (col === 'ProductRatings') {
+          // Raggruppa tutte le subcollection "ratings" sotto ProductRatings/*/ratings
+          try {
+            const qs = await getDocs(collectionGroup(db, 'ratings'));
+            qs.forEach(d => {
+              // path tipo: ProductRatings/{productId}/ratings/{userId}
+              const parentDoc = d.ref.parent.parent; // documento prodotto in ProductRatings
+              if (!parentDoc) return;
+              // NB: filtra solo i percorsi che appartengono a ProductRatings (per sicurezza)
+              const segments = parentDoc.path.split('/');
+              if (segments[0] !== 'ProductRatings') return;
+
+              const productId = parentDoc.id;
+              if (!out[productId]) out[productId] = {};
+              if (!out[productId].ratings) out[productId].ratings = {};
+              out[productId].ratings[d.id] = d.data() || {};
+              subCount++;
+            });
+          } catch (e) {
+            console.error('Errore lettura collectionGroup "ratings"', e);
+          }
+        }
+
+        // 3) Se non c’è nulla ai root ma hai subcollection, almeno avrai dati raggruppati
+        const when = new Date().toISOString().slice(0,19).replace(/[:T]/g,'-');
+        const fname = `${col}_export_${when}.json`;
+        const jsonStr = JSON.stringify(out, null, 2);
+
+        const blob = new Blob([jsonStr], { type: "application/json" });
+        const url  = URL.createObjectURL(blob);
+        const a    = document.createElement('a');
+        a.href     = url;
+        a.download = fname;
+        a.click();
+        URL.revokeObjectURL(url);
+
+        statusEl.textContent = `Esportati ${rootCount} doc root e ${subCount} doc subcollection da "${col}".\nFile: ${fname}`;
+      } catch (err) {
+        console.error('Errore esportazione:', err);
+        statusEl.textContent = 'Errore durante l’esportazione (vedi console).';
+      } finally {
+        btn.disabled = false;
+      }
+    });
+  </script>
+</body>
+</html>

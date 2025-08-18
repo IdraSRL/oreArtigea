@@ -1,0 +1,122 @@
+/* activity-groups.css - Stili per gruppi di attività */
+
+/* ===== ACTIVITY GROUPS ===== */
+.activity-group {
+  position: relative;
+  margin-bottom: 1rem;
+  border-left: 4px solid var(--bs-border-start-color);
+  box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .075);
+  border-radius: .25rem;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.activity-group:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.activity-group .card-body {
+  padding: 1rem;
+}
+
+.activity-group .delete-btn {
+  bottom: 0.75rem;
+  right: 0.75rem;
+}
+
+.activity-group .form-control,
+.activity-group .form-select {
+  width: 100%;
+}
+
+.activity-group .row {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 0.5rem;
+}
+
+.activity-group .card-header {
+  border-bottom: none;
+  font-weight: 600;
+}
+
+.activity-group .form-control:focus,
+.activity-group .form-select:focus {
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+/* ===== ACTIVITY CARDS IMPROVEMENTS ===== */
+.activity-group .card-header {
+  padding: 0.75rem !important;
+}
+
+.activity-group .card-header .d-flex {
+  flex-wrap: nowrap !important;
+}
+
+.activity-group .card-header .min-w-0 {
+  min-width: 0;
+  overflow: hidden;
+}
+
+.activity-group .card-header .text-truncate {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.activity-group .card-header .badge.small {
+  font-size: 0.65rem;
+  padding: 0.2rem 0.4rem;
+}
+
+.activity-group .card-actions {
+  flex-shrink: 0;
+}
+
+.activity-group .card-actions .btn {
+  min-width: 32px;
+  height: 32px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Responsive adjustments for activity cards */
+@media (max-width: 768px) {
+  .activity-group .card-header {
+    padding: 0.5rem !important;
+  }
+  
+  .activity-group .card-header img {
+    width: 35px !important;
+    height: 35px !important;
+  }
+  
+  .activity-group .card-header h6 {
+    font-size: 0.9rem;
+  }
+  
+  .activity-group .card-header .small {
+    font-size: 0.75rem;
+  }
+  
+  .activity-group .card-actions .btn {
+    min-width: 28px;
+    height: 28px;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .activity-group .card-header .d-flex.gap-1 {
+    gap: 0.25rem !important;
+  }
+  
+  .activity-group .card-header .badge {
+    font-size: 0.6rem;
+    padding: 0.15rem 0.3rem;
+  }
+}

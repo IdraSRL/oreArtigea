@@ -1,0 +1,68 @@
+/* forms.css - Form elements e input */
+
+/* ===== FORM ELEMENTS ===== */
+.form-control,
+.form-select {
+    background-color: var(--gray-600);
+    border: 1px solid rgba(255, 255, 255, var(--alpha-10)) !important;
+    border-radius: 12px !important;
+    color: var(--gray-100) !important;
+    font-weight: bold;
+    padding: 0.75rem 1rem;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    width: fit-content;
+}
+
+.form-control:focus,
+.form-select:focus {
+    background-color: var(--gray-600);
+    border-color: var(--primary) !important;
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, var(--alpha-20)) !important;
+    transform: scale(1.02);
+}
+
+.form-control-sm,
+.form-select-sm {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.875rem;
+}
+
+.form-label {
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.form-check-input {
+    background-color: rgba(15, 15, 35, var(--alpha-60));
+    border: 1px solid rgba(255, 255, 255, var(--alpha-20));
+}
+
+.form-check-input:checked {
+    background-color: var(--primary);
+    border-color: var(--primary);
+}
+
+.form-control[readonly] {
+  background-color: rgba(108, 117, 125, 0.3) !important;
+  cursor: not-allowed;
+}
+
+.form-control[readonly]:focus {
+  box-shadow: none !important;
+  border-color: rgba(108, 117, 125, 0.5) !important;
+}
+
+.form-control:disabled {
+  background-color: rgba(108, 117, 125, 0.3) !important;
+  opacity: 0.7 !important;
+  cursor: not-allowed;
+}
+
+/* ===== ACCESSIBILITY IMPROVEMENTS ===== */
+.btn:focus,
+.form-control:focus,
+.form-select:focus {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}

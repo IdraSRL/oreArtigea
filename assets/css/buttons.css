@@ -1,0 +1,111 @@
+/* buttons.css - Stili per pulsanti */
+
+/* ===== BUTTONS ===== */
+.btn {
+    border-radius: 12px;
+    font-weight: 600;
+    padding: 0.75rem 1.5rem;
+    transition: all 0.3s ease;
+    border: none;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-size: 0.875rem;
+    min-width: 140px;
+    background-color: var(--secondary);
+    margin: 10px;
+}
+
+.btn-primary {
+    background: linear-gradient(45deg, var(--primary), var(--secondary));
+    box-shadow: 0 4px 15px rgba(99, 102, 241, var(--alpha-30));
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(99, 102, 241, 0.4);
+}
+
+.btn-success {
+    background: linear-gradient(45deg, var(--success), #059669);
+    box-shadow: 0 4px 15px rgba(16, 185, 129, var(--alpha-30));
+    color: var(--white);
+}
+
+.btn-success:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(16, 185, 129, 0.4);
+    color: var(--white);
+}
+
+.btn-outline-light {
+    border: 1px solid rgba(255, 255, 255, var(--alpha-20));
+    color: var(--gray-100);
+    backdrop-filter: blur(10px);
+}
+
+.btn-outline-light:hover {
+    background: rgba(255, 255, 255, var(--alpha-10));
+    border-color: rgba(255, 255, 255, var(--alpha-30));
+    transform: translateY(-1px);
+    color: var(--white);
+}
+
+.btn-outline-secondary {
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, var(--alpha-30));
+    color: var(--gray-100);
+    box-shadow: 0 4px 15px rgba(255, 255, 255, var(--alpha-10));
+    background-color: #ef4444;
+}
+
+.btn-outline-secondary:hover {
+    background: rgba(255, 255, 255, var(--alpha-10));
+    border-color: rgba(255, 255, 255, var(--alpha-40));
+    transform: translateY(-2px);
+    color: var(--white);
+    box-shadow: 0 8px 25px rgba(255, 255, 255, 0.2);
+}
+
+.btn-sm {
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
+}
+
+.btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none !important;
+}
+
+.btn-close {
+    background-color: var(--danger);
+    --bs-btn-close-bg: none;
+}
+
+.btn-delete {
+    background-color: var(--danger);
+    color: var(--white);
+}
+
+.btn-lista {
+  color: #000000;
+  background-color: #f59e0b;
+}
+
+/* ===== BUTTON IMPROVEMENTS ===== */
+.btn-activity {
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-activity:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.btn-activity:active {
+  transform: translateY(-1px);
+}

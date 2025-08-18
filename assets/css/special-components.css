@@ -1,0 +1,176 @@
+/* special-components.css - Componenti speciali e specifici */
+
+/* ===== COLORI APPARTAMENTI ===== */
+.irene {
+    background-color: #960505;
+}
+.molino {
+    background-color: #7e0596;
+}
+.cerrano {
+    background-color: #052c96;
+}
+.lorenza {
+    background-color: #059669;
+}
+
+/* per colorare anche l'intestazione della card */
+.card-header.dalmazia   { background-color: #c41400 !important; }
+.card-header.martiri    { background-color: #0062b3 !important; }
+.card-header.c-grande   { background-color: #009107 !important; }
+.card-header.c-piccola  { background-color: #003d03  !important; }
+
+/* ===== IFRAME ===== */
+.custom-ratio-16x9 {
+    position: relative !important;
+    width: 100% !important;
+    aspect-ratio: 9 / 16 !important;
+}
+
+.custom-ratio-16x9 iframe {
+    position: absolute !important;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+/* ===== VALUTAZIONE PRODOTTI STYLES ===== */
+.product-image {
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.product-image:hover {
+  transform: scale(1.05);
+}
+
+.toast-notification {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  color: white;
+  font-weight: 500;
+  z-index: 10000;
+  max-width: 300px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.toast-error {
+  background: linear-gradient(45deg, #ef4444, #dc2626);
+}
+
+.toast-success {
+  background: linear-gradient(45deg, #10b981, #059669);
+}
+
+/* Rating dots hover effects */
+.rating-dot:hover {
+  transform: scale(1.2);
+  border-color: #0d6efd !important;
+}
+
+.rating-dot.active:hover {
+  background-color: #0b5ed7 !important;
+}
+
+/* ===== BNB TABLE WRAPPER ===== */
+.bnb-table-wrapper {
+  padding-top: 1rem;
+}
+
+.bnb-table-wrapper + .bnb-table-wrapper {
+  border-top: 1px solid #ddd;
+  margin-top: 1.5rem;
+}
+
+/* ===== BIGLIETTINI BNB COMPATTI ===== */
+.bnb-compact-card {
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.bnb-compact-card .card-header {
+  padding: 0.5rem 0.75rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.bnb-compact-card .card-body {
+  padding: 0.75rem;
+}
+
+.bnb-compact-card .service-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.25rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.bnb-compact-card .service-item:last-child {
+  border-bottom: none;
+}
+
+.bnb-compact-card .service-label {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.bnb-compact-card .service-value {
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+.bnb-compact-card .biancheria-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.bnb-compact-card .biancheria-item {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+}
+
+.bnb-compact-card .biancheria-name {
+  font-weight: 600;
+  text-transform: capitalize;
+  margin-bottom: 0.1rem;
+}
+
+.bnb-compact-card .biancheria-values {
+  display: flex;
+  justify-content: space-between;
+}
+
+.bnb-compact-card .employee-info {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 0.4rem 0.6rem;
+  border-radius: 6px;
+  margin-top: 0.5rem;
+  font-size: 0.8rem;
+}
+
+/* Responsive per bigliettini compatti */
+@media (max-width: 768px) {
+  .bnb-compact-card .biancheria-grid {
+    grid-template-columns: 1fr;
+    gap: 0.25rem;
+  }
+  
+  .bnb-compact-card .card-body {
+    padding: 0.5rem;
+  }
+  
+  .bnb-compact-card .service-item {
+    padding: 0.15rem 0;
+  }
+}

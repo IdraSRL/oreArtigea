@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Importa Dati da data.js</title>
+  <style>
+    body { font-family: sans-serif; padding: 1rem; max-width: 600px; margin: auto; }
+    h1 { margin-bottom: .5rem; }
+    .variable-list { list-style: none; padding: 0; margin: 1rem 0; }
+    .variable-list li { margin: .25rem 0; }
+    button { padding: .5rem 1rem; font-size: 1rem; }
+    #status { margin-top: 1rem; font-weight: bold; }
+  </style>
+</head>
+<body>
+  <h1>Importazione Dati in Firestore</h1>
+
+  <p>Seleziona quali insiemi di dati importare:</p>
+  <ul id="variablesContainer" class="variable-list"></ul>
+
+  <button id="importBtn">Avvia Importazione</button>
+  <p id="status">In attesa di avvio importazione...</p>
+
+  <script type="module">
+    // 1) Firebase SDK
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.1/firebase-app.js";
+    import { getFirestore, doc, setDoc } from "https://www.gstatic.com/firebasejs/9.22.1/firebase-firestore.js";
+
+    // 2) Import di tutti i dataset da data.js
+    import * as data from "./data.js";
+
+    // 3) Separa config e dataset
+    const { firebaseConfig, ...datasets } = data;
+
+    // 4) UI: lista di checkbox
+    const container = document.getElementById('variablesContainer');
+    Object.keys(datasets).forEach(name => {
+      const li = document.createElement('li');
+      li.innerHTML = `
+        <label>
+          <input type="checkbox" value="${name}" checked />
+          ${name}
+        </label>
+      `;
+      container.appendChild(li);
+    });
+
+    // ------- Adattatori per "Gestione Data" --------
+
+    // Alcune liste nel vecchio data.js sono stringhe "Nome|Minuti" o solo "Nome"
+    const STRING_LIST_WITH_PIPE = new Set(['appartamenti', 'bnb', 'uffici']);
+    const STRING_LIST_PLAIN     = new Set(['bnbNomi']);
+
+    // Se data.js esportasse un oggetto { [name]: [...] } lo “srotoliamo”
+    function unwrapDataset(name, value) {
+      if (Array.isArray(value)) return value;
+      if (value && typeof value === 'object' && Array.isArray(value[name])) return value[name];
+      return value;
+    }
+
+    // Rileva se la maggioranza ha il separatore |
+    function detectPipe(arr) {
+      const withPipe = arr.filter(s => typeof s === 'string' && s.includes('|')).length;
+      return withPipe >= Math.ceil(arr.length / 2);
+    }
+
+    // Converte nel formato che Gestione Data si aspetta (array di oggetti)
+    function normalizeForGestioneData(name, val) {
+      const arr = unwrapDataset(name, val);
+
+      // Valori non array (stringhe primitive ecc.) passano così
+      if (!Array.isArray(arr)) return arr;
+
+      if (arr.length === 0) return [];
+
+      // Se già oggetti, non tocchiamo
+      if (typeof arr[0] === 'object' && arr[0] !== null) return arr;
+
+      // Array di stringhe -> oggetti
+      const shouldUsePipe =
+        STRING_LIST_WITH_PIPE.has(name) || (!STRING_LIST_PLAIN.has(name) && detectPipe(arr));
+
+      if (shouldUsePipe) {
+        return arr.map(s => {
+          const [n, m] = String(s).split('|');
+          return {
+            nome: (n ?? '').trim(),
+            minuti: Number((m ?? '').trim() || 0)
+          };
+        });
+      } else {
+        // Solo nomi
+        return arr.map(s => ({ nome: String(s).trim() }));
+      }
+    }
+
+    // ------------------------------------------------
+
+    // 5) Inizializza Firebase + Firestore
+    const app = initializeApp(firebaseConfig);
+    const db = getFirestore(app);
+
+    // 6) Import con normalizzazione
+    async function importData() {
+      const statusEl = document.getElementById('status');
+      const importBtn = document.getElementById('importBtn');
+      importBtn.disabled = true;
+
+      const selected = Array.from(
+        container.querySelectorAll('input[type="checkbox"]:checked')
+      ).map(cb => cb.value);
+
+      if (selected.length === 0) {
+        alert('Seleziona almeno un dataset da importare.');
+        importBtn.disabled = false;
+        return;
+      }
+
+      statusEl.textContent = 'Avvio importazione…';
+      try {
+        for (const name of selected) {
+          statusEl.textContent = `Importando ${name}…`;
+          const docRef = doc(db, 'Data', name);
+
+          // 🔧 Qui la conversione per Gestione Data
+          const normalized = normalizeForGestioneData(name, datasets[name]);
+
+          await setDoc(docRef, { [name]: normalized });
+        }
+        statusEl.textContent = 'Importazione completata con successo!';
+      } catch (err) {
+        console.error('Errore durante importData:', err);
+        statusEl.textContent = 'Errore durante importazione. Controlla console.';
+      } finally {
+        importBtn.disabled = false;
+      }
+    }
+
+    // 7) Evento sul bottone
+    document.getElementById('importBtn').addEventListener('click', importData);
+  </script>
+</body>
+</html>
