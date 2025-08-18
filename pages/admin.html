@@ -4,476 +4,287 @@
   <!-- Sistema di Cache-Busting -->
   <script type="module" src="../assets/js/common/loader.js"></script>
   
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Pannello Admin – Gestione Sistema</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pannello Amministrativo</title>
 
   <!-- CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-  <link rel="stylesheet" href="../assets/css/style.css" />
-  <link rel="stylesheet" href="../assets/css/style_gradimento.css" />
-  <link rel="stylesheet" href="../assets/css/style_bnb.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.min.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/style_bnb.css">
+  <link rel="stylesheet" href="../assets/css/style_gradimento.css">
 </head>
 
-<body>
-  <!-- Navbar -->
-  <nav class="navbar navbar-dark bg-dark">
-    <div class="container">
-      <a class="navbar-brand" href="#">
-        <i class="fas fa-cogs me-2"></i>Pannello Admin
-      </a>
-      <div class="d-flex align-items-center">
-        <span class="navbar-text me-2 version-display">Caricamento...</span>
-        <span class="navbar-text me-3" id="userDisplay">Admin</span>
-        <button class="btn btn-outline-light btn-sm" id="logoutBtn">
-          <i class="fas fa-sign-out-alt me-1"></i>Logout
-        </button>
-      </div>
+<body class="bg-dark text-light">
+  <!-- Header -->
+  <header class="navbar navbar-dark bg-dark sticky-top px-2">
+    <a class="navbar-brand mb-0 h6" href="#">
+      <i class="fas fa-cog me-2"></i>Pannello Amministrativo
+    </a>
+    <div class="ms-auto d-flex align-items-center">
+      <span id="userDisplay" class="me-2 small d-none d-sm-inline"></span>
+      <span class="me-2 small version-display">Caricamento...</span>
+      <button id="logoutBtn" class="btn btn-outline-light btn-sm">
+        <i class="fas fa-sign-out-alt me-1"></i>
+        <span class="d-none d-sm-inline">Esci</span>
+      </button>
     </div>
-  </nav>
+  </header>
 
-  <div class="container mt-4">
-    <!-- Tabs Amministrazione -->
-    <ul class="nav nav-tabs mb-4" id="adminTabs">
+  <!-- Main Content -->
+  <main class="container-fluid px-2 py-2">
+    <!-- Navigation Tabs -->
+    <ul class="nav nav-tabs nav-justified mb-3" id="adminTabs">
       <li class="nav-item">
-        <button class="nav-link active" id="ore-tab" data-bs-toggle="tab" data-bs-target="#orePane" type="button">
-          <i class="fas fa-clock me-1"></i>Riepilogo Ore
+        <button class="nav-link active small" id="ore-tab" data-bs-toggle="tab" data-bs-target="#ore-pane" type="button">
+          <i class="fas fa-clock me-1"></i>
+          <span class="d-none d-sm-inline">Gestione Ore</span>
+          <span class="d-sm-none">Ore</span>
         </button>
       </li>
       <li class="nav-item">
-        <button class="nav-link" id="registro-tab" data-bs-toggle="tab" data-bs-target="#registroPane" type="button">
-          <i class="fas fa-list me-1"></i>Registro Attività
+        <button class="nav-link small" id="registro-tab" data-bs-toggle="tab" data-bs-target="#registro-pane" type="button">
+          <i class="fas fa-list me-1"></i>
+          <span class="d-none d-sm-inline">Registro</span>
+          <span class="d-sm-none">Reg</span>
         </button>
       </li>
       <li class="nav-item">
-        <button class="nav-link" id="bnb-tab" data-bs-toggle="tab" data-bs-target="#bnbPane" type="button">
-          <i class="fas fa-bed me-1"></i>Bigliettini BnB
+        <button class="nav-link small" id="fatturazione-tab" data-bs-toggle="tab" data-bs-target="#fatturazione-pane" type="button">
+          <i class="fas fa-euro-sign me-1"></i>
+          <span class="d-none d-sm-inline">Fatturazione</span>
+          <span class="d-sm-none">Fatt</span>
         </button>
       </li>
       <li class="nav-item">
-        <button class="nav-link" id="gradimento-tab" data-bs-toggle="tab" data-bs-target="#gradimentoPane" type="button">
-          <i class="fas fa-star me-1"></i>Gradimento
+        <button class="nav-link small" id="valutazione-tab" data-bs-toggle="tab" data-bs-target="#valutazione-pane" type="button">
+          <i class="fas fa-star me-1"></i>
+          <span class="d-none d-sm-inline">Valutazioni</span>
+          <span class="d-sm-none">Val</span>
         </button>
       </li>
       <li class="nav-item">
-        <button class="nav-link" id="calcolo-tab" data-bs-toggle="tab" data-bs-target="#calcoloPane" type="button">
-          <i class="fas fa-calculator me-1"></i>Calcolo Biancheria
+        <button class="nav-link small" id="badges-tab" data-bs-toggle="tab" data-bs-target="#badges-pane" type="button">
+          <i class="fas fa-id-card me-1"></i>
+          <span class="d-none d-sm-inline">Tesserini</span>
+          <span class="d-sm-none">Test</span>
         </button>
       </li>
       <li class="nav-item">
-        <button class="nav-link" id="data-tab" data-bs-toggle="tab" data-bs-target="#dataPane" type="button">
-          <i class="fas fa-database me-1"></i>Gestione Data
+        <button class="nav-link small" id="gradimento-tab" data-bs-toggle="tab" data-bs-target="#gradimento-pane" type="button">
+          <i class="fas fa-thumbs-up me-1"></i>
+          <span class="d-none d-sm-inline">Gradimento</span>
+          <span class="d-sm-none">Grad</span>
         </button>
       </li>
       <li class="nav-item">
-        <button class="nav-link" id="valutazione-tab" data-bs-toggle="tab" data-bs-target="#valutazionePane" type="button">
-          <i class="fas fa-chart-line me-1"></i>Valutazione Prodotti
+        <button class="nav-link small" id="data-tab" data-bs-toggle="tab" data-bs-target="#data-pane" type="button">
+          <i class="fas fa-database me-1"></i>
+          <span class="d-none d-sm-inline">Dati</span>
+          <span class="d-sm-none">DB</span>
         </button>
-      </li>
-      <li class="nav-item">
-        <button class="nav-link" id="fatturazione-tab" data-bs-toggle="tab" data-bs-target="#fatturazionePane" type="button">
-          <i class="fas fa-calculator me-1"></i>Fatturazione Cantieri
-        </button>
-      </li>
-      <li class="nav-item">
-        <button class="nav-link" id="badges-tab" data-bs-toggle="tab" data-bs-target="#badgesPane" type="button">
-          <i class="fas fa-id-card me-1"></i>Tesserini
-        </button>
-      </li>
-
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#collegamenti" data-bs-toggle="tab">
-          <i class="fas fa-external-link-alt me-1"></i>Collegamenti
-        </a>
       </li>
     </ul>
 
+    <!-- Tab Content -->
     <div class="tab-content" id="adminTabsContent">
-      <!-- Fatturazione Cantieri -->
-      <div class="tab-pane fade" id="fatturazionePane">
-        <div class="card border-secondary mb-4">
-          <div class="card-body">
-            <div class="d-flex justify-content-between align-items-center mb-4">
-              <h3 class="card-title mb-0">
-                <i class="fas fa-calculator me-2"></i>Gestione Cantieri Mensile
-              </h3>
-              <div class="d-flex gap-2">
-                <button id="refreshFatturazioneBtn" class="btn btn-outline-secondary btn-sm">
-                  <i class="fas fa-sync-alt me-1"></i>Aggiorna
-                </button>
-              </div>
+      
+      <!-- TAB Gestione Ore -->
+      <div class="tab-pane fade show active" id="ore-pane">
+        <div class="card bg-secondary border-secondary mb-3">
+          <div class="card-body p-3">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <h5 class="card-title mb-0 text-primary">
+                <i class="fas fa-clock me-2"></i>Gestione Ore Dipendenti
+              </h5>
+              <button id="refreshBtn" class="btn btn-outline-primary btn-sm">
+                <i class="fas fa-sync-alt me-1"></i>Aggiorna
+              </button>
             </div>
-            
-            <!-- Navigation Tabs per Fatturazione -->
-            <nav class="nav-tabs bg-dark border-secondary mb-4">
-              <button class="nav-tab active" data-tab="dashboard">
-                <i class="fas fa-chart-bar me-1"></i>Dashboard
-              </button>
-              <button class="nav-tab" data-tab="per-employee">
-                <i class="fas fa-user me-1"></i>Per Dipendente
-              </button>
-              <button class="nav-tab" data-tab="annual-report">
-                <i class="fas fa-calendar-alt me-1"></i>Report Annuale
-              </button>
-              <button class="nav-tab" data-tab="cost-management">
-                <i class="fas fa-cog me-1"></i>Gestione Costi
-              </button>
-            </nav>
 
-            <!-- Dashboard Section -->
-            <section id="dashboard" class="content-section active">
-              <div class="controls mb-3">
-                <div class="d-flex gap-2 align-items-center flex-wrap">
-                  <button id="export-dashboard" class="btn btn-sm btn-primary">
-                    <i class="fas fa-download me-1"></i>Esporta Dashboard
-                  </button>
-                  <label for="dashboard-month" class="form-label mb-0">Mese:</label>
-                  <input type="month" id="dashboard-month" class="form-control form-control-sm" style="width: auto;">
-                </div>
-              </div>
-              
-              <div id="dashboard-content">
-                <div class="text-center py-4">
-                  <div class="spinner-border text-primary mb-3"></div>
-                  <p class="text-muted">Caricamento dati dashboard...</p>
-                </div>
-              </div>
-            </section>
-
-            <!-- Per Dipendente Section -->
-            <section id="per-employee" class="content-section" style="display: none;">
-              <div class="controls mb-3">
-                <div class="d-flex gap-2 align-items-center flex-wrap">
-                  <button id="export-per-dipendente" class="btn btn-sm btn-primary">
-                    <i class="fas fa-download me-1"></i>Esporta Per Dipendente
-                  </button>
-                  <label for="employee-month" class="form-label mb-0">Mese:</label>
-                  <input type="month" id="employee-month" class="form-control form-control-sm" style="width: auto;">
-                </div>
-              </div>
-              
-              <div id="employee-content">
-                <div class="text-center py-4">
-                  <div class="spinner-border text-primary mb-3"></div>
-                  <p class="text-muted">Caricamento dati dipendenti...</p>
-                </div>
-              </div>
-            </section>
-
-            <!-- Annual Report Section -->
-            <section id="annual-report" class="content-section" style="display: none;">
-              <div class="controls mb-3">
-                <div class="d-flex gap-2 align-items-center flex-wrap">
-                  <button id="export-annual-report" class="btn btn-sm btn-primary">
-                    <i class="fas fa-download me-1"></i>Esporta Report Annuale
-                  </button>
-                  <button id="clear-annual-cache" class="btn btn-sm btn-secondary">
-                    <i class="fas fa-trash me-1"></i>Pulisci Cache
-                  </button>
-                  <label for="annual-year" class="form-label mb-0">Anno:</label>
-                  <select id="annual-year" class="form-select form-select-sm" style="width: auto;">
-                    <option value="2024">2024</option>
-                    <option value="2023">2023</option>
-                    <option value="2022">2022</option>
-                    <option value="2021">2021</option>
-                  </select>
-                </div>
-              </div>
-              
-              <div id="annual-content">
-                <div class="text-center py-4">
-                  <div class="spinner-border text-primary mb-3"></div>
-                  <p class="text-muted">Caricamento report annuale...</p>
-                </div>
-              </div>
-            </section>
-
-            <!-- Cost Management Section -->
-            <section id="cost-management" class="content-section" style="display: none;">
-              <h5 class="text-primary mb-4">Gestione Costi</h5>
-              
-              <!-- Employee Costs -->
-              <div class="card bg-dark border-info mb-4">
-                <div class="card-header bg-info text-dark">
-                  <h6 class="mb-0">Costi Dipendenti (€/ora)</h6>
-                </div>
-                <div class="card-body">
-                  <div class="mb-3">
-                    <input type="text" class="form-control form-control-sm bg-secondary text-light border-0" 
-                           id="employee-search" placeholder="Cerca dipendente...">
-                  </div>
-                  <div class="d-flex gap-2 mb-3">
-                    <button class="btn btn-primary btn-sm" id="add-employee-cost">
-                      <i class="fas fa-plus me-1"></i>Aggiungi Dipendente
-                    </button>
-                    <button class="btn btn-success btn-sm" id="save-employee-costs">
-                      <i class="fas fa-save me-1"></i>Salva Costi Dipendenti
-                    </button>
-                  </div>
-                  <div id="employee-costs-container">
-                    <div class="text-center py-3">
-                      <div class="spinner-border text-primary mb-2"></div>
-                      <p class="text-muted small">Caricamento costi dipendenti...</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Job Site Costs -->
-              <div class="card bg-dark border-warning mb-4">
-                <div class="card-header bg-warning text-dark">
-                  <h6 class="mb-0">Costi e Ricavi Cantieri</h6>
-                </div>
-                <div class="card-body">
-                  <div class="mb-3">
-                    <input type="text" class="form-control form-control-sm bg-secondary text-light border-0" 
-                           id="jobsite-search" placeholder="Cerca cantiere...">
-                  </div>
-                  <div class="d-flex gap-2 mb-3">
-                    <button class="btn btn-primary btn-sm" id="add-jobsite-cost">
-                      <i class="fas fa-plus me-1"></i>Aggiungi Cantiere
-                    </button>
-                    <button class="btn btn-success btn-sm" id="save-jobsite-costs">
-                      <i class="fas fa-save me-1"></i>Salva Costi Cantieri
-                    </button>
-                  </div>
-                  <p class="small text-muted mb-3">
-                    <strong>Biancheria/Prodotti:</strong> costo per singola attività • 
-                    <strong>€/mese:</strong> ricavo fisso mensile • 
-                    <strong>€/intervento:</strong> ricavo per singola attività
-                  </p>
-                  <div id="jobsite-costs-container">
-                    <div class="text-center py-3">
-                      <div class="spinner-border text-primary mb-2"></div>
-                      <p class="text-muted small">Caricamento costi cantieri...</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </section>
-          </div>
-        </div>
-      </div>
-
-      <!-- Riepilogo Ore -->
-      <div class="tab-pane fade show active" id="orePane">
-        <div class="card mb-4 border-secondary">
-          <div class="card-body">
-            <h3 class="card-title mb-4">
-
-              <i class="fas fa-clock me-2"></i>Riepilogo Ore Dipendenti
-            </h3>
-            <div class="row mb-4">
-              <div class="col-md-5">
-                <label for="employeeSelect" class="form-label">Dipendente</label>
-                <select class="form-select" id="employeeSelect">
-                  <option value="">Caricamento dipendenti...</option>
+            <div class="row g-3 mb-4">
+              <div class="col-md-6">
+                <label for="employeeSelect" class="form-label small fw-bold">
+                  <i class="fas fa-user me-1"></i>Dipendente
+                </label>
+                <select class="form-select bg-dark text-light border-secondary" id="employeeSelect">
+                  <option value="all">Caricamento...</option>
                 </select>
               </div>
-              <div class="col-md-5">
-                <label for="monthSelect" class="form-label">Mese</label>
-                <select class="form-select" id="monthSelect">
-                  <option value="">Seleziona mese...</option>
-                </select>
+              <div class="col-md-4">
+                <label for="monthSelect" class="form-label small fw-bold">
+                  <i class="fas fa-calendar-alt me-1"></i>Mese
+                </label>
+                <select class="form-select bg-dark text-light border-secondary" id="monthSelect"></select>
               </div>
               <div class="col-md-2 d-flex align-items-end">
-                <button class="btn btn-primary w-100" id="exportBtn">
-                  <i class="fas fa-download me-1"></i>Esporta Excel
+                <button id="exportBtn" class="btn btn-success btn-sm w-100">
+                  <i class="fas fa-file-excel me-1"></i>Excel
                 </button>
               </div>
             </div>
-            <div id="summaryContainer" class="mt-4">
-              <p class="text-muted">Seleziona un dipendente e un mese per visualizzare i dati.</p>
-            </div>
-          </div>
-        </div>
 
-        <!-- Modal Dettaglio Giornaliero -->
-        <div class="modal fade" id="dayDetailModal" tabindex="-1">
-          <div class="modal-dialog modal-lg modal-dialog-scrollable">
-            <div class="modal-content bg-dark">
-              <div class="modal-header">
-                <h5 class="modal-title">Dettaglio Giornaliero</h5>
-                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
-              </div>
-              <div class="modal-body">
-                <div id="dayDetail">
-                  <p class="text-muted">Seleziona un giorno dalla tabella per visualizzare i dettagli.</p>
-                </div>
-              </div>
+            <div id="summaryContainer">
+              <p class="text-center text-muted">Seleziona dipendente e mese per visualizzare i dati.</p>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- Registro Attività -->
-      <div class="tab-pane fade" id="registroPane">
-        <div class="card border-secondary mb-4">
-          <div class="card-body">
-            <div class="d-flex justify-content-between align-items-center mb-4">
-              <h3 class="card-title mb-0">
-                <i class="fas fa-list me-2"></i>Registro Attività
-              </h3>
+      <!-- TAB Registro Attività -->
+      <div class="tab-pane fade" id="registro-pane">
+        <div class="card bg-secondary border-secondary mb-3">
+          <div class="card-body p-3">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <h5 class="card-title mb-0 text-primary">
+                <i class="fas fa-list me-2"></i>Registro Completo Attività
+              </h5>
               <div class="d-flex gap-2">
-                <button id="refreshRegistroBtn" class="btn btn-outline-secondary btn-sm">
+                <button id="refreshRegistroBtn" class="btn btn-outline-primary btn-sm">
                   <i class="fas fa-sync-alt me-1"></i>Aggiorna
                 </button>
                 <button id="exportRegistroBtn" class="btn btn-success btn-sm">
-                  <i class="fas fa-download me-1"></i>Esporta Excel
+                  <i class="fas fa-file-excel me-1"></i>Esporta
                 </button>
               </div>
             </div>
-            
+
             <!-- Filtri -->
-            <div class="card bg-dark border-info mb-4">
+            <div class="card bg-dark border-info mb-3">
               <div class="card-header bg-info text-dark py-2">
-                <h6 class="mb-0">
-                  <i class="fas fa-filter me-2"></i>Filtri di Ricerca
-                </h6>
+                <h6 class="mb-0"><i class="fas fa-filter me-2"></i>Filtri</h6>
               </div>
-              <div class="card-body p-3">
-                <div class="row g-3">
+              <div class="card-body p-2">
+                <div class="row g-2 mb-2">
                   <div class="col-md-3">
-                    <label for="registroFilterEmployee" class="form-label small fw-bold">Dipendente</label>
+                    <label class="form-label small">Dipendente</label>
                     <select class="form-select form-select-sm bg-secondary text-light border-0" id="registroFilterEmployee">
                       <option value="">Tutti i dipendenti</option>
                     </select>
                   </div>
-                  <div class="col-md-3">
-                    <label for="registroFilterType" class="form-label small fw-bold">Tipo Attività</label>
+                  <div class="col-md-2">
+                    <label class="form-label small">Tipo</label>
                     <select class="form-select form-select-sm bg-secondary text-light border-0" id="registroFilterType">
                       <option value="">Tutti i tipi</option>
-                      <option value="uffici">Uffici</option>
                       <option value="appartamenti">Appartamenti</option>
+                      <option value="uffici">Uffici</option>
                       <option value="bnb">BnB</option>
                       <option value="pst">PST</option>
                     </select>
                   </div>
                   <div class="col-md-2">
-                    <label for="registroFilterDateFrom" class="form-label small fw-bold">Data Da</label>
-                    <input type="date" class="form-control form-control-sm bg-secondary text-light border-0" id="registroFilterDateFrom">
-                  </div>
-                  <div class="col-md-2">
-                    <label for="registroFilterDateTo" class="form-label small fw-bold">Data A</label>
-                    <input type="date" class="form-control form-control-sm bg-secondary text-light border-0" id="registroFilterDateTo">
-                  </div>
-                  <div class="col-md-2 d-flex align-items-end">
-                    <button id="applyRegistroFilters" class="btn btn-primary btn-sm w-100">
-                      <i class="fas fa-search me-1"></i>Filtra
-                    </button>
-                  </div>
-                </div>
-                <div class="row g-3 mt-2">
-                  <div class="col-md-6">
-                    <label for="registroFilterActivity" class="form-label small fw-bold">Nome Attività</label>
-                    <input type="text" class="form-control form-control-sm bg-secondary text-light border-0" 
-                           id="registroFilterActivity" placeholder="Cerca per nome attività...">
-                  </div>
-                  <div class="col-md-3">
-                    <label for="registroFilterMonth" class="form-label small fw-bold">Mese</label>
+                    <label class="form-label small">Mese</label>
                     <select class="form-select form-select-sm bg-secondary text-light border-0" id="registroFilterMonth">
                       <option value="">Tutti i mesi</option>
                     </select>
                   </div>
-                  <div class="col-md-3 d-flex align-items-end">
+                  <div class="col-md-2">
+                    <label class="form-label small">Da</label>
+                    <input type="date" class="form-control form-control-sm bg-secondary text-light border-0" id="registroFilterDateFrom">
+                  </div>
+                  <div class="col-md-2">
+                    <label class="form-label small">A</label>
+                    <input type="date" class="form-control form-control-sm bg-secondary text-light border-0" id="registroFilterDateTo">
+                  </div>
+                  <div class="col-md-1 d-flex align-items-end">
                     <button id="resetRegistroFilters" class="btn btn-outline-warning btn-sm w-100">
-                      <i class="fas fa-undo me-1"></i>Reset Filtri
+                      <i class="fas fa-undo"></i>
+                    </button>
+                  </div>
+                </div>
+                <div class="row g-2">
+                  <div class="col-md-6">
+                    <label class="form-label small">Cerca attività</label>
+                    <input type="text" class="form-control form-control-sm bg-secondary text-light border-0" 
+                           id="registroFilterActivity" placeholder="Nome attività...">
+                  </div>
+                  <div class="col-md-6 d-flex align-items-end">
+                    <button id="applyRegistroFilters" class="btn btn-primary btn-sm w-100">
+                      <i class="fas fa-search me-1"></i>Applica Filtri
                     </button>
                   </div>
                 </div>
               </div>
             </div>
-            
+
             <!-- Statistiche -->
-            <div class="row mb-4">
-              <div class="col-md-3 mb-3">
+            <div class="row mb-3">
+              <div class="col-md-3">
                 <div class="card bg-primary text-white h-100 border-0">
-                  <div class="card-body text-center">
-                    <h5 class="card-title">
-                      <i class="fas fa-list mb-2 d-block"></i>Totale Attività
-                    </h5>
-                    <p class="card-text display-6" id="totalActivitiesCount">0</p>
+                  <div class="card-body text-center p-2">
+                    <h6 class="card-title small">Attività Totali</h6>
+                    <p class="card-text h6 mb-0" id="totalActivitiesCount">0</p>
                   </div>
                 </div>
               </div>
-              <div class="col-md-3 mb-3">
-                <div class="card bg-info text-white h-100 border-0">
-                  <div class="card-body text-center">
-                    <h5 class="card-title">
-                      <i class="fas fa-users mb-2 d-block"></i>Dipendenti Attivi
-                    </h5>
-                    <p class="card-text display-6" id="activeEmployeesCount">0</p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-3 mb-3">
+              <div class="col-md-3">
                 <div class="card bg-success text-white h-100 border-0">
-                  <div class="card-body text-center">
-                    <h5 class="card-title">
-                      <i class="fas fa-calendar mb-2 d-block"></i>Giorni Coperti
-                    </h5>
-                    <p class="card-text display-6" id="daysCoveredCount">0</p>
+                  <div class="card-body text-center p-2">
+                    <h6 class="card-title small">Dipendenti Attivi</h6>
+                    <p class="card-text h6 mb-0" id="activeEmployeesCount">0</p>
                   </div>
                 </div>
               </div>
-              <div class="col-md-3 mb-3">
+              <div class="col-md-3">
+                <div class="card bg-info text-white h-100 border-0">
+                  <div class="card-body text-center p-2">
+                    <h6 class="card-title small">Giorni Coperti</h6>
+                    <p class="card-text h6 mb-0" id="daysCoveredCount">0</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3">
                 <div class="card bg-warning text-dark h-100 border-0">
-                  <div class="card-body text-center">
-                    <h5 class="card-title">
-                      <i class="fas fa-clock mb-2 d-block"></i>Ore Totali
-                    </h5>
-                    <p class="card-text display-6" id="totalHoursCount">0</p>
+                  <div class="card-body text-center p-2">
+                    <h6 class="card-title small">Ore Totali</h6>
+                    <p class="card-text h6 mb-0" id="totalHoursCount">0</p>
                   </div>
                 </div>
               </div>
             </div>
-            
-            <div id="loadingRegistroMessage" class="text-center py-5">
+
+            <!-- Loading -->
+            <div id="loadingRegistroMessage" class="text-center py-4">
               <div class="spinner-border text-primary mb-3">
                 <span class="visually-hidden">Caricamento...</span>
               </div>
               <p class="text-muted">Caricamento registro attività...</p>
             </div>
-            
+
+            <!-- No Data -->
+            <div id="noRegistroData" class="text-center py-4" style="display: none;">
+              <div class="mb-3">
+                <i class="fas fa-inbox fa-3x text-muted"></i>
+              </div>
+              <p class="text-muted">Nessuna attività trovata con i filtri selezionati.</p>
+            </div>
+
+            <!-- Content -->
             <div id="registroContent" style="display: none;">
               <div class="table-responsive">
                 <table class="table table-dark table-striped table-hover">
-                  <thead class="table-primary">
+                  <thead>
                     <tr>
-                      <th style="cursor: pointer;" onclick="registroActivityManager.sortTable('nome')">
-                        <i class="fas fa-sort me-1"></i>Nome Attività
-                      </th>
-                      <th style="cursor: pointer;" onclick="registroActivityManager.sortTable('data')">
-                        <i class="fas fa-sort me-1"></i>Data
-                      </th>
-                      <th style="cursor: pointer;" onclick="registroActivityManager.sortTable('dipendente')">
-                        <i class="fas fa-sort me-1"></i>Dipendente
-                      </th>
-                      <th style="cursor: pointer;" onclick="registroActivityManager.sortTable('tipo')">
-                        <i class="fas fa-sort me-1"></i>Tipo
-                      </th>
-                      <th style="cursor: pointer;" onclick="registroActivityManager.sortTable('minuti')">
-                        <i class="fas fa-sort me-1"></i>Minuti
-                      </th>
-                      <th style="cursor: pointer;" onclick="registroActivityManager.sortTable('persone')">
-                        <i class="fas fa-sort me-1"></i>Persone
-                      </th>
-                      <th style="cursor: pointer;" onclick="registroActivityManager.sortTable('moltiplicatore')">
-                        <i class="fas fa-sort me-1"></i>Moltiplicatore
-                      </th>
-                      <th>Minuti Effettivi</th>
-                      <th>Salva</th>
+                      <th class="small">Attività</th>
+                      <th class="small">Data</th>
+                      <th class="small">Dipendente</th>
+                      <th class="small">Tipo</th>
+                      <th class="small">Min</th>
+                      <th class="small">Pers</th>
+                      <th class="small">Molt</th>
+                      <th class="small">Min Eff</th>
+                      <th class="small">Azioni</th>
                     </tr>
                   </thead>
                   <tbody id="registroTableBody"></tbody>
                 </table>
               </div>
-              
-              <!-- Paginazione -->
+
+              <!-- Pagination -->
               <div class="d-flex justify-content-between align-items-center mt-3">
-                <div class="text-muted small">
+                <div class="small text-muted">
                   Mostrando <span id="showingFrom">0</span>-<span id="showingTo">0</span> di <span id="totalRecords">0</span> record
                 </div>
                 <nav>
@@ -481,495 +292,403 @@
                 </nav>
               </div>
             </div>
-            
-            <div id="noRegistroData" class="text-center py-5" style="display: none;">
-              <i class="fas fa-clipboard-list fa-4x text-muted mb-3"></i>
-              <h4 class="text-muted">Nessuna attività trovata</h4>
-              <p class="text-muted">Non sono state trovate attività con i filtri selezionati.</p>
-            </div>
           </div>
         </div>
       </div>
 
-      <!-- Bigliettini BnB -->
-      <div class="tab-pane fade" id="bnbPane">
-        <div class="card mb-4 border-secondary">
-          <div class="card-body">
-            <h3 class="card-title mb-4">
-              <i class="fas fa-clipboard-list me-2"></i>Elenco Bigliettini BnB
-            </h3>
-            <div class="row mb-3">
-              <div class="col-sm-6">
-                <label for="bnbFilterDate" class="form-label">Seleziona Data</label>
-                <input type="date" id="bnbFilterDate" class="form-control" required />
-              </div>
-              <div class="col-sm-6 d-flex align-items-end">
-                <button id="bnbFilterBtn" class="btn btn-primary" type="button">
-                  <i class="fas fa-search me-1"></i>Carica Bigliettini
-                </button>
-              </div>
-            </div>
-            <div id="bnbEntriesContainer">
-              <p class="text-muted">Seleziona una data per visualizzare i bigliettini.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Gradimento -->
-      <div class="tab-pane fade" id="gradimentoPane">
-        <!-- Toolbar Filtri & Azioni -->
-        <div class="gr-toolbar d-flex flex-wrap gap-3 mb-3">
-          <div class="gr-filter-group">
-            <label for="gr-month" class="form-label">Mese</label>
-            <select id="gr-month" class="form-select">
-              <option value="all">Tutti i mesi</option>
-            </select>
-          </div>
-          <div class="gr-filter-group">
-            <label for="gr-rating" class="form-label">Valutazione</label>
-            <select id="gr-rating" class="form-select">
-              <option value="all">Tutte</option>
-              <option value="high">Alta (8–10)</option>
-              <option value="medium">Media (5–7)</option>
-              <option value="low">Bassa (1–4)</option>
-            </select>
-          </div>
-          <div class="gr-filter-group">
-            <label for="gr-client" class="form-label">Cliente</label>
-            <select id="gr-client" class="form-select">
-              <option value="all">Tutti i clienti</option>
-            </select>
-          </div>
-          <div class="gr-filter-group flex-grow-1">
-            <label for="gr-email" class="form-label">Cerca</label>
-            <input id="gr-email" type="text" class="form-control" placeholder="Email o nome cliente">
-          </div>
-          <div class="gr-button-group d-flex gap-2 align-items-end">
-            <button id="gr-apply" class="btn btn-primary">Applica</button>
-            <button id="gr-refresh" class="btn btn-secondary">Aggiorna</button>
-          </div>
-        </div>
-
-        <hr class="gr-divider">
-
-        <!-- Statistiche -->
-        <div class="gr-stats row text-center mb-4">
-          <div class="gr-stat col">
-            <span id="gr-total" class="h2">0</span>
-            <div>Clienti Totali</div>
-          </div>
-          <div class="gr-stat col">
-            <span id="gr-avg" class="h2">0.0</span>
-            <div>Valutazione Media</div>
-          </div>
-          <div class="gr-stat col">
-            <span id="gr-monthly" class="h2">0</span>
-            <div>Feedback Mese</div>
-          </div>
-          <div class="gr-stat col">
-            <span id="gr-comments" class="h2">0</span>
-            <div>Con Commenti</div>
-          </div>
-        </div>
-
-        <hr class="gr-divider">
-
-        <!-- Tabella Feedback -->
-        <div class="gr-table-wrapper table-responsive">
-          <table class="table table-bordered">
-            <thead class="table-light">
-              <tr>
-                <th>Nome Cliente</th>
-                <th>Email</th>
-                <th>Pulizia</th>
-                <th>Prodotti</th>
-                <th>Comunicazione</th>
-                <th>Media</th>
-                <th>Data</th>
-                <th>Commenti</th>
-                <th>Azioni</th>
-              </tr>
-            </thead>
-            <tbody id="gr-body">
-              <tr>
-                <td colspan="9" class="text-center py-5">Caricamento...</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-
-        <!-- Modal Commento -->
-        <div class="modal fade" id="gr-modal" tabindex="-1">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title">Commento Dettagliato</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-              </div>
-              <div class="modal-body">
-                <p id="gr-modal-text"></p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Modal Dettagli Feedback -->
-        <div class="modal fade" id="gr-detail-modal" tabindex="-1">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title">Dettagli Feedback</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-              </div>
-              <div class="modal-body">
-                <input type="hidden" id="gr-detail-id">
-                <div class="mb-3">
-                  <label for="gr-detail-client-name" class="form-label">Nome Cliente</label>
-                  <input type="text" id="gr-detail-client-name" class="form-control">
-                </div>
-                <div class="mb-3">
-                  <label for="gr-detail-email" class="form-label">Email</label>
-                  <input type="email" id="gr-detail-email" class="form-control">
-                </div>
-                <p><strong>Mese:</strong> <span id="gr-detail-month"></span></p>
-                <p><strong>Pulizia:</strong> <span id="gr-detail-q1"></span></p>
-                <p><strong>Prodotti:</strong> <span id="gr-detail-q2"></span></p>
-                <p><strong>Comunicazione:</strong> <span id="gr-detail-q3"></span></p>
-                <p><strong>Commento:</strong> <span id="gr-detail-comment"></span></p>
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Chiudi</button>
-                <button type="button" class="btn btn-primary" id="gr-detail-save">Salva</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Calcolo Biancheria -->
-      <div class="tab-pane fade" id="calcoloPane">
-        <div class="card border-secondary mb-4">
-          <div class="card-body">
-            <h3 class="card-title mb-4">
-              <i class="fas fa-calculator me-2"></i>Calcolo Preventivo Biancheria
-            </h3>
-            <form id="calculatorForm" class="row g-3">
-              <div class="col-md-6">
-                <label for="lettiMatrimoniali" class="form-label">Letti Matrimoniali</label>
-                <input type="number" id="lettiMatrimoniali" class="form-control" min="0" />
-              </div>
-              <div class="col-md-6">
-                <label for="lettiSingoli" class="form-label">Letti Singoli</label>
-                <input type="number" id="lettiSingoli" class="form-control" min="0" />
-              </div>
-              <div class="col-md-6">
-                <label for="cucina" class="form-label">Cucine</label>
-                <input type="number" id="cucina" class="form-control" min="0" />
-              </div>
-              <div class="col-md-6">
-                <label for="bagno" class="form-label">Bagni</label>
-                <input type="number" id="bagno" class="form-control" min="0" />
-              </div>
-              <div class="col-md-6">
-                <label for="ore" class="form-label">Ore Necessarie</label>
-                <input type="number" id="ore" class="form-control" step="0.5" min="0" />
-              </div>
-            </form>
-
-            <hr class="my-4">
-
-            <h5>Risultato</h5>
-            <div class="d-flex justify-content-between mb-2">
-              <span>Prezzo Finale:</span>
-              <strong id="total_price">€ 0.00</strong>
-            </div>
-            <div id="hiddenResults" class="d-none">
-              <div class="d-flex justify-content-between mb-2">
-                <span>Costo Biancheria:</span><span id="biancheriaTOT">0</span>
-              </div>
-              <div class="d-flex justify-content-between mb-2">
-                <span>Costo Personale:</span><span id="przPersonale">0</span>
-              </div>
-              <div class="d-flex justify-content-between mb-2">
-                <span>Margine:</span><span id="margine">0</span>
-              </div>
-            </div>
-            <div class="text-center mt-3">
-              <button id="toggleVisibility" class="btn btn-outline-secondary btn-sm">
-                <i class="fas fa-eye me-1"></i>Mostra Dettagli
+      <!-- TAB Fatturazione -->
+      <div class="tab-pane fade" id="fatturazione-pane">
+        <div class="card bg-secondary border-secondary mb-3">
+          <div class="card-body p-3">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <h5 class="card-title mb-0 text-primary">
+                <i class="fas fa-euro-sign me-2"></i>Fatturazione Cantieri
+              </h5>
+              <button id="refreshFatturazioneBtn" class="btn btn-outline-primary btn-sm">
+                <i class="fas fa-sync-alt me-1"></i>Aggiorna
               </button>
             </div>
-          </div>
-        </div>
-      </div>
 
-      <!-- Gestione Data -->
-      <div class="tab-pane fade" id="dataPane">
-        <div class="container py-4">
-          <div class="d-flex mb-3">
-            <button id="add-group" class="btn btn-primary me-2">
-              <i class="fas fa-plus me-1"></i>Nuovo Gruppo
-            </button>
-          </div>
-          <ul class="nav nav-tabs" id="groupTabs"></ul>
-          <div class="tab-content border p-3" id="groupTabContent"></div>
-        </div>
-      </div>
+            <!-- Navigation Tabs per Fatturazione -->
+            <div class="nav-tabs">
+              <button class="nav-tab active" data-tab="dashboard">
+                <i class="fas fa-chart-pie me-1"></i>Dashboard
+              </button>
+              <button class="nav-tab" data-tab="per-employee">
+                <i class="fas fa-users me-1"></i>Per Dipendente
+              </button>
+              <button class="nav-tab" data-tab="annual-report">
+                <i class="fas fa-calendar-alt me-1"></i>Report Annuale
+              </button>
+              <button class="nav-tab" data-tab="cost-management">
+                <i class="fas fa-cogs me-1"></i>Gestione Costi
+              </button>
+            </div>
 
-      <!-- Valutazione Prodotti -->
-      <div class="tab-pane fade" id="valutazionePane">
-        <div class="card border-secondary mb-4">
-          <div class="card-body">
-            <div class="d-flex justify-content-between align-items-center mb-4">
-              <h3 class="card-title mb-0">
-                <i class="fas fa-chart-line me-2"></i>Dashboard Valutazioni Prodotti
-              </h3>
-              <div class="d-flex gap-2">
-                <div class="btn-group">
-                  <button id="viewDashboardBtn" class="btn btn-outline-primary btn-sm active">
-                    <i class="fas fa-chart-bar me-1"></i>Dashboard
-                  </button>
-                  <button id="viewProductsBtn" class="btn btn-outline-primary btn-sm">
-                    <i class="fas fa-list me-1"></i>Lista Prodotti
+            <!-- Dashboard -->
+            <div id="dashboard" class="content-section">
+              <div class="controls">
+                <div class="d-flex gap-3 align-items-end">
+                  <div>
+                    <label for="dashboard-month" class="form-label small fw-bold">Mese</label>
+                    <input type="month" class="form-control form-control-sm bg-dark text-light border-secondary" id="dashboard-month">
+                  </div>
+                  <button id="export-dashboard" class="btn btn-success btn-sm">
+                    <i class="fas fa-file-excel me-1"></i>Esporta
                   </button>
                 </div>
-                <button id="addProductBtn" class="btn btn-success btn-sm" data-bs-toggle="modal" data-bs-target="#addProductModal">
-                  <i class="fas fa-plus me-1"></i>Aggiungi Prodotto
+              </div>
+              <div id="dashboard-content"></div>
+            </div>
+
+            <!-- Per Dipendente -->
+            <div id="per-employee" class="content-section" style="display: none;">
+              <div class="controls">
+                <div class="d-flex gap-3 align-items-end">
+                  <div>
+                    <label for="employee-month" class="form-label small fw-bold">Mese</label>
+                    <input type="month" class="form-control form-control-sm bg-dark text-light border-secondary" id="employee-month">
+                  </div>
+                  <button id="export-per-dipendente" class="btn btn-success btn-sm">
+                    <i class="fas fa-file-excel me-1"></i>Esporta
+                  </button>
+                </div>
+              </div>
+              <div id="employee-content"></div>
+            </div>
+
+            <!-- Report Annuale -->
+            <div id="annual-report" class="content-section" style="display: none;">
+              <div class="controls">
+                <div class="d-flex gap-3 align-items-end">
+                  <div>
+                    <label for="annual-year" class="form-label small fw-bold">Anno</label>
+                    <select class="form-select form-select-sm bg-dark text-light border-secondary" id="annual-year"></select>
+                  </div>
+                  <button id="export-annual-report" class="btn btn-success btn-sm">
+                    <i class="fas fa-file-excel me-1"></i>Esporta
+                  </button>
+                  <button id="clear-annual-cache" class="btn btn-outline-warning btn-sm">
+                    <i class="fas fa-trash me-1"></i>Pulisci Cache
+                  </button>
+                </div>
+              </div>
+              <div id="annual-content"></div>
+            </div>
+
+            <!-- Gestione Costi -->
+            <div id="cost-management" class="content-section" style="display: none;">
+              <div class="row">
+                <div class="col-lg-6">
+                  <div class="card bg-dark border-warning mb-3">
+                    <div class="card-header bg-warning text-dark">
+                      <h6 class="mb-0"><i class="fas fa-users me-2"></i>Costi Dipendenti</h6>
+                    </div>
+                    <div class="card-body">
+                      <div class="mb-2">
+                        <input type="text" class="form-control form-control-sm bg-secondary text-light border-0" 
+                               id="employee-search" placeholder="Cerca dipendente...">
+                      </div>
+                      <div id="employee-costs-container" class="mb-3" style="max-height: 300px; overflow-y: auto;"></div>
+                      <div class="d-flex gap-2">
+                        <button id="add-employee-cost" class="btn btn-outline-success btn-sm">
+                          <i class="fas fa-plus me-1"></i>Aggiungi
+                        </button>
+                        <button id="save-employee-costs" class="btn btn-success btn-sm">
+                          <i class="fas fa-save me-1"></i>Salva
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="card bg-dark border-info mb-3">
+                    <div class="card-header bg-info text-dark">
+                      <h6 class="mb-0"><i class="fas fa-building me-2"></i>Costi Cantieri</h6>
+                    </div>
+                    <div class="card-body">
+                      <div class="mb-2">
+                        <input type="text" class="form-control form-control-sm bg-secondary text-light border-0" 
+                               id="jobsite-search" placeholder="Cerca cantiere...">
+                      </div>
+                      <div id="jobsite-costs-container" class="mb-3" style="max-height: 300px; overflow-y: auto;"></div>
+                      <div class="d-flex gap-2">
+                        <button id="add-jobsite-cost" class="btn btn-outline-success btn-sm">
+                          <i class="fas fa-plus me-1"></i>Aggiungi
+                        </button>
+                        <button id="save-jobsite-costs" class="btn btn-success btn-sm">
+                          <i class="fas fa-save me-1"></i>Salva
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TAB Valutazioni -->
+      <div class="tab-pane fade" id="valutazione-pane">
+        <div class="card bg-secondary border-secondary mb-3">
+          <div class="card-body p-3">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <h5 class="card-title mb-0 text-primary">
+                <i class="fas fa-star me-2"></i>Gestione Valutazioni Prodotti
+              </h5>
+              <div class="d-flex gap-2">
+                <button id="viewDashboardBtn" class="btn btn-primary btn-sm active">
+                  <i class="fas fa-chart-bar me-1"></i>Dashboard
+                </button>
+                <button id="viewProductsBtn" class="btn btn-outline-primary btn-sm">
+                  <i class="fas fa-list me-1"></i>Prodotti
                 </button>
                 <button id="refreshProductsBtn" class="btn btn-outline-secondary btn-sm">
                   <i class="fas fa-sync-alt me-1"></i>Aggiorna
                 </button>
               </div>
             </div>
-            
-            <div id="loadingProductsMessage" class="text-center py-5">
-              <div class="spinner-border text-primary mb-3">
-                <span class="visually-hidden">Caricamento...</span>
-                      <div class="badge-form-section employee-list-section">
-              <p class="text-muted">Caricamento dati valutazioni...</p>
-            </div>
-            
-            <div id="dashboardProductsContent" style="display: none;">
-                        <div class="employee-list-container" id="employeeListContainer">
-              <div class="row mb-4">
-                <div class="col-md-3 mb-3">
+
+            <!-- Dashboard Content -->
+            <div id="dashboardProductsContent">
+              <div id="loadingProductsMessage" class="text-center py-4">
+                <div class="spinner-border text-primary mb-3">
+                  <span class="visually-hidden">Caricamento...</span>
+                </div>
+                <p class="text-muted">Caricamento dati valutazioni...</p>
+              </div>
+
+              <div id="noProductsData" class="text-center py-4" style="display: none;">
+                <div class="mb-3">
+                  <i class="fas fa-chart-bar fa-3x text-muted"></i>
+                </div>
+                <p class="text-muted">Nessun dato di valutazione disponibile.</p>
+              </div>
+
+              <!-- Stats Cards -->
+              <div class="row mb-4" style="display: none;" id="statsCards">
+                <div class="col-md-3">
                   <div class="card bg-primary text-white h-100 border-0">
-                    <div class="card-body text-center">
-                      <h5 class="card-title">
-                        <i class="fas fa-box mb-2 d-block"></i>Prodotti Valutati
-                      </h5>
-                      <p class="card-text display-6" id="totalProductsCount">0</p>
+                    <div class="card-body text-center p-2">
+                      <h6 class="card-title small">Prodotti Valutati</h6>
+                      <p class="card-text h6 mb-0" id="totalProductsCount">0</p>
                     </div>
                   </div>
                 </div>
-                <div class="col-md-3 mb-3">
-                  <div class="card bg-info text-white h-100 border-0">
-                    <div class="card-body text-center">
-                      <h5 class="card-title">
-                        <i class="fas fa-eye mb-2 d-block"></i>Prodotti Visibili
-                          <div class="badge-form-group">
-                      <p class="card-text display-6" id="visibleProductsCount">0</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-3 mb-3">
+                <div class="col-md-3">
                   <div class="card bg-success text-white h-100 border-0">
-                          <div class="badge-form-group">
-                      <h5 class="card-title">
-                        <i class="fas fa-star mb-2 d-block"></i>Valutazioni Totali
-                      </h5>
-                      <p class="card-text display-6" id="totalRatingsCount">0</p>
+                    <div class="card-body text-center p-2">
+                      <h6 class="card-title small">Prodotti Visibili</h6>
+                      <p class="card-text h6 mb-0" id="visibleProductsCount">0</p>
                     </div>
                   </div>
-                          <div class="badge-form-group">
-                <div class="col-md-3 mb-3">
+                </div>
+                <div class="col-md-3">
+                  <div class="card bg-info text-white h-100 border-0">
+                    <div class="card-body text-center p-2">
+                      <h6 class="card-title small">Valutazioni Totali</h6>
+                      <p class="card-text h6 mb-0" id="totalRatingsCount">0</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3">
                   <div class="card bg-warning text-dark h-100 border-0">
-                    <div class="card-body text-center">
-                      <h5 class="card-title">
-                        <i class="fas fa-chart-line mb-2 d-block"></i>Media Generale
-                      </h5>
-                          <div class="badge-form-group">
+                    <div class="card-body text-center p-2">
+                      <h6 class="card-title small">Media Generale</h6>
+                      <p class="card-text h6 mb-0" id="overallAverageScore">0</p>
                     </div>
                   </div>
                 </div>
               </div>
-              
-              <!-- Container grafici -->
-                          <div class="badge-form-group">
+
+              <!-- Charts Container -->
+              <div id="productsChartsContainer" class="row"></div>
+
+              <!-- Last Update -->
+              <div class="text-center mt-3">
+                <small class="text-muted">Ultimo aggiornamento: <span id="lastUpdateTime">-</span></small>
+              </div>
             </div>
-            
-            <!-- Lista Prodotti -->
-            <div id="productsListContent" style="display: none;"></div>
-            
-            <div id="noProductsData" class="text-center py-5" style="display: none;">
-                          <div class="badge-form-group image-upload-container">
-              <h4 class="text-muted">Nessun dato disponibile</h4>
-              <p class="text-muted">Non sono ancora state registrate valutazioni per i prodotti.</p>
+
+            <!-- Products List Content -->
+            <div id="productsListContent" style="display: none;">
+              <div class="d-flex justify-content-end mb-3">
+                <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#addProductModal">
+                  <i class="fas fa-plus me-1"></i>Aggiungi Prodotto
+                </button>
+              </div>
+              <!-- Table will be rendered here -->
             </div>
           </div>
-                            <div class="file-input-wrapper mb-3">
-                              <input type="file" id="employeePhotoFile" accept="image/*">
-                              <label for="employeePhotoFile" class="file-input-label">
-                                <i class="fas fa-upload"></i>
-                                Carica Nuova Foto
-                              </label>
-                            </div>
-                            <div class="text-center mb-3">
-                              <div class="upload-placeholder" onclick="document.getElementById('employeePhotoFile').click()">
-                                <i class="fas fa-camera"></i>
-                              </div>
-                              <div id="photoPreview" style="display: none;">
-                                <img id="previewPhotoImg" class="image-upload-preview" alt="Anteprima foto">
-                              </div>
-                            </div>
-                            <input type="text" class="form-control" id="employeePhoto" placeholder="O inserisci nome file esistente (es: mario_rossi.jpg)">
-      <div class="tab-pane fade" id="badgesPane">
-          <div class="card-body">
-            <div class="d-flex justify-content-between align-items-center mb-4">
-              <h3 class="card-title mb-0">
+        </div>
+      </div>
+
+      <!-- TAB Tesserini -->
+      <div class="tab-pane fade" id="badges-pane">
+        <div class="card bg-secondary border-secondary mb-3">
+          <div class="card-body p-3">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <h5 class="card-title mb-0 text-primary">
                 <i class="fas fa-id-card me-2"></i>Gestione Tesserini Dipendenti
-              </h3>
-              <button id="refreshBadgesBtn" class="btn btn-outline-secondary btn-sm">
+              </h5>
+              <button id="refreshBadgesBtn" class="btn btn-outline-primary btn-sm">
                 <i class="fas fa-sync-alt me-1"></i>Aggiorna
               </button>
-            
+            </div>
+
             <div class="row">
               <!-- Lista Dipendenti -->
               <div class="col-lg-4">
-                <div class="badge-management-card p-3 mb-4">
-                  <h6 class="text-primary mb-3">
+                <div class="badge-form-section">
+                  <h6 class="text-info mb-3">
                     <i class="fas fa-users me-2"></i>Seleziona Dipendente
                   </h6>
-                  <div id="employeeListContainer">
-                    <div class="text-center py-3">
-                      <div class="spinner-border text-primary mb-2"></div>
-                      <p class="text-muted small">Caricamento dipendenti...</p>
+                  <div class="employee-list-container" id="employeeListContainer">
+                    <div class="text-center py-4">
+                      <div class="spinner-border text-primary mb-3">
+                        <span class="visually-hidden">Caricamento...</span>
+                      </div>
+                      <p class="text-muted">Caricamento dipendenti...</p>
                     </div>
                   </div>
                 </div>
-              </div>
-              
-              <!-- Form Modifica -->
-              <div class="col-lg-4">
-                <!-- Dati Azienda -->
+
+                <!-- Form Dati Azienda -->
                 <div class="badge-form-section">
-                          <div class="badge-form-group">
-                    <i class="fas fa-building"></i>Dati Azienda
+                  <h6 class="text-warning mb-3">
+                    <i class="fas fa-building me-2"></i>Dati Azienda
                   </h6>
                   <form id="companyForm">
-                    <div class="mb-3">
-                      <label for="companyName" class="form-label small fw-bold">Nome Azienda</label>
-                      <input type="text" class="form-control form-control-sm bg-secondary text-light border-0" 
-                             id="companyName" placeholder="es: Artigea Srl" required>
+                    <div class="badge-form-group">
+                      <label for="companyName" class="form-label">
+                        <i class="fas fa-building me-1"></i>Nome Azienda
+                      </label>
+                      <input type="text" class="form-control" id="companyName" placeholder="Nome azienda">
                     </div>
-                          <div class="badge-form-group image-upload-container">
-                      <label class="form-label small fw-bold">Logo Azienda</label>
-                      <div class="row g-2">
-                        <div class="col-8">
-                          <input type="file" class="form-control form-control-sm bg-secondary text-light border-0" 
-                            <div class="file-input-wrapper mb-3">
-                              <input type="file" id="companyLogoFile" accept="image/*">
-                              <label for="companyLogoFile" class="file-input-label">
-                                <i class="fas fa-upload"></i>
-                                Carica Nuovo Logo
-                              </label>
-                            </div>
-                            <div class="text-center mb-3">
-                              <div class="upload-placeholder" onclick="document.getElementById('companyLogoFile').click()" style="width: 100px; height: 100px; border-radius: 12px;">
-                                <i class="fas fa-building"></i>
-                              </div>
-                              <div id="logoPreview" style="display: none;">
-                                <img id="previewLogoImg" style="width: 100px; height: 100px; object-fit: contain; border-radius: 12px; border: 3px solid #e5e7eb;" alt="Anteprima logo">
-                              </div>
-                          <input type="text" class="form-control form-control-sm bg-secondary text-light border-0" 
-                            <input type="text" class="form-control" id="companyLogo" placeholder="O inserisci nome file esistente (es: logo.png)">
-                                 id="companyLogo" placeholder="logo.png">
-                          <small class="text-muted">Nome file</small>
-                        </div>
+                    
+                    <div class="badge-form-group">
+                      <label for="companyLogo" class="form-label">
+                        <i class="fas fa-image me-1"></i>Logo Azienda (nome file)
+                      </label>
+                      <input type="text" class="form-control" id="companyLogo" placeholder="logo.png">
+                    </div>
+
+                    <div class="image-upload-container">
+                      <label class="form-label">
+                        <i class="fas fa-upload me-1"></i>Carica Nuovo Logo
+                      </label>
+                      <div class="file-input-wrapper">
+                        <input type="file" id="companyLogoFile" accept="image/*">
+                        <label for="companyLogoFile" class="file-input-label">
+                          <i class="fas fa-cloud-upload-alt me-2"></i>Seleziona Logo
+                        </label>
                       </div>
-                      <div id="logoPreview" class="mt-2 text-center" style="display: none;">
-                        <img id="previewLogoImg" src="" alt="Anteprima logo" style="max-width: 80px; max-height: 60px; border-radius: 8px;">
+                      <div id="logoPreview" style="display: none;" class="mt-2 text-center">
+                        <img id="previewLogoImg" class="image-upload-preview" alt="Preview logo">
                       </div>
+                    </div>
+
+                    <button type="button" id="saveCompanyDataBtn" class="btn btn-warning w-100">
+                      <i class="fas fa-save me-1"></i>Salva Dati Azienda
                     </button>
                   </form>
                 </div>
+              </div>
 
-                <!-- Dati Dipendente -->
+              <!-- Form Dati Dipendente -->
+              <div class="col-lg-4">
                 <div class="badge-form-section">
-                  <h6>
-                    <i class="fas fa-user"></i>Dati Dipendente
+                  <h6 class="text-success mb-3">
+                    <i class="fas fa-user-edit me-2"></i>Dati Dipendente
                   </h6>
                   <form id="badgeForm">
-                    <div class="row g-2 mb-3">
-                      <div class="col-6">
-                        <label for="employeeNome" class="form-label small fw-bold">Nome</label>
-                        <input type="text" class="form-control form-control-sm bg-secondary text-light border-0" 
-                               id="employeeNome" placeholder="Mario" required>
+                    <div class="badge-form-group">
+                      <label for="employeeNome" class="form-label">
+                        <i class="fas fa-user me-1"></i>Nome
+                      </label>
+                      <input type="text" class="form-control" id="employeeNome" placeholder="Nome">
+                    </div>
+
+                    <div class="badge-form-group">
+                      <label for="employeeCognome" class="form-label">
+                        <i class="fas fa-user me-1"></i>Cognome
+                      </label>
+                      <input type="text" class="form-control" id="employeeCognome" placeholder="Cognome">
+                    </div>
+
+                    <div class="badge-form-group">
+                      <label for="employeeDataNascita" class="form-label">
+                        <i class="fas fa-birthday-cake me-1"></i>Data di Nascita
+                      </label>
+                      <input type="date" class="form-control" id="employeeDataNascita">
+                    </div>
+
+                    <div class="badge-form-group">
+                      <label for="employeeCodiceFiscale" class="form-label">
+                        <i class="fas fa-id-card me-1"></i>Codice Fiscale
+                      </label>
+                      <input type="text" class="form-control" id="employeeCodiceFiscale" placeholder="RSSMRA80A01H501Z" maxlength="16">
+                    </div>
+
+                    <div class="badge-form-group">
+                      <label for="employeeNumeroMatricola" class="form-label">
+                        <i class="fas fa-hashtag me-1"></i>Numero Matricola
+                      </label>
+                      <input type="text" class="form-control" id="employeeNumeroMatricola" placeholder="001">
+                    </div>
+
+                    <div class="badge-form-group">
+                      <label for="employeePhoto" class="form-label">
+                        <i class="fas fa-image me-1"></i>Foto (nome file)
+                      </label>
+                      <input type="text" class="form-control" id="employeePhoto" placeholder="dipendente.jpg">
+                    </div>
+
+                    <div class="image-upload-container">
+                      <label class="form-label">
+                        <i class="fas fa-upload me-1"></i>Carica Nuova Foto
+                      </label>
+                      <div class="file-input-wrapper">
+                        <input type="file" id="employeePhotoFile" accept="image/*">
+                        <label for="employeePhotoFile" class="file-input-label">
+                          <i class="fas fa-camera me-2"></i>Seleziona Foto
+                        </label>
                       </div>
-                      <div class="col-6">
-                        <label for="employeeCognome" class="form-label small fw-bold">Cognome</label>
-                        <input type="text" class="form-control form-control-sm bg-secondary text-light border-0" 
-                               id="employeeCognome" placeholder="Rossi" required>
+                      <div id="photoPreview" style="display: none;" class="mt-2 text-center">
+                        <img id="previewPhotoImg" class="image-upload-preview" alt="Preview foto">
                       </div>
                     </div>
-                    <div class="mb-3">
-                      <label for="employeeDataNascita" class="form-label small fw-bold">Data di Nascita</label>
-                      <input type="date" class="form-control form-control-sm bg-secondary text-light border-0" 
-                             id="employeeDataNascita">
-                    </div>
-                    <div class="mb-3">
-                      <label for="employeeCodiceFiscale" class="form-label small fw-bold">Codice Fiscale</label>
-                      <input type="text" class="form-control form-control-sm bg-secondary text-light border-0" 
-                             id="employeeCodiceFiscale" placeholder="RSSMRA80A01H501Z" maxlength="16">
-                    </div>
-                    <div class="mb-3">
-                      <label for="employeeNumeroMatricola" class="form-label small fw-bold">Numero Matricola</label>
-                      <input type="text" class="form-control form-control-sm bg-secondary text-light border-0" 
-                             id="employeeNumeroMatricola" placeholder="EMP001">
-                    </div>
-                    <div class="mb-3">
-                      <label class="form-label small fw-bold">Foto Dipendente</label>
-                      <div class="row g-2">
-                        <div class="col-8">
-                          <input type="file" class="form-control form-control-sm bg-secondary text-light border-0" 
-                                 id="employeePhotoFile" accept="image/*">
-                          <small class="text-muted">Carica nuova foto</small>
-                        </div>
-                        <div class="col-4">
-                          <input type="text" class="form-control form-control-sm bg-secondary text-light border-0" 
-                                 id="employeePhoto" placeholder="foto.jpg">
-                          <small class="text-muted">Nome file</small>
-                        </div>
-                      </div>
-                      <div id="photoPreview" class="mt-2 text-center" style="display: none;">
-                        <img id="previewPhotoImg" src="" alt="Anteprima foto" class="image-upload-preview">
-                      </div>
-                    </div>
-                    <button type="button" class="btn btn-primary btn-sm w-100" id="saveBadgeDataBtn">
+
+                    <button type="button" id="saveBadgeDataBtn" class="btn btn-success w-100">
                       <i class="fas fa-save me-1"></i>Salva Tesserino
                     </button>
                   </form>
                 </div>
               </div>
-              
+
               <!-- Preview Tesserino -->
               <div class="col-lg-4">
                 <div class="badge-preview">
-                  <h6>
-                  <div class="badge-action-buttons">
-                    <button id="saveCompanyDataBtn" class="badge-action-btn primary">
-                      <i class="fas fa-building"></i>
-                      Salva Azienda
-                    </button>
-                    <button id="saveBadgeDataBtn" class="badge-action-btn primary">
-                      <i class="fas fa-id-card"></i>
-                      Salva Tesserino
-                    </button>
-                    <button id="refreshBadgesBtn" class="badge-action-btn secondary">
-                      <i class="fas fa-sync-alt"></i>
-                      Aggiorna
-                    </button>
+                  <h6 class="text-center mb-3">
+                    <i class="fas fa-eye me-2"></i>Anteprima Tesserino
+                  </h6>
+                  <div id="badgePreviewContainer" class="text-center">
+                    <div class="employee-badge mx-auto">
+                      <div class="badge-header">
+                        <div class="d-flex align-items-center justify-content-center gap-2">
+                          <img src="../assets/img/logo.png" alt="Logo" class="company-logo">
+                          <h6 class="company-name mb-0">Artigea Srl</h6>
+                        </div>
+                      </div>
+                      <div class="badge-body text-center">
+                        <img src="../assets/img/badges/default-avatar.png" alt="Foto dipendente" class="employee-photo">
+                        <div class="employee-name">Seleziona un dipendente</div>
+                        <div class="employee-details mt-3">
+                          <p class="text-muted small">Seleziona un dipendente per vedere l'anteprima del tesserino</p>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -978,42 +697,144 @@
         </div>
       </div>
 
-      <!-- Collegamenti -->
-      <div class="tab-pane fade" id="collegamenti">
-        <div class="card border-secondary">
-          <div class="card-body">
-            <h3 class="card-title mb-4">
-              <i class="fas fa-external-link-alt me-2"></i>Collegamenti Rapidi
-            </h3>
-            <div class="d-grid gap-2">
-              <a href="https://docs.google.com/spreadsheets/d/16ZgOZv5jgoHxMWNfbDvdbk5aSm6OV14Gmkak1Hi8hRA/edit?pli=1&gid=0#gid=0" 
-                 target="_blank" class="btn btn-success">
-                <i class="fas fa-table me-2"></i>Foglio Lorenza
-              </a>
-              <a href="https://docs.google.com/spreadsheets/d/1TfRgNy1wmKBLGciopQiU7d6I1A6jMjx3XI-SuYF10cA/edit?pli=1&gid=0#gid=0" 
-                 target="_blank" class="btn btn-success">
-                <i class="fas fa-table me-2"></i>Foglio Appartamenti
-              </a>
-              <a href="https://docs.google.com/spreadsheets/d/1znemHbbA-KMphOfyksohR07K6OXkksL0x6eXFiUD4UA/edit?gid=0#gid=0" 
-                 target="_blank" class="btn btn-success">
-                <i class="fas fa-table me-2"></i>Foglio BnB
-              </a>
-              <a href="https://docs.google.com/spreadsheets/d/1D0cG1Z59MTR5-MA1701goQ44vKQJSveofg_rvzSieFQ/edit?gid=0#gid=0" 
-                 target="_blank" class="btn btn-success">
-                <i class="fas fa-table me-2"></i>Foglio Casale Di David
-              </a>
-              <a href="https://docs.google.com/spreadsheets/d/1shvFnqNWlFhaFOKiGQN4REKwFwwK4e9_18KeMIkpDlQ/edit?gid=1535185113#gid=1535185113" 
-                 target="_blank" class="btn btn-success">
-                <i class="fas fa-table me-2"></i>Foglio Bigliettini
-              </a>
+      <!-- TAB Gradimento -->
+      <div class="tab-pane fade" id="gradimento-pane">
+        <div class="card bg-secondary border-secondary mb-3">
+          <div class="card-body p-3">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <h5 class="card-title mb-0 text-primary">
+                <i class="fas fa-thumbs-up me-2"></i>Analisi Gradimento Clienti
+              </h5>
+            </div>
+
+            <!-- Toolbar -->
+            <div class="gr-toolbar d-flex flex-wrap gap-3 align-items-end mb-4">
+              <div class="gr-filter-group">
+                <label for="gr-month" class="form-label small">Mese</label>
+                <select id="gr-month" class="form-select form-select-sm">
+                  <option value="all">Tutti i mesi</option>
+                </select>
+              </div>
+              <div class="gr-filter-group">
+                <label for="gr-rating" class="form-label small">Valutazione</label>
+                <select id="gr-rating" class="form-select form-select-sm">
+                  <option value="all">Tutte</option>
+                  <option value="high">Alta (8-10)</option>
+                  <option value="medium">Media (5-7)</option>
+                  <option value="low">Bassa (1-4)</option>
+                </select>
+              </div>
+              <div class="gr-filter-group">
+                <label for="gr-client" class="form-label small">Cliente</label>
+                <select id="gr-client" class="form-select form-select-sm">
+                  <option value="all">Tutti i clienti</option>
+                </select>
+              </div>
+              <div class="gr-filter-group">
+                <label for="gr-email" class="form-label small">Cerca</label>
+                <input type="text" id="gr-email" class="form-control form-control-sm" placeholder="Email o nome...">
+              </div>
+              <div class="gr-button-group">
+                <button id="gr-apply" class="btn btn-primary btn-sm">Applica</button>
+                <button id="gr-reset" class="btn btn-secondary btn-sm">Reset</button>
+                <button id="gr-refresh" class="btn btn-warning btn-sm">Aggiorna</button>
+                <button id="gr-export" class="btn btn-success btn-sm">Esporta</button>
+              </div>
+            </div>
+
+            <!-- Stats -->
+            <div class="gr-stats mb-4">
+              <div class="gr-stat">
+                <span id="gr-total">0</span>
+                <small>Clienti Totali</small>
+              </div>
+              <div class="gr-stat">
+                <span id="gr-avg">0.0</span>
+                <small>Media Generale</small>
+              </div>
+              <div class="gr-stat">
+                <span id="gr-monthly">0</span>
+                <small>Questo Mese</small>
+              </div>
+              <div class="gr-stat">
+                <span id="gr-comments">0</span>
+                <small>Con Commenti</small>
+              </div>
+            </div>
+
+            <!-- Charts -->
+            <div class="gr-charts mb-4">
+              <div class="gr-chart-container">
+                <h5>Valutazioni per Categoria</h5>
+                <canvas id="gr-bar"></canvas>
+              </div>
+              <div class="gr-chart-container">
+                <h5>Andamento Mensile</h5>
+                <canvas id="gr-line"></canvas>
+              </div>
+            </div>
+
+            <!-- Client Charts -->
+            <div id="gr-client-charts" class="gr-client-charts mb-4"></div>
+
+            <!-- Table -->
+            <div class="gr-table-wrapper">
+              <table class="table table-hover mb-0">
+                <thead>
+                  <tr>
+                    <th>Cliente</th>
+                    <th>Email</th>
+                    <th>Pulizia</th>
+                    <th>Prodotti</th>
+                    <th>Comunicazione</th>
+                    <th>Media</th>
+                    <th>Data</th>
+                    <th>Commento</th>
+                    <th>Azioni</th>
+                  </tr>
+                </thead>
+                <tbody id="gr-body"></tbody>
+              </table>
             </div>
           </div>
         </div>
       </div>
+
+      <!-- TAB Gestione Dati -->
+      <div class="tab-pane fade" id="data-pane">
+        <div class="card bg-secondary border-secondary mb-3">
+          <div class="card-body p-3">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <h5 class="card-title mb-0 text-primary">
+                <i class="fas fa-database me-2"></i>Gestione Dati
+              </h5>
+              <button id="add-group" class="btn btn-success btn-sm">
+                <i class="fas fa-plus me-1"></i>Nuovo Gruppo
+              </button>
+            </div>
+
+            <ul class="nav nav-pills mb-3" id="groupTabs"></ul>
+            <div class="tab-content" id="groupTabContent"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Modal per dettagli giorno -->
+  <div class="modal fade" id="dayDetailModal" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content bg-dark text-light">
+        <div class="modal-header border-secondary">
+          <h5 class="modal-title">Dettagli Giorno</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body" id="dayDetail"></div>
+      </div>
     </div>
   </div>
 
-  <!-- Modal Aggiunta Prodotto -->
+  <!-- Modal per aggiunta prodotto -->
   <div class="modal fade" id="addProductModal" tabindex="-1">
     <div class="modal-dialog modal-lg">
       <div class="modal-content bg-dark text-light">
@@ -1024,65 +845,71 @@
           <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
         </div>
         <div class="modal-body">
-          <form id="addProductForm" class="row g-3">
-            <div class="col-md-6">
-              <label for="productId" class="form-label">ID Prodotto</label>
-              <input type="text" class="form-control bg-secondary text-light border-0" 
-                     id="productId" name="productId" required 
-                     placeholder="es: detergente-multiuso">
-              <small class="text-muted">Usare solo lettere minuscole, numeri e trattini</small>
-            </div>
-            <div class="col-md-6">
-              <label for="productName" class="form-label">Nome Prodotto</label>
-              <input type="text" class="form-control bg-secondary text-light border-0" 
-                     id="productName" name="productName" required 
-                     placeholder="es: Detergente Multiuso">
-            </div>
-            <div class="col-12">
-              <label for="productDescription" class="form-label">Descrizione</label>
-              <textarea class="form-control bg-secondary text-light border-0" 
-                        id="productDescription" name="productDescription" rows="2" required
-                        placeholder="Breve descrizione del prodotto"></textarea>
-            </div>
-            <div class="col-12">
-              <label class="form-label">Immagine Prodotto</label>
-              <div class="row g-2">
-                <div class="col-md-8">
-                  <input type="file" class="form-control bg-secondary text-light border-0" 
-                         id="productImageFile" name="productImageFile" 
-                         accept="image/jpeg,image/jpg,image/png,image/gif,image/webp">
-                  <small class="text-muted">Carica una nuova immagine (JPG, PNG, GIF, WebP - max 5MB)</small>
-                </div>
-                <div class="col-md-4">
-                  <input type="text" class="form-control bg-secondary text-light border-0" 
-                         id="productImage" name="productImage" 
-                         placeholder="nome-file.jpg">
-                  <small class="text-muted">Nome file esistente</small>
+          <form id="addProductForm">
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label for="productId" class="form-label">
+                  <i class="fas fa-hashtag me-1"></i>ID Prodotto
+                </label>
+                <input type="text" class="form-control bg-secondary text-light border-0" 
+                       id="productId" placeholder="id-prodotto" required>
+                <div class="form-text">ID univoco per il prodotto (auto-generato dal nome)</div>
+              </div>
+              <div class="col-md-6">
+                <label for="productName" class="form-label">
+                  <i class="fas fa-tag me-1"></i>Nome Prodotto
+                </label>
+                <input type="text" class="form-control bg-secondary text-light border-0" 
+                       id="productName" placeholder="Nome del prodotto" required>
+              </div>
+              <div class="col-12">
+                <label for="productDescription" class="form-label">
+                  <i class="fas fa-align-left me-1"></i>Descrizione
+                </label>
+                <textarea class="form-control bg-secondary text-light border-0" 
+                          id="productDescription" rows="3" placeholder="Descrizione del prodotto"></textarea>
+              </div>
+              <div class="col-md-6">
+                <label for="productMarca" class="form-label">
+                  <i class="fas fa-copyright me-1"></i>Marca
+                </label>
+                <input type="text" class="form-control bg-secondary text-light border-0" 
+                       id="productMarca" placeholder="Marca del prodotto" required>
+              </div>
+              <div class="col-md-6">
+                <label for="productTipo" class="form-label">
+                  <i class="fas fa-layer-group me-1"></i>Tipo
+                </label>
+                <input type="text" class="form-control bg-secondary text-light border-0" 
+                       id="productTipo" placeholder="Tipo di prodotto" required>
+              </div>
+              <div class="col-12">
+                <label for="productTags" class="form-label">
+                  <i class="fas fa-tags me-1"></i>Tag (premi Invio per aggiungere)
+                </label>
+                <input type="text" class="form-control bg-secondary text-light border-0" 
+                       id="productTags" placeholder="Aggiungi tag...">
+                <div id="selectedTags" class="mt-2"></div>
+              </div>
+              <div class="col-md-6">
+                <label for="productImage" class="form-label">
+                  <i class="fas fa-image me-1"></i>Immagine (nome file)
+                </label>
+                <input type="text" class="form-control bg-secondary text-light border-0" 
+                       id="productImage" placeholder="prodotto.jpg">
+              </div>
+              <div class="col-md-6">
+                <label for="productImageFile" class="form-label">
+                  <i class="fas fa-upload me-1"></i>Carica Immagine
+                </label>
+                <input type="file" class="form-control bg-secondary text-light border-0" 
+                       id="productImageFile" accept="image/*">
+              </div>
+              <div class="col-12" id="imagePreview" style="display: none;">
+                <div class="text-center">
+                  <img id="previewImg" class="img-thumbnail" style="max-width: 200px; max-height: 200px;" alt="Preview">
                 </div>
               </div>
-              <div id="imagePreview" class="mt-2" style="display: none;">
-                <img id="previewImg" src="" alt="Anteprima" style="max-width: 200px; max-height: 150px; border-radius: 8px;">
-              </div>
-            </div>
-            <div class="col-md-4">
-              <label for="productMarca" class="form-label">Marca</label>
-              <input type="text" class="form-control bg-secondary text-light border-0" 
-                     id="productMarca" name="productMarca" required 
-                     placeholder="es: Ariel">
-            </div>
-            <div class="col-md-4">
-              <label for="productTipo" class="form-label">Tipo</label>
-              <input type="text" class="form-control bg-secondary text-light border-0" 
-                     id="productTipo" name="productTipo" required 
-                     placeholder="es: Detergente">
-            </div>
-            <div class="col-12">
-              <label for="productTags" class="form-label">Tag</label>
-              <input type="text" class="form-control bg-secondary text-light border-0" 
-                     id="productTags" name="productTags" 
-                     placeholder="Scrivi un tag e premi Invio">
-              <small class="text-muted">Premi Invio o virgola per aggiungere un tag</small>
-              <div id="selectedTags" class="mt-2"></div>
             </div>
           </form>
         </div>
@@ -1098,113 +925,91 @@
     </div>
   </div>
 
+  <!-- Modal per commenti gradimento -->
+  <div class="modal fade" id="gr-modal" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Commento Cliente</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <p id="gr-modal-text"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal per dettagli gradimento -->
+  <div class="modal fade" id="gr-detail-modal" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Dettagli Feedback</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <input type="hidden" id="gr-detail-id">
+          <div class="mb-3">
+            <label for="gr-detail-email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="gr-detail-email">
+          </div>
+          <div class="mb-3">
+            <label for="gr-detail-client-name" class="form-label">Nome Cliente</label>
+            <input type="text" class="form-control" id="gr-detail-client-name">
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Mese</label>
+            <p id="gr-detail-month" class="form-control-plaintext"></p>
+          </div>
+          <div class="row mb-3">
+            <div class="col-4">
+              <label class="form-label">Pulizia</label>
+              <p id="gr-detail-q1" class="form-control-plaintext"></p>
+            </div>
+            <div class="col-4">
+              <label class="form-label">Prodotti</label>
+              <p id="gr-detail-q2" class="form-control-plaintext"></p>
+            </div>
+            <div class="col-4">
+              <label class="form-label">Comunicazione</label>
+              <p id="gr-detail-q3" class="form-control-plaintext"></p>
+            </div>
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Commento</label>
+            <p id="gr-detail-comment" class="form-control-plaintext"></p>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Chiudi</button>
+          <button type="button" class="btn btn-primary" id="gr-detail-save">Salva Modifiche</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- Loading Overlay -->
-  <div id="loading-overlay" class="loading-overlay" style="display: none;">
-    <div class="loading-content">
-      <div class="spinner"></div>
-      <p>Caricamento dati...</p>
+  <div id="loading-overlay" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(31, 41, 55, 0.95); z-index: 9999; backdrop-filter: blur(5px);">
+    <div class="loading-content" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: linear-gradient(135deg, #374151 0%, #1f2937 100%); padding: 2rem; border-radius: 12px; border: 1px solid #4b5563; text-align: center;">
+      <div class="spinner" style="width: 40px; height: 40px; border: 3px solid #4b5563; border-top: 3px solid #6366f1; border-radius: 50%; animation: spin 1s linear infinite; margin: 0 auto 1rem;"></div>
+      <p class="text-light mb-0">Caricamento in corso...</p>
     </div>
   </div>
 
   <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
-
-  <!-- Moduli admin -->
-  <script type="module" src="../assets/js/common/firebase-config_gradimento.js"></script>
-  <script type="module" src="../assets/js/auth/auth.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+  
+  <!-- Moduli Admin -->
   <script type="module" src="../assets/js/admin/common/admin.js"></script>
-  <script type="module" src="../assets/js/admin/common/admin-data.js"></script>
-  <script type="module" src="../assets/js/admin/gradimento/admin_gradimento.js"></script>
-  <script type="module" src="../assets/js/admin/valutazione/admin-valutazione.js"></script>
   <script type="module" src="../assets/js/admin/registro/admin-registro.js"></script>
-  <script type="module" src="../assets/js/admin/ore/admin-ore-detail.js"></script>
   <script type="module" src="../assets/js/admin/fatturazione/admin-fatturazione.js"></script>
+  <script type="module" src="../assets/js/admin/valutazione/admin-valutazione.js"></script>
   <script type="module" src="../assets/js/admin/badges/admin-badges.js"></script>
-  <script type="module" src="../assets/js/common/preventivo.js"></script>
-
-  <!-- Inizializzazione BnB per admin -->
-  <script type="module">
-    import { AuthService } from '../assets/js/auth/auth.js';
-    import { loadBnbEntries } from '../assets/js/admin/bnb/admin-bnb.js';
-
-    document.addEventListener('DOMContentLoaded', async () => {
-      if (!AuthService.checkAuth() || !AuthService.isAdmin()) return;
-
-      const dateInput = document.getElementById('bnbFilterDate');
-      const filterBtn = document.getElementById('bnbFilterBtn');
-      const container = document.getElementById('bnbEntriesContainer');
-      
-      if (!dateInput || !container || !filterBtn) return;
-      
-      const today = new Date().toISOString().slice(0, 10);
-      dateInput.value = today;
-      
-      const loadData = async () => {
-        const selectedDate = dateInput.value;
-        if (!selectedDate) {
-          container.innerHTML = '<p class="text-warning">Seleziona una data valida.</p>';
-          return;
-        }
-        
-        container.innerHTML = '<div class="text-center"><div class="spinner-border"></div><p class="mt-2">Caricamento...</p></div>';
-        
-        try {
-          await loadBnbEntries(selectedDate, container);
-        } catch (error) {
-          console.error('Errore caricamento:', error);
-          container.innerHTML = '<p class="text-danger">Errore nel caricamento dei bigliettini.</p>';
-        }
-      };
-
-      filterBtn.addEventListener('click', loadData);
-      dateInput.addEventListener('change', loadData);
-      await loadData();
-    });
-  </script>
-
-  <!-- Cleanup e gestione modal -->
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      // Cleanup quando si cambia tab
-      const tabs = document.querySelectorAll('#adminTabs button[data-bs-toggle="tab"]');
-      tabs.forEach(tab => {
-        tab.addEventListener('shown.bs.tab', (e) => {
-          if (e.relatedTarget && e.relatedTarget.id === 'gradimento-tab') {
-            if (window.cleanupGradimento) {
-              window.cleanupGradimento();
-            }
-          }
-        });
-      });
-
-      // Gestione modal prodotti
-      const addProductModal = document.getElementById('addProductModal');
-      if (addProductModal) {
-        addProductModal.addEventListener('hidden.bs.modal', () => {
-          setTimeout(() => {
-            const backdrops = document.querySelectorAll('.modal-backdrop');
-            backdrops.forEach(backdrop => backdrop.remove());
-            document.body.classList.remove('modal-open');
-            document.body.style.overflow = '';
-            document.body.style.paddingRight = '';
-          }, 100);
-          
-          if (window.adminValutazioneManager) {
-            window.adminValutazioneManager.resetModal();
-          }
-        });
-        
-        addProductModal.addEventListener('hide.bs.modal', (e) => {
-          const saveBtn = document.getElementById('saveProductBtn');
-          if (saveBtn && saveBtn.disabled) {
-            e.preventDefault();
-            return false;
-          }
-        });
-      }
-    });
-  </script>
+  <script type="module" src="../assets/js/admin/gradimento/admin_gradimento.js"></script>
+  <script type="module" src="../assets/js/admin/common/admin-data.js"></script>
+  <script type="module" src="../assets/js/common/firebase-config_gradimento.js"></script>
 </body>
 </html>

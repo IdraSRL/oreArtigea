@@ -23,6 +23,19 @@ class AdminBadgeManager {
   async init() {
     if (this.isInitialized) return;
     
+    // Verifica che gli elementi DOM necessari esistano
+    const requiredElements = [
+      'employeeListContainer',
+      'badgePreviewContainer'
+    ];
+    
+    const missingElements = requiredElements.filter(id => !document.getElementById(id));
+    if (missingElements.length > 0) {
+      console.error('Elementi DOM mancanti per tesserini:', missingElements);
+      this.showError('Interfaccia tesserini non completamente caricata. Riprova tra qualche secondo.');
+      return;
+    }
+    
     this.setupEventListeners();
     await this.loadEmployees();
     await this.loadCompanyData();
@@ -183,13 +196,24 @@ class AdminBadgeManager {
     const badgeInfo = this.badgeData[this.selectedEmployee.id] || {};
     const [defaultNome, defaultCognome] = this.selectedEmployee.name.split(' ');
     
-    // Popola il form
-    document.getElementById('employeeNome').value = badgeInfo.nome || defaultNome || '';
-    document.getElementById('employeeCognome').value = badgeInfo.cognome || defaultCognome || '';
-    document.getElementById('employeeDataNascita').value = badgeInfo.dataNascita || '';
-    document.getElementById('employeeCodiceFiscale').value = badgeInfo.codiceFiscale || '';
-    document.getElementById('employeeNumeroMatricola').value = badgeInfo.numeroMatricola || '';
-    document.getElementById('employeePhoto').value = badgeInfo.foto ? badgeInfo.foto.split('/').pop() : '';
+    // Popola il form con controlli di sicurezza
+    const elements = {
+      employeeNome: badgeInfo.nome || defaultNome || '',
+      employeeCognome: badgeInfo.cognome || defaultCognome || '',
+      employeeDataNascita: badgeInfo.dataNascita || '',
+      employeeCodiceFiscale: badgeInfo.codiceFiscale || '',
+      employeeNumeroMatricola: badgeInfo.numeroMatricola || '',
+      employeePhoto: badgeInfo.foto ? badgeInfo.foto.split('/').pop() : ''
+    };
+    
+    Object.entries(elements).forEach(([id, value]) => {
+      const element = document.getElementById(id);
+      if (element) {
+        element.value = value;
+      } else {
+        console.warn(`Elemento ${id} non trovato nel DOM`);
+      }
+    });
     
     // Reset file input
     const fileInput = document.getElementById('employeePhotoFile');
@@ -201,10 +225,25 @@ class AdminBadgeManager {
   }
 
   renderCompanyForm() {
-    if (!this.companyData) return;
+    if (!this.companyData) {
+      console.warn('Dati azienda non disponibili per renderCompanyForm');
+      return;
+    }
     
-    document.getElementById('companyName').value = this.companyData.nomeAzienda || '';
-    document.getElementById('companyLogo').value = this.companyData.logoAzienda ? this.companyData.logoAzienda.split('/').pop() : '';
+    const companyNameEl = document.getElementById('companyName');
+    const companyLogoEl = document.getElementById('companyLogo');
+    
+    if (companyNameEl) {
+      companyNameEl.value = this.companyData.nomeAzienda || '';
+    } else {
+      console.warn('Elemento companyName non trovato nel DOM');
+    }
+    
+    if (companyLogoEl) {
+      companyLogoEl.value = this.companyData.logoAzienda ? this.companyData.logoAzienda.split('/').pop() : '';
+    } else {
+      console.warn('Elemento companyLogo non trovato nel DOM');
+    }
   }
 
   handlePhotoPreview(event) {
@@ -355,6 +394,14 @@ class AdminBadgeManager {
     const photoPreview = document.getElementById('previewPhotoImg');
     
     let photoSrc = document.getElementById('employeePhoto').value;
+    
+    // Controlli di sicurezza per gli elementi DOM
+    const nomeEl = document.getElementById('employeeNome');
+    const cognomeEl = document.getElementById('employeeCognome');
+    const dataNascitaEl = document.getElementById('employeeDataNascita');
+    const codiceFiscaleEl = document.getElementById('employeeCodiceFiscale');
+    const numeroMatricolaEl = document.getElementById('employeeNumeroMatricola');
+    
     if (photoFile && photoPreview) {
       photoSrc = photoPreview.src;
     } else if (photoSrc) {
@@ -364,11 +411,11 @@ class AdminBadgeManager {
     }
 
     return {
-      nome: document.getElementById('employeeNome').value.trim(),
-      cognome: document.getElementById('employeeCognome').value.trim(),
-      dataNascita: document.getElementById('employeeDataNascita').value,
-      codiceFiscale: document.getElementById('employeeCodiceFiscale').value.trim().toUpperCase(),
-      numeroMatricola: document.getElementById('employeeNumeroMatricola').value.trim(),
+      nome: nomeEl ? nomeEl.value.trim() : '',
+      cognome: cognomeEl ? cognomeEl.value.trim() : '',
+      dataNascita: dataNascitaEl ? dataNascitaEl.value : '',
+      codiceFiscale: codiceFiscaleEl ? codiceFiscaleEl.value.trim().toUpperCase() : '',
+      numeroMatricola: numeroMatricolaEl ? numeroMatricolaEl.value.trim() : '',
       foto: photoSrc
     };
   }
@@ -378,6 +425,10 @@ class AdminBadgeManager {
     const logoPreview = document.getElementById('previewLogoImg');
     
     let logoSrc = document.getElementById('companyLogo').value;
+    
+    // Controllo di sicurezza per l'elemento nome azienda
+    const companyNameEl = document.getElementById('companyName');
+    
     if (logoFile && logoPreview) {
       logoSrc = logoPreview.src;
     } else if (logoSrc) {
@@ -387,7 +438,7 @@ class AdminBadgeManager {
     }
 
     return {
-      nomeAzienda: document.getElementById('companyName').value.trim(),
+      nomeAzienda: companyNameEl ? companyNameEl.value.trim() : 'Artigea Srl',
       logoAzienda: logoSrc
     };
   }
