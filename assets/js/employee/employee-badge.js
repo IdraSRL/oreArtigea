@@ -177,9 +177,10 @@ class EmployeeBadgeManager {
         </div>
       </div>
       
-      <div class="text-center mt-3">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
-          <i class="fas fa-times me-1"></i>Chiudi
+      <div class="badge-action-buttons mt-4">
+        <button type="button" class="badge-action-btn secondary" data-bs-dismiss="modal">
+          <i class="fas fa-times"></i>
+          Chiudi
         </button>
       </div>
     `;

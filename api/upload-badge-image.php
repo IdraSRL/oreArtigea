@@ -1,56 +1,22 @@
 <?php
-// Abilita logging degli errori
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
-ini_set('log_errors', 1);
-ini_set('error_log', 'upload_badge_errors.log');
+// upload-badge-image.php - Upload ottimizzato per immagini tesserini
+header('Content-Type: application/json');
+header('Access-Control-Allow-Origin: *');
+header('Access-Control-Allow-Methods: POST, OPTIONS');
+header('Access-Control-Allow-Headers: Content-Type');
 
-// Forza output JSON anche in caso di errori
-function sendJsonResponse($data, $httpCode = 200) {
-    http_response_code($httpCode);
-    header('Content-Type: application/json');
-    header('Access-Control-Allow-Origin: *');
-    header('Access-Control-Allow-Methods: POST, OPTIONS');
-    header('Access-Control-Allow-Headers: Content-Type');
-    echo json_encode($data);
+// Gestione CORS preflight
+if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
+    http_response_code(200);
     exit();
 }
 
-// Gestione errori personalizzata per restituire sempre JSON
-function handleError($message, $httpCode = 500) {
-    error_log("ERROR: " . $message);
-    sendJsonResponse(['success' => false, 'message' => $message], $httpCode);
-}
-
-// Set error handler
-set_error_handler(function($severity, $message, $file, $line) {
-    handleError("PHP Error: $message in $file:$line");
-});
-
-// Set exception handler
-set_exception_handler(function($exception) {
-    handleError("PHP Exception: " . $exception->getMessage());
-});
-
-// Log della richiesta
-error_log("=== BADGE UPLOAD REQUEST START ===");
-error_log("Method: " . $_SERVER['REQUEST_METHOD']);
-error_log("URI: " . $_SERVER['REQUEST_URI']);
-error_log("Headers: " . json_encode(getallheaders()));
-
-// Gestisci richieste OPTIONS per CORS
-if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
-    error_log("OPTIONS request handled");
-    sendJsonResponse(['message' => 'CORS preflight handled']);
-}
-
-// Verifica che sia una richiesta POST
+// Solo POST consentito
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
-    error_log("Invalid method: " . $_SERVER['REQUEST_METHOD']);
-    handleError('Metodo non consentito', 405);
+    http_response_code(405);
+    echo json_encode(['success' => false, 'message' => 'Metodo non consentito']);
+    exit();
 }
-
-error_log("POST request processing...");
 
 // Configurazione
 $uploadDir = '../assets/img/badges/';
@@ -58,32 +24,23 @@ $maxFileSize = 5 * 1024 * 1024; // 5MB
 $allowedTypes = ['image/jpeg', 'image/jpg', 'image/png', 'image/gif', 'image/webp'];
 $allowedExtensions = ['jpg', 'jpeg', 'png', 'gif', 'webp'];
 
-error_log("Upload directory: " . $uploadDir);
-error_log("Max file size: " . $maxFileSize);
-
-// Verifica che la cartella di destinazione esista
+// Crea directory se non esiste
 if (!is_dir($uploadDir)) {
-    error_log("Creating upload directory: " . $uploadDir);
     if (!mkdir($uploadDir, 0755, true)) {
-        error_log("Failed to create upload directory");
-        handleError('Impossibile creare la cartella di destinazione');
+        echo json_encode(['success' => false, 'message' => 'Impossibile creare la cartella di destinazione']);
+        exit();
     }
 }
 
-// Log dei dati POST e FILES
-error_log("POST data: " . json_encode($_POST));
-error_log("FILES data: " . json_encode($_FILES));
-
-// Verifica che sia stato caricato un file
+// Verifica upload
 if (!isset($_FILES['badgeImage']) || $_FILES['badgeImage']['error'] !== UPLOAD_ERR_OK) {
     $errorMessage = 'Errore nel caricamento del file';
     
     if (isset($_FILES['badgeImage']['error'])) {
-        error_log("Upload error code: " . $_FILES['badgeImage']['error']);
         switch ($_FILES['badgeImage']['error']) {
             case UPLOAD_ERR_INI_SIZE:
             case UPLOAD_ERR_FORM_SIZE:
-                $errorMessage = 'File troppo grande';
+                $errorMessage = 'File troppo grande (max 5MB)';
                 break;
             case UPLOAD_ERR_PARTIAL:
                 $errorMessage = 'Caricamento parziale del file';
@@ -98,87 +55,69 @@ if (!isset($_FILES['badgeImage']) || $_FILES['badgeImage']['error'] !== UPLOAD_E
                 $errorMessage = 'Impossibile scrivere il file';
                 break;
         }
-    } else {
-        error_log("No badgeImage in FILES array");
     }
     
-    error_log("Upload error: " . $errorMessage);
-    handleError($errorMessage);
+    echo json_encode(['success' => false, 'message' => $errorMessage]);
+    exit();
 }
 
 $file = $_FILES['badgeImage'];
-error_log("File info - Name: " . $file['name'] . ", Size: " . $file['size'] . ", Type: " . $file['type']);
 
-// Verifica dimensione file
+// Validazioni
 if ($file['size'] > $maxFileSize) {
-    error_log("File too large: " . $file['size'] . " > " . $maxFileSize);
-    handleError('File troppo grande. Massimo 5MB consentiti');
+    echo json_encode(['success' => false, 'message' => 'File troppo grande. Massimo 5MB consentiti']);
+    exit();
 }
 
-// Verifica tipo MIME
 if (!in_array($file['type'], $allowedTypes)) {
-    error_log("Invalid MIME type: " . $file['type']);
-    handleError('Tipo di file non consentito. Usa JPG, PNG, GIF o WebP');
+    echo json_encode(['success' => false, 'message' => 'Tipo di file non consentito. Usa JPG, PNG, GIF o WebP']);
+    exit();
 }
 
-// Ottieni informazioni sul file
+// Verifica che sia realmente un'immagine
+$imageInfo = getimagesize($file['tmp_name']);
+if ($imageInfo === false) {
+    echo json_encode(['success' => false, 'message' => 'Il file non è un\'immagine valida']);
+    exit();
+}
+
+// Ottieni informazioni file
 $fileInfo = pathinfo($file['name']);
 $extension = strtolower($fileInfo['extension']);
-error_log("File extension: " . $extension);
 
-// Verifica estensione
 if (!in_array($extension, $allowedExtensions)) {
-    error_log("Invalid extension: " . $extension);
-    handleError('Estensione file non consentita');
+    echo json_encode(['success' => false, 'message' => 'Estensione file non consentita']);
+    exit();
 }
 
 // Genera nome file sicuro
 $fileId = isset($_POST['fileId']) ? preg_replace('/[^a-z0-9\-_]/', '', strtolower($_POST['fileId'])) : '';
 if (empty($fileId)) {
-    error_log("Missing or invalid fileId");
-    handleError('ID file mancante o non valido');
+    echo json_encode(['success' => false, 'message' => 'ID file mancante o non valido']);
+    exit();
 }
 
 $fileName = $fileId . '.' . $extension;
 $filePath = $uploadDir . $fileName;
-error_log("Target file path: " . $filePath);
 
-// Verifica che il file sia realmente un'immagine
-$imageInfo = getimagesize($file['tmp_name']);
-if ($imageInfo === false) {
-    error_log("File is not a valid image");
-    handleError('Il file non è un\'immagine valida');
-}
-
-error_log("Image info: " . json_encode($imageInfo));
-
-// Sposta il file nella cartella di destinazione
+// Sposta il file
 if (move_uploaded_file($file['tmp_name'], $filePath)) {
-    error_log("File moved successfully to: " . $filePath);
-    
-    // Ottimizza l'immagine se necessario
+    // Ottimizza l'immagine
     $optimized = optimizeImage($filePath, $imageInfo[2]);
-    error_log("Image optimization result: " . ($optimized ? 'true' : 'false'));
     
-    $response = [
-        'success' => true, 
+    echo json_encode([
+        'success' => true,
         'message' => 'Immagine caricata con successo',
         'fileName' => $fileName,
         'filePath' => '../assets/img/badges/' . $fileName,
         'optimized' => $optimized
-    ];
-    
-    error_log("Success response: " . json_encode($response));
-    sendJsonResponse($response);
+    ]);
 } else {
-    error_log("Failed to move uploaded file from " . $file['tmp_name'] . " to " . $filePath);
-    handleError('Errore nel salvataggio del file');
+    echo json_encode(['success' => false, 'message' => 'Errore nel salvataggio del file']);
 }
 
-error_log("=== BADGE UPLOAD REQUEST END ===");
-
 /**
- * Ottimizza l'immagine riducendo la qualità se necessario
+ * Ottimizza l'immagine riducendo dimensioni e qualità se necessario
  */
 function optimizeImage($filePath, $imageType) {
     $maxWidth = 400;
@@ -186,25 +125,19 @@ function optimizeImage($filePath, $imageType) {
     $quality = 85;
     
     try {
-        error_log("Starting image optimization for: " . $filePath);
-        
-        // Ottieni dimensioni originali
         list($width, $height) = getimagesize($filePath);
-        error_log("Original dimensions: {$width}x{$height}");
         
-        // Se l'immagine è già piccola, non fare nulla
+        // Se l'immagine è già piccola, non ottimizzare
         if ($width <= $maxWidth && $height <= $maxHeight) {
-            error_log("Image already small enough, no optimization needed");
             return false;
         }
         
-        // Calcola nuove dimensioni mantenendo le proporzioni
+        // Calcola nuove dimensioni mantenendo proporzioni
         $ratio = min($maxWidth / $width, $maxHeight / $height);
         $newWidth = intval($width * $ratio);
         $newHeight = intval($height * $ratio);
-        error_log("New dimensions: {$newWidth}x{$newHeight}");
         
-        // Crea immagine di origine
+        // Crea immagine sorgente
         switch ($imageType) {
             case IMAGETYPE_JPEG:
                 $source = imagecreatefromjpeg($filePath);
@@ -216,16 +149,12 @@ function optimizeImage($filePath, $imageType) {
                 $source = imagecreatefromgif($filePath);
                 break;
             default:
-                error_log("Unsupported image type for optimization: " . $imageType);
                 return false;
         }
         
-        if (!$source) {
-            error_log("Failed to create source image");
-            return false;
-        }
+        if (!$source) return false;
         
-        // Crea immagine di destinazione
+        // Crea immagine destinazione
         $destination = imagecreatetruecolor($newWidth, $newHeight);
         
         // Mantieni trasparenza per PNG e GIF
@@ -257,11 +186,9 @@ function optimizeImage($filePath, $imageType) {
         imagedestroy($source);
         imagedestroy($destination);
         
-        error_log("Image optimization completed, save result: " . ($saveResult ? 'true' : 'false'));
         return $saveResult;
         
     } catch (Exception $e) {
-        error_log('Errore ottimizzazione immagine: ' . $e->getMessage());
         return false;
     }
 }

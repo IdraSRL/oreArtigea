@@ -211,12 +211,14 @@ class AdminBadgeManager {
     const file = event.target.files[0];
     const preview = document.getElementById('photoPreview');
     const previewImg = document.getElementById('previewPhotoImg');
+    const placeholder = document.querySelector('.upload-placeholder');
     
     if (file) {
       if (!file.type.startsWith('image/')) {
         this.showError('Seleziona un file immagine valido');
         event.target.value = '';
         preview.style.display = 'none';
+        if (placeholder) placeholder.style.display = 'flex';
         return;
       }
       
@@ -224,6 +226,7 @@ class AdminBadgeManager {
         this.showError('L\'immagine è troppo grande. Massimo 5MB consentiti.');
         event.target.value = '';
         preview.style.display = 'none';
+        if (placeholder) placeholder.style.display = 'flex';
         return;
       }
       
@@ -231,6 +234,7 @@ class AdminBadgeManager {
       reader.onload = (e) => {
         previewImg.src = e.target.result;
         preview.style.display = 'block';
+        if (placeholder) placeholder.style.display = 'none';
         this.updateBadgePreview();
       };
       reader.readAsDataURL(file);
@@ -239,6 +243,7 @@ class AdminBadgeManager {
       document.getElementById('employeePhoto').value = '';
     } else {
       preview.style.display = 'none';
+      if (placeholder) placeholder.style.display = 'flex';
     }
   }
 
@@ -246,12 +251,14 @@ class AdminBadgeManager {
     const file = event.target.files[0];
     const preview = document.getElementById('logoPreview');
     const previewImg = document.getElementById('previewLogoImg');
+    const placeholder = document.querySelector('.badge-form-section .upload-placeholder');
     
     if (file) {
       if (!file.type.startsWith('image/')) {
         this.showError('Seleziona un file immagine valido');
         event.target.value = '';
         preview.style.display = 'none';
+        if (placeholder) placeholder.style.display = 'flex';
         return;
       }
       
@@ -259,6 +266,7 @@ class AdminBadgeManager {
         this.showError('L\'immagine è troppo grande. Massimo 5MB consentiti.');
         event.target.value = '';
         preview.style.display = 'none';
+        if (placeholder) placeholder.style.display = 'flex';
         return;
       }
       
@@ -266,6 +274,7 @@ class AdminBadgeManager {
       reader.onload = (e) => {
         previewImg.src = e.target.result;
         preview.style.display = 'block';
+        if (placeholder) placeholder.style.display = 'none';
         this.updateBadgePreview();
       };
       reader.readAsDataURL(file);
@@ -274,6 +283,7 @@ class AdminBadgeManager {
       document.getElementById('companyLogo').value = '';
     } else {
       preview.style.display = 'none';
+      if (placeholder) placeholder.style.display = 'flex';
     }
   }
 
@@ -386,7 +396,7 @@ class AdminBadgeManager {
     const saveBtn = document.getElementById('saveCompanyDataBtn');
     const originalText = saveBtn.innerHTML;
     saveBtn.disabled = true;
-    saveBtn.innerHTML = '<i class="fas fa-spinner fa-spin me-1"></i>Salvando...';
+    saveBtn.classList.add('badge-loading');
 
     try {
       const companyData = this.collectCompanyData();
@@ -422,7 +432,7 @@ class AdminBadgeManager {
       this.showError('Errore nel salvataggio dei dati azienda');
     } finally {
       saveBtn.disabled = false;
-      saveBtn.innerHTML = originalText;
+      saveBtn.classList.remove('badge-loading');
     }
   }
 
@@ -435,7 +445,7 @@ class AdminBadgeManager {
     const saveBtn = document.getElementById('saveBadgeDataBtn');
     const originalText = saveBtn.innerHTML;
     saveBtn.disabled = true;
-    saveBtn.innerHTML = '<i class="fas fa-spinner fa-spin me-1"></i>Salvando...';
+    saveBtn.classList.add('badge-loading');
 
     try {
       const badgeData = this.collectFormData();
@@ -474,42 +484,76 @@ class AdminBadgeManager {
       this.showError('Errore nel salvataggio del tesserino');
     } finally {
       saveBtn.disabled = false;
-      saveBtn.innerHTML = originalText;
+      saveBtn.classList.remove('badge-loading');
     }
   }
 
   async uploadBadgeImage(file, fileId) {
-    const apiPath = '../api/upload-badge-image.php';
+    // Determina il percorso corretto dell'API
+    let apiPath;
+    if (window.location.pathname.includes('/pages/')) {
+      apiPath = '../api/upload-badge-image.php';
+    } else {
+      apiPath = 'api/upload-badge-image.php';
+    }
+    
     const formData = new FormData();
     formData.append('badgeImage', file);
     formData.append('fileId', fileId);
 
     try {
+      // Mostra indicatore di caricamento
+      this.showUploadProgress(true);
+      
       const response = await fetch(apiPath, {
         method: 'POST',
         body: formData
       });
 
       if (!response.ok) {
+        this.showUploadProgress(false);
         return {
           success: false,
-          message: `Errore server HTTP ${response.status}`
+          message: `Errore server HTTP ${response.status}. Verifica la configurazione del server.`
         };
       }
 
       const responseText = await response.text();
       
-      if (responseText.includes('<br />') || responseText.includes('<?php')) {
+      // Verifica se la risposta contiene HTML di errore PHP
+      if (responseText.includes('<br />') || responseText.includes('<?php') || responseText.includes('<html>')) {
+        this.showUploadProgress(false);
         return {
           success: false,
-          message: 'Errore del server PHP'
+          message: 'Errore del server PHP. Verifica la configurazione.'
         };
       }
       
-      const result = JSON.parse(responseText);
+      let result;
+      try {
+        result = JSON.parse(responseText);
+      } catch (parseError) {
+        this.showUploadProgress(false);
+        return {
+          success: false,
+          message: 'Risposta del server non valida.'
+        };
+      }
+      
+      this.showUploadProgress(false);
       return result;
       
     } catch (error) {
+      this.showUploadProgress(false);
+      
+      // Se l'errore è di rete, potrebbe essere un problema di configurazione server
+      if (error.message.includes('Failed to fetch') || error.message.includes('NetworkError')) {
+        return {
+          success: false,
+          message: 'Errore di connessione al server. Verifica la configurazione del server.'
+        };
+      }
+      
       return {
         success: false,
         message: `Errore durante l'upload: ${error.message}`
@@ -530,7 +574,7 @@ class AdminBadgeManager {
     const refreshBtn = document.getElementById('refreshBadgesBtn');
     if (refreshBtn) {
       const originalText = refreshBtn.innerHTML;
-      refreshBtn.innerHTML = '<i class="fas fa-spinner fa-spin me-1"></i>Aggiornamento...';
+      refreshBtn.classList.add('badge-loading');
       refreshBtn.disabled = true;
 
       await this.loadEmployees();
@@ -544,7 +588,7 @@ class AdminBadgeManager {
         this.updateBadgePreview();
       }
 
-      refreshBtn.innerHTML = originalText;
+      refreshBtn.classList.remove('badge-loading');
       refreshBtn.disabled = false;
     }
   }
@@ -555,6 +599,25 @@ class AdminBadgeManager {
 
   showError(message) {
     showToast(message, 'error');
+  }
+
+  showUploadProgress(show) {
+    const containers = document.querySelectorAll('.image-upload-container');
+    containers.forEach(container => {
+      let progressEl = container.querySelector('.upload-progress');
+      
+      if (show && !progressEl) {
+        progressEl = document.createElement('div');
+        progressEl.className = 'upload-progress';
+        progressEl.innerHTML = `
+          <div class="spinner"></div>
+          <span>Caricamento...</span>
+        `;
+        container.appendChild(progressEl);
+      } else if (!show && progressEl) {
+        progressEl.remove();
+      }
+    });
   }
 }
 

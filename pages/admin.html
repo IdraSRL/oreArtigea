@@ -746,12 +746,12 @@
             <div id="loadingProductsMessage" class="text-center py-5">
               <div class="spinner-border text-primary mb-3">
                 <span class="visually-hidden">Caricamento...</span>
-              </div>
+                      <div class="badge-form-section employee-list-section">
               <p class="text-muted">Caricamento dati valutazioni...</p>
             </div>
             
             <div id="dashboardProductsContent" style="display: none;">
-              <!-- Statistiche -->
+                        <div class="employee-list-container" id="employeeListContainer">
               <div class="row mb-4">
                 <div class="col-md-3 mb-3">
                   <div class="card bg-primary text-white h-100 border-0">
@@ -768,52 +768,63 @@
                     <div class="card-body text-center">
                       <h5 class="card-title">
                         <i class="fas fa-eye mb-2 d-block"></i>Prodotti Visibili
-                      </h5>
+                          <div class="badge-form-group">
                       <p class="card-text display-6" id="visibleProductsCount">0</p>
                     </div>
                   </div>
                 </div>
                 <div class="col-md-3 mb-3">
                   <div class="card bg-success text-white h-100 border-0">
-                    <div class="card-body text-center">
+                          <div class="badge-form-group">
                       <h5 class="card-title">
                         <i class="fas fa-star mb-2 d-block"></i>Valutazioni Totali
                       </h5>
                       <p class="card-text display-6" id="totalRatingsCount">0</p>
                     </div>
                   </div>
-                </div>
+                          <div class="badge-form-group">
                 <div class="col-md-3 mb-3">
                   <div class="card bg-warning text-dark h-100 border-0">
                     <div class="card-body text-center">
                       <h5 class="card-title">
                         <i class="fas fa-chart-line mb-2 d-block"></i>Media Generale
                       </h5>
-                      <p class="card-text display-6" id="overallAverageScore">0.0</p>
+                          <div class="badge-form-group">
                     </div>
                   </div>
                 </div>
               </div>
               
               <!-- Container grafici -->
-              <div id="productsChartsContainer" class="row g-4"></div>
+                          <div class="badge-form-group">
             </div>
             
             <!-- Lista Prodotti -->
             <div id="productsListContent" style="display: none;"></div>
             
             <div id="noProductsData" class="text-center py-5" style="display: none;">
-              <i class="fas fa-chart-bar fa-4x text-muted mb-3"></i>
+                          <div class="badge-form-group image-upload-container">
               <h4 class="text-muted">Nessun dato disponibile</h4>
               <p class="text-muted">Non sono ancora state registrate valutazioni per i prodotti.</p>
             </div>
           </div>
-        </div>
-      </div>
-
-      <!-- Tesserini Dipendenti -->
+                            <div class="file-input-wrapper mb-3">
+                              <input type="file" id="employeePhotoFile" accept="image/*">
+                              <label for="employeePhotoFile" class="file-input-label">
+                                <i class="fas fa-upload"></i>
+                                Carica Nuova Foto
+                              </label>
+                            </div>
+                            <div class="text-center mb-3">
+                              <div class="upload-placeholder" onclick="document.getElementById('employeePhotoFile').click()">
+                                <i class="fas fa-camera"></i>
+                              </div>
+                              <div id="photoPreview" style="display: none;">
+                                <img id="previewPhotoImg" class="image-upload-preview" alt="Anteprima foto">
+                              </div>
+                            </div>
+                            <input type="text" class="form-control" id="employeePhoto" placeholder="O inserisci nome file esistente (es: mario_rossi.jpg)">
       <div class="tab-pane fade" id="badgesPane">
-        <div class="card border-secondary mb-4">
           <div class="card-body">
             <div class="d-flex justify-content-between align-items-center mb-4">
               <h3 class="card-title mb-0">
@@ -822,7 +833,6 @@
               <button id="refreshBadgesBtn" class="btn btn-outline-secondary btn-sm">
                 <i class="fas fa-sync-alt me-1"></i>Aggiorna
               </button>
-            </div>
             
             <div class="row">
               <!-- Lista Dipendenti -->
@@ -844,7 +854,7 @@
               <div class="col-lg-4">
                 <!-- Dati Azienda -->
                 <div class="badge-form-section">
-                  <h6>
+                          <div class="badge-form-group">
                     <i class="fas fa-building"></i>Dati Azienda
                   </h6>
                   <form id="companyForm">
@@ -853,16 +863,27 @@
                       <input type="text" class="form-control form-control-sm bg-secondary text-light border-0" 
                              id="companyName" placeholder="es: Artigea Srl" required>
                     </div>
-                    <div class="mb-3">
+                          <div class="badge-form-group image-upload-container">
                       <label class="form-label small fw-bold">Logo Azienda</label>
                       <div class="row g-2">
                         <div class="col-8">
                           <input type="file" class="form-control form-control-sm bg-secondary text-light border-0" 
-                                 id="companyLogoFile" accept="image/*">
-                          <small class="text-muted">Carica nuovo logo</small>
-                        </div>
-                        <div class="col-4">
+                            <div class="file-input-wrapper mb-3">
+                              <input type="file" id="companyLogoFile" accept="image/*">
+                              <label for="companyLogoFile" class="file-input-label">
+                                <i class="fas fa-upload"></i>
+                                Carica Nuovo Logo
+                              </label>
+                            </div>
+                            <div class="text-center mb-3">
+                              <div class="upload-placeholder" onclick="document.getElementById('companyLogoFile').click()" style="width: 100px; height: 100px; border-radius: 12px;">
+                                <i class="fas fa-building"></i>
+                              </div>
+                              <div id="logoPreview" style="display: none;">
+                                <img id="previewLogoImg" style="width: 100px; height: 100px; object-fit: contain; border-radius: 12px; border: 3px solid #e5e7eb;" alt="Anteprima logo">
+                              </div>
                           <input type="text" class="form-control form-control-sm bg-secondary text-light border-0" 
+                            <input type="text" class="form-control" id="companyLogo" placeholder="O inserisci nome file esistente (es: logo.png)">
                                  id="companyLogo" placeholder="logo.png">
                           <small class="text-muted">Nome file</small>
                         </div>
@@ -870,9 +891,6 @@
                       <div id="logoPreview" class="mt-2 text-center" style="display: none;">
                         <img id="previewLogoImg" src="" alt="Anteprima logo" style="max-width: 80px; max-height: 60px; border-radius: 8px;">
                       </div>
-                    </div>
-                    <button type="button" class="btn btn-success btn-sm w-100" id="saveCompanyDataBtn">
-                      <i class="fas fa-save me-1"></i>Salva Dati Azienda
                     </button>
                   </form>
                 </div>
@@ -939,13 +957,19 @@
               <div class="col-lg-4">
                 <div class="badge-preview">
                   <h6>
-                    <i class="fas fa-eye me-2"></i>Anteprima Tesserino
-                  </h6>
-                  <div id="badgePreviewContainer">
-                    <div class="text-center py-4">
-                      <i class="fas fa-id-card fa-3x text-muted mb-3"></i>
-                      <p class="text-muted small">Seleziona un dipendente per vedere l'anteprima</p>
-                    </div>
+                  <div class="badge-action-buttons">
+                    <button id="saveCompanyDataBtn" class="badge-action-btn primary">
+                      <i class="fas fa-building"></i>
+                      Salva Azienda
+                    </button>
+                    <button id="saveBadgeDataBtn" class="badge-action-btn primary">
+                      <i class="fas fa-id-card"></i>
+                      Salva Tesserino
+                    </button>
+                    <button id="refreshBadgesBtn" class="badge-action-btn secondary">
+                      <i class="fas fa-sync-alt"></i>
+                      Aggiorna
+                    </button>
                   </div>
                 </div>
               </div>
