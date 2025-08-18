@@ -137,6 +137,43 @@
   transform: scale(1);
 }
 
+/* Dropzone styles for new layout */
+.logo-dropzone,
+.photo-dropzone {
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px dashed rgba(255, 255, 255, 0.3) !important;
+}
+
+.logo-dropzone:hover,
+.photo-dropzone:hover {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  border-color: rgba(99, 102, 241, 0.6) !important;
+}
+
+/* Preview containers */
+#logoPreview,
+#photoPreview {
+  transition: all 0.3s ease;
+}
+
+#logoPreview img,
+#photoPreview img {
+  border-radius: 8px;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+#logoPreview.show,
+#photoPreview.show {
+  border-color: rgba(16, 185, 129, 0.6) !important;
+}
+
 @keyframes photoFadeIn {
   from {
     opacity: 0;
@@ -343,92 +380,10 @@
 }
 
 /* Admin Badge Management - Layout migliorato */
-.badge-management-container {
-  background: linear-gradient(135deg, rgba(15, 15, 35, 0.95) 0%, rgba(30, 30, 46, 0.9) 100%);
-  border-radius: 20px;
-  padding: 32px;
-  backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
-}
-
-.badge-form-section {
-  background: linear-gradient(135deg, rgba(55, 65, 81, 0.8) 0%, rgba(75, 85, 99, 0.6) 100%);
-  border-radius: 16px;
-  padding: 32px;
-  margin-bottom: 32px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
-  transition: all 0.3s ease;
-}
-
-.badge-form-section:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
-}
-
-.badge-form-section h6 {
-  color: #60a5fa;
-  font-weight: 700;
-  margin-bottom: 28px;
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  font-size: 1.2rem;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-}
-
-.badge-form-section h6::before {
-  content: '';
-  width: 5px;
-  height: 28px;
-  background: linear-gradient(45deg, #60a5fa, #3b82f6);
-  border-radius: 3px;
-  box-shadow: 0 0 10px rgba(96, 165, 250, 0.5);
-}
-
-.badge-preview {
-  position: sticky;
-  top: 32px;
-  background: linear-gradient(135deg, rgba(15, 15, 35, 0.95) 0%, rgba(30, 30, 46, 0.9) 100%);
-  border-radius: 20px;
-  padding: 32px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(20px);
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
-  transition: all 0.3s ease;
-}
-
-.badge-preview:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.5);
-}
-
-.badge-preview h6 {
-  color: #34d399;
-  font-weight: 700;
-  margin-bottom: 28px;
-  text-align: center;
-  font-size: 1.2rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-}
-
-.badge-preview h6::before {
-  content: '👁️';
-  font-size: 1.4rem;
-  filter: drop-shadow(0 0 8px rgba(52, 211, 153, 0.6));
-}
 
 /* Employee List migliorata */
 .employee-list-container {
-  max-height: 600px;
+  max-height: 400px;
   overflow-y: auto;
   padding-right: 12px;
   margin-bottom: 24px;
@@ -780,23 +735,6 @@
 }
 
 /* Grid Layout Improvements */
-.badge-admin-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 32px;
-  align-items: start;
-}
-
-.badge-admin-left {
-  display: flex;
-  flex-direction: column;
-  gap: 32px;
-}
-
-.badge-admin-right {
-  position: sticky;
-  top: 32px;
-}
 
 /* Form Section Headers */
 .form-section-header {
@@ -829,15 +767,6 @@
 
 /* Responsive Design */
 @media (max-width: 768px) {
-  .badge-admin-grid {
-    grid-template-columns: 1fr;
-    gap: 24px;
-  }
-  
-  .badge-admin-right {
-    position: static;
-  }
-  
   .employee-badge {
     width: 320px;
     min-height: 200px;
@@ -860,20 +789,6 @@
     font-size: 0.8rem;
   }
   
-  .badge-preview {
-    position: static;
-    margin-top: 32px;
-  }
-  
-  .badge-management-container {
-    padding: 24px;
-  }
-  
-  .badge-form-section {
-    padding: 24px;
-    margin-bottom: 24px;
-  }
-  
   .employee-list-item {
     padding: 16px;
     margin-bottom: 12px;
@@ -883,35 +798,11 @@
     width: 50px;
     height: 50px;
   }
-  
-  .badge-form-group {
-    margin-bottom: 20px;
-  }
-  
-  .badge-action-buttons {
-    gap: 12px;
-    margin-top: 24px;
-  }
-  
-  .badge-action-btn {
-    min-width: 140px;
-    padding: 12px 20px;
-  }
 }
 
 @media (max-width: 576px) {
   .employee-badge {
     width: 280px;
-  }
-  
-  .badge-action-buttons {
-    flex-direction: column;
-    gap: 12px;
-  }
-  
-  .badge-action-btn {
-    min-width: auto;
-    width: 100%;
   }
   
   .employee-details .detail-row {
@@ -924,18 +815,9 @@
     max-width: 100%;
     margin-top: 2px;
   }
-  
-  .badge-management-container {
-    padding: 16px;
-  }
-  
-  .badge-form-section {
-    padding: 16px;
-    margin-bottom: 16px;
-  }
-  
-  .upload-placeholder,
-  .image-upload-preview {
+
+  .logo-dropzone,
+  .photo-dropzone {
     width: 120px;
     height: 120px;
   }
@@ -952,32 +834,6 @@
 .form-select.is-valid {
   border-color: #10b981;
   box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.2);
-}
-
-/* Upload Progress */
-.upload-progress {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.8);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 16px;
-  color: white;
-  font-weight: 600;
-}
-
-.upload-progress .spinner {
-  width: 24px;
-  height: 24px;
-  border: 3px solid rgba(255, 255, 255, 0.3);
-  border-top-color: white;
-  border-radius: 50%;
-  animation: spin 1s linear infinite;
-  margin-right: 12px;
 }
 
 /* Scrollbar personalizzata per lista dipendenti */

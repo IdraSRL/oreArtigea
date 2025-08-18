@@ -344,15 +344,13 @@ class AdminBadgeManager {
     console.log(`${LOG_PREFIX} 📸 Gestione preview foto...`);
     
     const file = event.target.files[0];
-    const preview = document.getElementById('photoPreview');
     const previewImg = document.getElementById('previewPhotoImg');
-    const placeholder = document.querySelector('.upload-placeholder');
+    const previewPlaceholder = document.getElementById('previewPhotoPlaceholder');
     
     console.log(`${LOG_PREFIX} 📊 Stato preview:`, {
       hasFile: !!file,
-      hasPreview: !!preview,
       hasPreviewImg: !!previewImg,
-      hasPlaceholder: !!placeholder
+      hasPlaceholder: !!previewPlaceholder
     });
     
     if (file) {
@@ -366,8 +364,8 @@ class AdminBadgeManager {
         console.error(`${LOG_PREFIX} ❌ Tipo file non valido:`, file.type);
         this.showError('Seleziona un file immagine valido');
         event.target.value = '';
-        if (preview) preview.style.display = 'none';
-        if (placeholder) placeholder.style.display = 'flex';
+        if (previewImg) previewImg.classList.add('d-none');
+        if (previewPlaceholder) previewPlaceholder.classList.remove('d-none');
         return;
       }
       
@@ -375,8 +373,8 @@ class AdminBadgeManager {
         console.error(`${LOG_PREFIX} ❌ File troppo grande:`, file.size);
         this.showError('L\'immagine è troppo grande. Massimo 5MB consentiti.');
         event.target.value = '';
-        if (preview) preview.style.display = 'none';
-        if (placeholder) placeholder.style.display = 'flex';
+        if (previewImg) previewImg.classList.add('d-none');
+        if (previewPlaceholder) previewPlaceholder.classList.remove('d-none');
         return;
       }
       
@@ -385,13 +383,10 @@ class AdminBadgeManager {
         console.log(`${LOG_PREFIX} ✅ File letto con successo, aggiorno preview`);
         if (previewImg) {
           previewImg.src = e.target.result;
+          previewImg.classList.remove('d-none');
           console.log(`${LOG_PREFIX} 🖼️ Preview img src impostato`);
         }
-        if (preview) {
-          preview.style.display = 'block';
-          console.log(`${LOG_PREFIX} 👁️ Preview mostrato`);
-        }
-        if (placeholder) placeholder.style.display = 'none';
+        if (previewPlaceholder) previewPlaceholder.classList.add('d-none');
         this.updateBadgePreview();
       };
       reader.onerror = (e) => {
@@ -408,8 +403,8 @@ class AdminBadgeManager {
       }
     } else {
       console.log(`${LOG_PREFIX} 🚫 Nessun file selezionato, nascondo preview`);
-      if (preview) preview.style.display = 'none';
-      if (placeholder) placeholder.style.display = 'flex';
+      if (previewImg) previewImg.classList.add('d-none');
+      if (previewPlaceholder) previewPlaceholder.classList.remove('d-none');
     }
   }
 
@@ -417,9 +412,8 @@ class AdminBadgeManager {
     console.log(`${LOG_PREFIX} 🏢 Gestione preview logo...`);
     
     const file = event.target.files[0];
-    const preview = document.getElementById('logoPreview');
     const previewImg = document.getElementById('previewLogoImg');
-    const placeholder = document.querySelector('.badge-form-section .upload-placeholder');
+    const previewPlaceholder = document.getElementById('previewLogoPlaceholder');
     
     if (file) {
       console.log(`${LOG_PREFIX} 📁 Logo file selezionato:`, {
@@ -432,8 +426,8 @@ class AdminBadgeManager {
         console.error(`${LOG_PREFIX} ❌ Tipo logo non valido:`, file.type);
         this.showError('Seleziona un file immagine valido');
         event.target.value = '';
-        if (preview) preview.style.display = 'none';
-        if (placeholder) placeholder.style.display = 'flex';
+        if (previewImg) previewImg.classList.add('d-none');
+        if (previewPlaceholder) previewPlaceholder.classList.remove('d-none');
         return;
       }
       
@@ -441,17 +435,19 @@ class AdminBadgeManager {
         console.error(`${LOG_PREFIX} ❌ Logo troppo grande:`, file.size);
         this.showError('L\'immagine è troppo grande. Massimo 5MB consentiti.');
         event.target.value = '';
-        if (preview) preview.style.display = 'none';
-        if (placeholder) placeholder.style.display = 'flex';
+        if (previewImg) previewImg.classList.add('d-none');
+        if (previewPlaceholder) previewPlaceholder.classList.remove('d-none');
         return;
       }
       
       const reader = new FileReader();
       reader.onload = (e) => {
         console.log(`${LOG_PREFIX} ✅ Logo letto con successo`);
-        if (previewImg) previewImg.src = e.target.result;
-        if (preview) preview.style.display = 'block';
-        if (placeholder) placeholder.style.display = 'none';
+        if (previewImg) {
+          previewImg.src = e.target.result;
+          previewImg.classList.remove('d-none');
+        }
+        if (previewPlaceholder) previewPlaceholder.classList.add('d-none');
         this.updateBadgePreview();
       };
       reader.readAsDataURL(file);
@@ -460,8 +456,8 @@ class AdminBadgeManager {
       const manualInput = document.getElementById('companyLogo');
       if (manualInput) manualInput.value = '';
     } else {
-      if (preview) preview.style.display = 'none';
-      if (placeholder) placeholder.style.display = 'flex';
+      if (previewImg) previewImg.classList.add('d-none');
+      if (previewPlaceholder) previewPlaceholder.classList.remove('d-none');
     }
   }
 
@@ -873,7 +869,7 @@ class AdminBadgeManager {
   showUploadProgress(show) {
     console.log(`${LOG_PREFIX} 📊 Upload progress:`, show ? 'SHOW' : 'HIDE');
     
-    const containers = document.querySelectorAll('.image-upload-container');
+    const containers = document.querySelectorAll('.logo-dropzone, .photo-dropzone');
     console.log(`${LOG_PREFIX} 🔍 Container upload trovati:`, containers.length);
     
     containers.forEach(container => {
@@ -882,8 +878,23 @@ class AdminBadgeManager {
       if (show && !progressEl) {
         progressEl = document.createElement('div');
         progressEl.className = 'upload-progress';
+        progressEl.style.cssText = `
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background: rgba(0, 0, 0, 0.8);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 8px;
+          color: white;
+          font-weight: 600;
+          z-index: 10;
+        `;
         progressEl.innerHTML = `
-          <div class="spinner"></div>
+          <div class="spinner-border spinner-border-sm me-2"></div>
           <span>Caricamento...</span>
         `;
         container.appendChild(progressEl);
