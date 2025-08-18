@@ -160,7 +160,25 @@ function renderComplexData(pane, id, data) {
   addBtn.className = 'btn btn-sm btn-primary';
   addBtn.innerHTML = '<i class="fas fa-plus me-1"></i>Aggiungi elemento';
   addBtn.onclick = async () => {
-    data.push({});
+    // Duplica la struttura di un elemento esistente se disponibile
+    let newElement = {};
+    if (data.length > 0) {
+      // Prendi il primo elemento come template
+      const template = data[0];
+      if (typeof template === 'object' && template !== null) {
+        // Crea un nuovo oggetto con le stesse chiavi ma valori vuoti
+        Object.keys(template).forEach(key => {
+          if (Array.isArray(template[key])) {
+            newElement[key] = []; // Array vuoto
+          } else if (typeof template[key] === 'number') {
+            newElement[key] = 0; // Numero zero
+          } else {
+            newElement[key] = ''; // Stringa vuota
+          }
+        });
+      }
+    }
+    data.push(newElement);
     await updateDoc('Data', id, { [id]: data });
     selectTab(id);
   };
@@ -224,7 +242,33 @@ function renderTableData(pane, id, data) {
   addRow.className = 'btn btn-sm btn-primary mt-2';
   addRow.innerHTML = '<i class="fas fa-plus me-1"></i>Aggiungi riga';
   addRow.onclick = async () => {
-    data.push({});
+    // Duplica la struttura di una riga esistente se disponibile
+    let newRow = {};
+    if (data.length > 0) {
+      // Prendi la prima riga come template
+      const template = data[0];
+      if (typeof template === 'object' && template !== null) {
+        // Crea un nuovo oggetto con le stesse chiavi ma valori vuoti
+        keys.forEach(key => {
+          if (typeof template[key] === 'number') {
+            newRow[key] = 0; // Numero zero
+          } else {
+            newRow[key] = ''; // Stringa vuota
+          }
+        });
+      } else {
+        // Se il template non è un oggetto, crea un oggetto vuoto con tutte le chiavi
+        keys.forEach(key => {
+          newRow[key] = '';
+        });
+      }
+    } else {
+      // Se non ci sono dati esistenti, crea un oggetto vuoto con tutte le chiavi disponibili
+      keys.forEach(key => {
+        newRow[key] = '';
+      });
+    }
+    data.push(newRow);
     await updateDoc('Data', id, { [id]: data });
     selectTab(id);
   };
@@ -355,6 +399,9 @@ function setupTableDataListeners(pane, id, data, keys) {
   });
 }
 
+/**
+ * Setup listeners per dati tabellari con duplicazione intelligente
+ */
 // Event listener per aggiunta nuovo gruppo
 if (addBtn) {
   addBtn.onclick = async () => {
