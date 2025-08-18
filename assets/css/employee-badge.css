@@ -13,6 +13,10 @@
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   transition: all 0.3s ease;
   animation: fadeInScale 0.5s ease-out;
+  /* Previeni sfarfallio */
+  backface-visibility: hidden;
+  transform: translateZ(0);
+  will-change: transform;
 }
 
 @keyframes fadeInScale {
@@ -49,6 +53,8 @@
   border-radius: 18px 18px 0 0;
   margin: -2px -2px 0 -2px;
   position: relative;
+  /* Stabilizza il rendering */
+  transform: translateZ(0);
 }
 
 .badge-header::after {
@@ -72,6 +78,13 @@
   background: white;
   padding: 6px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  /* Previeni sfarfallio durante il caricamento */
+  transition: opacity 0.2s ease;
+  opacity: 1;
+}
+
+.company-logo[src=""] {
+  opacity: 0;
 }
 
 .company-name {
@@ -81,12 +94,21 @@
   text-transform: uppercase;
   letter-spacing: 1px;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  /* Previeni layout shift */
+  min-height: 1.2em;
+  display: flex;
+  align-items: center;
 }
 
 .badge-body {
   padding: 24px 20px;
   color: #1f2937;
   text-align: center;
+  /* Stabilizza il layout */
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .employee-photo {
@@ -100,6 +122,19 @@
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
   transition: all 0.3s ease;
   animation: photoFadeIn 0.7s ease-out 0.2s both;
+  /* Previeni sfarfallio */
+  backface-visibility: hidden;
+  transform: translateZ(0);
+}
+
+.employee-photo[src=""] {
+  opacity: 0;
+  transform: scale(0.9);
+}
+
+.employee-photo:not([src=""]) {
+  opacity: 1;
+  transform: scale(1);
 }
 
 @keyframes photoFadeIn {
@@ -129,6 +164,11 @@
   -webkit-text-fill-color: transparent;
   background-clip: text;
   animation: textSlideIn 0.6s ease-out 0.4s both;
+  /* Previeni layout shift */
+  min-height: 1.6em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 @keyframes textSlideIn {
@@ -148,6 +188,8 @@
   color: #6b7280;
   margin-top: 12px;
   animation: detailsFadeIn 0.8s ease-out 0.6s both;
+  /* Stabilizza il layout */
+  min-height: 60px;
 }
 
 @keyframes detailsFadeIn {
@@ -169,6 +211,8 @@
   border-radius: 6px;
   background: rgba(99, 102, 241, 0.05);
   transition: all 0.2s ease;
+  /* Previeni sfarfallio */
+  backface-visibility: hidden;
 }
 
 .employee-details .detail-row:hover {
@@ -181,6 +225,8 @@
   color: #374151;
   display: flex;
   align-items: center;
+  /* Previeni layout shift */
+  min-width: 80px;
 }
 
 .employee-details .detail-label::before {
@@ -211,6 +257,9 @@
   right: 20px;
   box-shadow: 0 4px 12px rgba(99, 102, 241, 0.4);
   text-transform: uppercase;
+  /* Previeni sfarfallio */
+  backface-visibility: hidden;
+  transform: translateZ(0);
 }
 
 /* Badge Button */
@@ -225,6 +274,9 @@
   box-shadow: 0 6px 20px rgba(99, 102, 241, 0.3);
   text-transform: uppercase;
   letter-spacing: 0.5px;
+  /* Stabilizza il pulsante */
+  backface-visibility: hidden;
+  transform: translateZ(0);
 }
 
 .badge-btn:hover {
@@ -238,6 +290,9 @@
   background: transparent;
   border: none;
   box-shadow: none;
+  /* Previeni sfarfallio del modal */
+  backface-visibility: hidden;
+  transform: translateZ(0);
 }
 
 .badge-modal .modal-body {
@@ -245,6 +300,46 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  /* Stabilizza il contenuto del modal */
+  min-height: 300px;
+}
+
+/* Prevenzione sfarfallio generale */
+.badge-modal * {
+  backface-visibility: hidden;
+  transform: translateZ(0);
+}
+
+/* Loading state per immagini */
+.company-logo,
+.employee-photo {
+  position: relative;
+}
+
+.company-logo::before,
+.employee-photo::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+  border-radius: inherit;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.company-logo[src=""]::before,
+.employee-photo[src=""]::before {
+  opacity: 1;
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
 }
 
 /* Admin Badge Management - Layout migliorato */
