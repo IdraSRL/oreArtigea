@@ -76,6 +76,11 @@
           <i class="fas fa-calculator me-1"></i>Fatturazione Cantieri
         </button>
       </li>
+      <li class="nav-item">
+        <button class="nav-link" id="badges-tab" data-bs-toggle="tab" data-bs-target="#badgesPane" type="button">
+          <i class="fas fa-id-card me-1"></i>Tesserini
+        </button>
+      </li>
 
       </li>
       <li class="nav-item">
@@ -806,6 +811,149 @@
         </div>
       </div>
 
+      <!-- Tesserini Dipendenti -->
+      <div class="tab-pane fade" id="badgesPane">
+        <div class="card border-secondary mb-4">
+          <div class="card-body">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+              <h3 class="card-title mb-0">
+                <i class="fas fa-id-card me-2"></i>Gestione Tesserini Dipendenti
+              </h3>
+              <button id="refreshBadgesBtn" class="btn btn-outline-secondary btn-sm">
+                <i class="fas fa-sync-alt me-1"></i>Aggiorna
+              </button>
+            </div>
+            
+            <div class="row">
+              <!-- Lista Dipendenti -->
+              <div class="col-lg-4">
+                <div class="badge-management-card p-3 mb-4">
+                  <h6 class="text-primary mb-3">
+                    <i class="fas fa-users me-2"></i>Seleziona Dipendente
+                  </h6>
+                  <div id="employeeListContainer">
+                    <div class="text-center py-3">
+                      <div class="spinner-border text-primary mb-2"></div>
+                      <p class="text-muted small">Caricamento dipendenti...</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Form Modifica -->
+              <div class="col-lg-4">
+                <!-- Dati Azienda -->
+                <div class="badge-form-section">
+                  <h6>
+                    <i class="fas fa-building"></i>Dati Azienda
+                  </h6>
+                  <form id="companyForm">
+                    <div class="mb-3">
+                      <label for="companyName" class="form-label small fw-bold">Nome Azienda</label>
+                      <input type="text" class="form-control form-control-sm bg-secondary text-light border-0" 
+                             id="companyName" placeholder="es: Artigea Srl" required>
+                    </div>
+                    <div class="mb-3">
+                      <label class="form-label small fw-bold">Logo Azienda</label>
+                      <div class="row g-2">
+                        <div class="col-8">
+                          <input type="file" class="form-control form-control-sm bg-secondary text-light border-0" 
+                                 id="companyLogoFile" accept="image/*">
+                          <small class="text-muted">Carica nuovo logo</small>
+                        </div>
+                        <div class="col-4">
+                          <input type="text" class="form-control form-control-sm bg-secondary text-light border-0" 
+                                 id="companyLogo" placeholder="logo.png">
+                          <small class="text-muted">Nome file</small>
+                        </div>
+                      </div>
+                      <div id="logoPreview" class="mt-2 text-center" style="display: none;">
+                        <img id="previewLogoImg" src="" alt="Anteprima logo" style="max-width: 80px; max-height: 60px; border-radius: 8px;">
+                      </div>
+                    </div>
+                    <button type="button" class="btn btn-success btn-sm w-100" id="saveCompanyDataBtn">
+                      <i class="fas fa-save me-1"></i>Salva Dati Azienda
+                    </button>
+                  </form>
+                </div>
+
+                <!-- Dati Dipendente -->
+                <div class="badge-form-section">
+                  <h6>
+                    <i class="fas fa-user"></i>Dati Dipendente
+                  </h6>
+                  <form id="badgeForm">
+                    <div class="row g-2 mb-3">
+                      <div class="col-6">
+                        <label for="employeeNome" class="form-label small fw-bold">Nome</label>
+                        <input type="text" class="form-control form-control-sm bg-secondary text-light border-0" 
+                               id="employeeNome" placeholder="Mario" required>
+                      </div>
+                      <div class="col-6">
+                        <label for="employeeCognome" class="form-label small fw-bold">Cognome</label>
+                        <input type="text" class="form-control form-control-sm bg-secondary text-light border-0" 
+                               id="employeeCognome" placeholder="Rossi" required>
+                      </div>
+                    </div>
+                    <div class="mb-3">
+                      <label for="employeeDataNascita" class="form-label small fw-bold">Data di Nascita</label>
+                      <input type="date" class="form-control form-control-sm bg-secondary text-light border-0" 
+                             id="employeeDataNascita">
+                    </div>
+                    <div class="mb-3">
+                      <label for="employeeCodiceFiscale" class="form-label small fw-bold">Codice Fiscale</label>
+                      <input type="text" class="form-control form-control-sm bg-secondary text-light border-0" 
+                             id="employeeCodiceFiscale" placeholder="RSSMRA80A01H501Z" maxlength="16">
+                    </div>
+                    <div class="mb-3">
+                      <label for="employeeNumeroMatricola" class="form-label small fw-bold">Numero Matricola</label>
+                      <input type="text" class="form-control form-control-sm bg-secondary text-light border-0" 
+                             id="employeeNumeroMatricola" placeholder="EMP001">
+                    </div>
+                    <div class="mb-3">
+                      <label class="form-label small fw-bold">Foto Dipendente</label>
+                      <div class="row g-2">
+                        <div class="col-8">
+                          <input type="file" class="form-control form-control-sm bg-secondary text-light border-0" 
+                                 id="employeePhotoFile" accept="image/*">
+                          <small class="text-muted">Carica nuova foto</small>
+                        </div>
+                        <div class="col-4">
+                          <input type="text" class="form-control form-control-sm bg-secondary text-light border-0" 
+                                 id="employeePhoto" placeholder="foto.jpg">
+                          <small class="text-muted">Nome file</small>
+                        </div>
+                      </div>
+                      <div id="photoPreview" class="mt-2 text-center" style="display: none;">
+                        <img id="previewPhotoImg" src="" alt="Anteprima foto" class="image-upload-preview">
+                      </div>
+                    </div>
+                    <button type="button" class="btn btn-primary btn-sm w-100" id="saveBadgeDataBtn">
+                      <i class="fas fa-save me-1"></i>Salva Tesserino
+                    </button>
+                  </form>
+                </div>
+              </div>
+              
+              <!-- Preview Tesserino -->
+              <div class="col-lg-4">
+                <div class="badge-preview">
+                  <h6>
+                    <i class="fas fa-eye me-2"></i>Anteprima Tesserino
+                  </h6>
+                  <div id="badgePreviewContainer">
+                    <div class="text-center py-4">
+                      <i class="fas fa-id-card fa-3x text-muted mb-3"></i>
+                      <p class="text-muted small">Seleziona un dipendente per vedere l'anteprima</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <!-- Collegamenti -->
       <div class="tab-pane fade" id="collegamenti">
         <div class="card border-secondary">
@@ -949,6 +1097,7 @@
   <script type="module" src="../assets/js/admin/registro/admin-registro.js"></script>
   <script type="module" src="../assets/js/admin/ore/admin-ore-detail.js"></script>
   <script type="module" src="../assets/js/admin/fatturazione/admin-fatturazione.js"></script>
+  <script type="module" src="../assets/js/admin/badges/admin-badges.js"></script>
   <script type="module" src="../assets/js/common/preventivo.js"></script>
 
   <!-- Inizializzazione BnB per admin -->

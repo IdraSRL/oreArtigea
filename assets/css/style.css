@@ -10,6 +10,7 @@
 @import url('./activity-groups.css');
 @import url('./special-components.css');
 @import url('./responsive.css');
+@import url('./employee-badge.css');
 
 /* Stili per il sistema di versioning */
 .version-display {

@@ -1,0 +1,344 @@
+/* employee-badge.css - Stili per tesserini dipendenti */
+
+/* ===== EMPLOYEE BADGE STYLES ===== */
+.employee-badge {
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+  border: 2px solid #e9ecef;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+  width: 320px;
+  min-height: 200px;
+  position: relative;
+  overflow: hidden;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.employee-badge::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #6366f1, #8b5cf6, #ec4899);
+}
+
+.badge-header {
+  background: linear-gradient(135deg, #1f2937 0%, #374151 100%);
+  color: white;
+  padding: 12px 16px;
+  text-align: center;
+  border-radius: 14px 14px 0 0;
+  margin: -2px -2px 0 -2px;
+}
+
+.company-logo {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  border-radius: 8px;
+  background: white;
+  padding: 4px;
+}
+
+.company-name {
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.badge-body {
+  padding: 20px 16px;
+  color: #1f2937;
+}
+
+.employee-photo {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #e5e7eb;
+  margin-bottom: 12px;
+  background: #f3f4f6;
+}
+
+.employee-name {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 4px;
+  text-align: center;
+}
+
+.employee-details {
+  font-size: 0.8rem;
+  line-height: 1.4;
+  color: #6b7280;
+}
+
+.employee-details .detail-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 4px;
+  padding: 2px 0;
+}
+
+.employee-details .detail-label {
+  font-weight: 600;
+  color: #374151;
+}
+
+.employee-details .detail-value {
+  color: #6b7280;
+  text-align: right;
+  max-width: 60%;
+  word-break: break-word;
+}
+
+.employee-id {
+  background: linear-gradient(45deg, #6366f1, #8b5cf6);
+  color: white;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  position: absolute;
+  bottom: 12px;
+  right: 16px;
+}
+
+/* Badge Button */
+.badge-btn {
+  background: linear-gradient(45deg, #6366f1, #8b5cf6);
+  border: none;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 12px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(99, 102, 241, 0.3);
+}
+
+.badge-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(99, 102, 241, 0.4);
+  color: white;
+}
+
+/* Modal Styles */
+.badge-modal .modal-content {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+.badge-modal .modal-body {
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Admin Badge Management */
+.badge-management-card {
+  background: rgba(30, 30, 46, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  backdrop-filter: blur(20px);
+}
+
+.badge-form-section {
+  background: rgba(55, 65, 81, 0.5);
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.badge-form-section h6 {
+  color: #60a5fa;
+  font-weight: 600;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.badge-preview {
+  position: sticky;
+  top: 20px;
+  background: rgba(15, 15, 35, 0.95);
+  border-radius: 16px;
+  padding: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.badge-preview h6 {
+  color: #34d399;
+  font-weight: 600;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+/* Employee List */
+.employee-list-item {
+  background: rgba(55, 65, 81, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 12px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.employee-list-item:hover {
+  background: rgba(55, 65, 81, 0.5);
+  border-color: rgba(99, 102, 241, 0.3);
+  transform: translateY(-2px);
+}
+
+.employee-list-item.selected {
+  background: rgba(99, 102, 241, 0.1);
+  border-color: rgba(99, 102, 241, 0.5);
+}
+
+.employee-list-item .employee-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.employee-list-item .employee-photo-small {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  background: #374151;
+}
+
+.employee-list-item .employee-name-small {
+  font-weight: 600;
+  color: #f3f4f6;
+}
+
+.employee-list-item .employee-id-small {
+  font-size: 0.75rem;
+  color: #9ca3af;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .employee-badge {
+    width: 280px;
+    min-height: 180px;
+  }
+  
+  .badge-body {
+    padding: 16px 12px;
+  }
+  
+  .employee-photo {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .employee-name {
+    font-size: 1rem;
+  }
+  
+  .employee-details {
+    font-size: 0.75rem;
+  }
+  
+  .badge-preview {
+    position: static;
+    margin-top: 20px;
+  }
+}
+
+/* Form Validation */
+.form-control.is-invalid {
+  border-color: #ef4444;
+  box-shadow: 0 0 0 2px rgba(239, 68, 68, 0.2);
+}
+
+.form-control.is-valid {
+  border-color: #10b981;
+  box-shadow: 0 0 0 2px rgba(16, 185, 129, 0.2);
+}
+
+/* Loading States */
+.badge-loading {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.badge-loading::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  margin: -10px 0 0 -10px;
+  border: 2px solid transparent;
+  border-top-color: #6366f1;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Success/Error States */
+.badge-success {
+  border-color: #10b981;
+  box-shadow: 0 0 0 2px rgba(16, 185, 129, 0.2);
+}
+
+.badge-error {
+  border-color: #ef4444;
+  box-shadow: 0 0 0 2px rgba(239, 68, 68, 0.2);
+}
+
+/* Image Upload Preview */
+.image-upload-preview {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #e5e7eb;
+  background: #f3f4f6;
+  display: block;
+  margin: 0 auto 12px;
+}
+
+.upload-placeholder {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: #f3f4f6;
+  border: 2px dashed #d1d5db;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.upload-placeholder:hover {
+  border-color: #6366f1;
+  background: #f8faff;
+}
+
+.upload-placeholder i {
+  font-size: 1.5rem;
+  color: #9ca3af;
+}
