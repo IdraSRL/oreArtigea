@@ -2,18 +2,17 @@
 
 /* ===== EMPLOYEE BADGE STYLES ===== */
 .employee-badge {
-  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
-  border: 2px solid #e9ecef;
-  border-radius: 20px;
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
-  width: 350px;
-  min-height: 220px;
+  background: linear-gradient(135deg, #1a1f2e 0%, #2d3748 100%);
+  border: 3px solid rgba(96, 165, 250, 0.3);
+  border-radius: 24px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5), 0 0 40px rgba(96, 165, 250, 0.2);
+  width: 420px;
+  min-height: 280px;
   position: relative;
   overflow: hidden;
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-  transition: all 0.3s ease;
-  animation: fadeInScale 0.5s ease-out;
-  /* Previeni sfarfallio */
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  animation: fadeInScale 0.6s ease-out;
   backface-visibility: hidden;
   transform: translateZ(0);
   will-change: transform;
@@ -31,8 +30,9 @@
 }
 
 .employee-badge:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.6), 0 0 60px rgba(96, 165, 250, 0.4);
+  border-color: rgba(96, 165, 250, 0.6);
 }
 
 .employee-badge::before {
@@ -41,46 +41,48 @@
   top: 0;
   left: 0;
   right: 0;
-  height: 6px;
-  background: linear-gradient(90deg, #6366f1, #8b5cf6, #ec4899, #f59e0b);
+  height: 8px;
+  background: linear-gradient(90deg, #60a5fa, #3b82f6, #2563eb, #1d4ed8);
+  box-shadow: 0 4px 15px rgba(96, 165, 250, 0.5);
 }
 
 .badge-header {
-  background: linear-gradient(135deg, #1f2937 0%, #374151 100%);
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
   color: white;
-  padding: 16px 20px;
+  padding: 24px 28px;
   text-align: center;
-  border-radius: 18px 18px 0 0;
-  margin: -2px -2px 0 -2px;
+  border-radius: 21px 21px 0 0;
+  margin: -3px -3px 0 -3px;
   position: relative;
-  /* Stabilizza il rendering */
   transform: translateZ(0);
+  border-bottom: 3px solid rgba(96, 165, 250, 0.3);
 }
 
 .badge-header::after {
   content: '';
   position: absolute;
-  bottom: -10px;
+  bottom: -12px;
   left: 50%;
   transform: translateX(-50%);
   width: 0;
   height: 0;
-  border-left: 15px solid transparent;
-  border-right: 15px solid transparent;
-  border-top: 10px solid #374151;
+  border-left: 18px solid transparent;
+  border-right: 18px solid transparent;
+  border-top: 12px solid #1e293b;
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3));
 }
 
 .company-logo {
-  width: 50px;
-  height: 50px;
+  width: 70px;
+  height: 70px;
   object-fit: contain;
-  border-radius: 12px;
-  background: white;
-  padding: 6px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-  /* Previeni sfarfallio durante il caricamento */
-  transition: opacity 0.2s ease;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #ffffff 0%, #f0f9ff 100%);
+  padding: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4), 0 0 30px rgba(96, 165, 250, 0.2);
+  transition: all 0.3s ease;
   opacity: 1;
+  border: 2px solid rgba(96, 165, 250, 0.2);
 }
 
 .company-logo[src=""] {
@@ -88,43 +90,46 @@
 }
 
 .company-name {
-  font-size: 1rem;
-  font-weight: 700;
+  font-size: 1.2rem;
+  font-weight: 800;
   margin: 0;
   text-transform: uppercase;
-  letter-spacing: 1px;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-  /* Previeni layout shift */
+  letter-spacing: 2px;
+  text-shadow: 0 3px 8px rgba(0, 0, 0, 0.5);
   min-height: 1.2em;
   display: flex;
   align-items: center;
+  background: linear-gradient(90deg, #60a5fa, #93c5fd);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .badge-body {
-  padding: 24px 20px;
-  color: #1f2937;
+  padding: 32px 28px;
+  color: #e5e7eb;
   text-align: center;
-  /* Stabilizza il layout */
-  min-height: 200px;
+  min-height: 240px;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  position: relative;
 }
 
 .employee-photo {
-  width: 100px;
-  height: 100px;
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
   object-fit: cover;
-  border: 4px solid #e5e7eb;
-  margin-bottom: 16px;
-  background: #f3f4f6;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
-  transition: all 0.3s ease;
+  border: 5px solid rgba(96, 165, 250, 0.4);
+  margin: 0 auto 20px;
+  background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.5), 0 0 40px rgba(96, 165, 250, 0.3);
+  transition: all 0.4s ease;
   animation: photoFadeIn 0.7s ease-out 0.2s both;
-  /* Previeni sfarfallio */
   backface-visibility: hidden;
   transform: translateZ(0);
+  position: relative;
 }
 
 .employee-photo[src=""] {
@@ -186,26 +191,28 @@
 }
 
 .employee-photo:hover {
-  transform: scale(1.05);
-  border-color: #6366f1;
+  transform: scale(1.08);
+  border-color: rgba(96, 165, 250, 0.8);
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.6), 0 0 50px rgba(96, 165, 250, 0.5);
 }
 
 .employee-name {
-  font-size: 1.3rem;
-  font-weight: 800;
-  color: #1f2937;
-  margin-bottom: 8px;
+  font-size: 1.6rem;
+  font-weight: 900;
+  color: #f3f4f6;
+  margin-bottom: 12px;
   text-align: center;
-  background: linear-gradient(45deg, #1f2937, #374151);
+  background: linear-gradient(45deg, #60a5fa, #93c5fd);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   animation: textSlideIn 0.6s ease-out 0.4s both;
-  /* Previeni layout shift */
   min-height: 1.6em;
   display: flex;
   align-items: center;
   justify-content: center;
+  text-shadow: 0 4px 12px rgba(96, 165, 250, 0.3);
+  letter-spacing: 1px;
 }
 
 @keyframes textSlideIn {
@@ -220,13 +227,16 @@
 }
 
 .employee-details {
-  font-size: 0.85rem;
-  line-height: 1.5;
-  color: #6b7280;
-  margin-top: 12px;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #cbd5e1;
+  margin-top: 16px;
   animation: detailsFadeIn 0.8s ease-out 0.6s both;
-  /* Stabilizza il layout */
-  min-height: 60px;
+  min-height: 70px;
+  background: rgba(15, 23, 42, 0.5);
+  border-radius: 16px;
+  padding: 16px;
+  border: 1px solid rgba(96, 165, 250, 0.2);
 }
 
 @keyframes detailsFadeIn {
@@ -243,60 +253,63 @@
 .employee-details .detail-row {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 6px;
-  padding: 4px 8px;
-  border-radius: 6px;
-  background: rgba(99, 102, 241, 0.05);
-  transition: all 0.2s ease;
-  /* Previeni sfarfallio */
+  margin-bottom: 10px;
+  padding: 8px 12px;
+  border-radius: 10px;
+  background: rgba(96, 165, 250, 0.1);
+  transition: all 0.3s ease;
   backface-visibility: hidden;
+  border: 1px solid rgba(96, 165, 250, 0.15);
 }
 
 .employee-details .detail-row:hover {
-  background: rgba(99, 102, 241, 0.1);
-  transform: translateX(2px);
+  background: rgba(96, 165, 250, 0.2);
+  transform: translateX(4px);
+  border-color: rgba(96, 165, 250, 0.3);
 }
 
 .employee-details .detail-label {
   font-weight: 700;
-  color: #374151;
+  color: #93c5fd;
   display: flex;
   align-items: center;
-  /* Previeni layout shift */
-  min-width: 80px;
+  min-width: 100px;
+  font-size: 0.9rem;
 }
 
 .employee-details .detail-label::before {
-  content: '•';
-  color: #6366f1;
+  content: '▸';
+  color: #60a5fa;
   font-weight: bold;
-  margin-right: 6px;
+  margin-right: 8px;
+  font-size: 1.1rem;
 }
 
 .employee-details .detail-value {
-  color: #6b7280;
+  color: #e5e7eb;
   text-align: right;
   max-width: 60%;
   word-break: break-word;
-  font-weight: 500;
+  font-weight: 600;
+  font-size: 0.9rem;
 }
 
 .employee-id {
-  background: linear-gradient(45deg, #6366f1, #8b5cf6);
+  background: linear-gradient(45deg, #60a5fa, #3b82f6);
   color: white;
-  padding: 8px 16px;
-  border-radius: 20px;
-  font-size: 0.8rem;
-  font-weight: 700;
-  letter-spacing: 1px;
+  padding: 10px 20px;
+  border-radius: 24px;
+  font-size: 0.9rem;
+  font-weight: 800;
+  letter-spacing: 2px;
   position: absolute;
-  bottom: 16px;
-  right: 20px;
-  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.4);
+  bottom: 20px;
+  right: 24px;
+  box-shadow: 0 6px 20px rgba(96, 165, 250, 0.5), 0 0 30px rgba(96, 165, 250, 0.3);
   text-transform: uppercase;
-  /* Previeni sfarfallio */
   backface-visibility: hidden;
   transform: translateZ(0);
+  border: 2px solid rgba(255, 255, 255, 0.2);
 }
 
 /* Badge Button */
