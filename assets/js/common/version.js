@@ -1,17 +1,45 @@
 /**
  * Sistema di Versioning Centralizzato
  * Definisce la versione dell'applicazione per il cache-busting
+ *
+ * ════════════════════════════════════════════════════════════════════════════
+ * 🔄 COME AGGIORNARE LA VERSIONE
+ * ════════════════════════════════════════════════════════════════════════════
+ *
+ * 1. Modifica il numero di versione qui sotto (APP_VERSION)
+ * 2. Aggiorna la BUILD_DATE con la data corrente
+ * 3. Aggiorna la description in BUILD_INFO
+ * 4. Salva il file
+ *
+ * ⚠️  IMPORTANTE: Quando cambi la versione, tutti gli utenti riceveranno
+ *     automaticamente un refresh della pagina al prossimo caricamento e
+ *     tutte le risorse CSS e JS verranno ricaricate ignorando la cache.
+ *
+ * ════════════════════════════════════════════════════════════════════════════
+ * 📋 FORMATO VERSIONE: MAJOR.MINOR.PATCH
+ * ════════════════════════════════════════════════════════════════════════════
+ *
+ * - MAJOR: Cambiamenti incompatibili o ristrutturazioni complete
+ * - MINOR: Nuove funzionalità retrocompatibili
+ * - PATCH: Bug fix e miglioramenti minori
+ *
+ * Esempio:
+ *   2.26.0 → 2.26.1  (bug fix)
+ *   2.26.1 → 2.27.0  (nuova feature)
+ *   2.27.0 → 3.0.0   (breaking changes)
+ *
+ * ════════════════════════════════════════════════════════════════════════════
  */
 
 // Versione principale dell'applicazione
-export const APP_VERSION = '2.26.0';
+export const APP_VERSION = '2.27.0';
 
 // Informazioni aggiuntive
-export const BUILD_DATE = '2025-01-27-restructured';
+export const BUILD_DATE = '2025-10-03';
 export const BUILD_INFO = {
   version: APP_VERSION,
   buildDate: BUILD_DATE,
-  description: 'Sistema Gestione Ore e Bigliettini BnB - Ristrutturato con pulsanti attività admin'
+  description: 'Sistema Gestione Ore e Bigliettini BnB - Badge dipendente ridisegnato + sistema cache-busting migliorato'
 };
 
 /**

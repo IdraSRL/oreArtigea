@@ -31,8 +31,18 @@
   function checkForVersionUpdate(version) {
     const stored = localStorage.getItem('app_version');
     if (stored && stored !== version) {
-      console.log(`🔄 Versione cambiata da ${stored} a ${version} - Reload...`);
+      console.log(`🔄 Versione cambiata da ${stored} a ${version}`);
+      console.log('🧹 Pulizia cache del browser...');
+
+      // Pulisci la cache del browser
+      clearBrowserCache();
+
+      // Aggiorna la versione salvata
       localStorage.setItem('app_version', version);
+
+      console.log('🔄 Ricaricamento pagina per applicare la nuova versione...');
+
+      // Forza il reload completo senza cache
       window.location.reload(true);
       return true;
     }
@@ -40,6 +50,37 @@
       localStorage.setItem('app_version', version);
     }
     return false;
+  }
+
+  /**
+   * Pulisce la cache del browser
+   */
+  function clearBrowserCache() {
+    try {
+      // Pulisci Service Worker cache se presente
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.getRegistrations().then(registrations => {
+          registrations.forEach(registration => {
+            registration.unregister();
+            console.log('🗑️ Service Worker unregistered');
+          });
+        });
+      }
+
+      // Pulisci cache storage se disponibile
+      if ('caches' in window) {
+        caches.keys().then(names => {
+          names.forEach(name => {
+            caches.delete(name);
+            console.log(`🗑️ Cache eliminata: ${name}`);
+          });
+        });
+      }
+
+      console.log('✅ Cache del browser pulita');
+    } catch (error) {
+      console.warn('⚠️ Errore durante pulizia cache:', error);
+    }
   }
 
   /**
@@ -69,9 +110,23 @@
     let cssCount = 0;
     document.querySelectorAll('link[rel="stylesheet"]').forEach(link => {
       const href = link.getAttribute('href');
-      if (href && !href.startsWith('http')) {
+      if (href && !href.startsWith('http') && !href.includes('v=')) {
         const cleanHref = href.split('?')[0];
-        link.href = addVersionParam(cleanHref);
+        const newHref = addVersionParam(cleanHref);
+
+        // Forza il reload del CSS creando un nuovo elemento
+        const newLink = document.createElement('link');
+        newLink.rel = 'stylesheet';
+        newLink.href = newHref;
+
+        // Copia altri attributi se presenti
+        if (link.media) newLink.media = link.media;
+        if (link.type) newLink.type = link.type;
+
+        // Sostituisci il vecchio con il nuovo
+        link.parentNode.insertBefore(newLink, link.nextSibling);
+        link.remove();
+
         cssCount++;
       }
     });
@@ -151,19 +206,68 @@
    */
   async function init() {
     console.log('🚀 Inizializzazione sistema cache-busting...');
-    
+
     await loadVersion();
-    
+
     if (checkForVersionUpdate(APP_VERSION)) {
       return; // Reload in corso
     }
-    
+
     bustCSS();
     bustJS();
     bustOther();
     updateUI();
-    
+
+    // Monitora nuovi CSS/JS aggiunti dinamicamente
+    observeDynamicResources();
+
     console.log('✅ Cache-busting completato');
+  }
+
+  /**
+   * Osserva l'aggiunta dinamica di nuove risorse
+   */
+  function observeDynamicResources() {
+    const observer = new MutationObserver((mutations) => {
+      mutations.forEach((mutation) => {
+        mutation.addedNodes.forEach((node) => {
+          // Gestisci nuovi CSS
+          if (node.tagName === 'LINK' && node.rel === 'stylesheet') {
+            const href = node.getAttribute('href');
+            if (href && !href.startsWith('http') && !href.includes('v=')) {
+              const cleanHref = href.split('?')[0];
+              node.href = addVersionParam(cleanHref);
+              console.log(`📄 CSS dinamico versionato: ${cleanHref}`);
+            }
+          }
+
+          // Gestisci nuovi JS
+          if (node.tagName === 'SCRIPT' && node.src) {
+            const src = node.getAttribute('src');
+            if (src && !src.startsWith('http') && !src.includes('v=') && !src.includes('loader.js')) {
+              const cleanSrc = src.split('?')[0];
+              node.src = addVersionParam(cleanSrc);
+              console.log(`📜 JS dinamico versionato: ${cleanSrc}`);
+            }
+          }
+        });
+      });
+    });
+
+    observer.observe(document.head, {
+      childList: true,
+      subtree: true
+    });
+
+    // Osserva anche il body per risorse caricate dinamicamente
+    if (document.body) {
+      observer.observe(document.body, {
+        childList: true,
+        subtree: true
+      });
+    }
+
+    console.log('👁️ Observer per risorse dinamiche attivato');
   }
 
   // Avvio del sistema
@@ -177,15 +281,42 @@
   window.cacheBustingSystem = {
     getVersion: () => APP_VERSION,
     isLoaded: () => isVersionLoaded,
+    getStoredVersion: () => localStorage.getItem('app_version'),
     clearCache: () => {
       localStorage.removeItem('app_version');
       console.log('🗑️ Cache versione pulita');
     },
+    clearAllCache: () => {
+      clearBrowserCache();
+      localStorage.removeItem('app_version');
+      console.log('🗑️ Tutta la cache pulita');
+    },
     forceReload: () => {
       console.log('🔄 Reload forzato...');
       window.location.reload(true);
+    },
+    forceUpdate: () => {
+      console.log('🔄 Forzatura aggiornamento...');
+      localStorage.removeItem('app_version');
+      clearBrowserCache();
+      setTimeout(() => window.location.reload(true), 500);
+    },
+    listResources: () => {
+      const resources = {
+        css: Array.from(document.querySelectorAll('link[rel="stylesheet"]')).map(l => l.href),
+        js: Array.from(document.querySelectorAll('script[src]')).map(s => s.src)
+      };
+      console.table(resources);
+      return resources;
     }
   };
 
   console.log('🎯 Sistema cache-busting inizializzato');
+  console.log('💡 API disponibili:');
+  console.log('   - cacheBustingSystem.getVersion() - Ottieni versione corrente');
+  console.log('   - cacheBustingSystem.getStoredVersion() - Ottieni versione salvata');
+  console.log('   - cacheBustingSystem.clearCache() - Pulisci cache versione');
+  console.log('   - cacheBustingSystem.clearAllCache() - Pulisci tutta la cache');
+  console.log('   - cacheBustingSystem.forceUpdate() - Forza aggiornamento completo');
+  console.log('   - cacheBustingSystem.listResources() - Lista tutte le risorse');
 })();
