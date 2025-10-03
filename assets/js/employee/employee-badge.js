@@ -252,62 +252,94 @@ class EmployeeBadgeManager {
       photo: photoPath
     });
 
+    const fullName = `${this.badgeData?.nome || ''} ${this.badgeData?.cognome || ''}`.trim() || this.currentUser;
     const badgeHtml = `
-      <div class="employee-badge mx-auto">
-        <div class="badge-header">
-          <div class="d-flex align-items-center justify-content-center gap-2">
-            <img src="${logoPath}" 
-                 alt="Logo Azienda" 
-                 class="company-logo"
-                 onerror="console.error('${LOG_PREFIX} ❌ Errore caricamento logo:', this.src); this.src='../assets/img/logo.png';"
-                 onload="console.log('${LOG_PREFIX} ✅ Logo caricato:', this.src);">
-            <h6 class="company-name mb-0">${this.companyData?.nomeAzienda || 'Artigea Srl'}</h6>
+      <div class="employee-badge-card">
+        <div class="badge-card-stripe"></div>
+
+        <div class="badge-card-header">
+          <img src="${logoPath}"
+               alt="Logo Azienda"
+               class="badge-logo"
+               onerror="this.src='../assets/img/logo.png';">
+          <div class="badge-company-info">
+            <div class="badge-company-name">${this.companyData?.nomeAzienda || 'Artigea Srl'}</div>
+            <div class="badge-subtitle">Tesserino Dipendente</div>
           </div>
         </div>
-        
-        <div class="badge-body text-center">
-          <img src="${photoPath}" 
-               alt="Foto ${this.currentUser}" 
-               class="employee-photo"
-               onerror="console.error('${LOG_PREFIX} ❌ Errore caricamento foto dipendente:', this.src); this.src='../assets/img/badges/default-avatar.png';"
-               onload="console.log('${LOG_PREFIX} ✅ Foto dipendente caricata:', this.src);">
-          
-          <div class="employee-name">
-            ${this.badgeData?.nome || ''} ${this.badgeData?.cognome || ''}
-          </div>
-          
-          <div class="employee-details mt-3">
-            ${this.badgeData?.dataNascita ? `
-            <div class="detail-row">
-              <span class="detail-label">Nato il:</span>
-              <span class="detail-value">${this.formatDate(this.badgeData.dataNascita)}</span>
+
+        <div class="badge-card-body">
+          <div class="badge-photo-section">
+            <div class="badge-photo-frame">
+              <img src="${photoPath}"
+                   alt="Foto ${fullName}"
+                   class="badge-photo"
+                   onerror="this.src='../assets/img/badges/default-avatar.png';">
             </div>
-            ` : ''}
-            
-            ${this.badgeData?.codiceFiscale ? `
-            <div class="detail-row">
-              <span class="detail-label">C.F.:</span>
-              <span class="detail-value">${this.badgeData.codiceFiscale}</span>
-            </div>
-            ` : ''}
-            
             ${this.badgeData?.numeroMatricola ? `
-            <div class="detail-row">
-              <span class="detail-label">Matricola:</span>
-              <span class="detail-value">${this.badgeData.numeroMatricola}</span>
+            <div class="badge-id-chip">
+              <i class="fas fa-microchip chip-icon"></i>
+              <span class="chip-number">${this.badgeData.numeroMatricola}</span>
             </div>
             ` : ''}
           </div>
-          
-          ${this.badgeData?.numeroMatricola ? `
-          <div class="employee-id">
-            ID: ${this.badgeData.numeroMatricola}
+
+          <div class="badge-info-section">
+            <div class="badge-employee-name">${fullName}</div>
+
+            <div class="badge-data-grid">
+              ${this.badgeData?.dataNascita ? `
+              <div class="badge-data-item">
+                <div class="badge-data-label">
+                  <i class="fas fa-birthday-cake"></i>
+                  Data di Nascita
+                </div>
+                <div class="badge-data-value">${this.formatDate(this.badgeData.dataNascita)}</div>
+              </div>
+              ` : ''}
+
+              ${this.badgeData?.codiceFiscale ? `
+              <div class="badge-data-item">
+                <div class="badge-data-label">
+                  <i class="fas fa-id-card"></i>
+                  Codice Fiscale
+                </div>
+                <div class="badge-data-value">${this.badgeData.codiceFiscale}</div>
+              </div>
+              ` : ''}
+
+              ${this.badgeData?.numeroMatricola ? `
+              <div class="badge-data-item">
+                <div class="badge-data-label">
+                  <i class="fas fa-hashtag"></i>
+                  Numero Matricola
+                </div>
+                <div class="badge-data-value">${this.badgeData.numeroMatricola}</div>
+              </div>
+              ` : ''}
+            </div>
+
+            <div class="badge-qr-section">
+              <div class="badge-qr-placeholder">
+                <i class="fas fa-qrcode"></i>
+              </div>
+              <div class="badge-validity">
+                <i class="fas fa-shield-check"></i>
+                <span>Valido</span>
+              </div>
+            </div>
           </div>
-          ` : ''}
+        </div>
+
+        <div class="badge-card-footer">
+          <div class="badge-security-text">
+            <i class="fas fa-lock"></i>
+            Documento non valido per identificazione legale
+          </div>
         </div>
       </div>
-      
-      <div class="badge-action-buttons mt-4">
+
+      <div class="badge-action-buttons">
         <button type="button" class="badge-action-btn secondary" data-bs-dismiss="modal">
           <i class="fas fa-times"></i>
           Chiudi

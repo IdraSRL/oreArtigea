@@ -1,9 +1,28 @@
 /* employee-badge.css - Badge dipendenti stile carta d'identità professionale */
 
+/* ===== MODAL STYLING ===== */
+.badge-modal .modal-dialog {
+  max-width: 600px;
+  margin: 1.75rem auto;
+}
+
+.badge-modal .modal-content {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+.badge-modal .modal-body {
+  padding: 2rem;
+  background: transparent;
+}
+
 /* ===== EMPLOYEE BADGE CARD - NUOVO DESIGN ===== */
 .employee-badge-card {
-  width: 500px;
+  width: 100%;
+  max-width: 500px;
   min-height: 320px;
+  margin: 0 auto;
   background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
   border-radius: 20px;
   box-shadow:
@@ -602,8 +621,9 @@
   display: flex;
   gap: 16px;
   justify-content: center;
-  margin-top: 32px;
+  margin-top: 24px;
   flex-wrap: wrap;
+  padding: 0 28px;
 }
 
 .badge-action-btn {
