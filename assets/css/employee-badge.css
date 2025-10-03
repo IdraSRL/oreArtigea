@@ -1,0 +1,856 @@
+/* employee-badge.css - Stili migliorati per tesserini dipendenti */
+
+/* ===== EMPLOYEE BADGE STYLES ===== */
+.employee-badge {
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+  border: 2px solid #e9ecef;
+  border-radius: 20px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+  width: 350px;
+  min-height: 220px;
+  position: relative;
+  overflow: hidden;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  transition: all 0.3s ease;
+  animation: fadeInScale 0.5s ease-out;
+  /* Previeni sfarfallio */
+  backface-visibility: hidden;
+  transform: translateZ(0);
+  will-change: transform;
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.9) translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.employee-badge:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.employee-badge::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 6px;
+  background: linear-gradient(90deg, #6366f1, #8b5cf6, #ec4899, #f59e0b);
+}
+
+.badge-header {
+  background: linear-gradient(135deg, #1f2937 0%, #374151 100%);
+  color: white;
+  padding: 16px 20px;
+  text-align: center;
+  border-radius: 18px 18px 0 0;
+  margin: -2px -2px 0 -2px;
+  position: relative;
+  /* Stabilizza il rendering */
+  transform: translateZ(0);
+}
+
+.badge-header::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-top: 10px solid #374151;
+}
+
+.company-logo {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  border-radius: 12px;
+  background: white;
+  padding: 6px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  /* Previeni sfarfallio durante il caricamento */
+  transition: opacity 0.2s ease;
+  opacity: 1;
+}
+
+.company-logo[src=""] {
+  opacity: 0;
+}
+
+.company-name {
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  /* Previeni layout shift */
+  min-height: 1.2em;
+  display: flex;
+  align-items: center;
+}
+
+.badge-body {
+  padding: 24px 20px;
+  color: #1f2937;
+  text-align: center;
+  /* Stabilizza il layout */
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.employee-photo {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #e5e7eb;
+  margin-bottom: 16px;
+  background: #f3f4f6;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+  animation: photoFadeIn 0.7s ease-out 0.2s both;
+  /* Previeni sfarfallio */
+  backface-visibility: hidden;
+  transform: translateZ(0);
+}
+
+.employee-photo[src=""] {
+  opacity: 0;
+  transform: scale(0.9);
+}
+
+.employee-photo:not([src=""]) {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Dropzone styles for new layout */
+.logo-dropzone,
+.photo-dropzone {
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px dashed rgba(255, 255, 255, 0.3) !important;
+}
+
+.logo-dropzone:hover,
+.photo-dropzone:hover {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  border-color: rgba(99, 102, 241, 0.6) !important;
+}
+
+/* Preview containers */
+#logoPreview,
+#photoPreview {
+  transition: all 0.3s ease;
+}
+
+#logoPreview img,
+#photoPreview img {
+  border-radius: 8px;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+#logoPreview.show,
+#photoPreview.show {
+  border-color: rgba(16, 185, 129, 0.6) !important;
+}
+
+@keyframes photoFadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.employee-photo:hover {
+  transform: scale(1.05);
+  border-color: #6366f1;
+}
+
+.employee-name {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: #1f2937;
+  margin-bottom: 8px;
+  text-align: center;
+  background: linear-gradient(45deg, #1f2937, #374151);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: textSlideIn 0.6s ease-out 0.4s both;
+  /* Previeni layout shift */
+  min-height: 1.6em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@keyframes textSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.employee-details {
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: #6b7280;
+  margin-top: 12px;
+  animation: detailsFadeIn 0.8s ease-out 0.6s both;
+  /* Stabilizza il layout */
+  min-height: 60px;
+}
+
+@keyframes detailsFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.employee-details .detail-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 6px;
+  padding: 4px 8px;
+  border-radius: 6px;
+  background: rgba(99, 102, 241, 0.05);
+  transition: all 0.2s ease;
+  /* Previeni sfarfallio */
+  backface-visibility: hidden;
+}
+
+.employee-details .detail-row:hover {
+  background: rgba(99, 102, 241, 0.1);
+  transform: translateX(2px);
+}
+
+.employee-details .detail-label {
+  font-weight: 700;
+  color: #374151;
+  display: flex;
+  align-items: center;
+  /* Previeni layout shift */
+  min-width: 80px;
+}
+
+.employee-details .detail-label::before {
+  content: '•';
+  color: #6366f1;
+  font-weight: bold;
+  margin-right: 6px;
+}
+
+.employee-details .detail-value {
+  color: #6b7280;
+  text-align: right;
+  max-width: 60%;
+  word-break: break-word;
+  font-weight: 500;
+}
+
+.employee-id {
+  background: linear-gradient(45deg, #6366f1, #8b5cf6);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  position: absolute;
+  bottom: 16px;
+  right: 20px;
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.4);
+  text-transform: uppercase;
+  /* Previeni sfarfallio */
+  backface-visibility: hidden;
+  transform: translateZ(0);
+}
+
+/* Badge Button */
+.badge-btn {
+  background: linear-gradient(45deg, #6366f1, #8b5cf6);
+  border: none;
+  color: white;
+  padding: 14px 28px;
+  border-radius: 16px;
+  font-weight: 700;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 20px rgba(99, 102, 241, 0.3);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  /* Stabilizza il pulsante */
+  backface-visibility: hidden;
+  transform: translateZ(0);
+}
+
+.badge-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 35px rgba(99, 102, 241, 0.5);
+  color: white;
+}
+
+/* Modal Styles */
+.badge-modal .modal-content {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  /* Previeni sfarfallio del modal */
+  backface-visibility: hidden;
+  transform: translateZ(0);
+}
+
+.badge-modal .modal-body {
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* Stabilizza il contenuto del modal */
+  min-height: 300px;
+}
+
+/* Prevenzione sfarfallio generale */
+.badge-modal * {
+  backface-visibility: hidden;
+  transform: translateZ(0);
+}
+
+/* Loading state per immagini */
+.company-logo,
+.employee-photo {
+  position: relative;
+}
+
+.company-logo::before,
+.employee-photo::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+  border-radius: inherit;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.company-logo[src=""]::before,
+.employee-photo[src=""]::before {
+  opacity: 1;
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+/* Admin Badge Management - Layout migliorato */
+
+/* Employee List migliorata */
+.employee-list-container {
+  max-height: 400px;
+  overflow-y: auto;
+  padding-right: 12px;
+  margin-bottom: 24px;
+}
+
+.employee-list-item {
+  background: linear-gradient(135deg, rgba(55, 65, 81, 0.6) 0%, rgba(75, 85, 99, 0.4) 100%);
+  border: 2px solid rgba(255, 255, 255, 0.15);
+  border-radius: 16px;
+  padding: 20px;
+  margin-bottom: 16px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+}
+
+.employee-list-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 6px;
+  height: 100%;
+  background: linear-gradient(45deg, #6366f1, #8b5cf6);
+  transform: scaleY(0);
+  transition: transform 0.3s ease;
+  box-shadow: 0 0 15px rgba(99, 102, 241, 0.6);
+}
+
+.employee-list-item:hover {
+  background: linear-gradient(135deg, rgba(55, 65, 81, 0.8) 0%, rgba(75, 85, 99, 0.6) 100%);
+  border-color: rgba(99, 102, 241, 0.6);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.3);
+}
+
+.employee-list-item:hover::before {
+  transform: scaleY(1);
+}
+
+.employee-list-item.selected {
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.3) 0%, rgba(139, 92, 246, 0.2) 100%);
+  border-color: rgba(99, 102, 241, 0.8);
+  box-shadow: 0 12px 35px rgba(99, 102, 241, 0.4);
+  transform: translateY(-2px);
+}
+
+.employee-list-item.selected::before {
+  transform: scaleY(1);
+}
+
+.employee-list-item .employee-info {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.employee-list-item .employee-photo-small {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid rgba(255, 255, 255, 0.3);
+  background: #374151;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.employee-list-item:hover .employee-photo-small {
+  border-color: rgba(99, 102, 241, 0.8);
+  transform: scale(1.08);
+  box-shadow: 0 6px 20px rgba(99, 102, 241, 0.4);
+}
+
+.employee-list-item .employee-name-small {
+  font-weight: 700;
+  color: #f3f4f6;
+  font-size: 1.1rem;
+  margin-bottom: 6px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.employee-list-item .employee-id-small {
+  font-size: 0.85rem;
+  color: #9ca3af;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
+}
+
+.employee-list-item .status-icon {
+  font-size: 1.4rem;
+  transition: all 0.3s ease;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+}
+
+.employee-list-item:hover .status-icon {
+  transform: scale(1.15);
+}
+
+/* Form Improvements */
+.badge-form-group {
+  margin-bottom: 28px;
+}
+
+.badge-form-group label {
+  font-weight: 600;
+  color: #e5e7eb;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.badge-form-group .form-control,
+.badge-form-group .form-select {
+  background: rgba(31, 41, 55, 0.9);
+  border: 2px solid rgba(255, 255, 255, 0.15);
+  border-radius: 12px;
+  color: #f3f4f6;
+  padding: 14px 18px;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  font-size: 0.95rem;
+  backdrop-filter: blur(5px);
+}
+
+.badge-form-group .form-control:focus,
+.badge-form-group .form-select:focus {
+  background: rgba(31, 41, 55, 1);
+  border-color: #60a5fa;
+  box-shadow: 0 0 0 6px rgba(96, 165, 250, 0.25);
+  transform: translateY(-2px);
+}
+
+/* Image Upload Improvements */
+.image-upload-container {
+  position: relative;
+  margin-bottom: 28px;
+  text-align: center;
+}
+
+.image-upload-preview {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid rgba(255, 255, 255, 0.2);
+  background: #f3f4f6;
+  display: block;
+  margin: 0 auto 20px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.image-upload-preview:hover {
+  border-color: #60a5fa;
+  transform: scale(1.08);
+  box-shadow: 0 12px 35px rgba(96, 165, 250, 0.4);
+}
+
+.upload-placeholder {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, rgba(243, 244, 246, 0.1) 0%, rgba(229, 231, 235, 0.1) 100%);
+  border: 4px dashed rgba(255, 255, 255, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+}
+
+.upload-placeholder::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(96, 165, 250, 0.15);
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  transform: translate(-50%, -50%);
+}
+
+.upload-placeholder:hover {
+  border-color: #60a5fa;
+  background: linear-gradient(135deg, rgba(248, 250, 255, 0.2) 0%, rgba(224, 231, 255, 0.2) 100%);
+  transform: scale(1.08);
+}
+
+.upload-placeholder:hover::before {
+  width: 100%;
+  height: 100%;
+}
+
+.upload-placeholder i {
+  font-size: 2.5rem;
+  color: rgba(156, 163, 175, 0.8);
+  transition: all 0.3s ease;
+  z-index: 1;
+  position: relative;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+}
+
+.upload-placeholder:hover i {
+  color: #60a5fa;
+  transform: scale(1.15);
+}
+
+/* File Input Styling */
+.file-input-wrapper {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  width: 100%;
+  margin-top: 12px;
+}
+
+.file-input-wrapper input[type=file] {
+  position: absolute;
+  left: -9999px;
+}
+
+.file-input-label {
+  background: linear-gradient(45deg, #60a5fa, #3b82f6);
+  color: white;
+  padding: 14px 24px;
+  border-radius: 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: none;
+  width: 100%;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 6px 20px rgba(96, 165, 250, 0.3);
+}
+
+.file-input-label:hover {
+  background: linear-gradient(45deg, #3b82f6, #1d4ed8);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(96, 165, 250, 0.5);
+}
+
+/* Loading States */
+.badge-loading {
+  opacity: 0.6;
+  pointer-events: none;
+  position: relative;
+}
+
+.badge-loading::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 28px;
+  height: 28px;
+  margin: -14px 0 0 -14px;
+  border: 4px solid transparent;
+  border-top-color: #60a5fa;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  box-shadow: 0 0 15px rgba(96, 165, 250, 0.5);
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Success/Error States */
+.badge-success {
+  border-color: #34d399;
+  box-shadow: 0 0 0 6px rgba(52, 211, 153, 0.25);
+}
+
+.badge-error {
+  border-color: #f87171;
+  box-shadow: 0 0 0 6px rgba(248, 113, 113, 0.25);
+}
+
+/* Action Buttons */
+.badge-action-buttons {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  margin-top: 32px;
+  flex-wrap: wrap;
+}
+
+.badge-action-btn {
+  padding: 14px 28px;
+  border-radius: 14px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 160px;
+  justify-content: center;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-size: 0.9rem;
+}
+
+.badge-action-btn.primary {
+  background: linear-gradient(45deg, #60a5fa, #3b82f6);
+  color: white;
+  box-shadow: 0 6px 20px rgba(96, 165, 250, 0.4);
+}
+
+.badge-action-btn.primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(96, 165, 250, 0.5);
+}
+
+.badge-action-btn.secondary {
+  background: rgba(75, 85, 99, 0.9);
+  color: #f3f4f6;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.badge-action-btn.secondary:hover {
+  background: rgba(75, 85, 99, 1);
+  border-color: rgba(255, 255, 255, 0.4);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Grid Layout Improvements */
+
+/* Form Section Headers */
+.form-section-header {
+  background: linear-gradient(45deg, #1f2937, #374151);
+  border-radius: 12px;
+  padding: 16px 24px;
+  margin-bottom: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: center;
+}
+
+.form-section-header h5 {
+  color: #60a5fa;
+  font-weight: 700;
+  margin: 0;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Dividers */
+.section-divider {
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #60a5fa, transparent);
+  margin: 32px 0;
+  border-radius: 1px;
+  box-shadow: 0 0 10px rgba(96, 165, 250, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .employee-badge {
+    width: 320px;
+    min-height: 200px;
+  }
+  
+  .badge-body {
+    padding: 20px 16px;
+  }
+  
+  .employee-photo {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .employee-name {
+    font-size: 1.1rem;
+  }
+  
+  .employee-details {
+    font-size: 0.8rem;
+  }
+  
+  .employee-list-item {
+    padding: 16px;
+    margin-bottom: 12px;
+  }
+  
+  .employee-list-item .employee-photo-small {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+@media (max-width: 576px) {
+  .employee-badge {
+    width: 280px;
+  }
+  
+  .employee-details .detail-row {
+    flex-direction: column;
+    text-align: left;
+  }
+  
+  .employee-details .detail-value {
+    text-align: left;
+    max-width: 100%;
+    margin-top: 2px;
+  }
+
+  .logo-dropzone,
+  .photo-dropzone {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+/* Form Validation */
+.form-control.is-invalid,
+.form-select.is-invalid {
+  border-color: #ef4444;
+  box-shadow: 0 0 0 4px rgba(239, 68, 68, 0.2);
+}
+
+.form-control.is-valid,
+.form-select.is-valid {
+  border-color: #10b981;
+  box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.2);
+}
+
+/* Scrollbar personalizzata per lista dipendenti */
+.employee-list-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.employee-list-container::-webkit-scrollbar-track {
+  background: rgba(55, 65, 81, 0.3);
+  border-radius: 4px;
+}
+
+.employee-list-container::-webkit-scrollbar-thumb {
+  background: rgba(99, 102, 241, 0.6);
+  border-radius: 4px;
+}
+
+.employee-list-container::-webkit-scrollbar-thumb:hover {
+  background: rgba(99, 102, 241, 0.8);
+}
