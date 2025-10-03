@@ -479,57 +479,88 @@ class AdminBadgeManager {
     console.log(`${LOG_PREFIX} 📊 Dati per preview:`, { formData, companyData });
     
     const badgeHtml = `
-      <div class="employee-badge">
-        <div class="badge-header">
-          <div class="d-flex align-items-center justify-content-center gap-2">
-            <img src="${companyData.logoAzienda}" 
-                 alt="Logo Azienda" 
-                 class="company-logo"
-                 onerror="console.warn('${LOG_PREFIX} ⚠️ Errore logo preview:', this.src); this.src='../assets/img/logo.png';"
-                 onload="console.log('${LOG_PREFIX} ✅ Logo preview caricato');">
-            <h6 class="company-name mb-0">${companyData.nomeAzienda}</h6>
+      <div class="employee-badge-card">
+        <div class="badge-card-stripe"></div>
+
+        <div class="badge-card-header">
+          <img src="${companyData.logoAzienda}"
+               alt="Logo"
+               class="badge-logo"
+               onerror="this.src='../assets/img/logo.png';">
+          <div class="badge-company-info">
+            <div class="badge-company-name">${companyData.nomeAzienda}</div>
+            <div class="badge-subtitle">EMPLOYEE IDENTIFICATION CARD</div>
           </div>
         </div>
-        
-        <div class="badge-body text-center">
-          <img src="${formData.foto}" 
-               alt="Foto ${this.selectedEmployee.name}" 
-               class="employee-photo"
-               onerror="console.warn('${LOG_PREFIX} ⚠️ Errore foto preview:', this.src); this.src='../assets/img/badges/default-avatar.png';"
-               onload="console.log('${LOG_PREFIX} ✅ Foto preview caricata');">
-          
-          <div class="employee-name">
-            ${formData.nome} ${formData.cognome}
-          </div>
-          
-          <div class="employee-details mt-3">
-            ${formData.dataNascita ? `
-            <div class="detail-row">
-              <span class="detail-label">Nato il:</span>
-              <span class="detail-value">${this.formatDate(formData.dataNascita)}</span>
+
+        <div class="badge-card-body">
+          <div class="badge-photo-section">
+            <div class="badge-photo-frame">
+              <img src="${formData.foto}"
+                   alt="Employee Photo"
+                   class="badge-photo"
+                   onerror="this.src='../assets/img/badges/default-avatar.png';">
             </div>
-            ` : ''}
-            
-            ${formData.codiceFiscale ? `
-            <div class="detail-row">
-              <span class="detail-label">C.F.:</span>
-              <span class="detail-value">${formData.codiceFiscale}</span>
-            </div>
-            ` : ''}
-            
             ${formData.numeroMatricola ? `
-            <div class="detail-row">
-              <span class="detail-label">Matricola:</span>
-              <span class="detail-value">${formData.numeroMatricola}</span>
+            <div class="badge-id-chip">
+              <div class="chip-icon">
+                <i class="fas fa-microchip"></i>
+              </div>
+              <div class="chip-number">${formData.numeroMatricola}</div>
             </div>
             ` : ''}
           </div>
-          
-          ${formData.numeroMatricola ? `
-          <div class="employee-id">
-            ID: ${formData.numeroMatricola}
+
+          <div class="badge-info-section">
+            <div class="badge-employee-name">
+              ${formData.nome} ${formData.cognome}
+            </div>
+
+            <div class="badge-data-grid">
+              ${formData.dataNascita ? `
+              <div class="badge-data-item">
+                <div class="badge-data-label">
+                  <i class="fas fa-calendar-alt"></i> Data di Nascita
+                </div>
+                <div class="badge-data-value">${this.formatDate(formData.dataNascita)}</div>
+              </div>
+              ` : ''}
+
+              ${formData.codiceFiscale ? `
+              <div class="badge-data-item">
+                <div class="badge-data-label">
+                  <i class="fas fa-id-card"></i> Codice Fiscale
+                </div>
+                <div class="badge-data-value">${formData.codiceFiscale}</div>
+              </div>
+              ` : ''}
+
+              ${formData.numeroMatricola ? `
+              <div class="badge-data-item">
+                <div class="badge-data-label">
+                  <i class="fas fa-hashtag"></i> Matricola
+                </div>
+                <div class="badge-data-value">${formData.numeroMatricola}</div>
+              </div>
+              ` : ''}
+            </div>
+
+            <div class="badge-qr-section">
+              <div class="badge-qr-placeholder">
+                <i class="fas fa-qrcode"></i>
+              </div>
+              <div class="badge-validity">
+                <i class="fas fa-shield-alt"></i>
+                <span>Valido fino 31/12/${new Date().getFullYear() + 1}</span>
+              </div>
+            </div>
           </div>
-          ` : ''}
+        </div>
+
+        <div class="badge-card-footer">
+          <div class="badge-security-text">
+            <i class="fas fa-lock"></i> Documento di identificazione aziendale
+          </div>
         </div>
       </div>
     `;

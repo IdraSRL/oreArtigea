@@ -1,400 +1,367 @@
-/* employee-badge.css - Stili migliorati per tesserini dipendenti */
+/* employee-badge.css - Badge dipendenti stile carta d'identità professionale */
 
-/* ===== EMPLOYEE BADGE STYLES ===== */
-.employee-badge {
-  background: linear-gradient(135deg, #1a1f2e 0%, #2d3748 100%);
-  border: 3px solid rgba(96, 165, 250, 0.3);
-  border-radius: 24px;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5), 0 0 40px rgba(96, 165, 250, 0.2);
-  width: 420px;
-  min-height: 280px;
+/* ===== EMPLOYEE BADGE CARD - NUOVO DESIGN ===== */
+.employee-badge-card {
+  width: 500px;
+  min-height: 320px;
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  border-radius: 20px;
+  box-shadow:
+    0 25px 70px rgba(0, 0, 0, 0.7),
+    0 0 50px rgba(59, 130, 246, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
   position: relative;
   overflow: hidden;
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  animation: fadeInScale 0.6s ease-out;
-  backface-visibility: hidden;
-  transform: translateZ(0);
-  will-change: transform;
+  border: 2px solid rgba(59, 130, 246, 0.3);
+  animation: cardFadeIn 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.4s ease;
 }
 
-@keyframes fadeInScale {
+@keyframes cardFadeIn {
   from {
     opacity: 0;
-    transform: scale(0.9) translateY(20px);
+    transform: translateY(30px) scale(0.95);
   }
   to {
     opacity: 1;
-    transform: scale(1) translateY(0);
+    transform: translateY(0) scale(1);
   }
 }
 
-.employee-badge:hover {
-  transform: translateY(-8px) scale(1.02);
-  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.6), 0 0 60px rgba(96, 165, 250, 0.4);
-  border-color: rgba(96, 165, 250, 0.6);
+.employee-badge-card:hover {
+  transform: translateY(-8px);
+  box-shadow:
+    0 35px 90px rgba(0, 0, 0, 0.8),
+    0 0 70px rgba(59, 130, 246, 0.5),
+    inset 0 1px 0 rgba(255, 255, 255, 0.15);
+  border-color: rgba(59, 130, 246, 0.5);
 }
 
-.employee-badge::before {
-  content: '';
+/* Striscia superiore decorativa */
+.badge-card-stripe {
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
-  height: 8px;
-  background: linear-gradient(90deg, #60a5fa, #3b82f6, #2563eb, #1d4ed8);
-  box-shadow: 0 4px 15px rgba(96, 165, 250, 0.5);
+  height: 6px;
+  background: linear-gradient(90deg, #3b82f6, #60a5fa, #93c5fd, #3b82f6);
+  background-size: 200% 100%;
+  animation: stripeMove 3s linear infinite;
+  box-shadow: 0 2px 10px rgba(59, 130, 246, 0.6);
 }
 
-.badge-header {
-  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
-  color: white;
-  padding: 24px 28px;
-  text-align: center;
-  border-radius: 21px 21px 0 0;
-  margin: -3px -3px 0 -3px;
-  position: relative;
-  transform: translateZ(0);
-  border-bottom: 3px solid rgba(96, 165, 250, 0.3);
+@keyframes stripeMove {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 200% 50%; }
 }
 
-.badge-header::after {
-  content: '';
-  position: absolute;
-  bottom: -12px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 0;
-  height: 0;
-  border-left: 18px solid transparent;
-  border-right: 18px solid transparent;
-  border-top: 12px solid #1e293b;
-  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3));
+/* Header del badge */
+.badge-card-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 24px 28px 20px;
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.8), rgba(30, 41, 59, 0.6));
+  border-bottom: 2px solid rgba(59, 130, 246, 0.2);
 }
 
-.company-logo {
-  width: 70px;
-  height: 70px;
+.badge-logo {
+  width: 60px;
+  height: 60px;
   object-fit: contain;
-  border-radius: 16px;
-  background: linear-gradient(135deg, #ffffff 0%, #f0f9ff 100%);
-  padding: 10px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4), 0 0 30px rgba(96, 165, 250, 0.2);
+  background: linear-gradient(135deg, #ffffff, #f0f9ff);
+  padding: 8px;
+  border-radius: 12px;
+  box-shadow:
+    0 8px 20px rgba(0, 0, 0, 0.5),
+    0 0 20px rgba(59, 130, 246, 0.3);
+  border: 2px solid rgba(59, 130, 246, 0.2);
   transition: all 0.3s ease;
-  opacity: 1;
-  border: 2px solid rgba(96, 165, 250, 0.2);
 }
 
-.company-logo[src=""] {
-  opacity: 0;
+.employee-badge-card:hover .badge-logo {
+  transform: scale(1.05);
+  box-shadow:
+    0 10px 25px rgba(0, 0, 0, 0.6),
+    0 0 30px rgba(59, 130, 246, 0.5);
 }
 
-.company-name {
-  font-size: 1.2rem;
-  font-weight: 800;
-  margin: 0;
+.badge-company-info {
+  flex: 1;
+}
+
+.badge-company-name {
+  font-size: 1.4rem;
+  font-weight: 900;
+  color: #ffffff;
   text-transform: uppercase;
   letter-spacing: 2px;
-  text-shadow: 0 3px 8px rgba(0, 0, 0, 0.5);
-  min-height: 1.2em;
-  display: flex;
-  align-items: center;
-  background: linear-gradient(90deg, #60a5fa, #93c5fd);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  margin-bottom: 4px;
+  text-shadow: 0 2px 10px rgba(59, 130, 246, 0.5);
 }
 
-.badge-body {
-  padding: 32px 28px;
-  color: #e5e7eb;
-  text-align: center;
-  min-height: 240px;
+.badge-subtitle {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #60a5fa;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  opacity: 0.9;
+}
+
+/* Body del badge */
+.badge-card-body {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 24px;
+  padding: 24px 28px;
+  background: linear-gradient(135deg, rgba(30, 41, 59, 0.5), rgba(15, 23, 42, 0.3));
+}
+
+/* Sezione foto */
+.badge-photo-section {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  position: relative;
-}
-
-.employee-photo {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 5px solid rgba(96, 165, 250, 0.4);
-  margin: 0 auto 20px;
-  background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
-  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.5), 0 0 40px rgba(96, 165, 250, 0.3);
-  transition: all 0.4s ease;
-  animation: photoFadeIn 0.7s ease-out 0.2s both;
-  backface-visibility: hidden;
-  transform: translateZ(0);
-  position: relative;
-}
-
-.employee-photo[src=""] {
-  opacity: 0;
-  transform: scale(0.9);
-}
-
-.employee-photo:not([src=""]) {
-  opacity: 1;
-  transform: scale(1);
-}
-
-/* Dropzone styles for new layout */
-.logo-dropzone,
-.photo-dropzone {
-  cursor: pointer;
-  transition: all 0.3s ease;
-  min-height: 60px;
-  display: flex;
   align-items: center;
-  justify-content: center;
-  border: 2px dashed rgba(255, 255, 255, 0.3) !important;
+  gap: 12px;
 }
 
-.logo-dropzone:hover,
-.photo-dropzone:hover {
-  background-color: rgba(255, 255, 255, 0.1) !important;
-  border-color: rgba(99, 102, 241, 0.6) !important;
-}
-
-/* Preview containers */
-#logoPreview,
-#photoPreview {
+.badge-photo-frame {
+  width: 150px;
+  height: 150px;
+  border-radius: 16px;
+  padding: 6px;
+  background: linear-gradient(135deg, #3b82f6, #60a5fa);
+  box-shadow:
+    0 12px 30px rgba(0, 0, 0, 0.6),
+    0 0 30px rgba(59, 130, 246, 0.4),
+    inset 0 2px 4px rgba(255, 255, 255, 0.2);
+  position: relative;
+  overflow: hidden;
   transition: all 0.3s ease;
 }
 
-#logoPreview img,
-#photoPreview img {
-  border-radius: 8px;
-  object-fit: cover;
+.badge-photo-frame::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  transform: rotate(45deg);
+  animation: photoShine 3s infinite;
+}
+
+@keyframes photoShine {
+  0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+  100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+}
+
+.badge-photo {
   width: 100%;
   height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #1e293b, #334155);
+  transition: all 0.3s ease;
 }
 
-#logoPreview.show,
-#photoPreview.show {
-  border-color: rgba(16, 185, 129, 0.6) !important;
+.employee-badge-card:hover .badge-photo-frame {
+  transform: scale(1.05);
+  box-shadow:
+    0 15px 40px rgba(0, 0, 0, 0.7),
+    0 0 50px rgba(59, 130, 246, 0.6);
 }
 
-@keyframes photoFadeIn {
-  from {
-    opacity: 0;
-    transform: scale(0.8);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
-.employee-photo:hover {
-  transform: scale(1.08);
-  border-color: rgba(96, 165, 250, 0.8);
-  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.6), 0 0 50px rgba(96, 165, 250, 0.5);
-}
-
-.employee-name {
-  font-size: 1.6rem;
-  font-weight: 900;
-  color: #f3f4f6;
-  margin-bottom: 12px;
-  text-align: center;
-  background: linear-gradient(45deg, #60a5fa, #93c5fd);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  animation: textSlideIn 0.6s ease-out 0.4s both;
-  min-height: 1.6em;
+/* Chip ID */
+.badge-id-chip {
   display: flex;
   align-items: center;
-  justify-content: center;
-  text-shadow: 0 4px 12px rgba(96, 165, 250, 0.3);
+  gap: 8px;
+  background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+  padding: 8px 14px;
+  border-radius: 20px;
+  box-shadow:
+    0 4px 15px rgba(59, 130, 246, 0.5),
+    inset 0 1px 2px rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.chip-icon {
+  color: #fbbf24;
+  font-size: 1.1rem;
+  animation: chipPulse 2s infinite;
+}
+
+@keyframes chipPulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+.chip-number {
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: #ffffff;
   letter-spacing: 1px;
 }
 
-@keyframes textSlideIn {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.employee-details {
-  font-size: 0.95rem;
-  line-height: 1.6;
-  color: #cbd5e1;
-  margin-top: 16px;
-  animation: detailsFadeIn 0.8s ease-out 0.6s both;
-  min-height: 70px;
-  background: rgba(15, 23, 42, 0.5);
-  border-radius: 16px;
-  padding: 16px;
-  border: 1px solid rgba(96, 165, 250, 0.2);
-}
-
-@keyframes detailsFadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(15px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.employee-details .detail-row {
+/* Sezione informazioni */
+.badge-info-section {
   display: flex;
-  justify-content: space-between;
-  margin-bottom: 10px;
-  padding: 8px 12px;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.badge-employee-name {
+  font-size: 1.8rem;
+  font-weight: 900;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  line-height: 1.2;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+  padding-bottom: 12px;
+  border-bottom: 2px solid rgba(59, 130, 246, 0.3);
+}
+
+/* Griglia dati */
+.badge-data-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.badge-data-item {
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(30, 41, 59, 0.5));
+  padding: 10px 14px;
   border-radius: 10px;
-  background: rgba(96, 165, 250, 0.1);
+  border: 1px solid rgba(59, 130, 246, 0.2);
   transition: all 0.3s ease;
-  backface-visibility: hidden;
-  border: 1px solid rgba(96, 165, 250, 0.15);
 }
 
-.employee-details .detail-row:hover {
-  background: rgba(96, 165, 250, 0.2);
+.badge-data-item:hover {
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.2), rgba(30, 41, 59, 0.7));
+  border-color: rgba(59, 130, 246, 0.4);
   transform: translateX(4px);
-  border-color: rgba(96, 165, 250, 0.3);
 }
 
-.employee-details .detail-label {
+.badge-data-label {
+  font-size: 0.75rem;
   font-weight: 700;
   color: #93c5fd;
-  display: flex;
-  align-items: center;
-  min-width: 100px;
-  font-size: 0.9rem;
-}
-
-.employee-details .detail-label::before {
-  content: '▸';
-  color: #60a5fa;
-  font-weight: bold;
-  margin-right: 8px;
-  font-size: 1.1rem;
-}
-
-.employee-details .detail-value {
-  color: #e5e7eb;
-  text-align: right;
-  max-width: 60%;
-  word-break: break-word;
-  font-weight: 600;
-  font-size: 0.9rem;
-}
-
-.employee-id {
-  background: linear-gradient(45deg, #60a5fa, #3b82f6);
-  color: white;
-  padding: 10px 20px;
-  border-radius: 24px;
-  font-size: 0.9rem;
-  font-weight: 800;
-  letter-spacing: 2px;
-  position: absolute;
-  bottom: 20px;
-  right: 24px;
-  box-shadow: 0 6px 20px rgba(96, 165, 250, 0.5), 0 0 30px rgba(96, 165, 250, 0.3);
-  text-transform: uppercase;
-  backface-visibility: hidden;
-  transform: translateZ(0);
-  border: 2px solid rgba(255, 255, 255, 0.2);
-}
-
-/* Badge Button */
-.badge-btn {
-  background: linear-gradient(45deg, #6366f1, #8b5cf6);
-  border: none;
-  color: white;
-  padding: 14px 28px;
-  border-radius: 16px;
-  font-weight: 700;
-  transition: all 0.3s ease;
-  box-shadow: 0 6px 20px rgba(99, 102, 241, 0.3);
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  /* Stabilizza il pulsante */
-  backface-visibility: hidden;
-  transform: translateZ(0);
-}
-
-.badge-btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 12px 35px rgba(99, 102, 241, 0.5);
-  color: white;
-}
-
-/* Modal Styles */
-.badge-modal .modal-content {
-  background: transparent;
-  border: none;
-  box-shadow: none;
-  /* Previeni sfarfallio del modal */
-  backface-visibility: hidden;
-  transform: translateZ(0);
-}
-
-.badge-modal .modal-body {
-  padding: 0;
+  margin-bottom: 4px;
   display: flex;
-  justify-content: center;
   align-items: center;
-  /* Stabilizza il contenuto del modal */
-  min-height: 300px;
+  gap: 6px;
 }
 
-/* Prevenzione sfarfallio generale */
-.badge-modal * {
-  backface-visibility: hidden;
-  transform: translateZ(0);
+.badge-data-label i {
+  font-size: 0.85rem;
+  color: #60a5fa;
 }
 
-/* Loading state per immagini */
-.company-logo,
-.employee-photo {
-  position: relative;
+.badge-data-value {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #f3f4f6;
+  letter-spacing: 0.5px;
 }
 
-.company-logo::before,
-.employee-photo::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
-  background-size: 200% 100%;
-  animation: shimmer 1.5s infinite;
-  border-radius: inherit;
-  opacity: 0;
-  transition: opacity 0.3s ease;
+/* Sezione QR e validità */
+.badge-qr-section {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: auto;
+  padding-top: 12px;
+  border-top: 1px solid rgba(59, 130, 246, 0.2);
 }
 
-.company-logo[src=""]::before,
-.employee-photo[src=""]::before {
-  opacity: 1;
+.badge-qr-placeholder {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #ffffff, #f0f9ff);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid rgba(59, 130, 246, 0.3);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
-@keyframes shimmer {
-  0% { background-position: -200% 0; }
-  100% { background-position: 200% 0; }
+.badge-qr-placeholder i {
+  font-size: 2rem;
+  color: #1e293b;
 }
+
+.badge-validity {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #93c5fd;
+  letter-spacing: 0.5px;
+}
+
+.badge-validity i {
+  color: #10b981;
+  font-size: 1rem;
+}
+
+/* Footer del badge */
+.badge-card-footer {
+  padding: 12px 28px;
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.9), rgba(30, 41, 59, 0.7));
+  border-top: 1px solid rgba(59, 130, 246, 0.2);
+}
+
+.badge-security-text {
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.badge-security-text i {
+  color: #10b981;
+  font-size: 0.8rem;
+}
+
+/* ===== RESPONSIVENESS ===== */
+@media (max-width: 768px) {
+  .employee-badge-card {
+    width: 100%;
+    max-width: 500px;
+  }
+
+  .badge-card-body {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .badge-photo-section {
+    justify-self: center;
+  }
+
+  .badge-qr-section {
+    justify-content: center;
+  }
+}
+
+/* ===== ALTRI STILI BADGE (MANTENUTI PER COMPATIBILITÀ) ===== */
 
 /* Admin Badge Management - Layout migliorato */
-
-/* Employee List migliorata */
 .employee-list-container {
   max-height: 400px;
   overflow-y: auto;
@@ -422,15 +389,15 @@
   left: 0;
   width: 6px;
   height: 100%;
-  background: linear-gradient(45deg, #6366f1, #8b5cf6);
+  background: linear-gradient(45deg, #3b82f6, #60a5fa);
   transform: scaleY(0);
   transition: transform 0.3s ease;
-  box-shadow: 0 0 15px rgba(99, 102, 241, 0.6);
+  box-shadow: 0 0 15px rgba(59, 130, 246, 0.6);
 }
 
 .employee-list-item:hover {
   background: linear-gradient(135deg, rgba(55, 65, 81, 0.8) 0%, rgba(75, 85, 99, 0.6) 100%);
-  border-color: rgba(99, 102, 241, 0.6);
+  border-color: rgba(59, 130, 246, 0.6);
   transform: translateY(-4px);
   box-shadow: 0 12px 35px rgba(0, 0, 0, 0.3);
 }
@@ -440,9 +407,9 @@
 }
 
 .employee-list-item.selected {
-  background: linear-gradient(135deg, rgba(99, 102, 241, 0.3) 0%, rgba(139, 92, 246, 0.2) 100%);
-  border-color: rgba(99, 102, 241, 0.8);
-  box-shadow: 0 12px 35px rgba(99, 102, 241, 0.4);
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.3) 0%, rgba(96, 165, 250, 0.2) 100%);
+  border-color: rgba(59, 130, 246, 0.8);
+  box-shadow: 0 12px 35px rgba(59, 130, 246, 0.4);
   transform: translateY(-2px);
 }
 
@@ -468,9 +435,9 @@
 }
 
 .employee-list-item:hover .employee-photo-small {
-  border-color: rgba(99, 102, 241, 0.8);
+  border-color: rgba(59, 130, 246, 0.8);
   transform: scale(1.08);
-  box-shadow: 0 6px 20px rgba(99, 102, 241, 0.4);
+  box-shadow: 0 6px 20px rgba(59, 130, 246, 0.4);
 }
 
 .employee-list-item .employee-name-small {
@@ -488,16 +455,6 @@
   align-items: center;
   gap: 8px;
   font-weight: 500;
-}
-
-.employee-list-item .status-icon {
-  font-size: 1.4rem;
-  transition: all 0.3s ease;
-  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
-}
-
-.employee-list-item:hover .status-icon {
-  transform: scale(1.15);
 }
 
 /* Form Improvements */
@@ -582,28 +539,10 @@
   backdrop-filter: blur(10px);
 }
 
-.upload-placeholder::before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 0;
-  height: 0;
-  background: rgba(96, 165, 250, 0.15);
-  border-radius: 50%;
-  transition: all 0.3s ease;
-  transform: translate(-50%, -50%);
-}
-
 .upload-placeholder:hover {
   border-color: #60a5fa;
   background: linear-gradient(135deg, rgba(248, 250, 255, 0.2) 0%, rgba(224, 231, 255, 0.2) 100%);
   transform: scale(1.08);
-}
-
-.upload-placeholder:hover::before {
-  width: 100%;
-  height: 100%;
 }
 
 .upload-placeholder i {
@@ -612,7 +551,6 @@
   transition: all 0.3s ease;
   z-index: 1;
   position: relative;
-  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
 }
 
 .upload-placeholder:hover i {
@@ -657,44 +595,6 @@
   background: linear-gradient(45deg, #3b82f6, #1d4ed8);
   transform: translateY(-3px);
   box-shadow: 0 10px 30px rgba(96, 165, 250, 0.5);
-}
-
-/* Loading States */
-.badge-loading {
-  opacity: 0.6;
-  pointer-events: none;
-  position: relative;
-}
-
-.badge-loading::after {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 28px;
-  height: 28px;
-  margin: -14px 0 0 -14px;
-  border: 4px solid transparent;
-  border-top-color: #60a5fa;
-  border-radius: 50%;
-  animation: spin 1s linear infinite;
-  box-shadow: 0 0 15px rgba(96, 165, 250, 0.5);
-}
-
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
-
-/* Success/Error States */
-.badge-success {
-  border-color: #34d399;
-  box-shadow: 0 0 0 6px rgba(52, 211, 153, 0.25);
-}
-
-.badge-error {
-  border-color: #f87171;
-  box-shadow: 0 0 0 6px rgba(248, 113, 113, 0.25);
 }
 
 /* Action Buttons */
@@ -747,8 +647,6 @@
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
 }
 
-/* Grid Layout Improvements */
-
 /* Form Section Headers */
 .form-section-header {
   background: linear-gradient(45deg, #1f2937, #374151);
@@ -778,78 +676,7 @@
   box-shadow: 0 0 10px rgba(96, 165, 250, 0.3);
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-  .employee-badge {
-    width: 320px;
-    min-height: 200px;
-  }
-  
-  .badge-body {
-    padding: 20px 16px;
-  }
-  
-  .employee-photo {
-    width: 80px;
-    height: 80px;
-  }
-  
-  .employee-name {
-    font-size: 1.1rem;
-  }
-  
-  .employee-details {
-    font-size: 0.8rem;
-  }
-  
-  .employee-list-item {
-    padding: 16px;
-    margin-bottom: 12px;
-  }
-  
-  .employee-list-item .employee-photo-small {
-    width: 50px;
-    height: 50px;
-  }
-}
-
-@media (max-width: 576px) {
-  .employee-badge {
-    width: 280px;
-  }
-  
-  .employee-details .detail-row {
-    flex-direction: column;
-    text-align: left;
-  }
-  
-  .employee-details .detail-value {
-    text-align: left;
-    max-width: 100%;
-    margin-top: 2px;
-  }
-
-  .logo-dropzone,
-  .photo-dropzone {
-    width: 120px;
-    height: 120px;
-  }
-}
-
-/* Form Validation */
-.form-control.is-invalid,
-.form-select.is-invalid {
-  border-color: #ef4444;
-  box-shadow: 0 0 0 4px rgba(239, 68, 68, 0.2);
-}
-
-.form-control.is-valid,
-.form-select.is-valid {
-  border-color: #10b981;
-  box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.2);
-}
-
-/* Scrollbar personalizzata per lista dipendenti */
+/* Scrollbar personalizzata */
 .employee-list-container::-webkit-scrollbar {
   width: 8px;
 }
@@ -860,10 +687,37 @@
 }
 
 .employee-list-container::-webkit-scrollbar-thumb {
-  background: rgba(99, 102, 241, 0.6);
+  background: rgba(59, 130, 246, 0.6);
   border-radius: 4px;
 }
 
 .employee-list-container::-webkit-scrollbar-thumb:hover {
-  background: rgba(99, 102, 241, 0.8);
+  background: rgba(59, 130, 246, 0.8);
+}
+
+/* Loading States */
+.badge-loading {
+  opacity: 0.6;
+  pointer-events: none;
+  position: relative;
+}
+
+.badge-loading::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 28px;
+  height: 28px;
+  margin: -14px 0 0 -14px;
+  border: 4px solid transparent;
+  border-top-color: #60a5fa;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  box-shadow: 0 0 15px rgba(96, 165, 250, 0.5);
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
