@@ -143,12 +143,13 @@ function initializeDatePicker() {
   if (!dateInput) return;
 
   const today = new Date();
-  dateInput.value = formatISO(today);
+  const yesterday = new Date(today);
+  yesterday.setDate(today.getDate() - 1);
 
-  // I dipendenti possono selezionare tutte le date, ma non limitare il min
-  // La validazione per inserimento ore sarà fatta nel submit
+  dateInput.value = formatISO(today);
+  dateInput.min = formatISO(yesterday);
   dateInput.max = formatISO(today);
-  
+
   dateInput.addEventListener('change', async (e) => {
     await loadActivitiesForDate(e.target.value);
   });
