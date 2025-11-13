@@ -1,0 +1,743 @@
+/* employee-badge.css - Badge dipendenti stile carta d'identità professionale */
+
+/* ===== MODAL STYLING ===== */
+.badge-modal .modal-dialog {
+  max-width: 600px;
+  margin: 1.75rem auto;
+}
+
+.badge-modal .modal-content {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+.badge-modal .modal-body {
+  padding: 2rem;
+  background: transparent;
+}
+
+/* ===== EMPLOYEE BADGE CARD - NUOVO DESIGN ===== */
+.employee-badge-card {
+  width: 100%;
+  max-width: 500px;
+  min-height: 320px;
+  margin: 0 auto;
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  border-radius: 20px;
+  box-shadow:
+    0 25px 70px rgba(0, 0, 0, 0.7),
+    0 0 50px rgba(59, 130, 246, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  position: relative;
+  overflow: hidden;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  border: 2px solid rgba(59, 130, 246, 0.3);
+  animation: cardFadeIn 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.4s ease;
+}
+
+@keyframes cardFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.employee-badge-card:hover {
+  transform: translateY(-8px);
+  box-shadow:
+    0 35px 90px rgba(0, 0, 0, 0.8),
+    0 0 70px rgba(59, 130, 246, 0.5),
+    inset 0 1px 0 rgba(255, 255, 255, 0.15);
+  border-color: rgba(59, 130, 246, 0.5);
+}
+
+/* Striscia superiore decorativa */
+.badge-card-stripe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 6px;
+  background: linear-gradient(90deg, #3b82f6, #60a5fa, #93c5fd, #3b82f6);
+  background-size: 200% 100%;
+  animation: stripeMove 3s linear infinite;
+  box-shadow: 0 2px 10px rgba(59, 130, 246, 0.6);
+}
+
+@keyframes stripeMove {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 200% 50%; }
+}
+
+/* Header del badge */
+.badge-card-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 24px 28px 20px;
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.8), rgba(30, 41, 59, 0.6));
+  border-bottom: 2px solid rgba(59, 130, 246, 0.2);
+}
+
+.badge-logo {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  background: linear-gradient(135deg, #ffffff, #f0f9ff);
+  padding: 8px;
+  border-radius: 12px;
+  box-shadow:
+    0 8px 20px rgba(0, 0, 0, 0.5),
+    0 0 20px rgba(59, 130, 246, 0.3);
+  border: 2px solid rgba(59, 130, 246, 0.2);
+  transition: all 0.3s ease;
+}
+
+.employee-badge-card:hover .badge-logo {
+  transform: scale(1.05);
+  box-shadow:
+    0 10px 25px rgba(0, 0, 0, 0.6),
+    0 0 30px rgba(59, 130, 246, 0.5);
+}
+
+.badge-company-info {
+  flex: 1;
+}
+
+.badge-company-name {
+  font-size: 1.4rem;
+  font-weight: 900;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 4px;
+  text-shadow: 0 2px 10px rgba(59, 130, 246, 0.5);
+}
+
+.badge-subtitle {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #60a5fa;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  opacity: 0.9;
+}
+
+/* Body del badge */
+.badge-card-body {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 24px;
+  padding: 24px 28px;
+  background: linear-gradient(135deg, rgba(30, 41, 59, 0.5), rgba(15, 23, 42, 0.3));
+}
+
+/* Sezione foto */
+.badge-photo-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.badge-photo-frame {
+  width: 150px;
+  height: 150px;
+  border-radius: 16px;
+  padding: 6px;
+  background: linear-gradient(135deg, #3b82f6, #60a5fa);
+  box-shadow:
+    0 12px 30px rgba(0, 0, 0, 0.6),
+    0 0 30px rgba(59, 130, 246, 0.4),
+    inset 0 2px 4px rgba(255, 255, 255, 0.2);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.badge-photo-frame::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  transform: rotate(45deg);
+  animation: photoShine 3s infinite;
+}
+
+@keyframes photoShine {
+  0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+  100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+}
+
+.badge-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #1e293b, #334155);
+  transition: all 0.3s ease;
+}
+
+.employee-badge-card:hover .badge-photo-frame {
+  transform: scale(1.05);
+  box-shadow:
+    0 15px 40px rgba(0, 0, 0, 0.7),
+    0 0 50px rgba(59, 130, 246, 0.6);
+}
+
+/* Chip ID */
+.badge-id-chip {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+  padding: 8px 14px;
+  border-radius: 20px;
+  box-shadow:
+    0 4px 15px rgba(59, 130, 246, 0.5),
+    inset 0 1px 2px rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.chip-icon {
+  color: #fbbf24;
+  font-size: 1.1rem;
+  animation: chipPulse 2s infinite;
+}
+
+@keyframes chipPulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+.chip-number {
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: 1px;
+}
+
+/* Sezione informazioni */
+.badge-info-section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.badge-employee-name {
+  font-size: 1.8rem;
+  font-weight: 900;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  line-height: 1.2;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+  padding-bottom: 12px;
+  border-bottom: 2px solid rgba(59, 130, 246, 0.3);
+}
+
+/* Griglia dati */
+.badge-data-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.badge-data-item {
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(30, 41, 59, 0.5));
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 1px solid rgba(59, 130, 246, 0.2);
+  transition: all 0.3s ease;
+}
+
+.badge-data-item:hover {
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.2), rgba(30, 41, 59, 0.7));
+  border-color: rgba(59, 130, 246, 0.4);
+  transform: translateX(4px);
+}
+
+.badge-data-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #93c5fd;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 4px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.badge-data-label i {
+  font-size: 0.85rem;
+  color: #60a5fa;
+}
+
+.badge-data-value {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #f3f4f6;
+  letter-spacing: 0.5px;
+}
+
+/* Sezione QR e validità */
+.badge-qr-section {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: auto;
+  padding-top: 12px;
+  border-top: 1px solid rgba(59, 130, 246, 0.2);
+}
+
+.badge-qr-placeholder {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #ffffff, #f0f9ff);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid rgba(59, 130, 246, 0.3);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.badge-qr-placeholder i {
+  font-size: 2rem;
+  color: #1e293b;
+}
+
+.badge-validity {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #93c5fd;
+  letter-spacing: 0.5px;
+}
+
+.badge-validity i {
+  color: #10b981;
+  font-size: 1rem;
+}
+
+/* Footer del badge */
+.badge-card-footer {
+  padding: 12px 28px;
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.9), rgba(30, 41, 59, 0.7));
+  border-top: 1px solid rgba(59, 130, 246, 0.2);
+}
+
+.badge-security-text {
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.badge-security-text i {
+  color: #10b981;
+  font-size: 0.8rem;
+}
+
+/* ===== RESPONSIVENESS ===== */
+@media (max-width: 768px) {
+  .employee-badge-card {
+    width: 100%;
+    max-width: 500px;
+  }
+
+  .badge-card-body {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .badge-photo-section {
+    justify-self: center;
+  }
+
+  .badge-qr-section {
+    justify-content: center;
+  }
+}
+
+/* ===== ALTRI STILI BADGE (MANTENUTI PER COMPATIBILITÀ) ===== */
+
+/* Admin Badge Management - Layout migliorato */
+.employee-list-container {
+  max-height: 400px;
+  overflow-y: auto;
+  padding-right: 12px;
+  margin-bottom: 24px;
+}
+
+.employee-list-item {
+  background: linear-gradient(135deg, rgba(55, 65, 81, 0.6) 0%, rgba(75, 85, 99, 0.4) 100%);
+  border: 2px solid rgba(255, 255, 255, 0.15);
+  border-radius: 16px;
+  padding: 20px;
+  margin-bottom: 16px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+}
+
+.employee-list-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 6px;
+  height: 100%;
+  background: linear-gradient(45deg, #3b82f6, #60a5fa);
+  transform: scaleY(0);
+  transition: transform 0.3s ease;
+  box-shadow: 0 0 15px rgba(59, 130, 246, 0.6);
+}
+
+.employee-list-item:hover {
+  background: linear-gradient(135deg, rgba(55, 65, 81, 0.8) 0%, rgba(75, 85, 99, 0.6) 100%);
+  border-color: rgba(59, 130, 246, 0.6);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.3);
+}
+
+.employee-list-item:hover::before {
+  transform: scaleY(1);
+}
+
+.employee-list-item.selected {
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.3) 0%, rgba(96, 165, 250, 0.2) 100%);
+  border-color: rgba(59, 130, 246, 0.8);
+  box-shadow: 0 12px 35px rgba(59, 130, 246, 0.4);
+  transform: translateY(-2px);
+}
+
+.employee-list-item.selected::before {
+  transform: scaleY(1);
+}
+
+.employee-list-item .employee-info {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.employee-list-item .employee-photo-small {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid rgba(255, 255, 255, 0.3);
+  background: #374151;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.employee-list-item:hover .employee-photo-small {
+  border-color: rgba(59, 130, 246, 0.8);
+  transform: scale(1.08);
+  box-shadow: 0 6px 20px rgba(59, 130, 246, 0.4);
+}
+
+.employee-list-item .employee-name-small {
+  font-weight: 700;
+  color: #f3f4f6;
+  font-size: 1.1rem;
+  margin-bottom: 6px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.employee-list-item .employee-id-small {
+  font-size: 0.85rem;
+  color: #9ca3af;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
+}
+
+/* Form Improvements */
+.badge-form-group {
+  margin-bottom: 28px;
+}
+
+.badge-form-group label {
+  font-weight: 600;
+  color: #e5e7eb;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.badge-form-group .form-control,
+.badge-form-group .form-select {
+  background: rgba(31, 41, 55, 0.9);
+  border: 2px solid rgba(255, 255, 255, 0.15);
+  border-radius: 12px;
+  color: #f3f4f6;
+  padding: 14px 18px;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  font-size: 0.95rem;
+  backdrop-filter: blur(5px);
+}
+
+.badge-form-group .form-control:focus,
+.badge-form-group .form-select:focus {
+  background: rgba(31, 41, 55, 1);
+  border-color: #60a5fa;
+  box-shadow: 0 0 0 6px rgba(96, 165, 250, 0.25);
+  transform: translateY(-2px);
+}
+
+/* Image Upload Improvements */
+.image-upload-container {
+  position: relative;
+  margin-bottom: 28px;
+  text-align: center;
+}
+
+.image-upload-preview {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid rgba(255, 255, 255, 0.2);
+  background: #f3f4f6;
+  display: block;
+  margin: 0 auto 20px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.image-upload-preview:hover {
+  border-color: #60a5fa;
+  transform: scale(1.08);
+  box-shadow: 0 12px 35px rgba(96, 165, 250, 0.4);
+}
+
+.upload-placeholder {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, rgba(243, 244, 246, 0.1) 0%, rgba(229, 231, 235, 0.1) 100%);
+  border: 4px dashed rgba(255, 255, 255, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+}
+
+.upload-placeholder:hover {
+  border-color: #60a5fa;
+  background: linear-gradient(135deg, rgba(248, 250, 255, 0.2) 0%, rgba(224, 231, 255, 0.2) 100%);
+  transform: scale(1.08);
+}
+
+.upload-placeholder i {
+  font-size: 2.5rem;
+  color: rgba(156, 163, 175, 0.8);
+  transition: all 0.3s ease;
+  z-index: 1;
+  position: relative;
+}
+
+.upload-placeholder:hover i {
+  color: #60a5fa;
+  transform: scale(1.15);
+}
+
+/* File Input Styling */
+.file-input-wrapper {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  width: 100%;
+  margin-top: 12px;
+}
+
+.file-input-wrapper input[type=file] {
+  position: absolute;
+  left: -9999px;
+}
+
+.file-input-label {
+  background: linear-gradient(45deg, #60a5fa, #3b82f6);
+  color: white;
+  padding: 14px 24px;
+  border-radius: 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: none;
+  width: 100%;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 6px 20px rgba(96, 165, 250, 0.3);
+}
+
+.file-input-label:hover {
+  background: linear-gradient(45deg, #3b82f6, #1d4ed8);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(96, 165, 250, 0.5);
+}
+
+/* Action Buttons */
+.badge-action-buttons {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  margin-top: 24px;
+  flex-wrap: wrap;
+  padding: 0 28px;
+}
+
+.badge-action-btn {
+  padding: 14px 28px;
+  border-radius: 14px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 160px;
+  justify-content: center;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-size: 0.9rem;
+}
+
+.badge-action-btn.primary {
+  background: linear-gradient(45deg, #60a5fa, #3b82f6);
+  color: white;
+  box-shadow: 0 6px 20px rgba(96, 165, 250, 0.4);
+}
+
+.badge-action-btn.primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(96, 165, 250, 0.5);
+}
+
+.badge-action-btn.secondary {
+  background: rgba(75, 85, 99, 0.9);
+  color: #f3f4f6;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.badge-action-btn.secondary:hover {
+  background: rgba(75, 85, 99, 1);
+  border-color: rgba(255, 255, 255, 0.4);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Form Section Headers */
+.form-section-header {
+  background: linear-gradient(45deg, #1f2937, #374151);
+  border-radius: 12px;
+  padding: 16px 24px;
+  margin-bottom: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: center;
+}
+
+.form-section-header h5 {
+  color: #60a5fa;
+  font-weight: 700;
+  margin: 0;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Dividers */
+.section-divider {
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #60a5fa, transparent);
+  margin: 32px 0;
+  border-radius: 1px;
+  box-shadow: 0 0 10px rgba(96, 165, 250, 0.3);
+}
+
+/* Scrollbar personalizzata */
+.employee-list-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.employee-list-container::-webkit-scrollbar-track {
+  background: rgba(55, 65, 81, 0.3);
+  border-radius: 4px;
+}
+
+.employee-list-container::-webkit-scrollbar-thumb {
+  background: rgba(59, 130, 246, 0.6);
+  border-radius: 4px;
+}
+
+.employee-list-container::-webkit-scrollbar-thumb:hover {
+  background: rgba(59, 130, 246, 0.8);
+}
+
+/* Loading States */
+.badge-loading {
+  opacity: 0.6;
+  pointer-events: none;
+  position: relative;
+}
+
+.badge-loading::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 28px;
+  height: 28px;
+  margin: -14px 0 0 -14px;
+  border: 4px solid transparent;
+  border-top-color: #60a5fa;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  box-shadow: 0 0 15px rgba(96, 165, 250, 0.5);
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
